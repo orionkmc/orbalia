@@ -1,3 +1,13 @@
+<style>
+  .active-menu {
+    background-color: #44a2d2;
+    color: #fff;
+  }
+  .active-menu span {
+    color: #fff;
+  }
+</style>
+
 <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">
 
@@ -52,3 +62,20 @@
   </div>
 </div>
 <!-- Left Sidebar End -->
+
+<script>
+  function click() {
+  
+  // elementos de la lista
+  var menues = $(".nav-menu li"); 
+
+  // manejador de click sobre todos los elementos
+  menues.click(function() {
+     // eliminamos active de todos los elementos
+     menues.removeClass("active-menu");
+     // activamos el elemento clicado.
+     $(this).addClass("active-menu");
+  });
+
+};
+</script>

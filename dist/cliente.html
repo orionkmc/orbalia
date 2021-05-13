@@ -15,6 +15,26 @@
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- DataTables -->
+    <link
+    href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+    rel="stylesheet"
+    type="text/css"
+    />
+    <link
+    href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
+    rel="stylesheet"
+    type="text/css"
+    />
+
+    <!-- Responsive datatable examples -->
+    <link
+    href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+    rel="stylesheet"
+    type="text/css"
+    />
+
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
@@ -85,6 +105,16 @@
         </div>
       </header>
 
+      <style>
+        .active-menu {
+          background-color: #44a2d2;
+          color: #fff;
+        }
+        .active-menu span {
+          color: #fff;
+        }
+      </style>
+
       <!-- ========== Left Sidebar Start ========== -->
       <div class="vertical-menu">
 
@@ -139,6 +169,23 @@
         </div>
       </div>
       <!-- Left Sidebar End -->
+
+      <script>
+        function click() {
+  
+        // elementos de la lista
+        var menues = $(".nav-menu li"); 
+
+        // manejador de click sobre todos los elementos
+        menues.click(function() {
+           // eliminamos active de todos los elementos
+           menues.removeClass("active-menu");
+           // activamos el elemento clicado.
+           $(this).addClass("active-menu");
+        });
+
+      };
+      </script>
 
       <!-- ============================================================== -->
       <!-- Start right Content here -->
@@ -381,6 +428,9 @@
     <script src="assets/libs/metismenu/metisMenu.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Icon -->
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
 
     <script src="assets/js/app.js"></script>
     <script>

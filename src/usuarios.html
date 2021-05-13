@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/title-meta.html", {"title": "Usuarios / Administrador"})
+    
+    @@include("partials/head-css.html")
+  </head>
+
+  <body data-topbar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      @@include("partials/topbar.html") @@include("partials/sidebarAdm.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            
+            <div class="row">
+              <div class="col-6">
+                <div class="card card-content">
+                  <div class="mb-2 card-body text-muted d-flex justify-content-center align-items-center">
+                    <lord-icon
+                        src="assets/json/274-male-and-two-female-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#707070;,secondary:#707070;"
+                        style="width:80px; height:80px; margin-top: 0.4rem;">
+                      </lord-icon>
+                    <div style="text-align: initial; margin-left: 0.5rem;">
+                      <h3 class="text-black mt-2">15,852</h3> 
+                      <p class="m-0"> 
+                        Usuarios externos
+                      </p>
+                    </div>
+                  </div>
+                </div>    
+              </div>
+              <div class="col-6">
+                <div class="card card-content">
+                  <div class="mb-2 card-body text-muted d-flex justify-content-center align-items-center">
+                    <lord-icon
+                        src="assets/json/274-male-and-two-female-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#707070;,secondary:#707070;"
+                        style="width:80px; height:80px; margin-top: 0.4rem;">
+                      </lord-icon>
+                    <div style="text-align: initial; margin-left: 0.5rem;">
+                      <h3 class="text-black mt-2">15,852</h3> 
+                      <p class="m-0"> 
+                        Usuarios internos
+                      </p>
+                    </div>
+                  </div>
+                </div>    
+              </div>         
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table id="datatable3" class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Nombre y Apellido</th>
+                            <th>Tipo de empresa</th>
+                            <th>Fecha registro NIF/CIF</th>
+                            <th>Segmento del cliente</th>
+                            <th>Colaborador</th>
+                            <th>Rol de usuario</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>PYME</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                            <td>1</td>
+                            <td>2019/04/25</td>
+                            <td>2011/04/25</td>
+                            <td>Externo</td>
+                            <td>
+                              <button class="btn btn-sm btn-primary boton-usuarios" type="button">
+                                <a href="perfil-sociedad.html">Ver perfil</a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>PYME</td>
+                            <td>32</td>
+                            <td>Autónomo</td>
+                            <td>1</td>
+                            <td>2011/04/25</td>
+                            <td>2010/04/25</td>
+                            <td>Interno</td>
+                            <td>
+                              <button class="btn btn-sm btn-primary boton-usuarios" type="button">
+                                <a href="perfil-autonomo.html">Ver perfil</a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/right-sidebar.html")
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/usuarios.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+  </body>
+</html>

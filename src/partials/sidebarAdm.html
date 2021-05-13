@@ -1,3 +1,13 @@
+<style>
+  .active-menu {
+    background-color: #44a2d2;
+    color: #fff;
+  }
+  .active-menu span {
+    color: #fff;
+  }
+</style>
+
 <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">
 
@@ -5,49 +15,49 @@
     <!--- Sidemenu -->
     <div id="sidebar-menu">
     <!-- Left Menu Start -->
-      <ul class="metismenu list-unstyled" id="side-menu">
+      <ul class="metismenu list-unstyled nav-menu" id="side-menu">
         <li>
-          <a href="/" class="waves-effect">
+          <a href="/" class="waves-effect @@option1">
             <span>Inicio</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect">
+          <a href="#" class="waves-effect @@option2">
             <span>Procedimientos</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect">
+          <a href="#" class="waves-effect @@option3">
             <span>Expedientes</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect">
+          <a href="usuarios.html" class="waves-effect @@option4">
             <span>Usuarios</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect">
+          <a href="#" class="waves-effect @@option5">
             <span>Colaboradores</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect">
+          <a href="#" class="waves-effect @@option6">
             <span>RRHH</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect">
+          <a href="#" class="waves-effect @@option7">
             <span>Estadísticas</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect">
+          <a href="#" class="waves-effect @@option8">
             <span>Facturación</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect">
+          <a href="#" class="waves-effect @@option9">
             <span>Administración web</span>
           </a>
         </li>
@@ -57,3 +67,20 @@
   </div>
 </div>
 <!-- Left Sidebar End -->
+
+<script>
+  function click() {
+  
+  // elementos de la lista
+  var menues = $(".nav-menu li"); 
+
+  // manejador de click sobre todos los elementos
+  menues.click(function() {
+     // eliminamos active de todos los elementos
+     menues.removeClass("active-menu");
+     // activamos el elemento clicado.
+     $(this).addClass("active-menu");
+  });
+
+};
+</script>

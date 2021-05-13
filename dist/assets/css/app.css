@@ -3341,3 +3341,9 @@ input[switch="dark"]:checked + label {
   padding: 0.5rem 3rem;
   border: 1px solid lightgray;
   border-radius: 5px; }
+
+.boton-usuarios {
+  width: 100%; }
+
+.boton-usuarios a {
+  color: #fff !important; }

@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#datatable3").DataTable({paging:!1,info:!1,searching:!0}),$("#datatable4").DataTable({paging:!1,info:!1,searching:!1})});
