@@ -3347,3 +3347,34 @@ input[switch="dark"]:checked + label {
 
 .boton-usuarios a {
   color: #fff !important; }
+
+.datos-sociedad p {
+  margin-bottom: 0; }
+
+.etiquetas {
+  border: 1px solid lightgray; }
+
+.boton-etiqueta {
+  text-align: end;
+  margin-top: 10px; }
+
+.boton-etiqueta button {
+  padding: .5rem 2rem; }
+
+.custom-file-input:lang(en) ~ .custom-file-label::after {
+  content: "Elegir"; }
+
+.tbody-expediente {
+  text-align: center; }
+
+.ver-expediente {
+  padding: 6px 15px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #44a2d2;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.tbody-expediente:hover a {
+  color: #fff;
+  background-color: #2f90c1; }

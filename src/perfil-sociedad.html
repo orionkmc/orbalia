@@ -58,7 +58,7 @@
                       <!-- Tab panes -->
                       <div class="tab-content">
                         <div class="tab-pane active p-3" id="informacion" role="tabpanel">
-                          <h6 class="card-title">Representante</h6>
+                          <h6>Representante (solo si tiene es una sociedad)</h6>
                           <div class="table-responsive">
                             <table id="datatable4" class="table table-bordered">
                               <thead>
@@ -68,6 +68,7 @@
                                   <th>Apellido 2</th>
                                   <th>NIF</th>
                                   <th>Teléfono</th>
+                                  <th>Email</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -77,6 +78,7 @@
                                   <td>Sociedad</td>
                                   <td>1</td>
                                   <td>2019/04/25</td>
+                                  <td>andnndj@gmail.com</td>
                                 </tr>
                                 <tr>
                                   <td>PYME</td>
@@ -84,49 +86,759 @@
                                   <td>Sociedad</td>
                                   <td>1</td>
                                   <td>2019/04/25</td>
+                                  <td>nshhbdhfbhj@gmail.com</td>
                                 </tr>
                               </tbody>
                             </table>
                           </div>
+                          <div class="dropdown-divider"></div>
+                          <div class="row mt-4 datos-sociedad">
+                            <div class="col-12 col-md-6">
+                              <h6>DATOS DE LA SOCIEDAD</h6>
+                              <p>Denominación social: Lorem, ipsum dolor.</p>
+                              <p>CIF: 1736633</p>
+                              <p>Domicilio fiscal: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, pariatur.</p>
+                              <p>País: España</p>
+                              <p>Provincia: Lorem, ipsum.</p>
+                              <p>Código postal: 2827171</p>
+                              <p>Código de usuario: xiaidns</p>
+                              <p>Télefono fijo: 999-99-99</p>
+                              <p>Télefono móvil: (999) 999-99-99</p>
+                              <p>Email: xxxxx@gmail.com</p>
+                              <p>Fecha de registro: XX/XX/XXXX</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <h6>COLABORADOR</h6>
+                              <p>Nombre: Andrés</p>
+                              <p>Enlace: aldjsndsjd</p>
+                              <p>Código de usuario: xnvjsjfn</p>
+                              <h5 class="card-title mt-4">Etiquetas</h5>
+                              <div class="etiquetas">
+                                <div data-simplebar style="max-height: 260px;">
+                                  <div class="todo-list p-3">                                        
+                                    <div class="todo-box">
+                                      <button type="button" class="btn btn-link remove">
+                                        <i class="far fa-trash-alt"></i>
+                                      </button>
+                                      <div class="todo-task">
+                                        <span>#pymes2021</span>
+                                      </div> 
+                                    </div>
+                                    <div class="todo-box">
+                                      <button type="button" class="btn btn-link remove">
+                                        <i class="far fa-trash-alt"></i>
+                                      </button>
+                                      <div class="todo-task">
+                                        <span>#pymes2021</span>
+                                      </div>
+                                    </div>
+                                    <div class="todo-box">
+                                      <button type="button" class="btn btn-link remove">
+                                        <i class="far fa-trash-alt"></i>
+                                      </button>
+                                      <div class="todo-task">
+                                        <span>#pymes2021</span>
+                                      </div> 
+                                    </div>
+                                    <div class="boton-etiqueta">
+                                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirEtiqueta">Añadir</button>                                                                                                  
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                          <h6 class="mt-4">OTROS CONTACTOS</h6>
+                          <p>Representante (solo si tiene es una sociedad)</p>
+                          <div class="table-responsive">
+                            <table id="datatable5" class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>Nombre</th>
+                                  <th>Cargo</th>
+                                  <th>Teléfono fijo</th>
+                                  <th>Télefono móvil</th>
+                                  <th>Email</th>
+                                  <th>Notas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>PYME</td>
+                                  <td>22</td>
+                                  <td>Sociedad</td>
+                                  <td>1</td>
+                                  <td>2019/04/25</td>
+                                  <td>andnndj@gmail.com</td>
+                                </tr>
+                                <tr>
+                                  <td>PYME</td>
+                                  <td>22</td>
+                                  <td>Sociedad</td>
+                                  <td>1</td>
+                                  <td>2019/04/25</td>
+                                  <td>nshhbdhfbhj@gmail.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="boton-etiqueta">
+                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContacto">Añadir</button>
+                          </div>
+
+                          <div class="dropdown-divider"></div>
+                          <h6 class="mt-4">ARCHIVOS GENÉRICOS</h6>
+                          <div class="row">
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      PDF
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      PDF
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      XLS
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      JPG
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      PDF
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      TXT
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      DOC
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      JPG
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      XLS
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      PDF
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                          </div>
+
+                          <div class="boton-etiqueta">
+                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirArchivo">Añadir</button>
+                          </div>
+
+                          <div class="modal fade añadirContacto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir contacto</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="nombre" placeholder="Nombre">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" id="cargo" placeholder="Cargo">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="email" id="email" placeholder="Email">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" id="fijo" placeholder="Teléfono fijo">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" id="movil" placeholder="Teléfono móvil">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Nota"></textarea>
+                                    </div>
+                                    <div class="boton-etiqueta">
+                                      <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
+                          <div class="modal fade añadirEtiqueta" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir etiqueta</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="etiqueta" placeholder="Añadir etiqueta">                                                       
+                                      </div>                                                    
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
+                          <div class="modal fade añadirArchivo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir archivo</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-12">
+                                        <input class="form-control" type="text" id="nombreDocumento" placeholder="Nombre del documento">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12">
+                                        <select class="form-control">
+                                          <option>PDF</option>
+                                          <option>TXT</option>
+                                          <option>XLS</option>
+                                          <option>JPG</option>
+                                          <option>DOC</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="custom-file pl-2 pr-2">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                        <label class="custom-file-label" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile04">Seleccionar archivo...</label>
+                                      </div>                                                  
+                                    </div>
+                                    <div class="boton-etiqueta">
+                                      <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
                         </div>
                         <div class="tab-pane p-3" id="expedientes" role="tabpanel">
-                            <p class="font-size-13 mb-0">
-                                Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                single-origin coffee squid. Exercitation +1 labore velit, blog
-                                sartorial PBR leggings next level wes anderson artisan four loko
-                                farm-to-table craft beer twee. Qui photo booth letterpress,
-                                commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr,
-                                vero magna velit sapiente labore stumptown. Vegan fanny pack
-                                odio cillum wes anderson 8-bit.
-                            </p>
+                          <h6>Tabla de expedientes</h6>
+                          <div class="table-responsive">
+                            <table id="datatable-buttons" class="table table-striped table-bordered w-100">
+                              <thead>
+                                <tr>
+                                  <th>Departamento</th>
+                                  <th>Código expediente</th>
+                                  <th>Fase</th>
+                                  <th>Procedimiento</th>
+                                  <th>Código procedimiento proyecto</th>
+                                  <th>Importe inversión</th>
+                                  <th>Técnicos asignados</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013/03/03</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="expedientes.html">Ver</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Jena Gaines</td>
+                                <td>Office Manager</td>
+                                <td>London</td>
+                                <td>30</td>
+                                <td>2008/12/19</td>
+                                <td>$90,560</td>
+                                <td>$90,560</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="expedientes.html">Ver</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013/03/03</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="expedientes.html">Ver</a>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                         <div class="tab-pane p-3" id="subvenciones" role="tabpanel">
-                            <p class="font-size-13 mb-0">
-                                Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
-                                art party before they sold out master cleanse gluten-free squid
-                                scenester freegan cosby sweater. Fanny pack portland seitan DIY,
-                                art party locavore wolf cliche high life echo park Austin. Cred
-                                vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
-                                farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
-                                mustache readymade thundercats keffiyeh craft beer marfa
-                                ethical. Wolf salvia freegan, sartorial keffiyeh echo park
-                                vegan
-                            </p>
+                          <h6>Tabla de otras subvenciones</h6>
+                          <div class="table-responsive">
+                            <table id="datatable2-buttons" class="table table-striped table-bordered w-100">
+                              <thead>
+                                <tr>
+                                  <th>Procedimiento</th>
+                                  <th>Fase</th>
+                                  <th>Fecha de solicitud</th>
+                                  <th>Fecha de concesión</th>
+                                  <th>Minimis</th>
+                                  <th>Ente público</th>
+                                  <th>Importe</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013/03/03</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Jena Gaines</td>
+                                <td>Office Manager</td>
+                                <td>London</td>
+                                <td>30</td>
+                                <td>2008/12/19</td>
+                                <td>$90,560</td>
+                                <td>$90,560</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013/03/03</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="boton-etiqueta">
+                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirSubvencion">Añadir</button>
+                          </div>
+
+                          <div class="dropdown-divider"></div>
+                          <h6 class="mt-5">Tabla de minimis</h6>
+                          <div class="table-responsive">
+                            <table id="datatable3-buttons" class="table table-striped table-bordered w-100">
+                              <thead>
+                                <tr>
+                                  <th>Procedimiento</th>
+                                  <th>Fase</th>
+                                  <th>Fecha de concesión</th>
+                                  <th>Minimis</th>
+                                  <th>Año 1</th>
+                                  <th>Año 2</th>
+                                  <th>Año 3</th>
+                                  <th>Año 4</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013/03/03</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Jena Gaines</td>
+                                <td>Office Manager</td>
+                                <td>London</td>
+                                <td>30</td>
+                                <td>2008/12/19</td>
+                                <td>$90,560</td>
+                                <td>$90,560</td>
+                                <td>$90,560</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013/03/03</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td class="tbody-expediente">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class="modal fade añadirSubvencion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir Subvención</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="nombreS" placeholder="Nombre de subvención">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="ente" placeholder="Ente público">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="fechaS" placeholder="Fecha de solicitud">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="fechaC" placeholder="Fecha de concesión">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="fase" placeholder="Fase">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="importe" placeholder="Importe">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="custom-control custom-checkbox my-3 text-left">
+                                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                      <label class="custom-control-label" for="customCheck1">Sujeto a minimis</label>
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
                         </div>
                         <div class="tab-pane p-3" id="facturacion" role="tabpanel">
-                          <p class="font-size-13 mb-0">
-                              Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
-                              art party before they sold out master cleanse gluten-free squid
-                              scenester freegan cosby sweater. Fanny pack portland seitan DIY,
-                              art party locavore wolf cliche high life echo park Austin. Cred
-                              vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
-                              farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
-                              mustache readymade thundercats keffiyeh craft beer marfa
-                              ethical. Wolf salvia freegan, sartorial keffiyeh echo park
-                              vegan
-                          </p>
+                          <div class="table-responsive">
+                            <table id="datatable4-buttons" class="table table-striped table-bordered w-100">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Fecha</th>
+                                  <th>Importe</th>
+                                  <th>Método de pago</th>
+                                  <th>Estado</th>
+                                  <th>Cuantía pagada</th>
+                                  <th>Fecha de pago</th>
+                                  <th>Comprobante de pago</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013/03/03</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td class="tbody-expediente align-middle">
+                                  <div>
+                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">Añadir</button>
+                                  </div>
+                                </td>
+                                <td class="tbody-expediente align-middle">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Jena Gaines</td>
+                                <td>Office Manager</td>
+                                <td>London</td>
+                                <td>30</td>
+                                <td>2008/12/19</td>
+                                <td>$90,560</td>
+                                <td>$90,560</td>
+                                <td class="tbody-expediente align-middle">
+                                  <div>
+                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">Añadir</button>
+                                  </div>
+                                </td>
+                                <td class="tbody-expediente align-middle">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013/03/03</td>
+                                <td>$342,000</td>
+                                <td>$342,000</td>
+                                <td class="tbody-expediente align-middle">
+                                  <div>
+                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">Añadir</button>
+                                  </div>
+                                </td>
+                                <td class="tbody-expediente align-middle">
+                                  <a class="ver-expediente" href="/">Ver</a>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class="modal fade añadirComprobante" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir Comprobante</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" id="fase" placeholder="Fecha del importe">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="custom-file pl-2 pr-2">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                        <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile04">Seleccionar archivo...</label>
+                                      </div>                                                  
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
                         </div>
                         <div class="tab-pane p-3" id="notas" role="tabpanel">
                           <p class="font-size-13 mb-0">
