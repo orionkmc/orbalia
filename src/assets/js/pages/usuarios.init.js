@@ -12,6 +12,9 @@ $(document).ready(function () {
     paging: false,
     info: false,
     searching: true,
+    language: {
+      search: "Buscar",
+    },
   });
   $("#datatable4").DataTable({
     paging: false,
@@ -100,4 +103,88 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable4-buttons_wrapper .col-md-6:eq(0)");
+
+  //Buttons examples
+  var table = $("#datatable5-buttons").DataTable({
+    paging: false,
+    info: false,
+    searching: false,
+    lengthChange: false,
+    buttons: ["excel", "pdf", "colvis"],
+    language: {
+      buttons: {
+        excel: "Excel",
+        pdf: "PDF",
+        colvis: "Columnas Visibles",
+      },
+    },
+  });
+
+  table
+    .buttons()
+    .container()
+    .appendTo("#datatable5-buttons_wrapper .col-md-6:eq(0)");
+
+  //Buttons examples
+  var table = $("#datatable6-buttons").DataTable({
+    paging: false,
+    info: false,
+    searching: false,
+    lengthChange: false,
+    buttons: ["excel", "pdf", "colvis"],
+    language: {
+      buttons: {
+        excel: "Excel",
+        pdf: "PDF",
+        colvis: "Columnas Visibles",
+      },
+    },
+  });
+
+  table
+    .buttons()
+    .container()
+    .appendTo("#datatable6-buttons_wrapper .col-md-6:eq(0)");
+
+  //Buttons examples
+  var table = $("#datatable7-buttons").DataTable({
+    paging: false,
+    info: false,
+    searching: false,
+    lengthChange: false,
+    buttons: ["excel", "pdf", "colvis"],
+    language: {
+      buttons: {
+        excel: "Excel",
+        pdf: "PDF",
+        colvis: "Columnas Visibles",
+      },
+    },
+  });
+
+  table
+    .buttons()
+    .container()
+    .appendTo("#datatable7-buttons_wrapper .col-md-6:eq(0)");
+
+  //Buttons examples
+  var table = $("#datatable8-buttons").DataTable({
+    paging: false,
+    info: false,
+    searching: false,
+    lengthChange: false,
+    buttons: ["excel", "pdf", "colvis"],
+    language: {
+      buttons: {
+        excel: "Excel",
+        pdf: "PDF",
+        colvis: "Columnas Visibles",
+      },
+    },
+  });
+
+  table
+    .buttons()
+    .container()
+    .appendTo("#datatable8-buttons_wrapper .col-md-6:eq(0)");
 });

@@ -1,190 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Perfil Sociedad / Administrador | ORBALIA SUBVENCIONES</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    @@include("partials/title-meta.html", {"title": "Perfil Autónomo / Administrador"})
     
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- DataTables -->
-    <link
-    href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
-    rel="stylesheet"
-    type="text/css"
-    />
-    <link
-    href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
-    rel="stylesheet"
-    type="text/css"
-    />
-
-    <!-- Responsive datatable examples -->
-    <link
-    href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
-    rel="stylesheet"
-    type="text/css"
-    />
-
-    <!-- App Css-->
-    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    @@include("partials/head-css.html")
   </head>
 
   <body data-topbar="dark">
     <!-- Begin page -->
     <div id="layout-wrapper">
-      <header id="page-topbar">
-        <div class="navbar-header">
-          <div class="d-flex">
-            <!-- LOGO -->
-            <div class="navbar-brand-box">
-              <a href="index.html" class="logo logo-dark">
-                <span class="logo-sm">
-                  <img src="assets/images/logo-sm.png" alt="" height="22">
-                </span>
-                <span class="logo-lg">
-                  <img src="assets/images/logo-dark.png" alt="" height="17">
-                </span>
-              </a>
-
-              <a href="index.html" class="logo logo-light">
-                <span class="logo-sm">
-                  <img src="assets/images/logo-sm.png" alt="" height="22">
-                </span>
-                <span class="logo-lg">
-                  <img src="assets/images/logo-light.png" alt="" height="17">
-                </span>
-              </a>
-            </div>
-
-            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
-              <i class="mdi mdi-menu"></i>
-            </button>
-
-          </div>
-
-              <!-- Search input -->
-          <div class="search-wrap" id="search-wrap">
-            <div class="search-bar">
-              <input class="search-input form-control" placeholder="Search" />
-              <a href="#" class="close-search toggle-search" data-target="#search-wrap">
-                <i class="mdi mdi-close-circle"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="d-flex">
-            <div class="dropdown d-inline-block">
-              <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="rounded-circle header-profile-user" src="assets/images/users/user-1.jpg"
-                  alt="Header Avatar">
-                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-right">
-                <!-- item-->
-                <a class="dropdown-item" href="#"><i class="dripicons-user d-inlne-block text-muted mr-2"></i> Perfil</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="dripicons-exit d-inlne-block text-muted mr-2"></i> Cerrar sesión</a>
-              </div>
-            </div>
-        
-          </div>
-        </div>
-      </header>
-      <style>
-        .active-menu {
-          background-color: #44a2d2;
-          color: #fff;
-        }
-        .active-menu span {
-          color: #fff;
-        }
-      </style>
-
-      <!-- ========== Left Sidebar Start ========== -->
-      <div class="vertical-menu">
-
-        <div data-simplebar class="h-100">
-          <!--- Sidemenu -->
-          <div id="sidebar-menu">
-          <!-- Left Menu Start -->
-            <ul class="metismenu list-unstyled nav-menu" id="side-menu">
-              <li>
-                <a href="/" class="waves-effect ">
-                  <span>Inicio</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="waves-effect ">
-                  <span>Procedimientos</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="waves-effect ">
-                  <span>Expedientes</span>
-                </a>
-              </li>
-              <li>
-                <a href="usuarios.html" class="waves-effect active-menu">
-                  <span>Usuarios</span>
-                </a>
-              </li>
-              <li>
-                <a href="colaboradores.html" class="waves-effect ">
-                  <span>Colaboradores</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="waves-effect ">
-                  <span>RRHH</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="waves-effect ">
-                  <span>Estadísticas</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="waves-effect ">
-                  <span>Facturación</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="waves-effect ">
-                  <span>Administración web</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- Sidebar -->
-        </div>
-      </div>
-      <!-- Left Sidebar End -->
-
-      <script>
-        function click() {
-  
-        // elementos de la lista
-        var menues = $(".nav-menu li"); 
-
-        // manejador de click sobre todos los elementos
-        menues.click(function() {
-           // eliminamos active de todos los elementos
-           menues.removeClass("active-menu");
-           // activamos el elemento clicado.
-           $(this).addClass("active-menu");
-        });
-
-      };
-      </script>
+      @@include("partials/topbar.html")
+      @@include("partials/sidebarAdm.html", {
+        "option1": "",
+        "option2": "",
+        "option3": "",
+        "option4": "active-menu",
+        "option5": "",
+        "option6": "",
+        "option7": "",
+        "option8": "",
+        "option9": ""
+    })
 
       <!-- ============================================================== -->
       <!-- Start right Content here -->
@@ -198,7 +34,7 @@
               <div class="col-12">
                 <div class="card">
                     <div class="card-body">    
-                      <h5 class="card-title">NOMBRE SOCIEDAD</h5>
+                      <h5 class="card-title">NOMBRE DEL AUTÓNOMO</h5>
 
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
@@ -222,45 +58,12 @@
                       <!-- Tab panes -->
                       <div class="tab-content">
                         <div class="tab-pane active p-3" id="informacion" role="tabpanel">
-                          <h6>Representante (solo si tiene es una sociedad)</h6>
-                          <div class="table-responsive">
-                            <table id="datatable4" class="table table-bordered">
-                              <thead>
-                                <tr>
-                                  <th>Nombre</th>
-                                  <th>Apellido 1</th>
-                                  <th>Apellido 2</th>
-                                  <th>NIF</th>
-                                  <th>Teléfono</th>
-                                  <th>Email</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>PYME</td>
-                                  <td>22</td>
-                                  <td>Sociedad</td>
-                                  <td>1</td>
-                                  <td>2019/04/25</td>
-                                  <td>andnndj@gmail.com</td>
-                                </tr>
-                                <tr>
-                                  <td>PYME</td>
-                                  <td>22</td>
-                                  <td>Sociedad</td>
-                                  <td>1</td>
-                                  <td>2019/04/25</td>
-                                  <td>nshhbdhfbhj@gmail.com</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <div class="dropdown-divider"></div>
                           <div class="row datos-sociedad">
                             <div class="col-12 col-md-6">
-                              <h6>DATOS DE LA SOCIEDAD</h6>
-                              <p>Denominación social:</p>
-                              <p>CIF:</p>
+                              <h6>DATOS DEL AUTÓNOMO</h6>
+                              <p>Apellido 1:</p>
+                              <p>Apellido 2:</p>
+                              <p>NIF:</p>
                               <p>Domicilio fiscal:</p>
                               <p>País:</p>
                               <p>Provincia:</p>
@@ -273,9 +76,9 @@
                             </div>
                             <div class="col-12 col-md-6">
                               <h6>COLABORADOR</h6>
-                              <p>Nombre:</p>
-                              <p>Enlace:</p>
-                              <p>Código de usuario:</p>
+                              <p>Nombre: Andrés</p>
+                              <p>Enlace: aldjsndsjd</p>
+                              <p>Código de usuario: xnvjsjfn</p>
                               <h5 class="card-title mt-4">Etiquetas</h5>
                               <div class="etiquetas">
                                 <div data-simplebar style="max-height: 260px;">
@@ -305,52 +108,13 @@
                                       </div> 
                                     </div>
                                     <div class="boton-etiqueta">
-                                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirEtiqueta">Añadir</button>                                                                                                  
+                                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirEtiqueta2">Añadir</button>                                                                                                  
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="dropdown-divider"></div>
-                          <h6>OTROS CONTACTOS</h6>
-                          <p>Representante (solo si tiene es una sociedad)</p>
-                          <div class="table-responsive">
-                            <table id="datatable5" class="table table-bordered">
-                              <thead>
-                                <tr>
-                                  <th>Nombre</th>
-                                  <th>Cargo</th>
-                                  <th>Teléfono fijo</th>
-                                  <th>Télefono móvil</th>
-                                  <th>Email</th>
-                                  <th>Notas</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>PYME</td>
-                                  <td>22</td>
-                                  <td>Sociedad</td>
-                                  <td>1</td>
-                                  <td>2019/04/25</td>
-                                  <td>andnndj@gmail.com</td>
-                                </tr>
-                                <tr>
-                                  <td>PYME</td>
-                                  <td>22</td>
-                                  <td>Sociedad</td>
-                                  <td>1</td>
-                                  <td>2019/04/25</td>
-                                  <td>nshhbdhfbhj@gmail.com</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <div class="boton-etiqueta">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContacto">Añadir</button>
-                          </div>
-
                           <div class="dropdown-divider"></div>
                           <h6>ARCHIVOS GENÉRICOS</h6>
                           <div class="row">
@@ -567,52 +331,10 @@
                           </div>
 
                           <div class="boton-etiqueta">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirArchivo">Añadir</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirArchivo2">Añadir</button>
                           </div>
 
-                          <div class="modal fade añadirContacto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir contacto</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                </div>
-                                <div class="modal-body text-center">
-                                  <form>
-                                    <div class="form-group row">
-                                      <div class="col-sm-12">
-                                        <input class="form-control" type="text" id="nombre" placeholder="Nombre">                                                       
-                                      </div>                                                    
-                                    </div>
-                                    <div class="form-group row">
-                                      <div class="col-lg-6  mo-b-15">
-                                        <input class="form-control" type="text" id="cargo" placeholder="Cargo">                                                       
-                                      </div> 
-                                      <div class="col-lg-6">
-                                        <input class="form-control" type="email" id="email" placeholder="Email">
-                                      </div>                                                   
-                                    </div>
-                                    <div class="form-group row">
-                                      <div class="col-lg-6  mo-b-15">
-                                        <input class="form-control" type="text" id="fijo" placeholder="Teléfono fijo">                                                       
-                                      </div> 
-                                      <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="movil" placeholder="Teléfono móvil">
-                                      </div>                                                   
-                                    </div>
-                                    <div class="form-group">
-                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Nota"></textarea>
-                                    </div>
-                                    <div class="boton-etiqueta">
-                                      <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
-                                    </div>
-                                  </form>
-                                </div>
-                              </div><!-- /.modal-content -->
-                            </div><!-- /.modal-dialog -->
-                          </div><!-- /.modal -->
-
-                          <div class="modal fade añadirEtiqueta" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal fade añadirEtiqueta2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
@@ -635,7 +357,7 @@
                             </div><!-- /.modal-dialog -->
                           </div><!-- /.modal -->
 
-                          <div class="modal fade añadirArchivo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal fade añadirArchivo2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
@@ -679,7 +401,7 @@
                         <div class="tab-pane p-3" id="expedientes" role="tabpanel">
                           <h6>Tabla de expedientes</h6>
                           <div class="table-responsive">
-                            <table id="datatable-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable5-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Departamento</th>
@@ -735,7 +457,7 @@
                         <div class="tab-pane p-3" id="subvenciones" role="tabpanel">
                           <h6>Tabla de otras subvenciones</h6>
                           <div class="table-responsive">
-                            <table id="datatable2-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable6-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Procedimiento</th>
@@ -788,13 +510,13 @@
                             </table>
                           </div>
                           <div class="boton-etiqueta">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirSubvencion">Añadir</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirSubvencion2">Añadir</button>
                           </div>
 
                           <div class="dropdown-divider"></div>
                           <h6>Tabla de minimis</h6>
                           <div class="table-responsive">
-                            <table id="datatable3-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable7-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Procedimiento</th>
@@ -851,7 +573,7 @@
                             </table>
                           </div>
 
-                          <div class="modal fade añadirSubvencion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal fade añadirSubvencion2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
@@ -906,7 +628,7 @@
                         </div>
                         <div class="tab-pane p-3" id="facturacion" role="tabpanel">
                           <div class="table-responsive">
-                            <table id="datatable4-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable8-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>ID</th>
@@ -930,7 +652,7 @@
                                 <td>$342,000</td>
                                 <td class="tbody-expediente align-middle">
                                   <div>
-                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">Añadir</button>
+                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante2">Añadir</button>
                                   </div>
                                 </td>
                                 <td class="tbody-expediente align-middle">
@@ -947,7 +669,7 @@
                                 <td>$90,560</td>
                                 <td class="tbody-expediente align-middle">
                                   <div>
-                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">Añadir</button>
+                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante2">Añadir</button>
                                   </div>
                                 </td>
                                 <td class="tbody-expediente align-middle">
@@ -964,7 +686,7 @@
                                 <td>$342,000</td>
                                 <td class="tbody-expediente align-middle">
                                   <div>
-                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">Añadir</button>
+                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante2">Añadir</button>
                                   </div>
                                 </td>
                                 <td class="tbody-expediente align-middle">
@@ -975,7 +697,7 @@
                             </table>
                           </div>
 
-                          <div class="modal fade añadirComprobante" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal fade añadirComprobante2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
@@ -1006,7 +728,7 @@
                         </div>
                         <div class="tab-pane p-3" id="notas" role="tabpanel">
                           <div class="text-right">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNotaPerfil">Añadir Nota</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNotaPerfil2">Añadir Nota</button>
                           </div>
 
                           <h5 class="card-title mt-3">Historial de notas</h5>
@@ -1036,7 +758,7 @@
                             </div>                                                               
                           </div>
 
-                          <div class="modal fade añadirNotaPerfil" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal fade añadirNotaPerfil2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
@@ -1066,78 +788,14 @@
         </div>
         <!-- End Page-content -->
 
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <script>document.write(new Date().getFullYear())</script> © ORBALIA SUBVENCIONES
-                    </div>
-
-                </div>
-            </div>
-        </footer>
+        @@include("partials/footer.html")
       </div>
       <!-- end main content-->
     </div>
     <!-- END layout-wrapper -->
 
-    <!-- Right Sidebar -->
-    <div class="right-bar">
-        <div data-simplebar class="h-100">
-            <div class="rightbar-title px-3 py-4">
-                <a href="javascript:void(0);" class="right-bar-toggle float-right">
-                    <i class="mdi mdi-close noti-icon"></i>
-                </a>
-                <h5 class="m-0">Settings</h5>
-            </div>
-
-            <!-- Settings -->
-            <hr class="mt-0" />
-            <h6 class="text-center mb-0">Choose Layouts</h6>
-
-            <div class="p-4">
-                <div class="mb-2">
-                    <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="custom-control custom-switch mb-3">
-                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
-                    <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
-                </div>
-    
-                <div class="mb-2">
-                    <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="custom-control custom-switch mb-3">
-                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css" />
-                    <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
-                </div>
-    
-                <div class="mb-2">
-                    <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="custom-control custom-switch mb-5">
-                    <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
-                    <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
-                </div>
-
-            
-            </div>
-
-        </div> <!-- end slimscroll-menu-->
-    </div>
-    <!-- /Right-bar -->
-
-    <!-- Right bar overlay-->
-    <div class="rightbar-overlay"></div>
-    <!-- JAVASCRIPT -->
-    <script src="assets/libs/jquery/jquery.min.js"></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
-
-    <!-- Icon -->
-    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    @@include("partials/right-sidebar.html")
+    @@include("partials/vendor-scripts.html")
 
     <!-- Required datatable js -->
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
