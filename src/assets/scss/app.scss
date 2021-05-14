@@ -76,16 +76,8 @@ File: Main Css File
 @import "custom/pages/extras-pages";
 @import "custom/pages/profile";
 @import "custom/pages/faqs";
-
-.simplebar-content-wrapper {
-  display: flex;
-  align-items: center;
-}
-.simplebar-content {
-  width: 100%;
-}
-.simplebar-content-wrapper li {
-  border-bottom: 1px solid;
+.custom-select {
+  background-image: url("../images/flecha-select.png") !important;
 }
 .time-item,
 .time-item1 {

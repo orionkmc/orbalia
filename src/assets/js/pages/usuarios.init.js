@@ -9,30 +9,130 @@ File: Datatables Js File
 
 $(document).ready(function () {
   $("#datatable3").DataTable({
-    paging: false,
-    info: false,
-    searching: true,
+    paging: true,
+    info: true,
+    searching: false,
     language: {
-      search: "Buscar",
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
     },
   });
   $("#datatable4").DataTable({
-    paging: false,
-    info: false,
+    paging: true,
+    info: true,
     searching: false,
+    language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
+    },
   });
   $("#datatable5").DataTable({
-    paging: false,
-    info: false,
+    paging: true,
+    info: true,
     searching: false,
+    language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
+    },
   });
   //Buttons examples
   var table = $("#datatable-buttons").DataTable({
-    paging: false,
-    info: false,
+    paging: true,
+    info: true,
     searching: false,
-    lengthChange: false,
-    buttons: ["colvis"],
+    lengthChange: true,
+    language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
+    },
   });
 
   table
@@ -41,18 +141,41 @@ $(document).ready(function () {
     .appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)");
   //Buttons examples
   var table = $("#datatable2-buttons").DataTable({
-    paging: false,
+    paging: true,
     info: true,
     searching: false,
-    lengthChange: false,
+    lengthChange: true,
     buttons: ["excel", "pdf", "colvis"],
     language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
       buttons: {
         excel: "Excel",
         pdf: "PDF",
         colvis: "Columnas Visibles",
       },
-      info: "Mostrando _START_ de _END_ de _TOTAL_ entradas",
     },
   });
 
@@ -63,18 +186,41 @@ $(document).ready(function () {
 
   //Buttons examples
   var table = $("#datatable3-buttons").DataTable({
-    paging: false,
+    paging: true,
     info: true,
     searching: false,
-    lengthChange: false,
+    lengthChange: true,
     buttons: ["excel", "pdf", "colvis"],
     language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
       buttons: {
         excel: "Excel",
         pdf: "PDF",
         colvis: "Columnas Visibles",
       },
-      info: "Mostrando _START_ de _END_ de _TOTAL_ entradas",
     },
   });
 
@@ -85,12 +231,36 @@ $(document).ready(function () {
 
   //Buttons examples
   var table = $("#datatable4-buttons").DataTable({
-    paging: false,
-    info: false,
+    paging: true,
+    info: true,
     searching: false,
-    lengthChange: false,
+    lengthChange: true,
     buttons: ["excel", "pdf", "colvis"],
     language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
       buttons: {
         excel: "Excel",
         pdf: "PDF",
@@ -106,12 +276,36 @@ $(document).ready(function () {
 
   //Buttons examples
   var table = $("#datatable5-buttons").DataTable({
-    paging: false,
-    info: false,
+    paging: true,
+    info: true,
     searching: false,
-    lengthChange: false,
+    lengthChange: true,
     buttons: ["excel", "pdf", "colvis"],
     language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
       buttons: {
         excel: "Excel",
         pdf: "PDF",
@@ -127,12 +321,36 @@ $(document).ready(function () {
 
   //Buttons examples
   var table = $("#datatable6-buttons").DataTable({
-    paging: false,
-    info: false,
+    paging: true,
+    info: true,
     searching: false,
-    lengthChange: false,
+    lengthChange: true,
     buttons: ["excel", "pdf", "colvis"],
     language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
       buttons: {
         excel: "Excel",
         pdf: "PDF",
@@ -148,12 +366,36 @@ $(document).ready(function () {
 
   //Buttons examples
   var table = $("#datatable7-buttons").DataTable({
-    paging: false,
-    info: false,
+    paging: true,
+    info: true,
     searching: false,
-    lengthChange: false,
+    lengthChange: true,
     buttons: ["excel", "pdf", "colvis"],
     language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
       buttons: {
         excel: "Excel",
         pdf: "PDF",
@@ -169,12 +411,36 @@ $(document).ready(function () {
 
   //Buttons examples
   var table = $("#datatable8-buttons").DataTable({
-    paging: false,
-    info: false,
+    paging: true,
+    info: true,
     searching: false,
-    lengthChange: false,
+    lengthChange: true,
     buttons: ["excel", "pdf", "colvis"],
     language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
       buttons: {
         excel: "Excel",
         pdf: "PDF",

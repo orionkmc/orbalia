@@ -98,66 +98,66 @@
         
           </div>
         </div>
-      </header> <style>
-  .active-menu {
-    background-color: #44a2d2;
-    color: #fff;
-  }
-  .active-menu span {
-    color: #fff;
-  }
-</style>
-
-<!-- ========== Left Sidebar Start ========== -->
+      </header> <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">
 
   <div data-simplebar class="h-100">
     <!--- Sidemenu -->
     <div id="sidebar-menu">
-    <!-- Left Menu Start -->
-      <ul class="metismenu list-unstyled nav-menu" id="side-menu">
+      <!-- Left Menu Start -->
+      <ul class="metismenu list-unstyled" id="side-menu">
+        <li class="menu-title">Administrador</li>
         <li>
-          <a href="/" class="waves-effect @@option1">
+          <a href="index-adm.html" class="waves-effect">
+            <i class="mdi mdi-speedometer"></i>
             <span>Inicio</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect @@option2">
+          <a href="/" class=" waves-effect">
+            <i class="mdi mdi-email-variant"></i>
             <span>Procedimientos</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect @@option3">
+          <a href="expedientes.html" class=" waves-effect">
+            <i class="mdi mdi-calendar"></i>
             <span>Expedientes</span>
           </a>
         </li>
         <li>
-          <a href="usuarios.html" class="waves-effect @@option4">
+          <a href="usuarios.html" class=" waves-effect">
+            <i class="mdi mdi-calendar"></i>
             <span>Usuarios</span>
           </a>
         </li>
         <li>
-          <a href="colaboradores.html" class="waves-effect @@option5">
+          <a href="colaboradores.html" class=" waves-effect">
+            <i class="mdi mdi-calendar"></i>
             <span>Colaboradores</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect @@option6">
+          <a href="rrhh.html" class=" waves-effect">
+            <i class="mdi mdi-calendar"></i>
             <span>RRHH</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect @@option7">
+          <a href="/" class=" waves-effect">
+            <i class="mdi mdi-calendar"></i>
             <span>Estadísticas</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect @@option8">
+          <a href="facturacion.html" class=" waves-effect">
+            <i class="mdi mdi-calendar"></i>
             <span>Facturación</span>
           </a>
         </li>
         <li>
-          <a href="#" class="waves-effect @@option9">
+          <a href="/" class=" waves-effect">
+            <i class="mdi mdi-calendar"></i>
             <span>Administración web</span>
           </a>
         </li>
@@ -168,22 +168,6 @@
 </div>
 <!-- Left Sidebar End -->
 
-<script>
-  function click() {
-  
-  // elementos de la lista
-  var menues = $(".nav-menu li"); 
-
-  // manejador de click sobre todos los elementos
-  menues.click(function() {
-     // eliminamos active de todos los elementos
-     menues.removeClass("active-menu");
-     // activamos el elemento clicado.
-     $(this).addClass("active-menu");
-  });
-
-};
-</script>
 
       <!-- ============================================================== -->
       <!-- Start right Content here -->
@@ -489,10 +473,13 @@
     <!-- Responsive examples -->
     <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
+    
+    <!-- Icon -->
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
     <!-- Datatable init js -->
     <script src="assets/js/pages/colaboradores.init.js"></script>
     <script src="assets/js/app.js"></script>
+
 
   </body>
 </html>
