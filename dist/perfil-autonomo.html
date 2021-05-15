@@ -127,16 +127,25 @@
                 </a>
               </li>
               <li>
-                <a href="usuarios.html" class=" waves-effect">
-                  <i class="mdi mdi-calendar"></i>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                  <i class="mdi mdi-email-variant"></i>
                   <span>Usuarios</span>
                 </a>
+                <ul class="sub-menu" aria-expanded="false">
+                  <li><a href="usuarios.html">Usuarios</a></li>
+                  <li><a href="perfil-sociedad.html">Perfil Sociedad</a></li>
+                  <li><a href="perfil-autonomo.html">Perfil Autónomo</a></li>
+                </ul>
               </li>
               <li>
-                <a href="colaboradores.html" class=" waves-effect">
-                  <i class="mdi mdi-calendar"></i>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                  <i class="mdi mdi-email-variant"></i>
                   <span>Colaboradores</span>
                 </a>
+                <ul class="sub-menu" aria-expanded="false">
+                  <li><a href="colaboradores.html">Colaboradores</a></li>
+                  <li><a href="perfil-colab-sociedad.html">Perfil Sociedad</a></li>
+                </ul>
               </li>
               <li>
                 <a href="rrhh.html" class=" waves-effect">
@@ -479,7 +488,7 @@
                           </div>
 
                           <div class="boton-etiqueta">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirArchivo2">Añadir</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirArchivo2">Añadir</button>
                           </div>
 
                           <div class="modal fade añadirEtiqueta2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -498,7 +507,7 @@
                                     </div>
                                   </form>
                                   <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->
@@ -537,7 +546,7 @@
                                       </div>                                                  
                                     </div>
                                     <div class="boton-etiqueta">
-                                      <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
                                     </div>
                                   </form>
                                 </div>
@@ -549,7 +558,7 @@
                         <div class="tab-pane p-3" id="expedientes" role="tabpanel">
                           <h6>Tabla de expedientes</h6>
                           <div class="table-responsive">
-                            <table id="datatable5-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable-expedientes-aut-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Departamento</th>
@@ -605,7 +614,7 @@
                         <div class="tab-pane p-3" id="subvenciones" role="tabpanel">
                           <h6>Tabla de otras subvenciones</h6>
                           <div class="table-responsive">
-                            <table id="datatable6-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable-subven-aut-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Procedimiento</th>
@@ -658,13 +667,13 @@
                             </table>
                           </div>
                           <div class="boton-etiqueta">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirSubvencion2">Añadir</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirSubvencion2">Añadir</button>
                           </div>
 
                           <div class="dropdown-divider"></div>
                           <h6>Tabla de minimis</h6>
                           <div class="table-responsive">
-                            <table id="datatable7-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable-minimis-aut-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Procedimiento</th>
@@ -766,7 +775,7 @@
                                     </div>
                                   </form>
                                   <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->
@@ -776,7 +785,7 @@
                         </div>
                         <div class="tab-pane p-3" id="facturacion" role="tabpanel">
                           <div class="table-responsive">
-                            <table id="datatable8-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable-fact-aut-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>ID</th>
@@ -867,7 +876,7 @@
                                     </div>
                                   </form>
                                   <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->
@@ -876,7 +885,7 @@
                         </div>
                         <div class="tab-pane p-3" id="notas" role="tabpanel">
                           <div class="text-right">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNotaPerfil2">Añadir Nota</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNotaPerfil2">Añadir Nota</button>
                           </div>
 
                           <h5 class="card-title mt-3">Historial de notas</h5>
@@ -918,7 +927,7 @@
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba su nota aquí"></textarea>
                                 </div> 
                                   <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->

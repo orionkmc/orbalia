@@ -8,7 +8,7 @@ File: Datatables Js File
 */
 
 $(document).ready(function () {
-  const context = {
+  const context4 = {
     paging: true,
     info: true,
     searching: true,
@@ -41,11 +41,11 @@ $(document).ready(function () {
     },
   };
 
-  $("#datatable-acceso").DataTable(context);
-  $("#datatable-inf-sociedad-colab").DataTable(context);
-  $("#datatable-contac-colab-soc").DataTable(context);
+  $("#datatable-acceso").DataTable(context4);
+  $("#datatable-inf-sociedad-colab").DataTable(context4);
+  $("#datatable-contac-colab-soc").DataTable(context4);
 
-  const context2 = {
+  const context5 = {
     paging: true,
     info: true,
     searching: false,
@@ -87,17 +87,17 @@ $(document).ready(function () {
   };
   //Buttons examples
   $("#datatable-colaboradores-buttons")
-    .DataTable(context2)
+    .DataTable(context5)
     .buttons()
     .container()
     .appendTo("#datatable-colaboradores-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-refer-soc-buttons")
-    .DataTable(context2)
+    .DataTable(context5)
     .buttons()
     .container()
     .appendTo("#datatable-refer-soc-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-liq-soc-buttons")
-    .DataTable(context2)
+    .DataTable(context5)
     .buttons()
     .container()
     .appendTo("#datatable-liq-soc-buttons_wrapper .col-md-6:eq(0)");

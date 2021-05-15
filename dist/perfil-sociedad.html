@@ -127,16 +127,25 @@
                 </a>
               </li>
               <li>
-                <a href="usuarios.html" class=" waves-effect">
-                  <i class="mdi mdi-calendar"></i>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                  <i class="mdi mdi-email-variant"></i>
                   <span>Usuarios</span>
                 </a>
+                <ul class="sub-menu" aria-expanded="false">
+                  <li><a href="usuarios.html">Usuarios</a></li>
+                  <li><a href="perfil-sociedad.html">Perfil Sociedad</a></li>
+                  <li><a href="perfil-autonomo.html">Perfil Autónomo</a></li>
+                </ul>
               </li>
               <li>
-                <a href="colaboradores.html" class=" waves-effect">
-                  <i class="mdi mdi-calendar"></i>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                  <i class="mdi mdi-email-variant"></i>
                   <span>Colaboradores</span>
                 </a>
+                <ul class="sub-menu" aria-expanded="false">
+                  <li><a href="colaboradores.html">Colaboradores</a></li>
+                  <li><a href="perfil-colab-sociedad.html">Perfil Sociedad</a></li>
+                </ul>
               </li>
               <li>
                 <a href="rrhh.html" class=" waves-effect">
@@ -208,7 +217,7 @@
                         <div class="tab-pane active p-3" id="informacion" role="tabpanel">
                           <h6>Representante (solo si tiene es una sociedad)</h6>
                           <div class="table-responsive">
-                            <table id="datatable4" class="table table-bordered">
+                            <table id="datatable-inf-soc-usuario" class="table table-bordered">
                               <thead>
                                 <tr>
                                   <th>Nombre</th>
@@ -300,7 +309,7 @@
                           <h6>OTROS CONTACTOS</h6>
                           <p>Representante (solo si tiene es una sociedad)</p>
                           <div class="table-responsive">
-                            <table id="datatable5" class="table table-bordered">
+                            <table id="datatable-contac-usua-soc" class="table table-bordered">
                               <thead>
                                 <tr>
                                   <th>Nombre</th>
@@ -332,7 +341,7 @@
                             </table>
                           </div>
                           <div class="boton-etiqueta">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContacto">Añadir</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContacto">Añadir</button>
                           </div>
 
                           <div class="dropdown-divider"></div>
@@ -551,7 +560,7 @@
                           </div>
 
                           <div class="boton-etiqueta">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirArchivo">Añadir</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirArchivo">Añadir</button>
                           </div>
 
                           <div class="modal fade añadirContacto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -588,7 +597,7 @@
                                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Nota"></textarea>
                                     </div>
                                     <div class="boton-etiqueta">
-                                      <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                     </div>
                                   </form>
                                 </div>
@@ -612,7 +621,7 @@
                                     </div>
                                   </form>
                                   <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->
@@ -651,7 +660,7 @@
                                       </div>                                                  
                                     </div>
                                     <div class="boton-etiqueta">
-                                      <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
                                     </div>
                                   </form>
                                 </div>
@@ -663,7 +672,7 @@
                         <div class="tab-pane p-3" id="expedientes" role="tabpanel">
                           <h6>Tabla de expedientes</h6>
                           <div class="table-responsive">
-                            <table id="datatable-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable-expedientes-soc-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Departamento</th>
@@ -719,7 +728,7 @@
                         <div class="tab-pane p-3" id="subvenciones" role="tabpanel">
                           <h6>Tabla de otras subvenciones</h6>
                           <div class="table-responsive">
-                            <table id="datatable2-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable-subven-soc-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Procedimiento</th>
@@ -772,13 +781,13 @@
                             </table>
                           </div>
                           <div class="boton-etiqueta">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirSubvencion">Añadir</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirSubvencion">Añadir</button>
                           </div>
 
                           <div class="dropdown-divider"></div>
                           <h6>Tabla de minimis</h6>
                           <div class="table-responsive">
-                            <table id="datatable3-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable-minimis-soc-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>Procedimiento</th>
@@ -880,7 +889,7 @@
                                     </div>
                                   </form>
                                   <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->
@@ -890,7 +899,7 @@
                         </div>
                         <div class="tab-pane p-3" id="facturacion" role="tabpanel">
                           <div class="table-responsive">
-                            <table id="datatable4-buttons" class="table table-striped table-bordered w-100">
+                            <table id="datatable-fact-soc-buttons" class="table table-striped table-bordered w-100">
                               <thead>
                                 <tr>
                                   <th>ID</th>
@@ -981,7 +990,7 @@
                                     </div>
                                   </form>
                                   <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->
@@ -990,7 +999,7 @@
                         </div>
                         <div class="tab-pane p-3" id="notas" role="tabpanel">
                           <div class="text-right">
-                            <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNotaPerfil">Añadir Nota</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNotaPerfil">Añadir Nota</button>
                           </div>
 
                           <h5 class="card-title mt-3">Historial de notas</h5>
@@ -1032,7 +1041,7 @@
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba su nota aquí"></textarea>
                                 </div> 
                                   <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->

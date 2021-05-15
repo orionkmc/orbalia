@@ -3367,3 +3367,9 @@ input[switch="dark"]:checked + label {
 .tbody-expediente:hover a {
   color: #fff;
   background-color: #2f90c1; }
+
+.dtr-data button {
+  margin-bottom: 5px; }
+
+.btn-ver a {
+  padding: .5rem .9rem; }
