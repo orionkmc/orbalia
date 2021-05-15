@@ -3373,3 +3373,14 @@ input[switch="dark"]:checked + label {
 
 .btn-ver a {
   padding: .5rem .9rem; }
+
+.controls.control-prev {
+  position: absolute;
+  left: 0; }
+
+.controls.control-next {
+  position: absolute;
+  right: 0; }
+
+.controls img {
+  width: 30%; }
