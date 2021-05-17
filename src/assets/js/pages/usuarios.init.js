@@ -44,6 +44,12 @@ $(document).ready(function () {
   $("#datatable-usuarios").DataTable(context5);
   $("#datatable-inf-soc-usuario").DataTable(context5);
   $("#datatable-contac-usua-soc").DataTable(context5);
+  $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+    $($.fn.dataTable.tables(true))
+      .DataTable()
+      .columns.adjust()
+      .responsive.recalc();
+  });
 
   const context6 = {
     paging: true,
