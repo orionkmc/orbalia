@@ -136,14 +136,20 @@ File: Main Css File
 .btn-ver a {
   padding: .5rem .9rem;
 }
-.controls.control-prev {
-  position: absolute;
-  left: 0;
+.slick-prev:before,
+.slick-next:before  {
+  color: gray !important;
 }
-.controls.control-next {
-  position: absolute;
-  right: 0;
-}
-.controls img {
-  width: 30%;
+.text-circulos {
+  background-color: #e6e6e6;
+  padding: 0px;
+  width: 35%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 1rem;
+  text-align: center;
 }
