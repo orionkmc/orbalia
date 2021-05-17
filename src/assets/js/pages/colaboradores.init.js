@@ -13,6 +13,7 @@ $(document).ready(function () {
     info: true,
     searching: true,
     responsive: true,
+    scrollX: false,
     language: {
       decimal: ",",
       thousands: ".",
@@ -44,6 +45,12 @@ $(document).ready(function () {
   $("#datatable-acceso").DataTable(context);
   $("#datatable-inf-sociedad-colab").DataTable(context);
   $("#datatable-contac-colab-soc").DataTable(context);
+  $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+    $($.fn.dataTable.tables(true))
+      .DataTable()
+      .columns.adjust()
+      .responsive.recalc();
+  });
 
   const context2 = {
     paging: true,

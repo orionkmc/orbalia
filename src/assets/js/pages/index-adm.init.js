@@ -12,6 +12,8 @@ $(document).ready(function () {
     paging: true,
     info: true,
     searching: false,
+    responsive: true,
+    scrollX: false,
     language: {
       decimal: ",",
       thousands: ".",
@@ -43,6 +45,12 @@ $(document).ready(function () {
   $("#datatable-proyectos").DataTable(context3);
   $("#datatable-vencimiento").DataTable(context3);
   $("#datatable-fact-adm").DataTable(context3);
+  $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+    $($.fn.dataTable.tables(true))
+      .DataTable()
+      .columns.adjust()
+      .responsive.recalc();
+  });
 });
 
 !(function ($) {

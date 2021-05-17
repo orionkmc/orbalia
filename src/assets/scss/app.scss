@@ -140,16 +140,11 @@ File: Main Css File
 .slick-next:before  {
   color: gray !important;
 }
-.text-circulos {
-  background-color: #e6e6e6;
-  padding: 0px;
-  width: 35%;
-  height: 100%;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-  padding: 1rem;
+.circulos-slider {
+  width: 40%;
+  margin: 0 auto;
   text-align: center;
+  padding: 50px 5px;
+  border: 1px solid;
+  border-radius: 50%;
 }
