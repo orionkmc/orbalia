@@ -3316,6 +3316,10 @@ input[switch="dark"]:checked + label {
 .custom-select {
   background-image: url("../images/flecha-select.png") !important; }
 
+.table td,
+.table th {
+  vertical-align: middle !important; }
+
 .time-item,
 .time-item1 {
   background-color: #efefef; }
@@ -3324,12 +3328,8 @@ input[switch="dark"]:checked + label {
   padding: 0.5rem 2rem; }
 
 .btn-notificaciones {
-  text-align: end; }
-
-.fecha-ventas {
-  padding: 0.5rem 3rem;
-  border: 1px solid lightgray;
-  border-radius: 5px; }
+  text-align: end;
+  margin-bottom: 0.95rem; }
 
 .boton-usuarios {
   width: 100%; }
@@ -3353,10 +3353,13 @@ input[switch="dark"]:checked + label {
 .custom-file-input:lang(en) ~ .custom-file-label::after {
   content: "Elegir"; }
 
-.tbody-expediente {
+.dtr-data button {
+  margin-bottom: 5px; }
+
+.centrar-boton {
   text-align: center; }
 
-.ver-expediente {
+.btn-ver {
   padding: 6px 15px;
   border-radius: 4px;
   color: #fff;
@@ -3364,15 +3367,11 @@ input[switch="dark"]:checked + label {
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
 
-.tbody-expediente:hover a {
-  color: #fff;
-  background-color: #2f90c1; }
+.botones-accion {
+  text-align: center; }
 
-.dtr-data button {
-  margin-bottom: 5px; }
-
-.btn-ver a {
-  padding: .5rem .9rem; }
+.botones-accion a {
+  color: #fff; }
 
 .slick-prev:before,
 .slick-next:before {
@@ -3385,3 +3384,10 @@ input[switch="dark"]:checked + label {
   padding: 50px 5px;
   border: 1px solid;
   border-radius: 50%; }
+
+.dropdown-item {
+  padding: .35rem 0 !important;
+  font-size: 8px !important; }
+
+.dropdown-menu {
+  min-width: 7rem !important; }

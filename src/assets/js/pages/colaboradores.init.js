@@ -8,54 +8,10 @@ File: Datatables Js File
 */
 
 $(document).ready(function () {
-  const context = {
-    paging: true,
-    info: true,
-    searching: true,
-    responsive: true,
-    scrollX: false,
-    language: {
-      decimal: ",",
-      thousands: ".",
-      info: "Página _START_ de _END_ de _TOTAL_ entradas",
-      infoEmpty: "",
-      infoPostFix: "",
-      infoFiltered: "",
-      loadingRecords: "Cargando...",
-      lengthMenu: "Mostrar _MENU_ Resultados",
-      paginate: {
-        first: "Primero",
-        last: "Último",
-        next: "Siguiente",
-        previous: "Anterior",
-      },
-      processing: "Procesando...",
-      search: "Buscar: ",
-      searchPlaceholder: "",
-      zeroRecords: "No se encontraron resultados",
-      emptyTable: "Ningún dato disponible en esta tabla",
-      aria: {
-        sortAscending: ": Activar para ordenar la columna de manera ascendente",
-        sortDescending:
-          ": Activar para ordenar la columna de manera descendente",
-      },
-    },
-  };
-
-  $("#datatable-acceso").DataTable(context);
-  $("#datatable-inf-sociedad-colab").DataTable(context);
-  $("#datatable-contac-colab-soc").DataTable(context);
-  $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
-    $($.fn.dataTable.tables(true))
-      .DataTable()
-      .columns.adjust()
-      .responsive.recalc();
-  });
-
   const context2 = {
     paging: true,
     info: true,
-    searching: false,
+    searching: true,
     lengthChange: true,
     responsive: true,
     scrollX: false,
@@ -93,6 +49,26 @@ $(document).ready(function () {
     },
   };
   //Buttons examples
+  $("#datatable-acceso-buttons")
+    .DataTable(context2)
+    .buttons()
+    .container()
+    .appendTo("#datatable-acceso-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-histContra-buttons")
+    .DataTable(context2)
+    .buttons()
+    .container()
+    .appendTo("#datatable-histContra-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-inf-sociedad-colab-buttons")
+    .DataTable(context2)
+    .buttons()
+    .container()
+    .appendTo("#datatable-inf-sociedad-colab-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-contac-colab-soc-buttons")
+    .DataTable(context2)
+    .buttons()
+    .container()
+    .appendTo("#datatable-contac-colab-soc-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-colaboradores-buttons")
     .DataTable(context2)
     .buttons()
@@ -115,3 +91,24 @@ $(document).ready(function () {
       .responsive.recalc();
   });
 });
+
+!(function ($) {
+  "use strict";
+
+  var AdvancedForm = function () {};
+
+  (AdvancedForm.prototype.init = function () {
+    // Date Picker
+    $("#date-range").datepicker({
+      toggleActive: true,
+    });
+  }),
+    //init
+    ($.AdvancedForm = new AdvancedForm()),
+    ($.AdvancedForm.Constructor = AdvancedForm);
+})(window.jQuery),
+  //initializing
+  (function ($) {
+    "use strict";
+    $.AdvancedForm.init();
+  })(window.jQuery);

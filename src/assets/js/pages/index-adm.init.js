@@ -11,9 +11,11 @@ $(document).ready(function () {
   const context3 = {
     paging: true,
     info: true,
-    searching: false,
+    searching: true,
+    lengthChange: true,
     responsive: true,
     scrollX: false,
+    buttons: ["excel", "pdf", "colvis"],
     language: {
       decimal: ",",
       thousands: ".",
@@ -39,12 +41,33 @@ $(document).ready(function () {
         sortDescending:
           ": Activar para ordenar la columna de manera descendente",
       },
+      buttons: {
+        excel: "Excel",
+        pdf: "PDF",
+        colvis: "Columnas Visibles",
+      },
     },
   };
-  $("#datatable-index-adm").DataTable(context3);
-  $("#datatable-proyectos").DataTable(context3);
-  $("#datatable-vencimiento").DataTable(context3);
-  $("#datatable-fact-adm").DataTable(context3);
+  $("#datatable-index-adm-buttons")
+    .DataTable(context3)
+    .buttons()
+    .container()
+    .appendTo("#datatable-index-adm-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-proyectos-buttons")
+    .DataTable(context3)
+    .buttons()
+    .container()
+    .appendTo("#datatable-proyectos-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-vencimiento-buttons")
+    .DataTable(context3)
+    .buttons()
+    .container()
+    .appendTo("#datatable-vencimiento-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-fact-adm-buttons")
+    .DataTable(context3)
+    .buttons()
+    .container()
+    .appendTo("#datatable-fact-adm-buttons_wrapper .col-md-6:eq(0)");
   $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
     $($.fn.dataTable.tables(true))
       .DataTable()
@@ -115,4 +138,25 @@ $(document).ready(function () {
   (function ($) {
     "use strict";
     $.MorrisCharts.init();
+  })(window.jQuery);
+
+!(function ($) {
+  "use strict";
+
+  var AdvancedForm = function () {};
+
+  (AdvancedForm.prototype.init = function () {
+    // Date Picker
+    $("#date-range").datepicker({
+      toggleActive: true,
+    });
+  }),
+    //init
+    ($.AdvancedForm = new AdvancedForm()),
+    ($.AdvancedForm.Constructor = AdvancedForm);
+})(window.jQuery),
+  //initializing
+  (function ($) {
+    "use strict";
+    $.AdvancedForm.init();
   })(window.jQuery);

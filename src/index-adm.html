@@ -23,7 +23,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Resumen de procedimientos</h5>
                     <div class="table-responsive">
-                      <table id="datatable-index-adm" class="table table-bordered" style="width:100%">
+                      <table id="datatable-index-adm-buttons" class="table table-bordered" style="width:100%">
                         <thead>
                           <tr>
                             <th>Procedimiento</th>
@@ -67,7 +67,7 @@
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="table-responsive">
-                          <table id="datatable-proyectos" class="table table-bordered" style="width:100%">
+                          <table id="datatable-proyectos-buttons" class="table table-bordered" style="width:100%">
                             <thead>
                               <tr>
                                 <th>Procedimiento</th>
@@ -102,8 +102,7 @@
                       <div class="time-item1">
                         <div class="item-info">
                           <div class="text-muted float-right font-size-10 mt-1">
-                            <p class="mb-0">15 mins ago</p>
-                            <p class="mb-0">
+                            <p class="mb-0 mr-2">
                               <a href="" data-toggle="modal" data-animation="bounce" data-target=".notificaciones2">Leída</a>
                             </p>
                           </div>
@@ -115,8 +114,7 @@
                       <div class="time-item1">
                         <div class="item-info">
                           <div class="text-muted float-right font-size-10 mt-1">
-                            <p class="mb-0">25 mins ago</p>
-                            <p class="mb-0">
+                            <p class="mb-0 mr-2">
                               <a href="" data-toggle="modal" data-animation="bounce" data-target=".notificaciones2">Leída</a>
                             </p>
                           </div>
@@ -178,7 +176,7 @@
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="table-responsive">
-                          <table id="datatable-vencimiento" class="table table-bordered" style="width:100%">
+                          <table id="datatable-vencimiento-buttons" class="table table-bordered" style="width:100%">
                             <thead>
                               <tr>
                                 <th>Procedimiento</th>
@@ -214,7 +212,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Facturas pendientes de cobro</h5>
                     <div class="table-responsive">
-                      <table id="datatable-fact-adm" class="table table-bordered" style="width:100%">
+                      <table id="datatable-fact-adm-buttons" class="table table-bordered" style="width:100%">
                         <thead>
                           <tr>
                             <th>Factura</th>
@@ -258,9 +256,16 @@
                       <div>
                         <h5 class="card-title mb-0">Ventas</h5>
                       </div>
-                      <div class="fecha-ventas">
-                        11/05/2021            
-                      </div>
+                      <form>
+                        <div class="form-group mb-0">
+                          <div>
+                            <div class="input-daterange input-group" id="date-range">
+                              <input type="text" class="form-control" name="start" placeholder="Fecha inicial" />
+                              <input type="text" class="form-control" name="end" placeholder="Fecha final" />
+                            </div>
+                          </div>
+                        </div>
+                      </form>
                     </div>          
                     <div id="morris-area-example" class="morris-charts morris-charts-height"  dir="ltr"></div>            
                   </div>
@@ -307,6 +312,9 @@
     <!--Morris Chart-->
     <script src="assets/libs/morris.js/morris.min.js"></script>
     <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
     <!-- Datatable init js -->
     <script src="assets/js/pages/index-adm.init.js"></script>
