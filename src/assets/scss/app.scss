@@ -154,3 +154,11 @@ File: Main Css File
 .dropdown-menu {
   min-width: 7rem !important;
 }
+.tab-content > .tab-pane{
+  display: block !important;
+  height: 0px;
+  overflow: hidden;
+}
+.tab-pane.active{
+  height: auto;
+}
