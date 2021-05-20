@@ -3313,6 +3313,9 @@ input[switch="dark"]:checked + label {
           transform: rotate(180deg);
   color: #44a2d2; }
 
+.card-borde {
+  border-bottom: 3px solid #44a2d2; }
+
 .custom-select {
   background-image: url("../images/flecha-select.png") !important; }
 

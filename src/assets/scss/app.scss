@@ -76,6 +76,10 @@ File: Main Css File
 @import "custom/pages/extras-pages";
 @import "custom/pages/profile";
 @import "custom/pages/faqs";
+
+.card-borde {
+  border-bottom: 3px solid #44a2d2;
+}
 .custom-select {
   background-image: url("../images/flecha-select.png") !important;
 }
