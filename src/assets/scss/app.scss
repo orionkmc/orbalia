@@ -94,17 +94,8 @@ File: Main Css File
   text-align: end;
   margin-bottom: 0.95rem;
 }
-.boton-usuarios {
-  width: 100%;
-}
-.boton-usuarios a {
-  color: #fff !important;
-}
 .datos-sociedad p {
   margin-bottom: 0;
-}
-.etiquetas {
-  border: 1px solid lightgray;
 }
 .boton-etiqueta {
   text-align: end;
@@ -129,10 +120,20 @@ File: Main Css File
   background-color: #44a2d2;
   transition: all 0.5s;
 }
+.btn-ver:hover {
+  background-color:#2779a2;
+  color: #fff;
+}
+.btn-mensaje {
+  padding: 6px 11.5px;
+}
+.btn-ver-solo {
+  padding: 6px 25px;
+}
 .botones-accion {
   text-align: center;
 }
-.botones-accion a{
+.botones-accion a {
   color: #fff;
 }
 .slick-prev:before,
@@ -147,18 +148,33 @@ File: Main Css File
   border: 1px solid;
   border-radius: 50%;
 }
-.dropdown-item {
-  padding: .35rem 0 !important;
-  font-size: 8px !important;
+.toast-contrato {
+  height: 40vh;
 }
-.dropdown-menu {
-  min-width: 7rem !important;
+.toast-body-contrato {
+  height: 19vh;
 }
-.tab-content > .tab-pane{
-  display: block !important;
-  height: 0px;
-  overflow: hidden;
+.renovacion {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
 }
-.tab-pane.active{
-  height: auto;
+@media (max-width: 767.98px) {
+  .contrato-vigente {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 552.98px) {
+  .renovacion {
+    margin-top: 1rem;
+  }
+}
+.ui-timepicker-container{ 
+  z-index:1151 !important; 
+}
+.boton-editarP {
+  padding: .15rem .5rem; 
+  position: absolute; 
+  top: 10px; 
+  right: 10px;
 }

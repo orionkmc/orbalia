@@ -6,6 +6,11 @@
     @@include("partials/head-css.html")
   </head>
 
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    } 
+  </style>
   <body data-topbar="dark">
     <!-- Begin page -->
     <div id="layout-wrapper">
@@ -37,7 +42,7 @@
                       <h5 class="card-title">NOMBRE SOCIEDAD</h5>
 
                       <!-- Nav tabs -->
-                      <ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+                      <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
                           <li class="nav-item">
                               <a class="nav-link active" data-toggle="tab" href="#informacion" role="tab">Información</a>
                           </li>
@@ -50,9 +55,9 @@
                       </ul>
 
                       <!-- Tab panes -->
-                      <div class="tab-content">
+                      <div class="tab-content mt-4">
                         <div class="tab-pane active p-3" id="informacion" role="tabpanel">
-                          <h5>Representante (solo si tiene es una sociedad)</h5>
+                          <h5 class="mb-4">Representante (solo si tiene es una sociedad)</h5>
                           <div class="table-responsive">
                             <table id="datatable-inf-sociedad-colab-buttons" class="table table-bordered" style="width:100%">
                               <thead>
@@ -106,7 +111,7 @@
                           <div class="dropdown-divider"></div>
                           <div class="row datos-sociedad mt-5">
                             <div class="col-12 col-md-6">
-                              <h6>DATOS DE LA SOCIEDAD</h6>
+                              <h5>DATOS DE LA SOCIEDAD</h5>
                               <p>Denominación social:</p>
                               <p>CIF:</p>
                               <p>Domicilio fiscal:</p>
@@ -117,37 +122,43 @@
                               <p>Télefono fijo:</p>
                               <p>Télefono móvil:</p>
                               <p>Email:</p>
+                              <button class="btn btn-sm btn-primary mt-4 mb-1" type="button">Descargar certificado colaborador</button>
                             </div>
                             <div class="col-12 col-md-6">
-                              <h6>CONTRATO VIGENTE</h6>
-                              <div class="d-flex">
-                                <div class="toast fade show mr-4" style="max-width: 50%;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-between">
-                                    <small>11 mins ago</small>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
+                              <h5 class="contrato-vigente">CONTRATO VIGENTE</h5>
+                              <div class="row h-75">
+                                <div class="col-12 col-sm-6">
+                                  <div class="toast fade show toast-contrato" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header d-flex justify-content-between">
+                                      <small>11 mins ago</small>
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="toast-body toast-body-contrato">
+                                      Facturas
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center pt-2 pb-2 mt-3">
+                                      <button class="btn btn-sm btn-primary" type="button">Enviar contrato al historial</button>
+                                    </div>
                                   </div>
-                                  <div class="toast-body">
-                                    Facturas
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center pt-2 pb-2">
-                                    <button class="btn btn-sm btn-primary" type="button">Enviar contrato al historial</button>
+                                  <div class="text-left pt-2 pb-2">
+                                    <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-animation="bounce" data-target=".historialContrato">Ver historial de contratos</button>
                                   </div>
                                 </div>
-                                <div>
-                                  <p>Próxima renovación</p>
-                                  <p>25/06/2021</p>
-                                  <button class="btn btn-sm btn-primary" type="button">Editar</button>
+                                <div class="col-12 col-sm-6 renovacion">
+                                  <div>
+                                    <p>Próxima renovación</p>
+                                    <p class="text-center">25/06/2021</p>
+                                    <div class="d-flex justify-content-center">
+                                      <button class="btn btn-sm btn-primary mt-3" type="button">Editar</button>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="text-left pt-2 pb-2">
-                                <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-animation="bounce" data-target=".historialContrato">Ver historial de contratos</button>
                               </div>
                             </div>
                           </div>
-                          <button class="btn btn-sm btn-primary mt-3 mb-1" type="button">Descargar certificado colaborador</button>
 
                           <div class="modal fade historialContrato" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
@@ -177,8 +188,8 @@
                                               <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Descargar
                                               </button>
-                                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">
+                                              <div class="dropdown-menu" style="min-width: 7rem" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                                   <lord-icon
                                                     src="assets/json/78-document-PDF-outline.json"
                                                     trigger="loop-on-hover"
@@ -201,8 +212,8 @@
                                               <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Descargar
                                               </button>
-                                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">
+                                              <div class="dropdown-menu" style="min-width: 7rem" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                                   <lord-icon
                                                     src="assets/json/78-document-PDF-outline.json"
                                                     trigger="loop-on-hover"
@@ -361,10 +372,10 @@
                           </div>
                         </div>
                         <div class="tab-pane p-3" id="liquidacion" role="tabpanel">
-                          <div class="row">
+                          <div class="row justify-content-end">
                             <div class="col-6 align-self-end">
                               <form>
-                                <div class="form-group mb-0">
+                                <div class="form-group mb-3">
                                   <div>
                                     <div class="input-daterange input-group" id="date-range">
                                       <input type="text" class="form-control" name="start" placeholder="Fecha inicial" />
@@ -406,8 +417,8 @@
                                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       Descargar
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">
+                                    <div class="dropdown-menu" style="min-width: 7rem" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/78-document-PDF-outline.json"
                                           trigger="loop-on-hover"
@@ -417,7 +428,7 @@
                                         </lord-icon>
                                         Factura PDF
                                       </a>
-                                      <a class="dropdown-item" href="#">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/78-document-PDF-outline.json"
                                           trigger="loop-on-hover"
@@ -433,8 +444,8 @@
                                     <button class="btn btn-primary dropdown-toggle" style="padding: .47rem 1.55rem;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       Editar
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">
+                                    <div class="dropdown-menu" style="min-width: 7rem" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -444,7 +455,7 @@
                                         </lord-icon>
                                         Editar
                                       </a>
-                                      <a class="dropdown-item" href="#">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
@@ -473,8 +484,8 @@
                                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       Descargar
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">
+                                    <div class="dropdown-menu" style="min-width: 7rem" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/78-document-PDF-outline.json"
                                           trigger="loop-on-hover"
@@ -484,7 +495,7 @@
                                         </lord-icon>
                                         Factura PDF
                                       </a>
-                                      <a class="dropdown-item" href="#">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/78-document-PDF-outline.json"
                                           trigger="loop-on-hover"
@@ -500,8 +511,8 @@
                                     <button class="btn btn-primary dropdown-toggle" style="padding: .47rem 1.55rem;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       Editar
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">
+                                    <div class="dropdown-menu" style="min-width: 7rem" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -511,7 +522,7 @@
                                         </lord-icon>
                                         Editar
                                       </a>
-                                      <a class="dropdown-item" href="#">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
@@ -540,8 +551,8 @@
                                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       Descargar
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">
+                                    <div class="dropdown-menu" style="min-width: 7rem" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/78-document-PDF-outline.json"
                                           trigger="loop-on-hover"
@@ -551,7 +562,7 @@
                                         </lord-icon>
                                         Factura PDF
                                       </a>
-                                      <a class="dropdown-item" href="#">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/78-document-PDF-outline.json"
                                           trigger="loop-on-hover"
@@ -567,8 +578,8 @@
                                     <button class="btn btn-primary dropdown-toggle" style="padding: .47rem 1.55rem;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       Editar
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">
+                                    <div class="dropdown-menu" style="min-width: 7rem" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -578,7 +589,7 @@
                                         </lord-icon>
                                         Editar
                                       </a>
-                                      <a class="dropdown-item" href="#">
+                                      <a class="dropdown-item" style="padding: .35rem 0; font-size: 8px;" href="#">
                                         <lord-icon
                                           src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
@@ -613,10 +624,13 @@
                                         <input class="form-control" type="text" id="impuestoLiquidacion" placeholder="Importe pagado al colaborador">                                                       
                                       </div>                                                    
                                     </div>
-                                    <div class="form-group row">
-                                      <div class="col-sm-12">
-                                        <input class="form-control" type="text" id="fecha" placeholder="Fecha de pago">                                                       
-                                      </div>                                                    
+                                    <div class="form-group">
+                                      <div>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="mm/dd/aaaa" id="datepicker">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
                                     </div>
                                     <div class="form-group row">
                                       <div class="custom-file">

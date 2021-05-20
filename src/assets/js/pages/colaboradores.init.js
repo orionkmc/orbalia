@@ -91,24 +91,7 @@ $(document).ready(function () {
       .responsive.recalc();
   });
 });
-
-!(function ($) {
-  "use strict";
-
-  var AdvancedForm = function () {};
-
-  (AdvancedForm.prototype.init = function () {
-    // Date Picker
-    $("#date-range").datepicker({
-      toggleActive: true,
-    });
-  }),
-    //init
-    ($.AdvancedForm = new AdvancedForm()),
-    ($.AdvancedForm.Constructor = AdvancedForm);
-})(window.jQuery),
-  //initializing
-  (function ($) {
-    "use strict";
-    $.AdvancedForm.init();
-  })(window.jQuery);
+$("#datepicker").datepicker();
+$("#date-range").datepicker({
+  toggleActive: true,
+});

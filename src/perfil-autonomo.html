@@ -5,6 +5,11 @@
     
     @@include("partials/head-css.html")
   </head>
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    } 
+  </style>
 
   <body data-topbar="dark">
     <!-- Begin page -->
@@ -56,11 +61,11 @@
                       </ul>
 
                       <!-- Tab panes -->
-                      <div class="tab-content">
+                      <div class="tab-content mt-4">
                         <div class="tab-pane active p-3" id="informacion" role="tabpanel">
                           <div class="row datos-sociedad">
                             <div class="col-12 col-md-6">
-                              <h6>DATOS DEL AUTÓNOMO</h6>
+                              <h5>DATOS DEL AUTÓNOMO</h5>
                               <p>Apellido 1:</p>
                               <p>Apellido 2:</p>
                               <p>NIF:</p>
@@ -75,48 +80,23 @@
                               <p>Fecha de registro:</p>
                             </div>
                             <div class="col-12 col-md-6">
-                              <h6>COLABORADOR</h6>
+                              <h5>COLABORADOR</h5>
                               <p>Nombre:</p>
                               <p>Enlace:</p>
                               <p>Código de usuario:</p>
                               <h5 class="card-title mt-4">Etiquetas</h5>
-                              <div class="etiquetas">
-                                <div data-simplebar style="max-height: 260px;">
-                                  <div class="todo-list p-3">                                        
-                                    <div class="todo-box">
-                                      <button type="button" class="btn btn-link remove">
-                                        <i class="far fa-trash-alt"></i>
-                                      </button>
-                                      <div class="todo-task">
-                                        <span>#pymes2021</span>
-                                      </div> 
-                                    </div>
-                                    <div class="todo-box">
-                                      <button type="button" class="btn btn-link remove">
-                                        <i class="far fa-trash-alt"></i>
-                                      </button>
-                                      <div class="todo-task">
-                                        <span>#pymes2021</span>
-                                      </div>
-                                    </div>
-                                    <div class="todo-box">
-                                      <button type="button" class="btn btn-link remove">
-                                        <i class="far fa-trash-alt"></i>
-                                      </button>
-                                      <div class="todo-task">
-                                        <span>#pymes2021</span>
-                                      </div> 
-                                    </div>
-                                    <div class="boton-etiqueta">
-                                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirEtiqueta2">Añadir</button>                                                                                                  
-                                    </div>
-                                  </div>
-                                </div>
+                              <select class="etiquetas-multiple" name="states[]" multiple="multiple">
+                                <option value="e1">#pymes2021</option>
+                                <option value="e2">#pymes2020</option>
+                                <option value="e3">#innobono</option>
+                              </select>
+                              <div class="boton-etiqueta">
+                                <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirEtiqueta2">Añadir</button>
                               </div>
                             </div>
                           </div>
                           <div class="dropdown-divider"></div>
-                          <h6>ARCHIVOS GENÉRICOS</h6>
+                          <h5 class="mt-4">ARCHIVOS GENÉRICOS</h5>
                           <div class="row">
                             <div class="col-12 col-md-4 col-lg-2">
                               <div class="card">
@@ -133,6 +113,13 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/78-document-PDF-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
                                       PDF
                                     </div>
                                   </div> <!--end toast-->                      
@@ -154,6 +141,13 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/78-document-PDF-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
                                       PDF
                                     </div>
                                   </div> <!--end toast-->                      
@@ -175,6 +169,13 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/77-document-EXE-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
                                       XLS
                                     </div>
                                   </div> <!--end toast-->                      
@@ -196,7 +197,14 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
-                                      JPG
+                                      <lord-icon
+                                        src="assets/json/76-document-PNG-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
+                                      PNG
                                     </div>
                                   </div> <!--end toast-->                      
                                 </div><!--end card-body-->
@@ -217,6 +225,13 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/78-document-PDF-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
                                       PDF
                                     </div>
                                   </div> <!--end toast-->                      
@@ -238,6 +253,13 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/77-document-EXE-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
                                       TXT
                                     </div>
                                   </div> <!--end toast-->                      
@@ -259,6 +281,13 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/80-document-DOC-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
                                       DOC
                                     </div>
                                   </div> <!--end toast-->                      
@@ -280,7 +309,14 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
-                                      JPG
+                                      <lord-icon
+                                        src="assets/json/76-document-PNG-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
+                                      PNG
                                     </div>
                                   </div> <!--end toast-->                      
                                 </div><!--end card-body-->
@@ -301,6 +337,13 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/77-document-EXE-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
                                       XLS
                                     </div>
                                   </div> <!--end toast-->                      
@@ -322,6 +365,13 @@
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/78-document-PDF-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
                                       PDF
                                     </div>
                                   </div> <!--end toast-->                      
@@ -399,7 +449,7 @@
 
                         </div>
                         <div class="tab-pane p-3" id="expedientes" role="tabpanel">
-                          <h6>Tabla de expedientes</h6>
+                          <h5>Tabla de expedientes</h5>
                           <div class="table-responsive">
                             <table id="datatable-expedientes-aut-buttons" class="table table-striped table-bordered" style="width:100%">
                               <thead>
@@ -422,8 +472,8 @@
                                 <td>2013/03/03</td>
                                 <td>$342,000</td>
                                 <td>$342,000</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="expedientes.html">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="expedientes.html">Ver</a>
                                 </td>
                               </tr>
                               <tr>
@@ -434,8 +484,8 @@
                                 <td>2008/12/19</td>
                                 <td>$90,560</td>
                                 <td>$90,560</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="expedientes.html">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="expedientes.html">Ver</a>
                                 </td>
                               </tr>
                               <tr>
@@ -446,8 +496,8 @@
                                 <td>2013/03/03</td>
                                 <td>$342,000</td>
                                 <td>$342,000</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="expedientes.html">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="expedientes.html">Ver</a>
                                 </td>
                               </tr>
                               </tbody>
@@ -455,7 +505,7 @@
                           </div>
                         </div>
                         <div class="tab-pane p-3" id="subvenciones" role="tabpanel">
-                          <h6>Tabla de otras subvenciones</h6>
+                          <h5>Tabla de otras subvenciones</h5>
                           <div class="table-responsive">
                             <table id="datatable-subven-aut-buttons" class="table table-striped table-bordered" style="width:100%">
                               <thead>
@@ -478,8 +528,8 @@
                                 <td>2013/03/03</td>
                                 <td>$342,000</td>
                                 <td>$342,000</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               <tr>
@@ -490,8 +540,8 @@
                                 <td>2008/12/19</td>
                                 <td>$90,560</td>
                                 <td>$90,560</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               <tr>
@@ -502,8 +552,8 @@
                                 <td>2013/03/03</td>
                                 <td>$342,000</td>
                                 <td>$342,000</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               </tbody>
@@ -514,7 +564,7 @@
                           </div>
 
                           <div class="dropdown-divider"></div>
-                          <h6>Tabla de minimis</h6>
+                          <h5>Tabla de minimis</h5>
                           <div class="table-responsive">
                             <table id="datatable-minimis-aut-buttons" class="table table-striped table-bordered" style="width:100%">
                               <thead>
@@ -539,8 +589,8 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td>$342,000</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               <tr>
@@ -552,8 +602,8 @@
                                 <td>$90,560</td>
                                 <td>$90,560</td>
                                 <td>$90,560</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               <tr>
@@ -565,8 +615,8 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td>$342,000</td>
-                                <td class="tbody-expediente">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               </tbody>
@@ -592,15 +642,21 @@
                                         <input class="form-control" type="text" id="ente" placeholder="Ente público">                                                       
                                       </div>                                                    
                                     </div>
-                                    <div class="form-group row">
-                                      <div class="col-sm-12">
-                                        <input class="form-control" type="text" id="fechaS" placeholder="Fecha de solicitud">                                                       
-                                      </div>                                                    
+                                    <div class="form-group">
+                                      <div>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="mm/dd/aaaa" id="datepicker3">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
                                     </div>
-                                    <div class="form-group row">
-                                      <div class="col-sm-12">
-                                        <input class="form-control" type="text" id="fechaC" placeholder="Fecha de concesión">                                                       
-                                      </div>                                                    
+                                    <div class="form-group">
+                                      <div>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="mm/dd/aaaa" id="datepicker4">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
                                     </div>
                                     <div class="form-group row">
                                       <div class="col-sm-12">
@@ -650,13 +706,13 @@
                                 <td>2013/03/03</td>
                                 <td>$342,000</td>
                                 <td>$342,000</td>
-                                <td class="tbody-expediente align-middle">
+                                <td class="centrar-boton">
                                   <div>
                                     <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante2">Añadir</button>
                                   </div>
                                 </td>
-                                <td class="tbody-expediente align-middle">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               <tr>
@@ -667,13 +723,13 @@
                                 <td>2008/12/19</td>
                                 <td>$90,560</td>
                                 <td>$90,560</td>
-                                <td class="tbody-expediente align-middle">
+                                <td class="centrar-boton">
                                   <div>
                                     <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante2">Añadir</button>
                                   </div>
                                 </td>
-                                <td class="tbody-expediente align-middle">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               <tr>
@@ -684,13 +740,13 @@
                                 <td>2013/03/03</td>
                                 <td>$342,000</td>
                                 <td>$342,000</td>
-                                <td class="tbody-expediente align-middle">
+                                <td class="centrar-boton">
                                   <div>
                                     <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante2">Añadir</button>
                                   </div>
                                 </td>
-                                <td class="tbody-expediente align-middle">
-                                  <a class="ver-expediente" href="/">Ver</a>
+                                <td class="centrar-boton">
+                                  <a class="btn-ver btn-sm" href="#">Ver</a>
                                 </td>
                               </tr>
                               </tbody>
@@ -706,10 +762,13 @@
                                 </div>
                                 <div class="modal-body text-center">
                                   <form>
-                                    <div class="form-group row">
-                                      <div class="col-sm-12">
-                                        <input class="form-control" type="text" id="fase" placeholder="Fecha del importe">                                                       
-                                      </div>                                                    
+                                    <div class="form-group">
+                                      <div>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="mm/dd/aaaa" id="datepicker6">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
                                     </div>
                                     <div class="form-group row">
                                       <div class="custom-file pl-2 pr-2">
@@ -762,7 +821,7 @@
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir Subvención</h5>
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir nota</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 </div>
                                 <div class="modal-body text-center">
@@ -813,9 +872,19 @@
     <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
     <!-- Datatable init js -->
     <script src="assets/js/pages/usuarios.init.js"></script>
     <script src="assets/js/app.js"></script>
+
+    <script>
+      $(document).ready(function() {
+          $('.etiquetas-multiple').select2();
+          $('.select2').css("width", "100%");
+      });
+    </script>
 
   </body>
 </html>

@@ -23,11 +23,8 @@
                 <div class="card">
                   <div class="card-body">
 
-                    <h5 class="card-title">Custom Tabs</h5>
-                    <p class="card-title-desc">Example of custom tabs</p>
-
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+                    <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
                       <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#informacion" role="tab">Información</a>
                       </li>
@@ -37,7 +34,7 @@
                     </ul>
 
                     <!-- Tab panes -->
-                    <div class="tab-content">
+                    <div class="tab-content mt-4">
                       <div class="tab-pane active p-3" id="informacion" role="tabpanel">
                         <div class="row">
                           <div class="col-12 col-md-4">
@@ -104,7 +101,7 @@
                               <div class="card-body">
                                 <h5 class="card-title">Listado de usuarios</h5>
                                 <div class="table-responsive">
-                                  <table id="datatable-usuarios-rrhh" class="table table-bordered" style="width:100%">
+                                  <table id="datatable-usuarios-rrhh-buttons" class="table table-bordered" style="width:100%">
                                     <thead>
                                       <tr>
                                         <th>Foto</th>
@@ -136,10 +133,10 @@
                                         <td>Externo</td>
                                         <td>Externo</td>
                                         <td class="text-center">
-                                          <button class="btn btn-sm btn-primary btn-ver mb-1" type="button">
+                                          <button class="btn btn-sm btn-primary btn-ver-solo mb-1" type="button">
                                             <a href="#" style="color: #fff">Ver</a>
                                           </button>
-                                          <button class="btn btn-sm btn-primary mb-1" type="button"  data-toggle="modal" data-animation="bounce" data-target=".enviarMensaje">Mensaje</button>
+                                          <button class="btn btn-sm btn-primary mb-1 btn-mensaje" type="button"  data-toggle="modal" data-animation="bounce" data-target=".enviarMensaje">Mensaje</button>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -273,6 +270,9 @@
           }
         ]
       });
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        $('.center').slick('setPosition');
+      })
     </script>
 
     <script src="assets/js/app.js"></script>

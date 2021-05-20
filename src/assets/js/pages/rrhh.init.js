@@ -11,8 +11,10 @@ $(document).ready(function () {
     paging: true,
     info: true,
     searching: true,
+    lengthChange: true,
     responsive: true,
     scrollX: false,
+    buttons: ["excel", "pdf", "colvis"],
     language: {
       decimal: ",",
       thousands: ".",
@@ -38,8 +40,17 @@ $(document).ready(function () {
         sortDescending:
           ": Activar para ordenar la columna de manera descendente",
       },
+      buttons: {
+        excel: "Excel",
+        pdf: "PDF",
+        colvis: "Columnas Visibles",
+      },
     },
   };
 
-  $("#datatable-usuarios-rrhh").DataTable(context4);
+  $("#datatable-usuarios-rrhh-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-usuarios-rrhh-buttons_wrapper .col-md-6:eq(0)");
 });

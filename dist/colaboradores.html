@@ -39,6 +39,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
   </head>
 
   <body data-topbar="dark">
@@ -354,7 +356,7 @@
                       <p class="m-0"> 
                         % por defecto
                       </p>
-                      <button class="btn btn-sm btn-primary" style="padding: .15rem .5rem;" data-toggle="modal" data-animation="bounce" data-target=".editarPorcentaje">Editar</button>
+                      <button class="btn btn-sm btn-primary boton-editarP" data-toggle="modal" data-animation="bounce" data-target=".editarPorcentaje">Editar</button>
                     </div>
                   </div>
                 </div>    
@@ -362,7 +364,7 @@
             </div>
 
             <div class="modal fade editarPorcentaje" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
+              <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar porcentaje</h5>
@@ -370,9 +372,9 @@
                   </div>
                   <div class="modal-body text-center">
                     <form>
-                      <div class="form-group row">
-                        <div class="col-sm-12">
-                          <input class="form-control" type="text" id="porcentaje" placeholder="Porcentaje">                                                       
+                      <div class="form-group row d-flex justify-content-center">
+                        <div class="col-sm-4 d-flex align-items-center">
+                          <input class="form-control mr-2" type="text"> %                                                      
                         </div>                                                    
                       </div>
                     </form>
@@ -400,7 +402,7 @@
                             <th>Fecha de solicitud</th>
                             <th>Hora de solicitud</th>
                             <th>URL Web</th>
-                            <th></th>
+                            <th>Acciones</th>
                           </tr>
                         </thead>
 
@@ -413,12 +415,28 @@
                             <td>2019/04/25</td>
                             <td>2011/04/25</td>
                             <td>Externo</td>
-                            <td>
-                              <button class="btn btn-sm btn-primary" type="button">
-                                <a href="/" style="color: #fff">Ver</a>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-ver-solo" type="button">
+                                <a href="#" style="color: #fff">Ver</a>
                               </button>
-                              <button class="btn btn-sm btn-primary" type="button"  data-toggle="modal" data-animation="bounce" data-target=".añadirColaborador">Si</button>
-                              <button class="btn btn-sm btn-primary" type="button">No</button>
+                              <button class="btn btn-sm btn-primary btn-ver-solo" type="button"  data-toggle="modal" data-animation="bounce" data-target=".añadirColaborador">
+                                <lord-icon
+                                  src="assets/json/37-approve-checked-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#ffffff;,secondary:#ffffff;"
+                                  style="width:15px; height:15px;">
+                                </lord-icon>
+                              </button>
+                              <button class="btn btn-sm btn-primary btn-ver-solo" type="button">
+                                <lord-icon
+                                  src="assets/json/185-trash-bin-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#ffffff;,secondary:#ffffff;"
+                                  style="width:15px; height:15px;">
+                                </lord-icon>
+                              </button>
                             </td>
                           </tr>
                         </tbody>
@@ -449,7 +467,7 @@
                             <th>Próxima renovación</th>
                             <th>Facturación generada</th>
                             <th>Ranking</th>
-                            <th></th>
+                            <th>Acciones</th>
                           </tr>
                         </thead>
 
@@ -464,8 +482,8 @@
                             <td>Externo</td>
                             <td>Externo</td>
                             <td>Externo</td>
-                            <td>
-                              <button class="btn btn-sm btn-primary" type="button">
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-ver" type="button">
                                 <a href="perfil-colab-sociedad.html" style="color: #fff">Ver</a>
                               </button>
                             </td>
@@ -490,9 +508,9 @@
                   <div class="modal-body text-center">
                     <p>¿Seguro que desea aceptar a XXX como colaborador de ORBALIA?</p>
                     <form>
-                      <div class="form-group row">
-                        <div class="col-sm-12">
-                          <input class="form-control" type="text" id="porcColab" placeholder="Escribir porcentaje del colaborador">                                                       
+                      <div class="form-group row d-flex justify-content-center">
+                        <div class="col-sm-3 d-flex align-items-center">
+                          <input class="form-control mr-2" type="text" id="porcColab"> %                                                      
                         </div>                                                    
                       </div>
                     </form>
@@ -582,6 +600,8 @@
     <!-- Icon -->
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <!-- Required datatable js -->
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -598,8 +618,12 @@
     <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
     
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    
     <!-- Icon -->
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    
     <!-- Datatable init js -->
     <script src="assets/js/pages/colaboradores.init.js"></script>
     <script src="assets/js/app.js"></script>
