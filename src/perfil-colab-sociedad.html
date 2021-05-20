@@ -152,13 +152,39 @@
                                     <p>Próxima renovación</p>
                                     <p class="text-center">25/06/2021</p>
                                     <div class="d-flex justify-content-center">
-                                      <button class="btn btn-sm btn-primary mt-3" type="button">Editar</button>
+                                      <button class="btn btn-sm btn-primary mt-3" type="button" data-toggle="modal" data-animation="bounce" data-target=".fechaRenovacion">Editar</button>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
+
+                          <div class="modal fade fechaRenovacion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Cambiar fecha de renovación</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group">
+                                      <div>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="mm/dd/aaaa" id="datepicker1">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
+                                    </div>
+                                    <div class="boton-etiqueta">
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
 
                           <div class="modal fade historialContrato" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
@@ -627,7 +653,7 @@
                                     <div class="form-group">
                                       <div>
                                         <div class="input-group">
-                                          <input type="text" class="form-control" placeholder="mm/dd/aaaa" id="datepicker">
+                                          <input type="text" class="form-control" placeholder="Fecha de pago" id="datepicker">
                                           <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
                                         </div><!-- input-group -->
                                       </div>

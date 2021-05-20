@@ -92,6 +92,7 @@ $(document).ready(function () {
   });
 });
 $("#datepicker").datepicker();
+$("#datepicker1").datepicker();
 $("#date-range").datepicker({
   toggleActive: true,
 });
