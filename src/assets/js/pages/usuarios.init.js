@@ -103,6 +103,16 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-fact-aut-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-infGener-buttons")
+    .DataTable(context6)
+    .buttons()
+    .container()
+    .appendTo("#datatable-infGener-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-infAmp-buttons")
+    .DataTable(context6)
+    .buttons()
+    .container()
+    .appendTo("#datatable-infAmp-buttons_wrapper .col-md-6:eq(0)");
   $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
     $($.fn.dataTable.tables(true))
       .DataTable()

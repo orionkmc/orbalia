@@ -5,6 +5,17 @@
     
     @@include("partials/head-css.html")
   </head>
+  <style>
+    .dropdown-menu.show {
+      top: 60px !important;
+    }
+    .rolesUsuarios,
+    .rolUsuExt,
+    .rolesUsuarios2,
+    .rolUsuExt2 {
+      display: none;
+    }
+  </style>
 
   <body data-topbar="dark">
     <!-- Begin page -->
@@ -63,60 +74,533 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-body">
-                    <div class="table-responsive">
-                      <table id="datatable-usuarios-buttons" class="table table-bordered" style="width:100%">
-                        <thead>
-                          <tr>
-                            <th>ID</th>
-                            <th>Nombre y Apellido</th>
-                            <th>Tipo de empresa</th>
-                            <th>Fecha registro NIF/CIF</th>
-                            <th>Segmento del cliente</th>
-                            <th>Colaborador</th>
-                            <th>Rol de usuario</th>
-                            <th>Acciones</th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          <tr>
-                            <td>PYME</td>
-                            <td>22</td>
-                            <td>Sociedad</td>
-                            <td>1</td>
-                            <td>2019/04/25</td>
-                            <td>2011/04/25</td>
-                            <td>Externo</td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary botones-accion" type="button">
-                                <a href="perfil-sociedad.html">Ver perfil</a>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>PYME</td>
-                            <td>32</td>
-                            <td>Autónomo</td>
-                            <td>1</td>
-                            <td>2011/04/25</td>
-                            <td>2010/04/25</td>
-                            <td>Interno</td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary botones-accion" type="button">
-                                <a href="perfil-autonomo.html">Ver perfil</a>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Añadir usuario<i class="mdi mdi-chevron-down ml-1"></i></button>
+                    <div class="dropdown-menu" style="height: 80px;">
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-animation="bounce" data-target=".usuarioExtSociedad">Usuario externo Sociedad</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-animation="bounce" data-target=".usuarioExtPersona">Usuario externo Persona física</a>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- end col -->
+
+              <div class="modal fade usuarioExtSociedad" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Sociedad</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="razonSocial" placeholder="Razón social">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="cif" placeholder="CIF">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="calle" placeholder="Calle">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="numero" placeholder="Número">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="localidad" placeholder="Localidad">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="provincia" placeholder="Provincia">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="email" id="email" placeholder="Email">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="telf" placeholder="Teléfono">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="codigoPostal" placeholder="Código postal">                                                       
+                          </div>                                                   
+                        </div>
+                        <p><strong>Datos representante</strong></p>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="nombre" placeholder="Nombre">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="apellido" placeholder="Apellido">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="nif" placeholder="NIF">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="telUsu" placeholder="Teléfono usuario">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="email" id="emailUsu" placeholder="Email usuario">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="web" placeholder="Web">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="calle2" placeholder="Calle">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="numero2" placeholder="Número">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="localidad2" placeholder="Localidad">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="provincia2" placeholder="Provincia">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="codPostal" placeholder="Código postal">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="tipoRepr" placeholder="Tipo representación">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Colaborador</option>
+                              <option>xxxxxxxx</option>
+                              <option>yyyyyyy</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <select class="form-control" id="tipoUsuario">
+                              <option>Tipo</option>
+                              <option>Interno</option>
+                              <option>Externo</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row rolesUsuarios">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Rol de usuario</option>
+                              <option>Socio</option>
+                              <option>Director legal</option>
+                              <option>Auditor</option>
+                              <option>Técnico</option>
+                              <option>Redactor</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row rolUsuExt">
+                          <div class="col-12">
+                            <input class="form-control" style="background-color: #e2e2e2;" type="text" value="Rol de usuario: Cliente" readonly>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" rows="4" placeholder="Notas"></textarea>
+                        </div>
+                        <p><strong>Etiquetas</strong></p>
+                        <select class="etiquetas-multiple" name="states[]" multiple="multiple">
+                          <option value="e1">#pymes2021</option>
+                          <option value="e2">#pymes2020</option>
+                          <option value="e3">#innobono</option>
+                        </select>
+                        <div class="boton-etiqueta">
+                          <a data-toggle="modal" href="#añadirEtiqueta3" class="btn btn-primary">Añadir etiqueta</a>
+                        </div>
+                        <div class="form-group row mt-3">
+                          <div class="col-12 col-lg-6">
+                            <input class="form-control" style="background-color: #e2e2e2;" type="text" value="Código de usuario: XXXXXX" readonly>
+                          </div>
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Crear</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade usuarioExtPersona" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Persona física</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="nombre2" placeholder="Nombre">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="apellido2" placeholder="Apellido">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="NIF" placeholder="NIF">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="telefUsu2" placeholder="Teléfono usuario">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="email" id="email2" placeholder="Email usuario">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="web2" placeholder="Web">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="calle2" placeholder="Calle">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="numero2" placeholder="Número">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="localidad2" placeholder="Localidad">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="provincia2" placeholder="Provincia">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="codPostal2" placeholder="Código postal">                                                       
+                          </div>                                                  
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Colaborador</option>
+                              <option>xxxxxxxx</option>
+                              <option>yyyyyyy</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <select class="form-control" id="tipoUsuario2">
+                              <option>Tipo</option>
+                              <option>Interno</option>
+                              <option>Externo</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row rolesUsuarios2">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Rol de usuario</option>
+                              <option>Socio</option>
+                              <option>Director legal</option>
+                              <option>Auditor</option>
+                              <option>Técnico</option>
+                              <option>Redactor</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row rolUsuExt2">
+                          <div class="col-12">
+                            <input class="form-control" style="background-color: #e2e2e2;" type="text" value="Rol de usuario: Cliente" readonly>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" rows="4" placeholder="Notas"></textarea>
+                        </div>
+                        <p><strong>Etiquetas</strong></p>
+                        <select class="etiquetas-multiple" name="states[]" multiple="multiple">
+                          <option value="e1">#pymes2021</option>
+                          <option value="e2">#pymes2020</option>
+                          <option value="e3">#innobono</option>
+                        </select>
+                        <div class="boton-etiqueta">
+                          <a data-toggle="modal" href="#añadirEtiqueta4" class="btn btn-primary">Añadir etiqueta</a>
+                        </div>
+                        <div class="form-group row mt-3">
+                          <div class="col-12 col-lg-6">
+                            <input class="form-control" style="background-color: #e2e2e2;" type="text" value="Código de usuario: XXXXXX" readonly>
+                          </div>
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Crear</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade" id="añadirEtiqueta3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir etiqueta</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-sm-12">
+                            <input class="form-control" type="text" id="etiqueta">                                                       
+                          </div>                                                    
+                        </div>
+                      </form>
+                      <div class="boton-etiqueta">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade" id="añadirEtiqueta4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir etiqueta</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-sm-12">
+                            <input class="form-control" type="text" id="etiqueta">                                                       
+                          </div>                                                    
+                        </div>
+                      </form>
+                      <div class="boton-etiqueta">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
             </div>
             <!-- end row -->
 
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#informacionGenerica" role="tab">Información genérica</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#informacionAmpliada" role="tab">Información ampliada</a>
+                      </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content mt-4">
+                      <div class="tab-pane active p-3" id="informacionGenerica" role="tabpanel">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="table-responsive">
+                                  <table id="datatable-infGener-buttons" class="table table-bordered" style="width:100%">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Tipo usuario</th>
+                                        <th>Nombre/Denominación social</th>
+                                        <th>NIF/CIF</th>
+                                        <th>Fecha de registro</th>
+                                        <th>Teléfono</th>
+                                        <th>Correo</th>
+                                        <th>Segmento</th>
+                                        <th>Colaborador</th>
+                                        <th>Rol de usuario</th>
+                                        <th>Acciones</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>23444</td>
+                                        <td>22</td>
+                                        <td>Sociedad</td>
+                                        <td>1</td>
+                                        <td>2019/04/25</td>
+                                        <td>2011/04/25</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td class="centrar-boton">
+                                          <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                            <a href="perfil-sociedad.html" data-toggle="tooltip" data-placement="top" title="Ver perfil">
+                                              <lord-icon
+                                                src="assets/json/69-eye-outline.json"
+                                                trigger="loop-on-hover"
+                                                target="a"
+                                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                                style="width:20px; height:20px;">
+                                              </lord-icon>
+                                            </a>
+                                          </button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>23444</td>
+                                        <td>22</td>
+                                        <td>Autónomo</td>
+                                        <td>1</td>
+                                        <td>2019/04/25</td>
+                                        <td>2011/04/25</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td class="centrar-boton">
+                                          <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                            <a href="perfil-autonomo.html" data-toggle="tooltip" data-placement="top" title="Ver perfil">
+                                              <lord-icon
+                                                src="assets/json/69-eye-outline.json"
+                                                trigger="loop-on-hover"
+                                                target="a"
+                                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                                style="width:20px; height:20px;">
+                                              </lord-icon>
+                                            </a>
+                                          </button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                      </div>
+                      <div class="tab-pane p-3" id="informacionAmpliada" role="tabpanel">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="table-responsive">
+                                  <table id="datatable-infAmp-buttons" class="table table-bordered" style="width:100%">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Tipo usuario</th>
+                                        <th>Nombre/Denominación social</th>
+                                        <th>NIF/CIF</th>
+                                        <th>Correo</th>
+                                        <th>Inf1</th>
+                                        <th>Inf2</th>
+                                        <th>Inf3</th>
+                                        <th>Inf4</th>
+                                        <th>Inf5</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>23444</td>
+                                        <td>22</td>
+                                        <td>Sociedad</td>
+                                        <td>1</td>
+                                        <td>2019/04/25</td>
+                                        <td>2011/04/25</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                      </tr>
+                                      <tr>
+                                        <td>23444</td>
+                                        <td>22</td>
+                                        <td>Autónomo</td>
+                                        <td>1</td>
+                                        <td>2019/04/25</td>
+                                        <td>2011/04/25</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                        <td>Externo</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- container-fluid -->
         </div>
@@ -153,5 +637,35 @@
     <script src="assets/js/pages/usuarios.init.js"></script>
     <script src="assets/js/app.js"></script>
 
+    <script>
+      $('#tipoUsuario').on('change', function() {
+        if (this.value == "Interno") {
+          $('.rolesUsuarios').css("display", "block");
+        } else {
+          $('.rolesUsuarios').css("display", "none");
+        }
+        if (this.value == "Externo") {
+          $('.rolUsuExt').css("display", "block");
+        } else {
+          $('.rolUsuExt').css("display", "none");
+        }
+      });
+      $('#tipoUsuario2').on('change', function() {
+        if (this.value == "Interno") {
+          $('.rolesUsuarios2').css("display", "block");
+        } else {
+          $('.rolesUsuarios2').css("display", "none");
+        }
+        if (this.value == "Externo") {
+          $('.rolUsuExt2').css("display", "block");
+        } else {
+          $('.rolUsuExt2').css("display", "none");
+        }
+      });
+      $(document).ready(function() {
+        $('.etiquetas-multiple').select2();
+        $('.select2').css("width", "100%");
+      });
+    </script>
   </body>
 </html>

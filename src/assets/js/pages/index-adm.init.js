@@ -83,6 +83,11 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-tareasAsig-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-acciones-adm-buttons")
+    .DataTable(context3)
+    .buttons()
+    .container()
+    .appendTo("#datatable-acciones-adm-buttons_wrapper .col-md-6:eq(0)");
   $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
     $($.fn.dataTable.tables(true))
       .DataTable()

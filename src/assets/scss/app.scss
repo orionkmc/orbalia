@@ -77,17 +77,17 @@ File: Main Css File
 @import "custom/pages/profile";
 @import "custom/pages/faqs";
 
-.card {
-  border-radius: 0 .25rem .25rem 0 !important
-}
 .card-borde {
   border-left: 2px solid #44a2d2;
+  border-radius: 0 .25rem .25rem 0 !important;
 }
 .card-borde2 {
   border-left: 2px solid #44d24b;
+  border-radius: 0 .25rem .25rem 0 !important;
 }
 .card-borde3 {
   border-left: 2px solid #f3f70a;
+  border-radius: 0 .25rem .25rem 0 !important;
 }
 .noti-icon .badge {
   right: 0 !important;
@@ -155,6 +155,9 @@ File: Main Css File
 .btn-ver-solo {
   padding: 6px 25px;
 }
+.btn-acciones-iconos {
+  padding: 6px 6px;
+}
 .botones-accion {
   text-align: center;
 }
@@ -215,8 +218,33 @@ File: Main Css File
 .dt-buttons {
   margin-bottom: .2rem;
 }
-.img-usuarios {
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
+.usuarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.checkeable {
+  text-align: center;
+}
+.checkeable input {
+  display: none;
+}
+.checkeable img {
+  width: 50%;
+  border: 5px solid transparent;
+  height: 100%;
+}
+.checkeable input {
+  display: none;
+}
+.checkeable input:checked  + img {
+  border-color:#44a2d2;
+}
+.buscador {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.dropdown-item:hover {
+  color: #44a2d2;
 }
