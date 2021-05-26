@@ -42,6 +42,11 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
   </head>
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    } 
+  </style>
 
   <body data-topbar="dark">
     <!-- Begin page -->
@@ -53,34 +58,41 @@
             <div class="navbar-brand-box">
               <a href="index.html" class="logo logo-dark">
                 <span class="logo-sm">
-                  <img src="assets/images/logo-sm.png" alt="" height="22">
+                  <img src="assets/images/logo-sm.png" alt="" height="22" />
                 </span>
                 <span class="logo-lg">
-                  <img src="assets/images/logo-dark.png" alt="" height="17">
+                  <img src="assets/images/logo-dark.png" alt="" height="17" />
                 </span>
               </a>
 
               <a href="index.html" class="logo logo-light">
                 <span class="logo-sm">
-                  <img src="assets/images/logo-sm.png" alt="" height="22">
+                  <img src="assets/images/logo-sm.png" alt="" height="22" />
                 </span>
                 <span class="logo-lg">
-                  <img src="assets/images/logo-light.png" alt="" height="17">
+                  <img src="assets/images/logo-light.png" alt="" height="17" />
                 </span>
               </a>
             </div>
 
-            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
+            <button
+              type="button"
+              class="btn btn-sm px-3 font-size-24 header-item waves-effect"
+              id="vertical-menu-btn"
+            >
               <i class="mdi mdi-menu"></i>
             </button>
-
           </div>
 
-              <!-- Search input -->
+          <!-- Search input -->
           <div class="search-wrap" id="search-wrap">
             <div class="search-bar">
               <input class="search-input form-control" placeholder="Search" />
-              <a href="#" class="close-search toggle-search" data-target="#search-wrap">
+              <a
+                href="#"
+                class="close-search toggle-search"
+                data-target="#search-wrap"
+              >
                 <i class="mdi mdi-close-circle"></i>
               </a>
             </div>
@@ -88,23 +100,109 @@
 
           <div class="d-flex">
             <div class="dropdown d-inline-block">
-              <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="rounded-circle header-profile-user" src="assets/images/users/user-1.jpg"
-                  alt="Header Avatar">
+              <button
+                type="button"
+                class="btn header-item noti-icon waves-effect"
+                id="page-header-notifications-dropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="badge badge-danger badge-pill">2</span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                aria-labelledby="page-header-notifications-dropdown"
+              >
+                <div class="p-3">
+                  <h6 class="m-0">Notificaciones</h6>
+                </div>
+  
+                <div data-simplebar style="max-height: 230px">
+                  <a href="" class="text-reset notification-item">
+                    <div class="media">
+                      <div class="avatar-xs mr-3">
+                        <span
+                          class="avatar-title bg-primary rounded-circle font-size-16"
+                        >
+                          <i class="mdi mdi-cart-outline"></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="mt-0 mb-1 font-size-15">Your order is placed</h6>
+                        <div class="text-muted">
+                          <p class="mb-1 font-size-12">
+                            Dummy text of the printing and typesetting industry.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="" class="text-reset notification-item">
+                    <div class="media">
+                      <div class="avatar-xs mr-3">
+                        <span
+                          class="avatar-title bg-danger rounded-circle font-size-16"
+                        >
+                          <i class="mdi mdi-cart-outline"></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="mt-0 mb-1 font-size-15">Your order is placed</h6>
+                        <div class="text-muted">
+                          <p class="mb-1 font-size-12">
+                            Dummy text of the printing and typesetting industry.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="p-2 border-top">
+                  <a
+                    class="btn btn-sm btn-link font-size-14 btn-block text-center"
+                    href="javascript:void(0)"
+                  >
+                    <i class="mdi mdi-arrow-right-circle mr-1"></i> View all
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown d-inline-block">
+              <button
+                type="button"
+                class="btn header-item waves-effect"
+                id="page-header-user-dropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  class="rounded-circle header-profile-user"
+                  src="assets/images/users/user-1.jpg"
+                  alt="Header Avatar"
+                />
                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-right">
                 <!-- item-->
-                <a class="dropdown-item" href="#"><i class="dripicons-user d-inlne-block text-muted mr-2"></i> Perfil</a>
+                <a class="dropdown-item" href="#"
+                  ><i class="dripicons-user d-inlne-block text-muted mr-2"></i>
+                  Perfil</a
+                >
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="dripicons-exit d-inlne-block text-muted mr-2"></i> Cerrar sesión</a>
+                <a class="dropdown-item" href="#"
+                  ><i class="dripicons-exit d-inlne-block text-muted mr-2"></i> Cerrar
+                  sesión</a
+                >
               </div>
             </div>
-        
           </div>
         </div>
-      </header> <!-- ========== Left Sidebar Start ========== -->
+      </header>
+ <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">
 
   <div data-simplebar class="h-100">
@@ -126,7 +224,7 @@
           </a>
         </li>
         <li>
-          <a href="/" class=" waves-effect">
+          <a href="/" class="waves-effect">
             <lord-icon
               src="assets/json/56-document-outline.json"
               trigger="loop-on-hover"
@@ -311,10 +409,13 @@
                         <thead>
                           <tr>
                             <th>Procedimiento</th>
-                            <th>Fase 1</th>
-                            <th>Fase 2</th>
-                            <th>Fase 3</th>
-                            <th>Fecha de procedimiento</th>
+                            <th>Creadas</th>
+                            <th>Solicitadas</th>
+                            <th>Concedidas</th>
+                            <th>Denegadas</th>
+                            <th>Abandonadas</th>
+                            <th>Importe concedido</th>
+                            <th>Tasa éxito</th>
                           </tr>
                         </thead>
 
@@ -324,13 +425,19 @@
                             <td>32</td>
                             <td>22</td>
                             <td>1</td>
-                            <td>2011/04/25</td>
+                            <td>25</td>
+                            <td>23</td>
+                            <td>50.334$</td>
+                            <td>100%</td>
                           </tr>
                           <tr>
                             <td>ORBALIA</td>
                             <td>22</td>
                             <td>12</td>
                             <td>2</td>
+                            <td>2011/07/25</td>
+                            <td>2011/07/25</td>
+                            <td>2011/07/25</td>
                             <td>2011/07/25</td>
                           </tr>
                         </tbody>
@@ -398,28 +505,128 @@
                       <div class="time-item1">
                         <div class="item-info">
                           <div class="text-muted float-right font-size-10 mt-1">
-                            <p class="mb-0 mr-2">
-                              <a href="" data-toggle="modal" data-animation="bounce" data-target=".notificaciones2">Leída</a>
-                            </p>
+                            <button class="ver-notif" data-toggle="modal" data-animation="bounce" data-target=".verNotif">Ver</button>
                           </div>
-                          <h5 class="mt-0 mb-1">Task finished</h5>
-                          <p class="text-muted font-size-13">There are many variations of passages of Lorem Ipsum available.</p>
+                          <h5 class="mt-0 mb-1">@dbenitez</h5>
+                          <p class="text-muted font-size-13">quiere borrar el documento Escritura y le ha pedido validación</p>
                         </div>
                       </div>
-                      <div class="btn-notificaciones">
-                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".notificaciones1">Todas como leidas</button>
-                      </div>
+                    </div>
+                    <div class="btn-notificaciones">
+                      <button class="btn btn-sm btn-primary" style="padding: .25rem 2rem;" data-toggle="modal" data-animation="bounce" data-target=".histNotif">Ver todas</button>
+                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".notificaciones1">Todas como leidas</button>
                     </div>
                   </div>                                        
                 </div>
-              </div>  
+              </div>
+
+              <div class="modal fade histNotif" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Historial de notificaciones</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <div class="table-responsive">
+                        <table id="datatable-histNotif-buttons" class="table table-bordered" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>Fecha firma</th>
+                              <th>Fecha renovación</th>
+                              <th>Nota</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>PYME</td>
+                              <td>22</td>
+                              <td>Sociedad</td>
+                            </tr>
+                            <tr>
+                              <td>PYME</td>
+                              <td>22</td>
+                              <td>Sociedad</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
               
+              <div class="modal fade verNotif" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-end">
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-center">
+                        <strong>@dbenitez quiere borrar el documento Escritura y le ha pedido validación</strong>
+                      </p>
+                      <p>Procedimiento: PYMES 2021</p>
+                      <p>Expediente: EXP2021/001/0023</p>
+                      <p>Motivo: Me equivoqué al subir el documento, por eso lo borro</p>
+                      <div class="toast fade show arch-notif" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                        <div class="toast-body">
+                          Escritura
+                        </div>
+                        <div class="dropdown-divider m-0"></div>
+                        <div class="text-center">
+                          <lord-icon
+                            src="assets/json/78-document-PDF-outline.json"
+                            trigger="loop-on-hover"
+                            target="a"
+                            colors="primary:#707070;,secondary:#707070;"
+                            style="width: 30px; height: 30px;">
+                          </lord-icon>
+                          PDF
+                        </div>
+                      </div> <!--end toast-->
+                      <div class="text-center">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal confirmar1" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Rechazar</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
               <div class="modal fade notificaciones2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-sm">
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Notificaciones</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
                     </div>
                     <div class="modal-body text-center">
                       <p>
@@ -437,7 +644,16 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Notificaciones</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
                     </div>
                     <div class="modal-body text-center">
                       <p>
@@ -487,6 +703,215 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <!--end row-->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">Tareas pendientes</h5>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="table-responsive">
+                          <table id="datatable-tareasPend-buttons" class="table table-bordered" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Procedimiento</th>
+                                <th>Cliente</th>
+                                <th>Vencimiento</th>
+                                <th>Tarea</th>
+                                <th>Asignado por</th>
+                                <th style="width: 100px;">Asignado a</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>PYME2021</td>
+                                <td>Montando Movidas</td>
+                                <td>23/05/2021</td>
+                                <td>Recuerda hacer la presentación</td>
+                                <td class="text-center">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                </td>
+                                <td class="text-center">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                </td>
+                                <td>Pendiente</td>
+                                <td class="text-center">
+                                  <button class="btn btn-sm btn-primary btn-ver-solo mb-1" type="button">
+                                    <a href="#" style="color: #fff">Ver</a>
+                                  </button>
+                                  <button class="btn btn-sm btn-primary mb-1 btn-mensaje" type="button"  data-toggle="modal" data-animation="bounce" data-target=".enviarMensaje">Cancelar</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PYME2021</td>
+                                <td>Montando Movidas</td>
+                                <td>23/05/2021</td>
+                                <td>Recuerda hacer la presentación</td>
+                                <td class="text-center">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                </td>
+                                <td class="text-center">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                </td>
+                                <td>Finalizada 23/05/2021</td>
+                                <td class="text-center">
+                                  <button class="btn btn-sm btn-primary btn-ver-solo mb-1" type="button">
+                                    <a href="#" style="color: #fff">Ver</a>
+                                  </button>
+                                  <button class="btn btn-sm btn-primary mb-1 btn-mensaje" type="button"  data-toggle="modal" data-animation="bounce" data-target=".enviarMensaje">Cancelar</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--end table-responsive-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end row-->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">Tareas asignadas a otros usuarios</h5>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="table-responsive">
+                          <table id="datatable-tareasAsig-buttons" class="table table-bordered" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Procedimiento</th>
+                                <th>Cliente</th>
+                                <th>Fecha</th>
+                                <th>Vencimiento</th>
+                                <th>Tarea</th>
+                                <th style="width: 100px;">Asignado a</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>PYME2021</td>
+                                <td>Montando Movidas</td>
+                                <td>23/05/2021</td>
+                                <td>23/05/2021</td>
+                                <td>Recuerda hacer la presentación</td>
+                                <td class="text-center">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                </td>
+                                <td>Pendiente</td>
+                                <td class="text-center">
+                                  <button class="btn btn-sm btn-primary btn-ver-solo mb-1" type="button">
+                                    <a href="#" style="color: #fff">Ver</a>
+                                  </button>
+                                  <button class="btn btn-sm btn-primary mb-1 btn-mensaje" type="button"  data-toggle="modal" data-animation="bounce" data-target=".enviarMensaje">Cancelar</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PYME2021</td>
+                                <td>Montando Movidas</td>
+                                <td>23/05/2021</td>
+                                <td>23/05/2021</td>
+                                <td>Recuerda hacer la presentación</td>
+                                <td class="text-center">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                  <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                </td>
+                                <td>Finalizada</td>
+                                <td class="text-center">
+                                  <button class="btn btn-sm btn-primary btn-ver-solo mb-1" type="button">
+                                    <a href="#" style="color: #fff">Ver</a>
+                                  </button>
+                                  <button class="btn btn-sm btn-primary mb-1 btn-mensaje" type="button"  data-toggle="modal" data-animation="bounce" data-target=".enviarMensaje">Cancelar</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--end table-responsive-->
+                        <div class="boton-etiqueta">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirTarea">Añadir</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade añadirTarea" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir tarea</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <input class="form-control" type="text" placeholder="Procedimiento">                                                       
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="text" placeholder="Cliente">                                                       
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" placeholder="Tarea"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <div>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Vencimiento" id="datepicker1">
+                              <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                            </div><!-- input-group -->
+                          </div>
+                        </div>
+                      </form>
+                      <p class="text-left">Asignar usuarios</p>
+                      <div class="d-flex justify-content-around">
+                        <div class="img-usuarios">
+                          <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                        </div>
+                        <div class="img-usuarios">
+                          <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                        </div>
+                        <div class="img-usuarios">
+                          <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                        </div>
+                        <div class="img-usuarios">
+                          <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                        </div>
+                        <div class="img-usuarios">
+                          <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal confirmar1" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
             </div>
             <!--end row-->
 
@@ -577,54 +1002,6 @@
     </div>
     <!-- END layout-wrapper -->
 
-    <!-- Right Sidebar -->
-    <div class="right-bar">
-        <div data-simplebar class="h-100">
-            <div class="rightbar-title px-3 py-4">
-                <a href="javascript:void(0);" class="right-bar-toggle float-right">
-                    <i class="mdi mdi-close noti-icon"></i>
-                </a>
-                <h5 class="m-0">Settings</h5>
-            </div>
-
-            <!-- Settings -->
-            <hr class="mt-0" />
-            <h6 class="text-center mb-0">Choose Layouts</h6>
-
-            <div class="p-4">
-                <div class="mb-2">
-                    <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="custom-control custom-switch mb-3">
-                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
-                    <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
-                </div>
-    
-                <div class="mb-2">
-                    <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="custom-control custom-switch mb-3">
-                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css" />
-                    <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
-                </div>
-    
-                <div class="mb-2">
-                    <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="custom-control custom-switch mb-5">
-                    <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
-                    <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
-                </div>
-
-            
-            </div>
-
-        </div> <!-- end slimscroll-menu-->
-    </div>
-    <!-- /Right-bar -->
-
-    <!-- Right bar overlay-->
-    <div class="rightbar-overlay"></div>
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -639,8 +1016,8 @@
 
     <script>
       $('.confirmar').click(function() {
-          $('.time-item1').css("background-color", "#fff");
-        });
+        $('.time-item1').css("background-color", "#fff");
+      });
     </script>
 
     <!-- Required datatable js -->

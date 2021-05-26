@@ -68,6 +68,21 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-fact-adm-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-histNotif-buttons")
+    .DataTable(context3)
+    .buttons()
+    .container()
+    .appendTo("#datatable-histNotif-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-tareasPend-buttons")
+    .DataTable(context3)
+    .buttons()
+    .container()
+    .appendTo("#datatable-tareasPend-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-tareasAsig-buttons")
+    .DataTable(context3)
+    .buttons()
+    .container()
+    .appendTo("#datatable-tareasAsig-buttons_wrapper .col-md-6:eq(0)");
   $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
     $($.fn.dataTable.tables(true))
       .DataTable()
@@ -160,3 +175,5 @@ $(document).ready(function () {
     "use strict";
     $.AdvancedForm.init();
   })(window.jQuery);
+
+$("#datepicker1").datepicker();

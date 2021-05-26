@@ -3313,11 +3313,24 @@ input[switch="dark"]:checked + label {
           transform: rotate(180deg);
   color: #44a2d2; }
 
+.card {
+  border-radius: 0 .25rem .25rem 0 !important; }
+
 .card-borde {
-  border-bottom: 3px solid #44a2d2; }
+  border-left: 2px solid #44a2d2; }
+
+.card-borde2 {
+  border-left: 2px solid #44d24b; }
+
+.card-borde3 {
+  border-left: 2px solid #f3f70a; }
+
+.noti-icon .badge {
+  right: 0 !important; }
 
 .custom-select {
-  background-image: url("../images/flecha-select.png") !important; }
+  background-image: url("../images/flecha-select.png") !important;
+  margin: 0 .3rem; }
 
 .table td,
 .table th {
@@ -3330,8 +3343,16 @@ input[switch="dark"]:checked + label {
 .btn-modal {
   padding: 0.5rem 2rem; }
 
+.ver-notif {
+  border: none;
+  margin-right: .2rem;
+  color: #44a2d2; }
+
+.ver-notif:hover {
+  color: #2779a2; }
+
 .btn-notificaciones {
-  text-align: end;
+  text-align: center;
   margin-bottom: 0.95rem; }
 
 .datos-sociedad p {
@@ -3366,7 +3387,7 @@ input[switch="dark"]:checked + label {
   color: #fff; }
 
 .btn-mensaje {
-  padding: 6px 11.5px; }
+  padding: 6px 10.5px; }
 
 .btn-ver-solo {
   padding: 6px 25px; }
@@ -3388,6 +3409,10 @@ input[switch="dark"]:checked + label {
   padding: 50px 5px;
   border: 1px solid;
   border-radius: 50%; }
+
+.arch-notif {
+  margin: 0 auto .75rem auto !important;
+  max-width: 120px !important; }
 
 .toast-contrato {
   height: 40vh; }
@@ -3422,3 +3447,16 @@ input[switch="dark"]:checked + label {
   position: absolute;
   top: 10px;
   right: 10px; }
+
+.dropdown-menu {
+  margin-top: 5px;
+  height: 200px;
+  overflow: auto; }
+
+.dt-buttons {
+  margin-bottom: .2rem; }
+
+.img-usuarios {
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer; }
