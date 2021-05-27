@@ -68,6 +68,11 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-expedientes-soc-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-contratos-soc-buttons")
+    .DataTable(context6)
+    .buttons()
+    .container()
+    .appendTo("#datatable-contratos-soc-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-subven-soc-buttons")
     .DataTable(context6)
     .buttons()
@@ -127,3 +132,4 @@ $("#datepicker3").datepicker();
 $("#datepicker4").datepicker();
 $("#datepicker5").datepicker();
 $("#datepicker6").datepicker();
+$("#datepicker7").datepicker();
