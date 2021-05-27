@@ -133,3 +133,4 @@ $("#datepicker4").datepicker();
 $("#datepicker5").datepicker();
 $("#datepicker6").datepicker();
 $("#datepicker7").datepicker();
+$("#datepicker8").datepicker();
