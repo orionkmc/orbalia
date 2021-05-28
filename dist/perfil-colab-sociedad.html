@@ -46,7 +46,10 @@
   <style>
     .datepicker {
       z-index: 1060!important;
-    } 
+    }
+    .dropdown-menu {
+      height: auto;
+    }
   </style>
   <body data-topbar="dark">
     <!-- Begin page -->
@@ -430,17 +433,12 @@
                               <thead>
                                 <tr>
                                   <th>Nombre</th>
+                                  <th>Tipo</th>
                                   <th>Apellido 1</th>
                                   <th>Apellido 2</th>
                                   <th>NIF</th>
                                   <th>Teléfono</th>
-                                  <th>Teléfono</th>
-                                  <th>Teléfono</th>
-                                  <th>Teléfono</th>
-                                  <th>Teléfono</th>
-                                  <th>Teléfono</th>
-                                  <th>Teléfono</th>
-                                  <th>Email</th>
+                                  <th>E-mail</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -452,11 +450,6 @@
                                   <td>2019/04/25</td>
                                   <td>2019/04/25</td>
                                   <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>andnndj@gmail.com</td>
                                 </tr>
                                 <tr>
                                   <td>PYME</td>
@@ -465,12 +458,7 @@
                                   <td>1</td>
                                   <td>2019/04/25</td>
                                   <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>2019/04/25</td>
-                                  <td>nshhbdhfbhj@gmail.com</td>
+                                  <td>2021/04/25</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -478,7 +466,20 @@
                           <div class="dropdown-divider"></div>
                           <div class="row datos-sociedad mt-5">
                             <div class="col-12 col-md-6">
-                              <h5>DATOS DE LA SOCIEDAD</h5>
+                              <h5>
+                                DATOS DE LA SOCIEDAD
+                                <button class="btn btn-sm btn-primary botones-accion ml-2" type="button">
+                                  <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatosColab">
+                                    <lord-icon
+                                      src="assets/json/35-edit-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#ffffff;,secondary:#ffffff;"
+                                      style="width:20px; height:20px;">
+                                    </lord-icon>
+                                  </a>
+                                </button>
+                              </h5>
                               <p>Denominación social:</p>
                               <p>CIF:</p>
                               <p>Domicilio fiscal:</p>
@@ -489,21 +490,35 @@
                               <p>Télefono fijo:</p>
                               <p>Télefono móvil:</p>
                               <p>Email:</p>
+                              <p>% de colaborador:</p>
                               <button class="btn btn-sm btn-primary mt-4 mb-1" type="button">Descargar certificado colaborador</button>
                             </div>
                             <div class="col-12 col-md-6">
                               <h5 class="contrato-vigente">CONTRATO VIGENTE</h5>
                               <div class="row h-75">
                                 <div class="col-12 col-sm-6">
-                                  <div class="toast fade show toast-contrato" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
                                     <div class="toast-header d-flex justify-content-between">
                                       <small>11 mins ago</small>
-                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarContratoColab">
                                         <span aria-hidden="true">&times;</span>
                                       </button>
                                     </div>
-                                    <div class="toast-body toast-body-contrato">
+                                    <div class="toast-body">
                                       Facturas
+                                    </div>
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary botones-accion" type="button" style="padding: .15rem .1rem;" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoColab">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="text-center pt-2 pb-2 mt-3">
@@ -526,6 +541,151 @@
                               </div>
                             </div>
                           </div>
+
+                          <div class="modal fade eliminarContratoColab" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar contrato</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <p>¿Desea eliminar el contrato?</p>
+                                  <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                  <div class="d-flex justify-content-around">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                  </div>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
+                          <div class="modal fade editarArchivoColab" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar archivo</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-12">
+                                        <input class="form-control" type="text" id="nombreDocumento" placeholder="Nombre del documento">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12">
+                                        <select class="form-control">
+                                          <option>PDF</option>
+                                          <option>TXT</option>
+                                          <option>XLS</option>
+                                          <option>JPG</option>
+                                          <option>DOC</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="custom-file pl-2 pr-2">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                        <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile04">Seleccionar archivo...</label>
+                                      </div>                                                  
+                                    </div>
+                                    <div class="boton-etiqueta">
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                                    </div>
+                                    <small>Código: 00012323923</small>
+                                  </form>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
+                          <div class="modal fade editarDatosColab" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-md">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Sociedad</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" id="denomSociC" placeholder="Denominación social">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" id="cifEdiC" placeholder="CIF">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" id="domicFisC" placeholder="Domicilio fiscal">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" id="paisEditC" placeholder="País">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" id="provinciaEditC" placeholder="Provincia">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" id="codPosEditC" placeholder="Código postal">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" id="codUsuaEditC" placeholder="Código de usuario">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" id="telfEditC" placeholder="Teléfono fijo">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" id="telfUsEditC" placeholder="Teléfono móvil">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="email" id="correoEditC" placeholder="E-mail">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="boton-etiqueta">
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
 
                           <div class="modal fade fechaRenovacion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-sm">
@@ -593,7 +753,20 @@
                                         <tr>
                                           <td>PYME</td>
                                           <td>22</td>
-                                          <td>Sociedad</td>
+                                          <td>
+                                            Sociedad
+                                            <button class="btn btn-sm btn-primary botones-accion ml-2" type="button">
+                                              <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarNotaContColab">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#ffffff;,secondary:#ffffff;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </td>
                                           <td>
                                             <div class="dropdown text-center">
                                               <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -617,7 +790,20 @@
                                         <tr>
                                           <td>PYME</td>
                                           <td>22</td>
-                                          <td>Sociedad</td>
+                                          <td>
+                                            Sociedad
+                                            <button class="btn btn-sm btn-primary botones-accion ml-2" type="button">
+                                              <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarNotaContColab">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#ffffff;,secondary:#ffffff;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </td>
                                           <td>
                                             <div class="dropdown text-center">
                                               <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -640,6 +826,34 @@
                                         </tr>
                                       </tbody>
                                     </table>
+                                  </div>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
+                          <div class="modal fade editarNotaContColab" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar nota</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba su nota aquí"></textarea>
+                                </div> 
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->
@@ -748,7 +962,7 @@
                                   <th>Total facturado</th>
                                   <th>Total cobrado</th>
                                   <th>Total comisión colaborador</th>
-                                  <th></th>
+                                  <th>Acciones</th>
                                 </tr>
                               </thead>
                               <tr>
@@ -760,7 +974,17 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <a class="btn-ver" href="usuarios.html">Ver</a>
+                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                    <a href="usuarios.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                      <lord-icon
+                                        src="assets/json/69-eye-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
                                 </td>
                               </tr>
                               <tr>
@@ -772,7 +996,17 @@
                                 <td>$90,560</td>
                                 <td>$90,560</td>
                                 <td class="centrar-boton">
-                                  <a class="btn-ver" href="usuarios.html">Ver</a>
+                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                    <a href="usuarios.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                      <lord-icon
+                                        src="assets/json/69-eye-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
                                 </td>
                               </tr>
                               <tr>
@@ -784,7 +1018,17 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <a class="btn-ver" href="usuarios.html">Ver</a>
+                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                    <a href="usuarios.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                      <lord-icon
+                                        src="assets/json/69-eye-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
                                 </td>
                               </tr>
                               </tbody>

@@ -53,4 +53,30 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-usuarios-rrhh-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-historialUsua-rrhh-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-historialUsua-rrhh-buttons_wrapper .col-md-6:eq(0)");
 });
+
+!(function ($) {
+  "use strict";
+
+  var AdvancedForm = function () {};
+
+  (AdvancedForm.prototype.init = function () {
+    // Date Picker
+    $("#date-range2").datepicker({
+      toggleActive: true,
+    });
+  }),
+    //init
+    ($.AdvancedForm = new AdvancedForm()),
+    ($.AdvancedForm.Constructor = AdvancedForm);
+})(window.jQuery),
+  //initializing
+  (function ($) {
+    "use strict";
+    $.AdvancedForm.init();
+  })(window.jQuery);

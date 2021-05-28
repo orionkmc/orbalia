@@ -115,7 +115,7 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">CONTROL DE ACCESO</h5>
+                    <h5 class="card-title">CONTROL DE ADMISIÓN</h5>
                     <div class="table-responsive">
                       <table id="datatable-acceso" class="table table-bordered" style="width:100%">
                         <thead>
@@ -140,26 +140,38 @@
                             <td>2011/04/25</td>
                             <td>Externo</td>
                             <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary btn-ver-solo" type="button">
-                                <a href="#" style="color: #fff">Ver</a>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a href="perfil-colab-sociedad.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
                               </button>
-                              <button class="btn btn-sm btn-primary btn-ver-solo" type="button"  data-toggle="modal" data-animation="bounce" data-target=".añadirColaborador">
-                                <lord-icon
-                                  src="assets/json/37-approve-checked-simple-outline.json"
-                                  trigger="loop-on-hover"
-                                  target="a"
-                                  colors="primary:#ffffff;,secondary:#ffffff;"
-                                  style="width:15px; height:15px;">
-                                </lord-icon>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirColaborador">
+                                <a data-toggle="tooltip" data-placement="top" title="Aceptar">
+                                  <lord-icon
+                                    src="assets/json/37-approve-checked-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
                               </button>
-                              <button class="btn btn-sm btn-primary btn-ver-solo" type="button">
-                                <lord-icon
-                                  src="assets/json/185-trash-bin-outline.json"
-                                  trigger="loop-on-hover"
-                                  target="a"
-                                  colors="primary:#ffffff;,secondary:#ffffff;"
-                                  style="width:15px; height:15px;">
-                                </lord-icon>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirColaborador">
+                                <a data-toggle="tooltip" data-placement="top" title="Cancelar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
                               </button>
                             </td>
                           </tr>
@@ -190,7 +202,7 @@
                             <th>Referidos</th>
                             <th>Próxima renovación</th>
                             <th>Facturación generada</th>
-                            <th>Ranking</th>
+                            <th>% comisión</th>
                             <th>Acciones</th>
                           </tr>
                         </thead>
@@ -207,8 +219,16 @@
                             <td>Externo</td>
                             <td>Externo</td>
                             <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary btn-ver" type="button">
-                                <a href="perfil-colab-sociedad.html" style="color: #fff">Ver</a>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a href="perfil-colab-sociedad.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
                               </button>
                             </td>
                           </tr>

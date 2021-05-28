@@ -3417,12 +3417,6 @@ input[switch="dark"]:checked + label {
   margin: 0 auto .75rem auto !important;
   max-width: 120px !important; }
 
-.toast-contrato {
-  height: 40vh; }
-
-.toast-body-contrato {
-  height: 19vh; }
-
 .renovacion {
   display: -webkit-box;
   display: -ms-flexbox;
