@@ -58,6 +58,76 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-historialUsua-rrhh-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-depCrearRol-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-depCrearRol-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-PerIniCrearRol-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-PerIniCrearRol-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-PerExpCrearRol-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-PerExpCrearRol-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-PerProcCrearRol-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-PerProcCrearRol-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-PerRrhhCrearRol-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-PerRrhhCrearRol-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-depUsuaIntRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-depUsuaIntRR-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-AccEspUsuaIntRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-AccEspUsuaIntRR-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-otrosDocUsuaIntRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-otrosDocUsuaIntRR-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-historialUsuaIntRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-historialUsuaIntRR-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-gesPerUsuaRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-gesPerUsuaRR-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-EspUsuaRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-EspUsuaRR-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-ProcUsuaRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-ProcUsuaRR-buttons .col-md-6:eq(0)");
+  $("#datatable-RRHHUsuaRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-ProcUsuaRR-buttons .col-md-6:eq(0)");
+  $("#datatable-depUsuaSPRR-buttons")
+    .DataTable(context4)
+    .buttons()
+    .container()
+    .appendTo("#datatable-depUsuaSPRR-buttons_wrapper .col-md-6:eq(0)");
 });
 
 !(function ($) {
@@ -70,6 +140,9 @@ $(document).ready(function () {
     $("#date-range2").datepicker({
       toggleActive: true,
     });
+    $("#date-range3").datepicker({
+      toggleActive: true,
+    });
   }),
     //init
     ($.AdvancedForm = new AdvancedForm()),
@@ -80,3 +153,6 @@ $(document).ready(function () {
     "use strict";
     $.AdvancedForm.init();
   })(window.jQuery);
+
+$("#datepicker1").datepicker();
+$("#datepicker2").datepicker();

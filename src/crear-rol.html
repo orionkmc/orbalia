@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/title-meta.html", {"title": "Crear rol / Administrador"})
+    
+    @@include("partials/head-css.html")
+  </head>
+
+  <body data-topbar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      @@include("partials/topbar.html") @@include("partials/sidebarAdm.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5>Nombre del rol</h5>
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Fundador</option>
+                              <option>Director legal</option>
+                              <option>Socio</option>
+                              <option>Auditor</option>
+                              <option>Técnico</option>
+                              <option>Redactor</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                  </div>
+                </div>  
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Departamentos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-depCrearRol-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Departamento</th>
+                            <th>Asignado por</th>
+                            <th>Fecha</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>23444</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                            <td>22</td>
+                            <td>Autónomo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="boton-etiqueta">
+                        <button class="btn btn-sm btn-primary">Añadir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+            
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="mb-4">Permisos</h4>
+                    <h5 class="mb-4">Inicio</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-PerIniCrearRol-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Inicio</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>284736</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Expedientes</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-PerExpCrearRol-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Expedientes</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>284736</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Procedimientos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-PerProcCrearRol-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Procedimientos</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>284736</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">RRHH</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-PerRrhhCrearRol-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>RRHH</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>284736</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/rrhh.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+  </body>
+</html>

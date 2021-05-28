@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/title-meta.html", {"title": "RRHH-Usuario Interno / Administrador"})
+    
+    @@include("partials/head-css.html")
+  </head>
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    }
+  </style>
+  <body data-topbar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      @@include("partials/topbar.html") @@include("partials/sidebarAdm.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <div class="row datos-sociedad mt-5">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <h5>
+                          DATOS DEL USUARIO
+                          <button class="btn btn-sm btn-primary botones-accion ml-2" type="button">
+                            <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatosUsuaIntRRHH">
+                              <lord-icon
+                                src="assets/json/35-edit-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </h5>
+                        <p>Usuario:</p>
+                        <p>Nombre:</p>
+                        <p>Apellidos:</p>
+                        <p>Teléfono:</p>
+                        <p>Puesto:</p>
+                        <p>Jornada:</p>
+                        <p>Correo:</p>
+                        <div class="mt-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".rolUsuarioRRHH">Rol de usuario</button>
+                        </div>
+
+                        <div class="modal fade rolUsuarioRRHH" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Rol de usuario</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p><strong>¿Seguro que desea modificar el rol?</strong></p>
+                                <p>Se modificarán los permisos asignados a este usuario</p>
+                                <div class="d-flex justify-content-around mt-4">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" data-toggle="modal" data-animation="bounce" data-target=".cambiarRolUsuarioRRHH">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade cambiarRolUsuarioRRHH" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Rol de usuario</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="form-control" id="rolUsuarioDat">
+                                        <option>Seleccionar rol de usuario</option>
+                                        <option>Director legal</option>
+                                        <option>Auditor</option>
+                                        <option>Fundador</option>
+                                        <option>Socio</option>
+                                      </select>
+                                    </div>                                                  
+                                  </div>
+                                </form>
+                                <div class="boton-etiqueta">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="circulos-slider">
+                          <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                        </div>
+                        <div class="text-center mt-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".enviarMensajeUsuaInt">Mensaje</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade editarDatosUsuaIntRRHH" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Usuario RRHH</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="usuarRR" placeholder="Usuario">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="nombreRRhh" placeholder="Nombre">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="apellidoRRHH" placeholder="Apellido">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="telfRRHH" placeholder="Teléfono">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="puestoRRHH" placeholder="Puesto">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="jornadaRRHH" placeholder="Jornada">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="email" id="emailRRHH" placeholder="E-mail">                                                       
+                          </div>                                                   
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade enviarMensajeUsuaInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Mensaje a usuario</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <textarea class="form-control" rows="4" placeholder="Escriba su mensaje aquí..."></textarea>
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="mb-4">Gestionar permisos de usuario</h4>
+                    <h5 class="mb-4">Inicio</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-gesPerUsuaRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Inicio</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>22345</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Expedientes</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-EspUsuaRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Expedientes</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>PYMES2021</td>
+                          </tr>
+                          <tr>
+                            <td>ORBALIA2021</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Procedimientos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-ProcUsuaRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Procedimientos</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>PYMES2021</td>
+                          </tr>
+                          <tr>
+                            <td>ORBALIA2021</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">RRHH</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-RRHHUsuaRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>RRHH</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>PYMES2021</td>
+                          </tr>
+                          <tr>
+                            <td>ORBALIA2021</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/rrhh.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+  </body>
+</html>

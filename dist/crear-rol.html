@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Colaboradores / Administrador | ORBALIA SUBVENCIONES</title>
+    <title>Crear rol / Administrador | ORBALIA SUBVENCIONES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -394,163 +394,88 @@
       <div class="main-content">
         <div class="page-content">
           <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5>Nombre del rol</h5>
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Fundador</option>
+                              <option>Director legal</option>
+                              <option>Socio</option>
+                              <option>Auditor</option>
+                              <option>Técnico</option>
+                              <option>Redactor</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                  </div>
+                </div>  
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Departamentos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-depCrearRol-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Departamento</th>
+                            <th>Asignado por</th>
+                            <th>Fecha</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>23444</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                            <td>22</td>
+                            <td>Autónomo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="boton-etiqueta">
+                        <button class="btn btn-sm btn-primary">Añadir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
             
             <div class="row">
-              <div class="col-12 col-md-4">
-                <div class="card card-content card-borde">
-                  <div class="mb-2 card-body text-muted d-flex justify-content-center align-items-center">
-                    <lord-icon
-                        src="assets/json/274-male-and-two-female-outline.json"
-                        trigger="loop-on-hover"
-                        target="a"
-                        colors="primary:#707070;,secondary:#707070;"
-                        style="width:80px; height:80px; margin-top: 0.4rem;">
-                      </lord-icon>
-                    <div style="text-align: initial; margin-left: 0.5rem;">
-                      <h3 class="text-black mt-2 mb-0">15,852</h3> 
-                      <p class="m-0"> 
-                        Colaboradores
-                      </p>
-                    </div>
-                  </div>
-                </div>    
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card card-content card-borde">
-                  <div class="mb-2 card-body text-muted d-flex justify-content-center align-items-center">
-                    <lord-icon
-                        src="assets/json/274-male-and-two-female-outline.json"
-                        trigger="loop-on-hover"
-                        target="a"
-                        colors="primary:#707070;,secondary:#707070;"
-                        style="width:80px; height:80px; margin-top: 0.4rem;">
-                      </lord-icon>
-                    <div style="text-align: initial; margin-left: 0.5rem;">
-                      <h3 class="text-black mt-2 mb-0">15,852</h3> 
-                      <p class="m-0"> 
-                        Referidos
-                      </p>
-                    </div>
-                  </div>
-                </div>    
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card card-content card-borde">
-                  <div class="mb-2 card-body text-muted d-flex justify-content-center align-items-center">
-                    <lord-icon
-                        src="assets/json/274-male-and-two-female-outline.json"
-                        trigger="loop-on-hover"
-                        target="a"
-                        colors="primary:#707070;,secondary:#707070;"
-                        style="width:80px; height:80px; margin-top: 0.4rem;">
-                      </lord-icon>
-                    <div style="text-align: initial; margin-left: 0.5rem;">
-                      <h3 class="text-black mt-2 mb-0">8%</h3> 
-                      <p class="m-0"> 
-                        % por defecto
-                      </p>
-                      <button class="btn btn-sm btn-primary boton-editarP" data-toggle="modal" data-animation="bounce" data-target=".editarPorcentaje">Editar</button>
-                    </div>
-                  </div>
-                </div>    
-              </div>         
-            </div>
-
-            <div class="modal fade editarPorcentaje" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar porcentaje</h5>
-                    <lord-icon
-                      src="assets/json/38-error-cross-simple-outline.json"
-                      trigger="loop-on-hover"
-                      target="a"
-                      colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
-                      class="btn-close"
-                      data-dismiss="modal"
-                      aria-label="Close">
-                    </lord-icon>
-                  </div>
-                  <div class="modal-body text-center">
-                    <form>
-                      <div class="form-group row d-flex justify-content-center">
-                        <div class="col-sm-4 d-flex align-items-center">
-                          <input class="form-control mr-2" type="text"> %                                                      
-                        </div>                                                    
-                      </div>
-                    </form>
-                    <div class="boton-etiqueta">
-                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
-                    </div>
-                  </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
-
-            <div class="row">
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">CONTROL DE ADMISIÓN</h5>
+                    <h4 class="mb-4">Permisos</h4>
+                    <h5 class="mb-4">Inicio</h5>
                     <div class="table-responsive">
-                      <table id="datatable-acceso" class="table table-bordered" style="width:100%">
+                      <table id="datatable-PerIniCrearRol-buttons" class="table table-bordered" style="width:100%">
                         <thead>
                           <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Sociedad</th>
-                            <th>Teléfono</th>
-                            <th>Fecha de solicitud</th>
-                            <th>Hora de solicitud</th>
-                            <th>URL Web</th>
-                            <th>Acciones</th>
+                            <th>Inicio</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>PYME</td>
-                            <td>22</td>
-                            <td>Sociedad</td>
-                            <td>1</td>
-                            <td>2019/04/25</td>
-                            <td>2011/04/25</td>
-                            <td>Externo</td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary botones-accion" type="button">
-                                <a href="perfil-colab-sociedad.html" data-toggle="tooltip" data-placement="top" title="Ver">
-                                  <lord-icon
-                                    src="assets/json/69-eye-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirColaborador">
-                                <a data-toggle="tooltip" data-placement="top" title="Aceptar">
-                                  <lord-icon
-                                    src="assets/json/37-approve-checked-simple-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirColaborador">
-                                <a data-toggle="tooltip" data-placement="top" title="Cancelar">
-                                  <lord-icon
-                                    src="assets/json/185-trash-bin-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                            </td>
+                            <td>284736</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
                           </tr>
                         </tbody>
                       </table>
@@ -566,48 +491,20 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title mb-4">COLABORADORES</h5>
+                    <h5 class="mb-4">Expedientes</h5>
                     <div class="table-responsive">
-                      <table id="datatable-colaboradores-buttons" class="table table-bordered" style="width:100%">
+                      <table id="datatable-PerExpCrearRol-buttons" class="table table-bordered" style="width:100%">
                         <thead>
                           <tr>
-                            <th>ID</th>
-                            <th>Fecha colaborador</th>
-                            <th>Nombre</th>
-                            <th>Sociedad</th>
-                            <th>Teléfono</th>
-                            <th>Referidos</th>
-                            <th>Próxima renovación</th>
-                            <th>Facturación generada</th>
-                            <th>% comisión</th>
-                            <th>Acciones</th>
+                            <th>Expedientes</th>
                           </tr>
                         </thead>
-
                         <tbody>
                           <tr>
-                            <td>PYME</td>
-                            <td>22</td>
-                            <td>Sociedad</td>
-                            <td>1</td>
-                            <td>2019/04/25</td>
-                            <td>2011/04/25</td>
-                            <td>Externo</td>
-                            <td>Externo</td>
-                            <td>Externo</td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary botones-accion" type="button">
-                                <a href="perfil-colab-sociedad.html" data-toggle="tooltip" data-placement="top" title="Ver">
-                                  <lord-icon
-                                    src="assets/json/69-eye-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                            </td>
+                            <td>284736</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
                           </tr>
                         </tbody>
                       </table>
@@ -619,39 +516,62 @@
             </div>
             <!-- end row -->
 
-            <div class="modal fade añadirColaborador" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Aceptar colaborador</h5>
-                    <lord-icon
-                      src="assets/json/38-error-cross-simple-outline.json"
-                      trigger="loop-on-hover"
-                      target="a"
-                      colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
-                      class="btn-close"
-                      data-dismiss="modal"
-                      aria-label="Close">
-                    </lord-icon>
-                  </div>
-                  <div class="modal-body text-center">
-                    <p>¿Seguro que desea aceptar a XXX como colaborador de ORBALIA?</p>
-                    <form>
-                      <div class="form-group row d-flex justify-content-center">
-                        <div class="col-sm-3 d-flex align-items-center">
-                          <input class="form-control mr-2" type="text" id="porcColab"> %                                                      
-                        </div>                                                    
-                      </div>
-                    </form>
-                    <div class="boton-etiqueta">
-                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Procedimientos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-PerProcCrearRol-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Procedimientos</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>284736</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
-
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">RRHH</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-PerRrhhCrearRol-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>RRHH</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>284736</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
           </div>
           <!-- container-fluid -->
         </div>
@@ -671,6 +591,7 @@
       <!-- end main content-->
     </div>
     <!-- END layout-wrapper -->
+
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -698,17 +619,13 @@
     <!-- Responsive examples -->
     <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-    
+
     <!--Datepicker-->
     <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    
-    <!-- Icon -->
-    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-    
-    <!-- Datatable init js -->
-    <script src="assets/js/pages/colaboradores.init.js"></script>
-    <script src="assets/js/app.js"></script>
 
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/rrhh.init.js"></script>
+    <script src="assets/js/app.js"></script>
 
   </body>
 </html>

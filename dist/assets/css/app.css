@@ -3409,9 +3409,11 @@ input[switch="dark"]:checked + label {
   width: 40%;
   margin: 0 auto;
   text-align: center;
-  padding: 50px 5px;
-  border: 1px solid;
-  border-radius: 50%; }
+  padding: 5px 5px; }
+
+.circulos-slider img {
+  width: 100%;
+  height: 100%; }
 
 .arch-notif {
   margin: 0 auto .75rem auto !important;

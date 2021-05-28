@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>RRHH-Usuario Interno / Administrador | ORBALIA SUBVENCIONES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- DataTables -->
+    <link
+    href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+    rel="stylesheet"
+    type="text/css"
+    />
+    <link
+    href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
+    rel="stylesheet"
+    type="text/css"
+    />
+
+    <!-- Responsive datatable examples -->
+    <link
+    href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+    rel="stylesheet"
+    type="text/css"
+    />
+
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  </head>
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    }
+  </style>
+  <body data-topbar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      <header id="page-topbar">
+        <div class="navbar-header">
+          <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+              <a href="index.html" class="logo logo-dark">
+                <span class="logo-sm">
+                  <img src="assets/images/logo-sm.png" alt="" height="22" />
+                </span>
+                <span class="logo-lg">
+                  <img src="assets/images/logo-dark.png" alt="" height="17" />
+                </span>
+              </a>
+
+              <a href="index.html" class="logo logo-light">
+                <span class="logo-sm">
+                  <img src="assets/images/logo-sm.png" alt="" height="22" />
+                </span>
+                <span class="logo-lg">
+                  <img src="assets/images/logo-light.png" alt="" height="17" />
+                </span>
+              </a>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-sm px-3 font-size-24 header-item waves-effect"
+              id="vertical-menu-btn"
+            >
+              <i class="mdi mdi-menu"></i>
+            </button>
+          </div>
+
+          <!-- Search input -->
+          <div class="search-wrap" id="search-wrap">
+            <div class="search-bar">
+              <input class="search-input form-control" placeholder="Search" />
+              <a
+                href="#"
+                class="close-search toggle-search"
+                data-target="#search-wrap"
+              >
+                <i class="mdi mdi-close-circle"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="dropdown d-inline-block">
+              <button
+                type="button"
+                class="btn header-item noti-icon waves-effect"
+                id="page-header-notifications-dropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="badge badge-danger badge-pill">2</span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                aria-labelledby="page-header-notifications-dropdown"
+              >
+                <div class="p-3">
+                  <h6 class="m-0">Notificaciones (20)</h6>
+                </div>
+  
+                <div data-simplebar style="max-height: 230px">
+                  <a href="" class="text-reset notification-item">
+                    <div class="media">
+                      <div class="avatar-xs mr-3">
+                        <span
+                          class="avatar-title bg-primary rounded-circle font-size-16"
+                        >
+                          <i class="mdi mdi-cart-outline"></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="mt-0 mb-1 font-size-15">Your order is placed</h6>
+                        <div class="text-muted">
+                          <p class="mb-1 font-size-12">
+                            Dummy text of the printing and typesetting industry.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="" class="text-reset notification-item">
+                    <div class="media">
+                      <div class="avatar-xs mr-3">
+                        <span
+                          class="avatar-title bg-danger rounded-circle font-size-16"
+                        >
+                          <i class="mdi mdi-cart-outline"></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="mt-0 mb-1 font-size-15">Your order is placed</h6>
+                        <div class="text-muted">
+                          <p class="mb-1 font-size-12">
+                            Dummy text of the printing and typesetting industry.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="p-2 border-top">
+                  <a
+                    class="btn btn-sm btn-link font-size-14 btn-block text-center"
+                    href="javascript:void(0)"
+                  >
+                    <i class="mdi mdi-arrow-right-circle mr-1"></i> View all
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown d-inline-block">
+              <button
+                type="button"
+                class="btn header-item waves-effect"
+                id="page-header-user-dropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  class="rounded-circle header-profile-user"
+                  src="assets/images/users/user-1.jpg"
+                  alt="Header Avatar"
+                />
+                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <!-- item-->
+                <a class="dropdown-item" href="#"
+                  ><i class="dripicons-user d-inlne-block text-muted mr-2"></i>
+                  Perfil</a
+                >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"
+                  ><i class="dripicons-exit d-inlne-block text-muted mr-2"></i> Cerrar
+                  sesión</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+ <!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+  <div data-simplebar class="h-100">
+    <!--- Sidemenu -->
+    <div id="sidebar-menu">
+      <!-- Left Menu Start -->
+      <ul class="metismenu list-unstyled" id="side-menu">
+        <li class="menu-title">Administrador</li>
+        <li>
+          <a href="index-adm.html" class="waves-effect">
+            <lord-icon
+              src="assets/json/467-dashboard-gauge-outline.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class="waves-effect">
+            <lord-icon
+              src="assets/json/56-document-outline.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>Procedimientos</span>
+          </a>
+        </li>
+        <li>
+          <a href="expedientes.html" class=" waves-effect">
+            <lord-icon
+              src="assets/json/120-folder-open-morph-outline.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>Expedientes</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript: void(0);" class="has-arrow waves-effect">
+            <lord-icon
+              src="assets/json/268-avatar-man-outline.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>Usuarios</span>
+          </a>
+          <ul class="sub-menu" aria-expanded="false">
+            <li>
+              <a href="usuarios.html">
+                <lord-icon
+                  src="assets/json/268-avatar-man-outline.json"
+                  trigger="loop-on-hover"
+                  target="a"
+                  colors="primary:#707070;,secondary:#707070;"
+                  style="width:30px; height:30px;">
+                </lord-icon>
+                Usuarios
+              </a>
+            </li>
+            <li>
+              <a href="perfil-sociedad.html">
+                <lord-icon
+                  src="assets/json/274-male-and-two-female-outline.json"
+                  trigger="loop-on-hover"
+                  target="a"
+                  colors="primary:#707070;,secondary:#707070;"
+                  style="width:30px; height:30px;">
+                </lord-icon>
+                Perfil Sociedad
+              </a>
+            </li>
+            <li>
+              <a href="perfil-autonomo.html">
+                <lord-icon
+                  src="assets/json/284-avatar-man-approved-outline.json"
+                  trigger="loop-on-hover"
+                  target="a"
+                  colors="primary:#707070;,secondary:#707070;"
+                  style="width:30px; height:30px;">
+                </lord-icon>
+                Perfil Autónomo
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript: void(0);" class="has-arrow waves-effect">
+            <lord-icon
+              src="assets/json/271-three-male-avatars-outline.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>Colaboradores</span>
+          </a>
+          <ul class="sub-menu" aria-expanded="false">
+            <li>
+              <a href="colaboradores.html">
+                <lord-icon
+                  src="assets/json/278-avatar-man-plus-outline.json"
+                  trigger="loop-on-hover"
+                  target="a"
+                  colors="primary:#707070;,secondary:#707070;"
+                  style="width:30px; height:30px;">
+                </lord-icon>
+                Colaboradores
+              </a>
+            </li>
+            <li>
+              <a href="perfil-colab-sociedad.html">
+                <lord-icon
+                  src="assets/json/274-male-and-two-female-outline.json"
+                  trigger="loop-on-hover"
+                  target="a"
+                  colors="primary:#707070;,secondary:#707070;"
+                  style="width:30px; height:30px;">
+                </lord-icon>
+                Perfil Sociedad
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="rrhh.html" class=" waves-effect">
+            <lord-icon
+              src="assets/json/456-handshake-deal-outline.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>RRHH</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class=" waves-effect">
+            <lord-icon
+              src="assets/json/161-growth-outline.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>Estadísticas</span>
+          </a>
+        </li>
+        <li>
+          <a href="facturacion.html" class=" waves-effect">
+            <lord-icon
+              src="assets/json/755-invoice-receipt-validating-ticket-outline-edited.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>Facturación</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class=" waves-effect">
+            <lord-icon
+              src="assets/json/478-computer-display-outline.json"
+              trigger="loop-on-hover"
+              target="a"
+              colors="primary:#707070;,secondary:#707070;"
+              style="width:30px; height:30px;">
+            </lord-icon>
+            <span>Administración web</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar -->
+  </div>
+</div>
+<!-- Left Sidebar End -->
+
+<!-- Icon -->
+<script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <div class="row datos-sociedad mt-5">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <h5>
+                          DATOS DEL USUARIO
+                          <button class="btn btn-sm btn-primary botones-accion ml-2" type="button">
+                            <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatosUsuaRRHH">
+                              <lord-icon
+                                src="assets/json/35-edit-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </h5>
+                        <p>Usuario:</p>
+                        <p>Nombre:</p>
+                        <p>Apellidos:</p>
+                        <p>Teléfono:</p>
+                        <p>Puesto:</p>
+                        <p>Jornada:</p>
+                        <p>Correo:</p>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="circulos-slider">
+                          <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                        </div>
+                        <div class="text-center mt-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".enviarMensaje">Mensaje</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade editarDatosUsuaRRHH" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Usuario interno RRHH</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="usuarRR" placeholder="Usuario">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="nombreRRhh" placeholder="Nombre">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="apellidoRRHH" placeholder="Apellido">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="telfRRHH" placeholder="Teléfono">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="puestoRRHH" placeholder="Puesto">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="jornadaRRHH" placeholder="Jornada">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="email" id="emailRRHH" placeholder="E-mail">                                                       
+                          </div>                                                   
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade enviarMensaje" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Mensaje a usuario</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <textarea class="form-control" rows="4" placeholder="Escriba su mensaje aquí..."></textarea>
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Departamentos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-depUsuaIntRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Departamento</th>
+                            <th>Asignado por</th>
+                            <th>Fecha</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>23444</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                            <td>22</td>
+                            <td>Autónomo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="boton-etiqueta">
+                        <button class="btn btn-sm btn-primary">Asignar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Accesos especiales</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-AccEspUsuaIntRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Procedimiento</th>
+                            <th>Expediente</th>
+                            <th>Beneficiario</th>
+                            <th>Fecha de inicio de acceso</th>
+                            <th>Caducidad acceso</th>
+                            <th>Último acceso al expediente</th>
+                            <th>Departamento</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>PYMES2021</td>
+                            <td>EXP001/2021/2</td>
+                            <td>Montando Movidas SL</td>
+                            <td>23/02/2021</td>
+                            <td>Ilimitado</td>
+                            <td>23/04/2021 00:35</td>
+                            <td>Subvenciones</td>
+                          </tr>
+                          <tr>
+                            <td>ORBALIA2021</td>
+                            <td>EXP001/2021/2</td>
+                            <td>Montando Movidas SL</td>
+                            <td>20/02/2021</td>
+                            <td>Ilimitado</td>
+                            <td>25/04/2021 00:35</td>
+                            <td>Subvenciones</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="boton-etiqueta">
+                        <a href="crear-permisos-usuarios.html" class="btn btn-primary btn-sm">Crear acceso</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="mb-4">Documentos laborales</h4>
+                    <h5 class="mb-4">Contrato</h5>
+                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast" style="max-width: 150px;">
+                      <div class="ml-2">
+                        <small>25/05/2021 <br>11 mins ago</small>
+                      </div>
+                      <div class="dropdown-divider m-0"></div>
+                      <div class="toast-header d-flex justify-content-between">
+                        <div>
+                          <button class="btn btn-sm btn-outline-primary botones-accion" type="button" style="padding: .15rem .1rem;" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoAut">
+                            <a data-toggle="tooltip" data-placement="top" title="Editar">
+                              <lord-icon
+                                src="assets/json/35-edit-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#000000;,secondary:#000000;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </div>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoAut">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="toast-body text-center">
+                        Contrato
+                      </div>
+                      <div class="dropdown-divider m-0"></div>
+                      <div class="text-center">
+                        <lord-icon
+                          src="assets/json/78-document-PDF-outline.json"
+                          trigger="loop-on-hover"
+                          target="a"
+                          colors="primary:#707070;,secondary:#707070;"
+                          style="width: 30px; height: 30px;">
+                        </lord-icon>
+                        PDF
+                      </div>
+                      <div class="dropdown-divider m-0"></div>
+                      <div class="text-center">
+                        <small>Vencimiento <br>XX/XX/XXXX</small>
+                      </div>
+                    </div> <!--end toast-->
+                    <div class="boton-etiqueta mb-4">
+                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContrato">Añadir</button>
+                    </div>
+                    <div class="dropdown-divider m-0"></div>
+                    <h5 class="mt-4 mb-4">Contrato</h5>
+                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast" style="max-width: 150px;">
+                      <div class="ml-2">
+                        <small>25/05/2021 <br>11 mins ago</small>
+                      </div>
+                      <div class="dropdown-divider m-0"></div>
+                      <div class="toast-header d-flex justify-content-between">
+                        <div>
+                          <button class="btn btn-sm btn-outline-primary botones-accion" type="button" style="padding: .15rem .1rem;" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoAut">
+                            <a data-toggle="tooltip" data-placement="top" title="Editar">
+                              <lord-icon
+                                src="assets/json/35-edit-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#000000;,secondary:#000000;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </div>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoAut">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="toast-body text-center">
+                        Nomina
+                      </div>
+                      <div class="dropdown-divider m-0"></div>
+                      <div class="text-center">
+                        <lord-icon
+                          src="assets/json/78-document-PDF-outline.json"
+                          trigger="loop-on-hover"
+                          target="a"
+                          colors="primary:#707070;,secondary:#707070;"
+                          style="width: 30px; height: 30px;">
+                        </lord-icon>
+                        PDF
+                      </div>
+                      <div class="dropdown-divider m-0"></div>
+                      <div class="text-center">
+                        <small>Mes<br>Marzo 2021</small>
+                      </div>
+                    </div> <!--end toast-->
+                    <div class="boton-etiqueta mb-4">
+                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNomina">Añadir</button>
+                    </div>
+                    <div class="dropdown-divider m-0"></div>
+                    <h5 class="mt-4 mb-4">Otros documentos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-otrosDocUsuaIntRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Tipo de documento</th>
+                            <th>Descripción</th>
+                            <th>Usuario subida</th>
+                            <th>Usuario que debe firmar</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Baja</td>
+                            <td>Parte de baja por fiebre</td>
+                            <td>@nbarranco</td>
+                            <td>@kmarrero</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="boton-etiqueta mb-4">
+                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirOtroDoc">Añadir</button>
+                      </div>
+                    </div>
+                    <div class="dropdown-divider m-0"></div>
+                    <h5 class="mt-4 mb-4">Historial de cambios</h5>
+                    <div class="row">
+                      <div class="col-md-6 offset-md-6">
+                        <form class="mb-4">
+                          <div class="form-group mb-0">
+                            <div>
+                              <div class="input-daterange input-group" id="date-range3">
+                                <input type="text" class="form-control" name="start" placeholder="Fecha inicial" />
+                                <input type="text" class="form-control" name="end" placeholder="Fecha final" />
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table id="datatable-historialUsuaIntRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Tipo de documento</th>
+                            <th>Descripción</th>
+                            <th>Usuario subida</th>
+                            <th>Usuario que debe firmar</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Baja</td>
+                            <td>Parte de baja por fiebre</td>
+                            <td>@nbarranco</td>
+                            <td>@kmarrero</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="modal fade añadirContrato" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir contrato</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body text-center">
+                    <form>
+                      <div class="form-group">
+                        <div>
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Fecha de vencimiento" id="datepicker1">
+                            <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                          </div><!-- input-group -->
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="custom-file pl-2 pr-2">
+                          <input type="file" class="custom-file-input" id="inputGroupFile02">
+                          <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile06">Seleccionar archivo...</label>
+                        </div>                                                  
+                      </div>
+                      <div class="boton-etiqueta">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                      </div>
+                    </form>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="modal fade añadirNomina" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir nomina</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body text-center">
+                    <form>
+                      <div class="form-group">
+                        <div>
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Mes y año" id="datepicker2">
+                            <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                          </div><!-- input-group -->
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="custom-file pl-2 pr-2">
+                          <input type="file" class="custom-file-input" id="inputGroupFile02">
+                          <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile06">Seleccionar archivo...</label>
+                        </div>                                                  
+                      </div>
+                      <div class="boton-etiqueta">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                      </div>
+                    </form>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="modal fade añadirOtroDoc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir documento</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group row">
+                        <div class="col-lg-6  mo-b-15">
+                          <input class="form-control" type="text" id="tipoDoc" placeholder="Tipo de documento">                                                       
+                        </div> 
+                        <div class="col-lg-6">
+                          <input class="form-control" type="text" id="descrDoc" placeholder="Descripción del documento">
+                        </div>                                                   
+                      </div>
+                      <p><strong>Usuario que debe firmar</strong></p>
+                      <div class="usuarios">
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                        <label class="checkeable">
+                          <input type="radio" name="cap1"/>
+                          <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                        </label>
+                      </div>
+                    </form>
+                    <div class="boton-etiqueta">
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                    </div>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <script>document.write(new Date().getFullYear())</script> © ORBALIA SUBVENCIONES
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Icon -->
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/rrhh.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+  </body>
+</html>

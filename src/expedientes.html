@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/title-meta.html", {"title": "Usuarios / Administrador"})
+    
+    @@include("partials/head-css.html")
+  </head>
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    }
+  </style>
+  <body data-topbar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      @@include("partials/topbar.html") @@include("partials/sidebarAdm.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card" style="background-color: transparent; box-shadow: none;">
+                  <div class="card-body">
+                    <div class="text-left">
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirExpediente">
+                        Añadir expediente
+                        <lord-icon
+                          src="assets/json/48-plus-to-square-rotation-outline.json"
+                          trigger="loop-on-hover"
+                          target="a"
+                          colors="primary:#ffffff;,secondary:#ffffff;"
+                          style="width:20px; height:20px; margin-left: 5px;">
+                        </lord-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+
+              <div class="modal fade añadirExpediente" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir expediente</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <input class="form-control" type="text" id="idUsua" placeholder="ID del usuario">                                                       
+                          </div>                                                   
+                        </div>
+                        <div class="form-group mb-0">
+                          <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+                        </div>
+                        <div class="form-group row mt-3">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Procedimientos</option>
+                              <option>XXXXXX</option>
+                              <option>YYYYYY</option>
+                              <option>ZZZZZZ</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".crearExpediente">Crear</button>
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade crearExpediente" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Crear expediente</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p><strong>¿Está seguro que desea crear este expediente?</strong></p>
+                      <p>Si crea un expediente manualmente, tendrá que subir la información a rellenar por el cliente.</p>
+                      <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" id="crearExpediente" data-dismiss="modal" aria-label="Close">Crear</button>
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6 offset-md-6">
+                        <form class="mb-4">
+                          <div class="form-group mb-0">
+                            <div>
+                              <div class="input-daterange input-group" id="date-range4">
+                                <input type="text" class="form-control" name="start" placeholder="Fecha inicial" />
+                                <input type="text" class="form-control" name="end" placeholder="Fecha final" />
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table id="datatable-expedientes-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>TAGS</th>
+                            <th>Departamento</th>
+                            <th>Expediente</th>
+                            <th>Cliente</th>
+                            <th>Fecha de expediente</th>
+                            <th>Estado</th>
+                            <th>Procedimiento</th>
+                            <th>Fecha última nota</th>
+                            <th>Importe inversión</th>
+                            <th>Importe concedido</th>
+                            <th>Técnicos asignados</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>#auditoria</td>
+                            <td>Subvenciones</td>
+                            <td>2021/001/001</td>
+                            <td>Montando Movidas SL</td>
+                            <td>19/09/2021</td>
+                            <td style="color: #f3f70a">Pendiente presentación</td>
+                            <td>PYMES2021</td>
+                            <td>15/05/2021</td>
+                            <td>2500$</td>
+                            <td>2500$</td>
+                            <td class="text-center">
+                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                              <button class="btn btn-sm btn-outline-primary botones-accion ml-2" style="padding: .1rem;" type="button">
+                                <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarTecnicos">
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a data-toggle="tooltip" data-placement="top" title="Recuperar">
+                                  <lord-icon
+                                    src="assets/json/10-cloud-refresh-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarExpediente">
+                                <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#auditoria</td>
+                            <td>Subvenciones</td>
+                            <td>2021/002/001</td>
+                            <td>Montando Movidas SL</td>
+                            <td>19/09/2021</td>
+                            <td style="color: #dd1a00">Eliminado</td>
+                            <td>PYMES2021</td>
+                            <td>15/05/2021</td>
+                            <td>3500$</td>
+                            <td>5500$</td>
+                            <td class="text-center">
+                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                              <button class="btn btn-sm btn-outline-primary botones-accion ml-2" style="padding: .1rem;" type="button">
+                                <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarTecnicos">
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a data-toggle="tooltip" data-placement="top" title="Recuperar">
+                                  <lord-icon
+                                    src="assets/json/10-cloud-refresh-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarExpediente">
+                                <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="modal fade eliminarExpediente" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar expediente</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body text-center">
+                    <p><strong>¿Está seguro que desea eliminar este expediente?</strong></p>
+                    <p>Otro usuario deberá validad la acción.</p>
+                    <div class="form-group row mt-3">
+                      <div class="col-12">
+                        <select class="form-control">
+                          <option>Usuario validador</option>
+                          <option>XXXXXX</option>
+                          <option>YYYYYY</option>
+                          <option>ZZZZZZ</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Enviar</button>
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                    </div>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="modal fade editarTecnicos" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Selecionar técnicos</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body">
+                    <p><strong>Seleccione un supervisor</strong></p>
+                    <div class="usuarios">
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="radio" name="cap1"/>
+                        <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <p><strong>Seleccione los técnicos</strong></p>
+                    <div class="usuarios">
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                      <label class="checkeable">
+                        <input type="checkbox" name="cap1"/>
+                        <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                      </label>
+                    </div>
+                    <div class="boton-etiqueta">
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                    </div>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Historial de validación de expedientes</h5>
+                    <div class="row">
+                      <div class="col-md-6 offset-md-6">
+                        <form class="mb-4">
+                          <div class="form-group mb-0">
+                            <div>
+                              <div class="input-daterange input-group" id="date-range5">
+                                <input type="text" class="form-control" name="start" placeholder="Fecha inicial" />
+                                <input type="text" class="form-control" name="end" placeholder="Fecha final" />
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table id="datatable-histExpedientes-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>TAGS</th>
+                            <th>Departamento</th>
+                            <th>Expediente</th>
+                            <th>Cliente</th>
+                            <th>Fecha de expediente</th>
+                            <th>Estado</th>
+                            <th>Procedimiento</th>
+                            <th>Fecha última nota</th>
+                            <th>Importe inversión</th>
+                            <th>Importe concedido</th>
+                            <th>Técnicos asignados</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>#auditoria</td>
+                            <td>Subvenciones</td>
+                            <td>2021/001/001</td>
+                            <td>Montando Movidas SL</td>
+                            <td>19/09/2021</td>
+                            <td style="color: #f3f70a">Pendiente presentación</td>
+                            <td>PYMES2021</td>
+                            <td>15/05/2021</td>
+                            <td>2500$</td>
+                            <td>2500$</td>
+                            <td class="text-center">
+                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                              <button class="btn btn-sm btn-outline-primary botones-accion ml-2" style="padding: .1rem;" type="button">
+                                <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarTecnicos">
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a data-toggle="tooltip" data-placement="top" title="Recuperar">
+                                  <lord-icon
+                                    src="assets/json/10-cloud-refresh-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarExpediente">
+                                <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#auditoria</td>
+                            <td>Subvenciones</td>
+                            <td>2021/002/001</td>
+                            <td>Montando Movidas SL</td>
+                            <td>19/09/2021</td>
+                            <td style="color: #dd1a00">Eliminado</td>
+                            <td>PYMES2021</td>
+                            <td>15/05/2021</td>
+                            <td>3500$</td>
+                            <td>5500$</td>
+                            <td class="text-center">
+                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                              <button class="btn btn-sm btn-outline-primary botones-accion ml-2" style="padding: .1rem;" type="button">
+                                <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarTecnicos">
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a data-toggle="tooltip" data-placement="top" title="Recuperar">
+                                  <lord-icon
+                                    src="assets/json/10-cloud-refresh-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarExpediente">
+                                <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/expedientes.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      $('#crearExpediente').on('click', function() {
+        $('.añadirExpediente').modal('hide');
+      });
+    </script>
+
+  </body>
+</html>
