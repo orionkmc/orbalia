@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @@include("partials/title-meta.html", {"title": "Usuarios / Administrador"})
+    @@include("partials/title-meta.html", {"title": "Expedientes / Administrador"})
     
     @@include("partials/head-css.html")
   </head>
@@ -454,52 +454,28 @@
                       <table id="datatable-histExpedientes-buttons" class="table table-bordered" style="width:100%">
                         <thead>
                           <tr>
-                            <th>TAGS</th>
-                            <th>Departamento</th>
-                            <th>Expediente</th>
                             <th>Cliente</th>
-                            <th>Fecha de expediente</th>
-                            <th>Estado</th>
                             <th>Procedimiento</th>
-                            <th>Fecha última nota</th>
-                            <th>Importe inversión</th>
-                            <th>Importe concedido</th>
-                            <th>Técnicos asignados</th>
+                            <th>Fecha de solicitud</th>
+                            <th>Número pre-expediente</th>
+                            <th>Fecha de decisión</th>
+                            <th>Estado</th>
                             <th>Acciones</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>#auditoria</td>
-                            <td>Subvenciones</td>
-                            <td>2021/001/001</td>
-                            <td>Montando Movidas SL</td>
-                            <td>19/09/2021</td>
-                            <td style="color: #f3f70a">Pendiente presentación</td>
+                            <td>Tupac SL</td>
                             <td>PYMES2021</td>
-                            <td>15/05/2021</td>
-                            <td>2500$</td>
-                            <td>2500$</td>
-                            <td class="text-center">
-                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
-                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
-                              <button class="btn btn-sm btn-outline-primary botones-accion ml-2" style="padding: .1rem;" type="button">
-                                <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarTecnicos">
-                                  <lord-icon
-                                    src="assets/json/35-edit-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#000000;,secondary:#000000;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                            </td>
+                            <td>22/05/2021</td>
+                            <td>PRE-PYMES2021-02</td>
+                            <td>-</td>
+                            <td style="color: #f3f70a">Pendiente</td>
                             <td class="centrar-boton">
                               <button class="btn btn-sm btn-primary botones-accion" type="button">
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
+                                <a href="pre-expediente-interno.html" data-toggle="tooltip" data-placement="top" title="Más información">
                                   <lord-icon
-                                    src="assets/json/69-eye-outline.json"
+                                    src="assets/json/48-plus-to-square-rotation-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
                                     colors="primary:#ffffff;,secondary:#ffffff;"
@@ -508,9 +484,9 @@
                                 </a>
                               </button>
                               <button class="btn btn-sm btn-primary botones-accion" type="button">
-                                <a data-toggle="tooltip" data-placement="top" title="Recuperar">
+                                <a data-toggle="tooltip" data-placement="top" title="Aceptar expediente">
                                   <lord-icon
-                                    src="assets/json/10-cloud-refresh-outline.json"
+                                    src="assets/json/37-approve-checked-simple-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
                                     colors="primary:#ffffff;,secondary:#ffffff;"
@@ -519,9 +495,9 @@
                                 </a>
                               </button>
                               <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarExpediente">
-                                <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                <a data-toggle="tooltip" data-placement="top" title="Rechazar expediente">
                                   <lord-icon
-                                    src="assets/json/185-trash-bin-outline.json"
+                                    src="assets/json/38-error-cross-simple-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
                                     colors="primary:#ffffff;,secondary:#ffffff;"
@@ -532,58 +508,38 @@
                             </td>
                           </tr>
                           <tr>
-                            <td>#auditoria</td>
-                            <td>Subvenciones</td>
-                            <td>2021/002/001</td>
-                            <td>Montando Movidas SL</td>
-                            <td>19/09/2021</td>
-                            <td style="color: #dd1a00">Eliminado</td>
+                            <td>50cent SL</td>
                             <td>PYMES2021</td>
-                            <td>15/05/2021</td>
-                            <td>3500$</td>
-                            <td>5500$</td>
-                            <td class="text-center">
-                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
-                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
-                              <button class="btn btn-sm btn-outline-primary botones-accion ml-2" style="padding: .1rem;" type="button">
-                                <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarTecnicos">
+                            <td>22/05/2021</td>
+                            <td>PRE-PYMES2021-01</td>
+                            <td>22/05/2021</td>
+                            <td style="color: #dd1a00">Denegado</td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                <a href="pre-expediente-interno.html" data-toggle="tooltip" data-placement="top" title="Más información">
                                   <lord-icon
-                                    src="assets/json/35-edit-outline.json"
+                                    src="assets/json/48-plus-to-square-rotation-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#000000;,secondary:#000000;"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
                               </button>
                             </td>
+                          </tr>
+                          <tr>
+                            <td>Eminem SL</td>
+                            <td>PYMES2021</td>
+                            <td>22/05/2021</td>
+                            <td>PRE-PYMES2021-03</td>
+                            <td>22/05/2021</td>
+                            <td style="color: #69f70a">Aceptado</td>
                             <td class="centrar-boton">
                               <button class="btn btn-sm btn-primary botones-accion" type="button">
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
+                                <a href="pre-expediente-interno.html" data-toggle="tooltip" data-placement="top" title="Más información">
                                   <lord-icon
-                                    src="assets/json/69-eye-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                              <button class="btn btn-sm btn-primary botones-accion" type="button">
-                                <a data-toggle="tooltip" data-placement="top" title="Recuperar">
-                                  <lord-icon
-                                    src="assets/json/10-cloud-refresh-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                              <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarExpediente">
-                                <a data-toggle="tooltip" data-placement="top" title="Eliminar">
-                                  <lord-icon
-                                    src="assets/json/185-trash-bin-outline.json"
+                                    src="assets/json/48-plus-to-square-rotation-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
                                     colors="primary:#ffffff;,secondary:#ffffff;"
