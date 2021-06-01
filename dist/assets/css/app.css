@@ -3353,7 +3353,7 @@ input[switch="dark"]:checked + label {
 
 .btn-notificaciones {
   text-align: center;
-  margin-bottom: 0.95rem; }
+  margin-bottom: 0.7rem; }
 
 .datos-sociedad p {
   margin-bottom: 0; }
@@ -3408,7 +3408,11 @@ input[switch="dark"]:checked + label {
 
 @media (max-width: 767.98px) {
   .contrato-vigente {
-    margin-top: 2rem; } }
+    margin-top: 2rem; }
+  .title-exp-int {
+    text-align: center; }
+  .estado-exp {
+    margin: 0 auto; } }
 
 @media (max-width: 552.98px) {
   .renovacion {
@@ -3477,3 +3481,7 @@ input[switch="dark"]:checked + label {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly; }
+
+.btn:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }

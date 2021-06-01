@@ -409,7 +409,7 @@
             
               <div class="col-12">
                 <div class="card">
-                    <div class="card-body">    
+                    <div class="card-body card-borde">    
                       <h5 class="card-title">NOMBRE SOCIEDAD</h5>
 
                       <!-- Nav tabs -->
@@ -456,10 +456,10 @@
                                   <td>Sociedad</td>
                                   <td>1</td>
                                   <td>2019/04/25</td>
-                                  <td>andnndj@gmail.com</td>
+                                  <td>555-55-55</td>
                                   <td>andnndj@gmail.com</td>
                                   <td class="centrar-boton">
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresSoc">
                                       <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
@@ -489,10 +489,10 @@
                                   <td>Sociedad</td>
                                   <td>1</td>
                                   <td>2019/04/25</td>
-                                  <td>andnndj@gmail.com</td>
+                                  <td>555-55-55</td>
                                   <td>andnndj@gmail.com</td>
                                   <td class="centrar-boton">
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresSoc">
                                       <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
@@ -519,7 +519,7 @@
                               </tbody>
                             </table>
                           </div>
-                          <div class="boton-etiqueta mt-3" data-toggle="modal" data-animation="bounce" data-target=".añadirRepresSoc">
+                          <div class="boton-etiqueta mt-3 mb-3" data-toggle="modal" data-animation="bounce" data-target=".añadirRepresSoc">
                             <button class="btn btn-sm btn-primary">Añadir</button>
                           </div>
 
@@ -579,8 +579,64 @@
                             </div><!-- /.modal-dialog -->
                           </div><!-- /.modal -->
 
+                          <div class="modal fade editarRepresSoc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar representante</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" value="PYME">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" value="22">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" value="Sociedad">                                                   
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" value="1">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" value="2019/04/25">
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" value="555-55-55">                                                       
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="email" value="andnnjd@gmail.com">                                                       
+                                      </div>                                                 
+                                    </div>
+                                    <div class="boton-etiqueta">
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
                           <div class="dropdown-divider"></div>
-                          <div class="row datos-sociedad mt-5">
+                          <div class="row datos-sociedad mt-4">
                             <div class="col-12 col-md-6">
                               <h5>
                                 DATOS DE LA SOCIEDAD
@@ -612,7 +668,7 @@
                               </div>
 
                               <div class="mt-2">
-                                <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".generContraDatos">Generar contraseña</button>
+                                <button class="btn btn-sm btn-primary mb-2" data-toggle="modal" data-animation="bounce" data-target=".generContraDatos">Generar contraseña</button>
                               </div>
 
                               <div class="modal fade rolUsuarioDatos" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -707,7 +763,7 @@
                               </div><!-- /.modal -->
 
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-6 card-borde2">
                               <h5>
                                 COLABORADOR
                                 <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
@@ -834,7 +890,7 @@
                               </tbody>
                             </table>
                           </div>
-                          <div class="boton-etiqueta">
+                          <div class="boton-etiqueta mb-3">
                             <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContactoSoc">Añadir</button>
                           </div>
 

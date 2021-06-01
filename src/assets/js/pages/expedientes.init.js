@@ -63,6 +63,41 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-inf-soc-expediente-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-repre-preExp-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-repre-preExp-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-otrosContPreExp-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-otrosContPreExp-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-otrosContExpInt-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-otrosContExpInt-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-fechasClavesExpInt-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-fechasClavesExpInt-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-usuaAccesoExpInt-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-usuaAccesoExpInt-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-repre-expInt-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-repre-expInt-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-histCambExpInt-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-histCambExpInt-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-inf-soc-otrosContExpediente-buttons")
     .DataTable(context8)
     .buttons()
@@ -85,10 +120,7 @@ $(document).ready(function () {
 
   (AdvancedForm.prototype.init = function () {
     // Date Picker
-    $("#date-range4").datepicker({
-      toggleActive: true,
-    });
-    $("#date-range5").datepicker({
+    $("#date-range6").datepicker({
       toggleActive: true,
     });
   }),
@@ -103,3 +135,8 @@ $(document).ready(function () {
   })(window.jQuery);
 
 $("#datepicker1").datepicker();
+$("#datepicker2").datepicker();
+$("#datepicker3").datepicker();
+$("#datepicker4").datepicker();
+$("#datepicker5").datepicker();
+$("#datepicker6").datepicker();
