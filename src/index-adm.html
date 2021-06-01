@@ -25,7 +25,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body card-borde">
                     <h5 class="card-title mb-4">Resumen de procedimientos</h5>
                     <div class="table-responsive">
                       <table id="datatable-index-adm-buttons" class="table table-bordered" style="width:100%">
@@ -76,7 +76,7 @@
             <div class="row">
               <div class="col-12 col-md-8">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body card-borde">
                     <h5 class="card-title mb-4">Proyectos asignados</h5>
                     <div class="row">
                       <div class="col-sm-12">
@@ -109,7 +109,7 @@
                                               
               <div class="col-12 col-md-4">
                 <div class="card">                                       
-                  <div class="card-body"> 
+                  <div class="card-body card-borde3"> 
                     <h5 class="card-title mb-4">Notificaciones</h5>
                     <div class="activity">
                       <i class="mdi mdi-check text-primary"></i>
@@ -294,7 +294,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body card-borde">
                     <h5 class="card-title mb-4">Vencimiento</h5>
                     <div class="row">
                       <div class="col-sm-12">
@@ -332,7 +332,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body card-borde">
                     <h5 class="card-title mb-4">Tareas pendientes</h5>
                     <div class="row">
                       <div class="col-sm-12">
@@ -347,7 +347,6 @@
                                 <th>Asignado por</th>
                                 <th style="width: 100px;">Asignado a</th>
                                 <th>Estado</th>
-                                <th>Acciones</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -363,12 +362,12 @@
                                   <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
                                   <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
                                 </td>
-                                <td>Pendiente</td>
-                                <td class="text-center">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1" type="button">
-                                    <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver">
+                                <td>
+                                  Pendiente
+                                  <button class="btn btn-sm btn-success btn-acciones-iconos mb-1 ml-2" type="button">
+                                    <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
-                                        src="assets/json/69-eye-outline.json"
+                                        src="assets/json/37-approve-checked-simple-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
                                         colors="primary:#ffffff;,secondary:#ffffff;"
@@ -376,7 +375,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1" type="button">
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos mb-1" type="button">
                                     <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Cancelar">
                                       <lord-icon
                                         src="assets/json/185-trash-bin-outline.json"
@@ -402,30 +401,6 @@
                                   <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
                                 </td>
                                 <td>Finalizada 23/05/2021</td>
-                                <td class="text-center">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1" type="button">
-                                    <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver">
-                                      <lord-icon
-                                        src="assets/json/69-eye-outline.json"
-                                        trigger="loop-on-hover"
-                                        target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
-                                        style="width:20px; height:20px;">
-                                      </lord-icon>
-                                    </a>
-                                  </button>
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1" type="button">
-                                    <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Cancelar">
-                                      <lord-icon
-                                        src="assets/json/185-trash-bin-outline.json"
-                                        trigger="loop-on-hover"
-                                        target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
-                                        style="width:20px; height:20px;">
-                                      </lord-icon>
-                                    </a>
-                                  </button>
-                                </td>
                               </tr>
                             </tbody>
                           </table>
@@ -442,7 +417,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body card-borde">
                     <h5 class="card-title mb-4">Tareas asignadas a otros usuarios</h5>
                     <div class="row">
                       <div class="col-sm-12">
@@ -457,7 +432,6 @@
                                 <th>Tarea</th>
                                 <th style="width: 100px;">Asignado a</th>
                                 <th>Estado</th>
-                                <th>Acciones</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -471,12 +445,12 @@
                                   <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
                                   <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
                                 </td>
-                                <td>Pendiente</td>
-                                <td class="text-center">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1" type="button">
-                                    <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver">
+                                <td>
+                                  Pendiente
+                                  <button class="btn btn-sm btn-success btn-acciones-iconos mb-1 ml-2" type="button">
+                                    <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
-                                        src="assets/json/69-eye-outline.json"
+                                        src="assets/json/37-approve-checked-simple-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
                                         colors="primary:#ffffff;,secondary:#ffffff;"
@@ -484,7 +458,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1" type="button">
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos mb-1" type="button">
                                     <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Cancelar">
                                       <lord-icon
                                         src="assets/json/185-trash-bin-outline.json"
@@ -508,30 +482,6 @@
                                   <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
                                 </td>
                                 <td>Finalizada</td>
-                                <td class="text-center">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1" type="button">
-                                    <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver">
-                                      <lord-icon
-                                        src="assets/json/69-eye-outline.json"
-                                        trigger="loop-on-hover"
-                                        target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
-                                        style="width:20px; height:20px;">
-                                      </lord-icon>
-                                    </a>
-                                  </button>
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1" type="button">
-                                    <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Cancelar">
-                                      <lord-icon
-                                        src="assets/json/185-trash-bin-outline.json"
-                                        trigger="loop-on-hover"
-                                        target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
-                                        style="width:20px; height:20px;">
-                                      </lord-icon>
-                                    </a>
-                                  </button>
-                                </td>
                               </tr>
                             </tbody>
                           </table>
@@ -634,7 +584,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body card-borde">
                     <h5 class="card-title mb-4">Acciones propias pendientes de validación</h5>
                     <div class="table-responsive">
                       <table id="datatable-acciones-adm-buttons" class="table table-bordered" style="width:100%">
@@ -673,17 +623,6 @@
                                 <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Enviar a otro user">
                                   <lord-icon
                                     src="assets/json/143-paperplane-send-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                              <button class="btn btn-sm btn-primary mb-1 btn-acciones-iconos " type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Continuar">
-                                  <lord-icon
-                                    src="assets/json/252-double-play-next-smooth-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
                                     colors="primary:#ffffff;,secondary:#ffffff;"
@@ -766,50 +705,7 @@
                             <td>-</td>
                             <td>-</td>
                             <td class="text-center">
-                              <button class="btn btn-sm btn-primary mb-1 btn-acciones-iconos " type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Reenviar">
-                                  <lord-icon
-                                    src="assets/json/142-share-arrow-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                              <button class="btn btn-sm btn-primary mb-1 btn-acciones-iconos " type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Enviar a otro user">
-                                  <lord-icon
-                                    src="assets/json/143-paperplane-send-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                              <button class="btn btn-sm btn-primary mb-1 btn-acciones-iconos " type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Continuar">
-                                  <lord-icon
-                                    src="assets/json/252-double-play-next-smooth-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                              <button class="btn btn-sm btn-primary mb-1 btn-acciones-iconos " type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Marcar como resuelta">
-                                  <lord-icon
-                                    src="assets/json/24-approved-checked-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
+                              Motivo: Dani me dijo que no lo modificáramos
                             </td>
                           </tr>
                         </tbody>
@@ -825,7 +721,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body card-borde">
                     <h5 class="card-title mb-4">Facturas pendientes de cobro</h5>
                     <div class="table-responsive">
                       <table id="datatable-fact-adm-buttons" class="table table-bordered" style="width:100%">
@@ -867,7 +763,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <div class="card-body">  
+                  <div class="card-body card-borde">  
                     <div class="title-ventas d-flex justify-content-between">
                       <div>
                         <h5 class="card-title mb-4">Ventas</h5>
@@ -892,7 +788,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="card">
-                  <div class="card-body">
+                  <div class="card-body card-borde">
                     <div>
                       <h5 class="card-title mb-0">Buscador genérico de documentos</h5>
                     </div>

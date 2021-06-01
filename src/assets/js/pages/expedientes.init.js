@@ -58,6 +58,18 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-histExpedientes-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-inf-soc-expediente-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-inf-soc-expediente-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-inf-soc-otrosContExpediente-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo(
+      "#datatable-inf-soc-otrosContExpediente-buttons_wrapper .col-md-6:eq(0)"
+    );
   $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
     $($.fn.dataTable.tables(true))
       .DataTable()
@@ -89,3 +101,5 @@ $(document).ready(function () {
     "use strict";
     $.AdvancedForm.init();
   })(window.jQuery);
+
+$("#datepicker1").datepicker();

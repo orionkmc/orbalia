@@ -476,6 +476,7 @@
                                         <th>Segmento</th>
                                         <th>Colaborador</th>
                                         <th>Rol de usuario</th>
+                                        <th>Tags</th>
                                         <th>Acciones</th>
                                       </tr>
                                     </thead>
@@ -491,8 +492,9 @@
                                         <td>Externo</td>
                                         <td>Externo</td>
                                         <td>Externo</td>
+                                        <td>#pymes2021</td>
                                         <td class="centrar-boton">
-                                          <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                          <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                             <a href="perfil-sociedad.html" data-toggle="tooltip" data-placement="top" title="Ver perfil">
                                               <lord-icon
                                                 src="assets/json/69-eye-outline.json"
@@ -516,8 +518,9 @@
                                         <td>Externo</td>
                                         <td>Externo</td>
                                         <td>Externo</td>
+                                        <td>#pymes2021</td>
                                         <td class="centrar-boton">
-                                          <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                          <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                             <a href="perfil-autonomo.html" data-toggle="tooltip" data-placement="top" title="Ver perfil">
                                               <lord-icon
                                                 src="assets/json/69-eye-outline.json"
@@ -663,7 +666,16 @@
         }
       });
       $(document).ready(function() {
-        $('.etiquetas-multiple').select2();
+        $('.etiquetas-multiple').select2({
+          language: {
+            noResults: function() {
+              return "No hay resultado";        
+            },
+            searching: function() {
+              return "Buscando..";
+            }
+          }
+        });
         $('.select2').css("width", "100%");
       });
     </script>

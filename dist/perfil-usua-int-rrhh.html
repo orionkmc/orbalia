@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>RRHH-Usuario Interno / Administrador | ORBALIA SUBVENCIONES</title>
+    <title>Perfil Usuario Interno - RRHH / Administrador | ORBALIA SUBVENCIONES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -708,7 +708,7 @@
                       <div class="dropdown-divider m-0"></div>
                       <div class="toast-header d-flex justify-content-between">
                         <div>
-                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" style="padding: .15rem .1rem;" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoAut">
+                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocLab">
                             <a data-toggle="tooltip" data-placement="top" title="Editar">
                               <lord-icon
                                 src="assets/json/35-edit-outline.json"
@@ -720,7 +720,7 @@
                             </a>
                           </button>
                         </div>
-                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoAut">
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocLab">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
@@ -747,7 +747,7 @@
                       <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContrato">Añadir</button>
                     </div>
                     <div class="dropdown-divider m-0"></div>
-                    <h5 class="mt-4 mb-4">Contrato</h5>
+                    <h5 class="mt-4 mb-4">Nómina</h5>
                     <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast" style="max-width: 150px;">
                       <div class="ml-2">
                         <small>25/05/2021 <br>11 mins ago</small>
@@ -755,7 +755,7 @@
                       <div class="dropdown-divider m-0"></div>
                       <div class="toast-header d-flex justify-content-between">
                         <div>
-                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" style="padding: .15rem .1rem;" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoAut">
+                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocLab">
                             <a data-toggle="tooltip" data-placement="top" title="Editar">
                               <lord-icon
                                 src="assets/json/35-edit-outline.json"
@@ -767,7 +767,7 @@
                             </a>
                           </button>
                         </div>
-                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoAut">
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocLab">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
@@ -860,6 +860,83 @@
               <!-- end col -->
             </div>
             <!-- end row -->
+
+            <div class="modal fade editarDocLab" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar documento</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group row">
+                        <div class="col-12">
+                          <input class="form-control" type="text" id="nombreDocumento" placeholder="Nombre del documento">                                                       
+                        </div>                                                    
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-12">
+                          <select class="form-control">
+                            <option>PDF</option>
+                            <option>TXT</option>
+                            <option>XLS</option>
+                            <option>JPG</option>
+                            <option>DOC</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="custom-file pl-2 pr-2">
+                          <input type="file" class="custom-file-input" id="inputGroupFile10">
+                          <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile10">Seleccionar archivo...</label>
+                        </div>                                                  
+                      </div>
+                      <div class="boton-etiqueta">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                      </div>
+                    </form>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="modal fade eliminarDocLab" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar documento</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body text-center">
+                    <p>¿Desea eliminar el documento?</p>
+                    <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                    <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                    </div>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
 
             <div class="modal fade añadirContrato" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
               <div class="modal-dialog">

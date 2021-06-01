@@ -5,6 +5,11 @@
     
     @@include("partials/head-css.html")
   </head>
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    }
+  </style>
 
   <body data-topbar="dark">
     <!-- Begin page -->
@@ -70,8 +75,89 @@
                         </tbody>
                       </table>
                       <div class="boton-etiqueta">
-                        <button class="btn btn-sm btn-primary">Añadir</button>
+                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirDeptCrear">Añadir</button>
                       </div>
+
+                      <div class="modal fade añadirDeptCrear" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir departamento</h5>
+                              <lord-icon
+                                src="assets/json/38-error-cross-simple-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#808080;,secondary:#808080;"
+                                style="width:20px; height:20px"
+                                class="btn-close"
+                                data-dismiss="modal"
+                                aria-label="Close">
+                              </lord-icon>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group row">
+                                  <div class="col-lg-6 mo-b-15">
+                                    <input class="form-control" type="text" placeholder="Departamento">                                                       
+                                  </div>
+                                  <div class="col-lg-6 mo-b-15">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Fecha de concesión" id="datepicker3">
+                                      <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                    </div><!-- input-group -->                                                       
+                                  </div>                                              
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-12">
+                                    <p><strong>Asignado por:</strong></p>
+                                    <div class="usuarios">
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                    </div>                                                      
+                                  </div>                                                  
+                                </div>
+                                <div class="boton-etiqueta">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                      </div><!-- /.modal -->
                     </div>
                   </div>
                 </div>

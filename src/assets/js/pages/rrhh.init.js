@@ -156,3 +156,5 @@ $(document).ready(function () {
 
 $("#datepicker1").datepicker();
 $("#datepicker2").datepicker();
+$("#datepicker3").datepicker();
+$("#datepicker4").datepicker();

@@ -3374,32 +3374,8 @@ input[switch="dark"]:checked + label {
 .centrar-boton {
   text-align: center; }
 
-.btn-ver {
-  padding: 6px 15px;
-  border-radius: 4px;
-  color: #fff;
-  background-color: #44a2d2;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-
-.btn-ver:hover {
-  background-color: #2779a2;
-  color: #fff; }
-
-.btn-mensaje {
-  padding: 6px 10.5px; }
-
-.btn-ver-solo {
-  padding: 6px 25px; }
-
 .btn-acciones-iconos {
-  padding: 6px 6px; }
-
-.botones-accion {
-  text-align: center; }
-
-.botones-accion a {
-  color: #fff; }
+  padding: .1rem; }
 
 .slick-prev:before,
 .slick-next:before {
@@ -3493,3 +3469,11 @@ input[switch="dark"]:checked + label {
 .editarNotas {
   position: absolute;
   right: 0; }
+
+.respuestasTest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly; }

@@ -82,7 +82,7 @@
                                   <td>andnndj@gmail.com</td>
                                   <td>andnndj@gmail.com</td>
                                   <td class="centrar-boton">
-                                    <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                       <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
@@ -93,7 +93,7 @@
                                         </lord-icon>
                                       </a>
                                     </button>
-                                    <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                    <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
                                       <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                         <lord-icon
                                           src="assets/json/185-trash-bin-outline.json"
@@ -115,7 +115,7 @@
                                   <td>andnndj@gmail.com</td>
                                   <td>andnndj@gmail.com</td>
                                   <td class="centrar-boton">
-                                    <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                       <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
@@ -126,7 +126,7 @@
                                         </lord-icon>
                                       </a>
                                     </button>
-                                    <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                    <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
                                       <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                         <lord-icon
                                           src="assets/json/185-trash-bin-outline.json"
@@ -142,15 +142,72 @@
                               </tbody>
                             </table>
                           </div>
-                          <div class="boton-etiqueta mt-3">
+                          <div class="boton-etiqueta mt-3" data-toggle="modal" data-animation="bounce" data-target=".añadirRepresSoc">
                             <button class="btn btn-sm btn-primary">Añadir</button>
                           </div>
+
+                          <div class="modal fade añadirRepresSoc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir representante</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" placeholder="Nombre">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" placeholder="Tipo">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" placeholder="Apellido 1">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" placeholder="Apellido 2">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" placeholder="NIF">
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" placeholder="Teléfono">                                                       
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="email" placeholder="E-mail">                                                       
+                                      </div>                                                 
+                                    </div>
+                                    <div class="boton-etiqueta">
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
                           <div class="dropdown-divider"></div>
                           <div class="row datos-sociedad mt-5">
                             <div class="col-12 col-md-6">
                               <h5>
                                 DATOS DE LA SOCIEDAD
-                                <button class="btn btn-sm btn-primary botones-accion ml-2" type="button">
+                                <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
                                   <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatos">
                                     <lord-icon
                                       src="assets/json/35-edit-outline.json"
@@ -276,7 +333,7 @@
                             <div class="col-12 col-md-6">
                               <h5>
                                 COLABORADOR
-                                <button class="btn btn-sm btn-primary botones-accion ml-2" type="button">
+                                <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
                                   <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatosColab">
                                     <lord-icon
                                       src="assets/json/35-edit-outline.json"
@@ -401,8 +458,59 @@
                             </table>
                           </div>
                           <div class="boton-etiqueta">
-                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContacto">Añadir</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContactoSoc">Añadir</button>
                           </div>
+
+                          <div class="modal fade añadirContactoSoc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir contacto</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" placeholder="Nombre">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" placeholder="Cargo">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6  mo-b-15">
+                                        <input class="form-control" type="text" placeholder="Teléfono fijo">                                                       
+                                      </div> 
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="text" placeholder="Teléfono móvil">
+                                      </div>                                                   
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-lg-6">
+                                        <input class="form-control" type="email" placeholder="E-mail">                                                       
+                                      </div>                                                 
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Tus notas..."></textarea>
+                                    </div> 
+                                    <div class="boton-etiqueta">
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
 
                           <div class="dropdown-divider"></div>
                           <h5 class="mt-4 mb-4">ARCHIVOS GENÉRICOS / HISTÓRICO</h5>
@@ -954,7 +1062,7 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="expedientes.html" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -976,7 +1084,7 @@
                                 <td>$90,560</td>
                                 <td>$90,560</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="expedientes.html" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -998,7 +1106,7 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="expedientes.html" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1031,7 +1139,7 @@
                                 <td>Support Lead</td>
                                 <td>Edinburgh</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1049,7 +1157,7 @@
                                 <td>Support Lead</td>
                                 <td>Edinburgh</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1067,7 +1175,7 @@
                                 <td>Support Lead</td>
                                 <td>Edinburgh</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1109,7 +1217,7 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1131,7 +1239,7 @@
                                 <td>$90,560</td>
                                 <td>$90,560</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1153,7 +1261,7 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1200,7 +1308,7 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1223,7 +1331,7 @@
                                 <td>$90,560</td>
                                 <td>$90,560</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1246,7 +1354,7 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1356,7 +1464,7 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Añadir">
                                       <lord-icon
                                         src="assets/json/49-plus-circle-outline.json"
@@ -1369,7 +1477,7 @@
                                   </button>
                                 </td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1391,7 +1499,7 @@
                                 <td>$90,560</td>
                                 <td>$90,560</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Añadir">
                                       <lord-icon
                                         src="assets/json/49-plus-circle-outline.json"
@@ -1404,7 +1512,7 @@
                                   </button>
                                 </td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1426,7 +1534,7 @@
                                 <td>$342,000</td>
                                 <td>$342,000</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirComprobante">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Añadir">
                                       <lord-icon
                                         src="assets/json/49-plus-circle-outline.json"
@@ -1439,7 +1547,7 @@
                                   </button>
                                 </td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary botones-accion" type="button">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Ver">
                                       <lord-icon
                                         src="assets/json/69-eye-outline.json"
@@ -1504,7 +1612,7 @@
 
                           <h5 class="card-title mt-3">Historial de notas</h5>
                           <div class="activity mt-3">
-                            <button class="btn btn-sm btn-primary botones-accion editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut" type="button">
+                            <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut" type="button">
                               <a href="#" data-toggle="tooltip" data-placement="top" title="Editar">
                                 <lord-icon
                                   src="assets/json/35-edit-outline.json"
@@ -1524,7 +1632,7 @@
                               </div>
                             </div>
                             <div class="dropdown-divider"></div>
-                            <button class="btn btn-sm btn-primary botones-accion editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut" type="button">
+                            <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut" type="button">
                               <a href="#" data-toggle="tooltip" data-placement="top" title="Editar">
                                 <lord-icon
                                   src="assets/json/35-edit-outline.json"
@@ -1645,8 +1753,17 @@
 
     <script>
       $(document).ready(function() {
-          $('.etiquetas-multiple').select2();
-          $('.select2').css("width", "100%");
+        $('.etiquetas-multiple').select2({
+          language: {
+            noResults: function() {
+              return "No hay resultado";        
+            },
+            searching: function() {
+              return "Buscando..";
+            }
+          }
+        });
+        $('.select2').css("width", "100%");
       });
       $('#rolUsuarioDat').on('change', function() {
         if (this.value == "Interno") {

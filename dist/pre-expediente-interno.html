@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Perfil Colaborador Sociedad / Administrador | ORBALIA SUBVENCIONES</title>
+    <title>Pre-Expediente Interno / Administrador | ORBALIA SUBVENCIONES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -411,8 +411,8 @@
                       <div class="col-12 col-md-6">
                         <h5>
                           DATOS DE LA SOCIEDAD
-                          <button class="btn btn-sm btn-primary botones-accion ml-2" type="button">
-                            <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatosColab">
+                          <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
+                            <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatosPreExpInter">
                               <lord-icon
                                 src="assets/json/35-edit-outline.json"
                                 trigger="loop-on-hover"
@@ -433,38 +433,36 @@
                         <p>Télefono fijo:</p>
                         <p>Télefono móvil:</p>
                         <p>Email:</p>
-                        <p>% de colaborador:</p>
-                        <button class="btn btn-sm btn-primary mt-4 mb-1" type="button">Descargar certificado colaborador</button>
+                        <p>Fecha de registro:</p>
+                        <p>Expediente de procedimiento:</p>
                       </div>
                       <div class="col-12 col-md-6">
-                        <h5 class="contrato-vigente">CONTRATO VIGENTE</h5>
+                        <h5 class="contrato-vigente">CONTRATO EXPEDIENTE</h5>
                         <div class="row h-75">
                           <div class="col-12 col-sm-4">
                             <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
                               <div class="toast-header d-flex justify-content-between">
                                 <small>11 mins ago</small>
-                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarContratoColab">
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoPRE">
                                   <span aria-hidden="true">&times;</span>
                                 </button>
                               </div>
                               <div class="toast-body">
                                 Facturas
                               </div>
-                              <div>
-                                <button class="btn btn-sm btn-outline-primary botones-accion" type="button" style="padding: .15rem .1rem;" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoColab">
-                                  <a data-toggle="tooltip" data-placement="top" title="Editar">
-                                    <lord-icon
-                                      src="assets/json/35-edit-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#000000;,secondary:#000000;"
-                                      style="width:20px; height:20px;">
-                                    </lord-icon>
-                                  </a>
-                                </button>
+                              <div class="dropdown-divider m-0"></div>
+                                <div class="text-center">
+                                  <lord-icon
+                                    src="assets/json/78-document-PDF-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#707070;,secondary:#707070;"
+                                    style="width: 30px; height: 30px;">
+                                  </lord-icon>
+                                  PDF
+                                </div>
                               </div>
-                            </div>
-                            <div class="text-left pt-2 pb-2">
+                            <div class="text-center pt-2 pb-2">
                               <strong>PRECIO ELEGIDO</strong>
                               <p>15%</p>
                             </div>
@@ -476,6 +474,849 @@
                 </div>
               </div>
             </div>
+
+            <div class="modal fade editarDatosPreExpInter" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar datos</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group row">
+                        <div class="col-lg-6  mo-b-15">
+                          <input class="form-control" type="text" placeholder="Denominación social">                                                       
+                        </div> 
+                        <div class="col-lg-6">
+                          <input class="form-control" type="text" placeholder="CIF">
+                        </div>                                                   
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-lg-6  mo-b-15">
+                          <input class="form-control" type="text" placeholder="Domicilio fiscal">                                                       
+                        </div> 
+                        <div class="col-lg-6">
+                          <input class="form-control" type="text" placeholder="País">
+                        </div>                                                   
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-lg-6  mo-b-15">
+                          <input class="form-control" type="text" placeholder="Provincia">                                                       
+                        </div> 
+                        <div class="col-lg-6">
+                          <input class="form-control" type="text" placeholder="Código postal">
+                        </div>                                                   
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-lg-6  mo-b-15">
+                          <input class="form-control" type="text" placeholder="Código usuario">                                                       
+                        </div> 
+                        <div class="col-lg-6">
+                          <input class="form-control" type="text" placeholder="Teléfono fijo">
+                        </div>                                                   
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-lg-6  mo-b-15">
+                          <input class="form-control" type="text" placeholder="Teléfono móvil">                                                       
+                        </div> 
+                        <div class="col-lg-6">
+                          <input class="form-control" type="email" placeholder="Correo usuario">
+                        </div>                                                   
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-lg-6  mo-b-15">
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Fecha registro" id="datepicker1">
+                            <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                          </div><!-- input-group -->
+                        </div>
+                        <div class="col-lg-6">
+                          <input class="form-control" type="text" placeholder="Expediente de procedimiento">
+                        </div>                                                   
+                      </div>
+                      <div class="boton-etiqueta">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="modal fade eliminarArchivoPRE" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar archivo</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body text-center">
+                    <p>¿Desea eliminar el documento?</p>
+                    <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                    <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                    </div>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Representante (solo si tiene es una sociedad)</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-inf-soc-expediente-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Apellido 1</th>
+                            <th>Apellido 2</th>
+                            <th>NIF</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>PYME</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                            <td>1</td>
+                            <td>2019/04/25</td>
+                            <td>andnndj@gmail.com</td>
+                            <td>andnndj@gmail.com</td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>PYME</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                            <td>1</td>
+                            <td>2019/04/25</td>
+                            <td>andnndj@gmail.com</td>
+                            <td>andnndj@gmail.com</td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="boton-etiqueta mt-3">
+                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirRepresPreExpInt">Añadir</button>
+                    </div>
+
+                    <div class="modal fade añadirRepresPreExpInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir representante</h5>
+                            <lord-icon
+                              src="assets/json/38-error-cross-simple-outline.json"
+                              trigger="loop-on-hover"
+                              target="a"
+                              colors="primary:#808080;,secondary:#808080;"
+                              style="width:20px; height:20px"
+                              class="btn-close"
+                              data-dismiss="modal"
+                              aria-label="Close">
+                            </lord-icon>
+                          </div>
+                          <div class="modal-body text-center">
+                            <form>
+                              <div class="form-group row">
+                                <div class="col-lg-6  mo-b-15">
+                                  <input class="form-control" type="text" placeholder="Nombre">                                                       
+                                </div> 
+                                <div class="col-lg-6">
+                                  <input class="form-control" type="text" placeholder="Tipo">
+                                </div>                                                   
+                              </div>
+                              <div class="form-group row">
+                                <div class="col-lg-6  mo-b-15">
+                                  <input class="form-control" type="text" placeholder="Apellido 1">                                                       
+                                </div> 
+                                <div class="col-lg-6">
+                                  <input class="form-control" type="text" placeholder="Apellido 2">
+                                </div>                                                   
+                              </div>
+                              <div class="form-group row">
+                                <div class="col-lg-6  mo-b-15">
+                                  <input class="form-control" type="text" placeholder="NIF">
+                                </div> 
+                                <div class="col-lg-6">
+                                  <input class="form-control" type="text" placeholder="Teléfono">                                                       
+                                </div>                                                   
+                              </div>
+                              <div class="form-group row">
+                                <div class="col-lg-6  mo-b-15">
+                                  <input class="form-control" type="email" placeholder="E-mail">                                                       
+                                </div>                                                 
+                              </div>
+                              <div class="boton-etiqueta">
+                                <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div><!-- /.modal-content -->
+                      </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">OTROS CONTACTOS</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-inf-soc-otrosContExpediente-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Apellido 1</th>
+                            <th>Apellido 2</th>
+                            <th>NIF</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>PYME</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                            <td>1</td>
+                            <td>2019/04/25</td>
+                            <td>andnndj@gmail.com</td>
+                            <td>andnndj@gmail.com</td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>PYME</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                            <td>1</td>
+                            <td>2019/04/25</td>
+                            <td>andnndj@gmail.com</td>
+                            <td>andnndj@gmail.com</td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="boton-etiqueta mt-3">
+                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContactoPreExpInt">Añadir</button>
+                    </div>
+                    <div class="modal fade añadirContactoPreExpInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir contacto</h5>
+                            <lord-icon
+                              src="assets/json/38-error-cross-simple-outline.json"
+                              trigger="loop-on-hover"
+                              target="a"
+                              colors="primary:#808080;,secondary:#808080;"
+                              style="width:20px; height:20px"
+                              class="btn-close"
+                              data-dismiss="modal"
+                              aria-label="Close">
+                            </lord-icon>
+                          </div>
+                          <div class="modal-body text-center">
+                            <form>
+                              <div class="form-group row">
+                                <div class="col-lg-6  mo-b-15">
+                                  <input class="form-control" type="text" placeholder="Nombre">                                                       
+                                </div> 
+                                <div class="col-lg-6">
+                                  <input class="form-control" type="text" placeholder="Tipo">
+                                </div>                                                   
+                              </div>
+                              <div class="form-group row">
+                                <div class="col-lg-6  mo-b-15">
+                                  <input class="form-control" type="text" placeholder="Apellido 1">                                                       
+                                </div> 
+                                <div class="col-lg-6">
+                                  <input class="form-control" type="text" placeholder="Apellido 2">
+                                </div>                                                   
+                              </div>
+                              <div class="form-group row">
+                                <div class="col-lg-6  mo-b-15">
+                                  <input class="form-control" type="text" placeholder="NIF">                                                       
+                                </div> 
+                                <div class="col-lg-6">
+                                  <input class="form-control" type="text" placeholder="Teléfono móvil">
+                                </div>                                                   
+                              </div>
+                              <div class="form-group row">
+                                <div class="col-lg-6">
+                                  <input class="form-control" type="email" placeholder="E-mail">                                                       
+                                </div>                                                 
+                              </div>
+                              <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Tus notas..."></textarea>
+                              </div> 
+                              <div class="boton-etiqueta">
+                                <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div><!-- /.modal-content -->
+                      </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Test de requisitos</h5>
+                    <div class="accordion" id="accordionExample">
+                      <div class="card mb-0 pt-2 shadow-none">
+                        <div class="card-header" id="headingTwo">
+                          <h5 class="my-0">
+                            <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Pregunta 1: ¿Tienes empleados?
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body font-size-13">
+                            <form class="respuestasTest">
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                                <label class="custom-control-label" for="customRadio1">Si</label>
+                              </div>
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">No</label>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-0 pt-2 shadow-none">
+                        <div class="card-header" id="headingTwo">
+                          <h5 class="my-0">
+                            <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Pregunta 2: ¿Cuántos?
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                          <div class="card-body font-size-13">
+                            <form class="respuestasTest">
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" checked>
+                                <label class="custom-control-label" for="customRadio3">Si</label>
+                              </div>
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio4">No</label>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-0 pt-2 shadow-none">
+                        <div class="card-header" id="headingThree">
+                          <h5 class="my-0">
+                            <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Pregunta 3: ¿Su empresa está dada de alta en el epigrafe XXXX?
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body font-size-13">
+                            <form class="respuestasTest">
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input" checked>
+                                <label class="custom-control-label" for="customRadio5">Si</label>
+                              </div>
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio6">No</label>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-0 pt-2 shadow-none">
+                        <div class="card-header" id="headingThree">
+                          <h5 class="my-0">
+                            <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Pregunta 4: ¿XXXX?
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body font-size-13">
+                            <form class="respuestasTest">
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio7" name="customRadio" class="custom-control-input" checked>
+                                <label class="custom-control-label" for="customRadio7">Si</label>
+                              </div>
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio8" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio8">No</label>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mt-4 mb-4">Documentación previa</h5>
+                    <div class="row">
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                      <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                          <div class="card-body p-0">    
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>420 3T2020</small>
+                              </div>
+                              <div class="toast-body text-center">
+                                Bases
+                              </div>
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="text-center">
+                                <lord-icon
+                                  src="assets/json/78-document-PDF-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#707070;,secondary:#707070;"
+                                  style="width: 30px; height: 30px;">
+                                </lord-icon>
+                                PDF
+                              </div>
+                            </div> <!--end toast-->                      
+                          </div><!--end card-body-->
+                        </div><!--end card-->
+                      </div><!--end col-->
+                    </div>
+                    <div class="d-flex justify-content-center mt-3 mb-3">
+                      <button class="btn btn-sm btn-success mr-1" data-toggle="modal" data-animation="bounce" data-target=".validarArchivo">Validar creación de<br> expediente</button>
+                      <button class="btn btn-sm btn-danger ml-1" style="padding: .25rem 2.3rem" data-toggle="modal" data-animation="bounce" data-target=".denegarArchivo">Denegar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade validarArchivo tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Validar expediente</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body text-center">
+                    <p>
+                      ¿Está seguro que desea validar la creación del expediente?
+                    </p>
+                    <button type="button" class="btn btn-sm btn-primary btn-modal mt-2" data-dismiss="modal" aria-label="Close">Sí</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-modal mt-2" data-dismiss="modal" aria-label="Close">No</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div class="modal fade denegarArchivo tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Denegar expediente</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body text-center">
+                    <p>
+                      ¿Está seguro que desea denegar la creación del expediente?
+                    </p>
+                    <p class="text-left"><strong>Motivo:</strong></p>
+                    <div class="form-group">
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba aquí su motivo.."></textarea>
+                    </div> 
+                    <button type="button" class="btn btn-sm btn-primary btn-modal mt-2" data-dismiss="modal" aria-label="Close">Denegar</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-modal mt-2" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
           </div>
           <!-- container-fluid -->
         </div>
@@ -529,7 +1370,7 @@
     <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
     <!-- Datatable init js -->
-    <script src="assets/js/pages/colaboradores.init.js"></script>
+    <script src="assets/js/pages/expedientes.init.js"></script>
     <script src="assets/js/app.js"></script>
 
   </body>
