@@ -98,6 +98,16 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-histCambExpInt-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-docProyec-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-docProyec-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-tareasPendExp-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-tareasPendExp-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-inf-soc-otrosContExpediente-buttons")
     .DataTable(context8)
     .buttons()
@@ -140,3 +150,42 @@ $("#datepicker3").datepicker();
 $("#datepicker4").datepicker();
 $("#datepicker5").datepicker();
 $("#datepicker6").datepicker();
+$("#datepicker7").datepicker();
+$("#datepicker8").datepicker();
+$("#datepicker9").datepicker();
+$("#datepicker10").datepicker();
+$("#datepicker11").datepicker();
+$("#datepicker12").datepicker();
+
+$(function () {
+  "use strict";
+
+  // Knob Chart
+
+  $(".knob").knob({
+    format: function (value) {
+      return value + "%";
+    },
+  });
+
+  $(".knob").each(function () {
+    var $this = $(this);
+    var myVal = $this.attr("rel");
+    $this.knob();
+
+    $({
+      value: 0,
+    }).animate(
+      {
+        value: myVal,
+      },
+      {
+        duration: 2000,
+        easing: "swing",
+        step: function () {
+          $this.val(Math.ceil(this.value)).trigger("change");
+        },
+      }
+    );
+  });
+});

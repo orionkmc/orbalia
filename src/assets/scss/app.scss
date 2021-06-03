@@ -231,10 +231,26 @@ File: Main Css File
   position: absolute;
   right: 0;
 }
+.editarNotasExp {
+  position: absolute;
+  right: 25px;
+}
 .respuestasTest {
   display: flex;
   justify-content: space-evenly;
 }
 .btn:focus {
   box-shadow: none !important;
+}
+.documentosExpInt {
+  height: 37px;
+}
+.DocGen,
+.historicoDocGen {
+  color: #495057;
+  cursor: pointer;
+}
+.DocGen:hover,
+.historicoDocGen:hover {
+  color: #495057;
 }
