@@ -108,6 +108,16 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-tareasPendExp-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-opcPrecios-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-opcPrecios-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-enlaces-buttons")
+    .DataTable(context8)
+    .buttons()
+    .container()
+    .appendTo("#datatable-enlaces-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-inf-soc-otrosContExpediente-buttons")
     .DataTable(context8)
     .buttons()
@@ -156,6 +166,14 @@ $("#datepicker9").datepicker();
 $("#datepicker10").datepicker();
 $("#datepicker11").datepicker();
 $("#datepicker12").datepicker();
+$("#datepicker13").datepicker();
+$("#datepicker14").datepicker();
+$("#datepicker15").datepicker();
+$("#datepicker16").datepicker();
+$("#datepicker17").datepicker();
+$("#datepicker18").datepicker();
+$("#datepicker19").datepicker();
+$("#datepicker20").datepicker();
 
 $(function () {
   "use strict";

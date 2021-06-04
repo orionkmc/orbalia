@@ -463,9 +463,6 @@
                         <a class="nav-link" data-toggle="tab" href="#estado" role="tab">Estado del expediente</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#estadoyfases" role="tab">Estado y fases del expediente</a>
-                      </li>
-                      <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#infProcedimiento" role="tab">Información del procedimiento</a>
                       </li>
                     </ul>
@@ -641,7 +638,7 @@
                                     <div class="col-12">
                                       <select class="form-control">
                                         <option>Estado del expediente</option>
-                                        <option>Pendiente de presentación</option>
+                                        <option>Pendiente documentación</option>
                                         <option>Aceptado</option>
                                         <option>Validado</option>
                                         <option>Denegado</option>
@@ -1864,7 +1861,7 @@
                         <!-- Tab panes -->
                         <div class="tab-content">
                           <div class="tab-pane active p-3" id="archivosDocGene" role="tabpanel">
-                            <div class="row">
+                            <div class="row mt-4">
                               <div class="col-12 col-md-3">
                                 <div class="card">
                                   <div class="card-body p-0">    
@@ -2348,7 +2345,7 @@
                             </div>
                           </div>
                           <div class="tab-pane p-3" id="archivosHist" role="tabpanel">
-                            <div class="row">
+                            <div class="row mt-4">
                               <div class="col-12 col-md-4">
                                 <div class="card">
                                   <div class="card-body p-0">    
@@ -2723,7 +2720,7 @@
                         <!-- Tab panes -->
                         <div class="tab-content">
                           <div class="tab-pane active p-3" id="archivosDocEsp" role="tabpanel">
-                            <div class="row">
+                            <div class="row mt-4">
                               <div class="col-12 col-md-3">
                                 <div class="card">
                                   <div class="card-body p-0">    
@@ -3207,7 +3204,7 @@
                             </div>
                           </div>
                           <div class="tab-pane p-3" id="archivosHistEsp" role="tabpanel">
-                            <div class="row">
+                            <div class="row mt-4">
                               <div class="col-12 col-md-4">
                                 <div class="card">
                                   <div class="card-body p-0">    
@@ -3582,7 +3579,7 @@
                         <!-- Tab panes -->
                         <div class="tab-content">
                           <div class="tab-pane active p-3" id="archivosOtrosDoc" role="tabpanel">
-                            <div class="row">
+                            <div class="row mt-4">
                               <div class="col-12 col-md-3">
                                 <div class="card">
                                   <div class="card-body p-0">    
@@ -3935,7 +3932,7 @@
                             </div>
                           </div>
                           <div class="tab-pane p-3" id="archivosHistOtros" role="tabpanel">
-                            <div class="row">
+                            <div class="row mt-4">
                               <div class="col-12 col-md-4">
                                 <div class="card">
                                   <div class="card-body p-0">    
@@ -4171,7 +4168,7 @@
                         <!-- Tab panes -->
                         <div class="tab-content">
                           <div class="tab-pane active p-3" id="archivosDocProye" role="tabpanel">
-                            <div class="table-responsive">
+                            <div class="table-responsive mt-4">
                               <table id="datatable-docProyec-buttons" class="table table-bordered" style="width:100%">
                                 <thead>
                                   <tr>
@@ -4605,7 +4602,7 @@
                             data-readOnly=true data-thickness=".1"/>
                           </div>
                         </div>
-                        <div class="accordion mb-4" id="accordionExample">
+                        <div class="accordion mb-4 mt-4" id="accordionExample">
                           <div class="card mb-0 pt-2 shadow-none">
                             <div class="card-header" id="headingTwo">
                               <h5 class="my-0">
@@ -4733,16 +4730,17 @@
                                 <div class="col-12 col-md-6">
                                   <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="inputGroupFile32">
-                                    <label class="custom-file-label text-left" for="inputGroupFile02">Subir documentos...</label>
+                                    <label class="custom-file-label text-left" for="inputGroupFile32">Subir documentos...</label>
                                   </div>
                                 </div>
                               </div>
                             </form>
-                            <div class="boton-etiqueta">
+                            <div class="boton-etiqueta mb-3">
                               <button class="btn btn-sm btn-primary">Añadir</button>
                             </div>
+                            <div class="dropdown-divider"></div>
 
-                            <div class="row  mt-3">
+                            <div class="row mt-5">
                               <div-col-12 class="col-12 col-md-6">
                                 <h5 class="card-title">Historial de notas</h5>
                               </div-col-12>
@@ -5061,7 +5059,7 @@
                       <div class="tab-pane p-3" id="estado" role="tabpanel">
                         <form>
                           <div class="form-group">
-                            <div class="col-12 col-sm-4 offset-sm-4">
+                            <div class="col-12 col-sm-4">
                               <select class="form-control">
                                 <option>Estado</option>
                                 <option>Solicitada</option>
@@ -5073,8 +5071,8 @@
                             </div>
                           </div>
                         </form>
-                        <div class="row">
-                          <div class="col-12 col-sm-3 offset-sm-2">
+                        <div class="row mt-5">
+                          <div class="col-12 col-md-6">
                             <div class="card card-content card-borde">
                               <div class="mb-2 card-body text-muted d-flex justify-content-center align-items-center">
                                 <lord-icon
@@ -5085,39 +5083,2536 @@
                                     style="width:80px; height:80px; margin-top: 0.4rem;">
                                   </lord-icon>
                                 <div style="text-align: initial; margin-left: 0.5rem;">
-                                  <h3 class="text-black mt-2">3000$</h3> 
+                                  <h3 class="text-black mt-2">15,852</h3> 
                                   <p class="m-0"> 
                                     Importe solicitado
                                   </p>
                                 </div>
                               </div>
-                            </div> 
+                            </div>    
                           </div>
-                          <div class="col-12 col-sm-3 offset-sm-2">
-                            <div class="card card-content card-borde">
+                          <div class="col-12 col-md-6">
+                            <div class="card card-content card-borde2">
                               <div class="mb-2 card-body text-muted d-flex justify-content-center align-items-center">
                                 <lord-icon
                                     src="assets/json/298-coins-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#44a2d2;,secondary:#44a2d2;"
+                                    colors="primary:#44d24b;,secondary:#44d24b;"
                                     style="width:80px; height:80px; margin-top: 0.4rem;">
                                   </lord-icon>
                                 <div style="text-align: initial; margin-left: 0.5rem;">
-                                  <h3 class="text-black mt-2">3000$</h3> 
+                                  <h3 class="text-black mt-2">15,852</h3> 
                                   <p class="m-0"> 
                                     Importe concedido
                                   </p>
                                 </div>
                               </div>
-                            </div> 
+                            </div>    
+                          </div>         
+                        </div>
+                        <form>
+                          <div class="form-group mb-0 row">
+                            <label class="col-md-1 control-label mb-0 d-flex align-items-center">Situación</label>
+                            <div class="col-md-11">
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio17" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio17">Abierto</label>
+                                </div>
+                              </div>
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio18" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio18">Finalizado</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div> <!--end row-->
+                        </form>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div style="display:inline-block; width:100%; overflow-y:auto;">
+                              <ul class="timeline timeline-horizontal">
+                                <li class="timeline-item">
+                                  <div class="timeline-badge primary">
+                                    
+                                  </div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Pendiente documentación</h6>
+                                      <small>Finalizado 23/02/2021</small>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge success">
+                                    
+                                  </div>
+                                  <div class="timeline-panel" style="top: 80px; bottom: auto;">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Documentación dentro</h6>
+                                      <small>Finalizado 23/02/2021</small>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge warning">
+                                    
+                                  </div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Pendiente presentación</h6>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge danger">
+                                    
+                                  </div>
+                                  <div class="timeline-panel" style="top: 80px; bottom: auto;">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Presentada</h6>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge info">
+                                    
+                                  </div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Requerimiento</h6>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge success">
+                                    
+                                  </div>
+                                  <div class="timeline-panel" style="top: 80px; bottom: auto;">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Resolución provisional</h6>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                              <div class="text-right">
+                                <button class="btn btn-dropbox btn-rounded mb-3" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirEstado">
+                                  <a data-toggle="tooltip" data-placement="top" title="Añadir">
+                                    <lord-icon
+                                      src="assets/json/48-plus-to-square-rotation-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#ffffff;,secondary:#ffffff;"
+                                      style="width:20px; height:20px;">
+                                    </lord-icon>
+                                  </a>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="modal fade añadirEstado" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir estado</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" placeholder="Titulo o nombre del estado">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" id="exampleFormControlTextarea21" rows="2" placeholder="Descripción"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Fecha límite (si la hubiera)" id="datepicker18">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12">
+                                        <select class="custom-select">
+                                          <option>Antes de...</option>
+                                          <option>Pendiente documentación</option>
+                                          <option>Documentación dentro</option>
+                                          <option>Pendiente presentación</option>
+                                          <option>Presentada</option>
+                                          <option>Requerimiento</option>
+                                          <option>Resolución provisional</option>
+                                        </select>
+                                      </div>                                                  
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Crear</button>
+                                  </div>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+                        </div>
+
+                        <div class="content-historical mt-5">
+                          <div class="slider-nav">
+                            <div class="slide">
+                              <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                <div class="toast-header d-flex justify-content-end">
+                                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarEstado">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="toast-body text-center">
+                                  Pendiente presentación
+                                </div>
+                                <div class="text-right">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
+                                    <a data-toggle="modal" data-animation="bounce" data-target=".editarEstado">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                              </div> <!--end toast--> 
+                            </div>
+                            <div class="slide">
+                              <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                <div class="toast-header d-flex justify-content-end">
+                                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarEstado">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="toast-body text-center">
+                                  Presentada
+                                </div>
+                                <div class="text-right">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
+                                    <a data-toggle="modal" data-animation="bounce" data-target=".editarEstado">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                              </div> <!--end toast-->
+                              <div class="text-center">
+                                <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".cambiarEstadoPresen">Cambiar a este estado</button>
+                              </div>
+                            </div>
+                            <div class="slide">
+                              <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                <div class="toast-header d-flex justify-content-end">
+                                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarEstado">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="toast-body text-center">
+                                  Requerimiento
+                                </div>
+                                <div class="text-right">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
+                                    <a data-toggle="modal" data-animation="bounce" data-target=".editarEstado">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                              </div> <!--end toast-->
+                              <div class="text-center">
+                                <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".cambiarEstadoReq">Cambiar a este estado</button>
+                              </div>
+                            </div>
+                            <div class="slide">
+                              <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                <div class="toast-header d-flex justify-content-end">
+                                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarEstado">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="toast-body text-center">
+                                  Resolución provisional
+                                </div>
+                                <div class="text-right">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
+                                    <a data-toggle="modal" data-animation="bounce" data-target=".editarEstado">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                              </div> <!--end toast-->
+                              <div class="text-center">
+                                <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".cambiarEstadoRes">Cambiar a este estado</button>
+                              </div> 
+                            </div>
+                            <div class="slide">
+                              <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                <div class="toast-header d-flex justify-content-end">
+                                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarEstado">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="toast-body text-center">
+                                  Pendiente documentación
+                                </div>
+                                <div class="text-right">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
+                                    <a data-toggle="modal" data-animation="bounce" data-target=".editarEstado">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                              </div> <!--end toast-->
+                              <div class="text-center">
+                                <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".cambiarEstadoPenDoc">Cambiar a este estado</button>
+                              </div> 
+                            </div>
+                            <div class="slide">
+                              <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                <div class="toast-header d-flex justify-content-end">
+                                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarEstado">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="toast-body text-center">
+                                  Documentación dentro
+                                </div>
+                                <div class="text-right">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
+                                    <a data-toggle="modal" data-animation="bounce" data-target=".editarEstado">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                              </div> <!--end toast-->
+                              <div class="text-center">
+                                <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".cambiarEstadoDocDen">Cambiar a este estado</button>
+                              </div> 
+                            </div>
+                          </div>
+                          <div class="slider-for mt-5">
+                            <div class="slide">
+                              <div class="row">
+                                <div class="col-12">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6 mb-2 mb-md-0">
+                                        <input class="form-control" type="text" value="Pendiente presentación" disabled>
+                                      </div>
+                                      <div class="col-12 col-md-6">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker16">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" rows="4" placeholder="Notas"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6">
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="inputGroupFile35">
+                                          <label class="custom-file-label text-left" for="inputGroupFile35">Subir documentos...</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta mb-3">
+                                    <button class="btn btn-sm btn-primary">Añadir</button>
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+      
+                                  <div class="row mt-5">
+                                    <div-col-12 class="col-12 col-md-6">
+                                      <h5 class="card-title">Historial de notas</h5>
+                                    </div-col-12>
+                                    <div-col-12 class="col-12 col-md-3 offset-md-3">
+                                      <form>
+                                        <div class="form-group mb-0">
+                                          <input type="search" class="form-control ds-input" id="search-input4" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+                                        </div>
+                                      </form>
+                                    </div-col-12>
+                                  </div>
+                                  <div class="activity mt-3">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="assets/images/users/user-9.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <h6 class="mt-0 mb-1">Estado: Pendiente presentación</h6>
+                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <img src="assets/images/users/user-7.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <div class="row">
+                                          <div class="col-12 col-md-8">
+                                            <h6 class="mt-0 mb-1">Estado: Pendiente presentación</h6>
+                                            <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                          </div>
+                                          <div class="col-12 col-md-3 d-flex">
+                                            <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                            <div class="toast fade show ml-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                          </div>
+                                        </div>
+                                        <div class="text-right text-muted font-size-10 mt-2">El 25/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>                                                               
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="row mt-4">
+                                <div class="col-12">
+                                  <h5 class="mb-4">Justificantes Estado: "Pendiente presentación"</h5>
+                                  <div class="text-center mt-3 mb-3" data-toggle="modal" data-animation="bounce" data-target=".añadirJustificante">
+                                    <button class="btn btn-primary">Añadir justificante</button>
+                                  </div>
+                                  <div class="row mt-5">
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast-->
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast--> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slide">
+                              <div class="row">
+                                <div class="col-12">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6 mb-2 mb-md-0">
+                                        <input class="form-control" type="text" value="Presentada" disabled>
+                                      </div>
+                                      <div class="col-12 col-md-6">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker17">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" rows="4" placeholder="Notas"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6">
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="inputGroupFile36">
+                                          <label class="custom-file-label text-left" for="inputGroupFile36">Subir documentos...</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta mb-3">
+                                    <button class="btn btn-sm btn-primary">Añadir</button>
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+      
+                                  <div class="row mt-5">
+                                    <div-col-12 class="col-12 col-md-6">
+                                      <h5 class="card-title">Historial de notas</h5>
+                                    </div-col-12>
+                                    <div-col-12 class="col-12 col-md-3 offset-md-3">
+                                      <form>
+                                        <div class="form-group mb-0">
+                                          <input type="search" class="form-control ds-input" id="search-input5" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+                                        </div>
+                                      </form>
+                                    </div-col-12>
+                                  </div>
+                                  <div class="activity mt-3">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="assets/images/users/user-7.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <h6 class="mt-0 mb-1">Estado: Presentada</h6>
+                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <img src="assets/images/users/user-4.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <div class="row">
+                                          <div class="col-12 col-md-8">
+                                            <h6 class="mt-0 mb-1">Estado: Presentada</h6>
+                                            <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                          </div>
+                                          <div class="col-12 col-md-3 d-flex">
+                                            <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                            <div class="toast fade show ml-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                          </div>
+                                        </div>
+                                        <div class="text-right text-muted font-size-10 mt-2">El 25/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>                                                               
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="row mt-4">
+                                <div class="col-12">
+                                  <h5 class="mb-4">Justificantes Estado: "Presentada"</h5>
+                                  <div class="text-center mt-3 mb-3" data-toggle="modal" data-animation="bounce" data-target=".añadirJustificante">
+                                    <button class="btn btn-primary">Añadir justificante</button>
+                                  </div>
+                                  <div class="row mt-5">
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast-->
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast--> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slide">
+                              <div class="row">
+                                <div class="col-12">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6 mb-2 mb-md-0">
+                                        <input class="form-control" type="text" value="Requerimiento" disabled>
+                                      </div>
+                                      <div class="col-12 col-md-6">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker19">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" rows="4" placeholder="Notas"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6">
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="inputGroupFile37">
+                                          <label class="custom-file-label text-left" for="inputGroupFile37">Subir documentos...</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta mb-3">
+                                    <button class="btn btn-sm btn-primary">Añadir</button>
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+      
+                                  <div class="row mt-5">
+                                    <div-col-12 class="col-12 col-md-6">
+                                      <h5 class="card-title">Historial de notas</h5>
+                                    </div-col-12>
+                                    <div-col-12 class="col-12 col-md-3 offset-md-3">
+                                      <form>
+                                        <div class="form-group mb-0">
+                                          <input type="search" class="form-control ds-input" id="search-input6" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+                                        </div>
+                                      </form>
+                                    </div-col-12>
+                                  </div>
+                                  <div class="activity mt-3">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="assets/images/users/user-6.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <h6 class="mt-0 mb-1">Estado: Requerimiento</h6>
+                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <img src="assets/images/users/user-6.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <div class="row">
+                                          <div class="col-12 col-md-8">
+                                            <h6 class="mt-0 mb-1">Estado: Requerimiento</h6>
+                                            <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                          </div>
+                                          <div class="col-12 col-md-3 d-flex">
+                                            <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                            <div class="toast fade show ml-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                          </div>
+                                        </div>
+                                        <div class="text-right text-muted font-size-10 mt-2">El 25/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>                                                               
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="row mt-4">
+                                <div class="col-12">
+                                  <h5 class="mb-4">Justificantes Estado: "Requerimiento"</h5>
+                                  <div class="text-center mt-3 mb-3" data-toggle="modal" data-animation="bounce" data-target=".añadirJustificante">
+                                    <button class="btn btn-primary">Añadir justificante</button>
+                                  </div>
+                                  <div class="row mt-5">
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast-->
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast--> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slide">
+                              <div class="row">
+                                <div class="col-12">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6 mb-2 mb-md-0">
+                                        <input class="form-control" type="text" value="Resolución provisional" disabled>
+                                      </div>
+                                      <div class="col-12 col-md-6">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker20">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" rows="4" placeholder="Notas"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6">
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="inputGroupFile38">
+                                          <label class="custom-file-label text-left" for="inputGroupFile38">Subir documentos...</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta mb-3">
+                                    <button class="btn btn-sm btn-primary">Añadir</button>
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+      
+                                  <div class="row mt-5">
+                                    <div-col-12 class="col-12 col-md-6">
+                                      <h5 class="card-title">Historial de notas</h5>
+                                    </div-col-12>
+                                    <div-col-12 class="col-12 col-md-3 offset-md-3">
+                                      <form>
+                                        <div class="form-group mb-0">
+                                          <input type="search" class="form-control ds-input" id="search-input7" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+                                        </div>
+                                      </form>
+                                    </div-col-12>
+                                  </div>
+                                  <div class="activity mt-3">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <h6 class="mt-0 mb-1">Estado: Resolución provisional</h6>
+                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <img src="assets/images/users/user-2.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <div class="row">
+                                          <div class="col-12 col-md-8">
+                                            <h6 class="mt-0 mb-1">Estado: Resolución provisional</h6>
+                                            <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                          </div>
+                                          <div class="col-12 col-md-3 d-flex">
+                                            <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                            <div class="toast fade show ml-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                          </div>
+                                        </div>
+                                        <div class="text-right text-muted font-size-10 mt-2">El 25/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>                                                               
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="row mt-4">
+                                <div class="col-12">
+                                  <h5 class="mb-4">Justificantes Estado: "Resolución provisional"</h5>
+                                  <div class="text-center mt-3 mb-3" data-toggle="modal" data-animation="bounce" data-target=".añadirJustificante">
+                                    <button class="btn btn-primary">Añadir justificante</button>
+                                  </div>
+                                  <div class="row mt-5">
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast-->
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast--> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slide">
+                              <div class="row">
+                                <div class="col-12">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6 mb-2 mb-md-0">
+                                        <input class="form-control" type="text" value="Pendiente documentación" disabled>
+                                      </div>
+                                      <div class="col-12 col-md-6">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker14">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" rows="4" placeholder="Notas"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6">
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="inputGroupFile33">
+                                          <label class="custom-file-label text-left" for="inputGroupFile33">Subir documentos...</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta mb-3">
+                                    <button class="btn btn-sm btn-primary">Añadir</button>
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+      
+                                  <div class="row mt-5">
+                                    <div-col-12 class="col-12 col-md-6">
+                                      <h5 class="card-title">Historial de notas</h5>
+                                    </div-col-12>
+                                    <div-col-12 class="col-12 col-md-3 offset-md-3">
+                                      <form>
+                                        <div class="form-group mb-0">
+                                          <input type="search" class="form-control ds-input" id="search-input2" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+                                        </div>
+                                      </form>
+                                    </div-col-12>
+                                  </div>
+                                  <div class="activity mt-3">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="assets/images/users/user-4.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <h6 class="mt-0 mb-1">Estado: Pendiente documentación</h6>
+                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <img src="assets/images/users/user-7.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <div class="row">
+                                          <div class="col-12 col-md-8">
+                                            <h6 class="mt-0 mb-1">Estado: Pendiente documentación</h6>
+                                            <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                          </div>
+                                          <div class="col-12 col-md-3 d-flex">
+                                            <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                            <div class="toast fade show ml-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                          </div>
+                                        </div>
+                                        <div class="text-right text-muted font-size-10 mt-2">El 25/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>                                                               
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="row mt-4">
+                                <div class="col-12">
+                                  <h5 class="mb-4">Justificantes Estado: "Pendiente documentación"</h5>
+                                  <div class="text-center mt-3 mb-3" data-toggle="modal" data-animation="bounce" data-target=".añadirJustificante">
+                                    <button class="btn btn-primary">Añadir justificante</button>
+                                  </div>
+                                  <div class="row mt-5">
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast-->
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast--> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slide">
+                              <div class="row">
+                                <div class="col-12">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6 mb-2 mb-md-0">
+                                        <input class="form-control" type="text" value="Documentación dentro" disabled>
+                                      </div>
+                                      <div class="col-12 col-md-6">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker15">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" rows="4" placeholder="Notas"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12 col-md-6">
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="inputGroupFile34">
+                                          <label class="custom-file-label text-left" for="inputGroupFile34">Subir documentos...</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta mb-3">
+                                    <button class="btn btn-sm btn-primary">Añadir</button>
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+      
+                                  <div class="row mt-5">
+                                    <div-col-12 class="col-12 col-md-6">
+                                      <h5 class="card-title">Historial de notas</h5>
+                                    </div-col-12>
+                                    <div-col-12 class="col-12 col-md-3 offset-md-3">
+                                      <form>
+                                        <div class="form-group mb-0">
+                                          <input type="search" class="form-control ds-input" id="search-input3" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+                                        </div>
+                                      </form>
+                                    </div-col-12>
+                                  </div>
+                                  <div class="activity mt-3">
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="assets/images/users/user-1.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <h6 class="mt-0 mb-1">Estado: Documentación dentro</h6>
+                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <lord-icon
+                                          src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#ffffff;,secondary:#ffffff;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <img src="assets/images/users/user-3.jpg" alt="" class="img-activity">                                                                                                            
+                                    <div class="time-item2">
+                                      <div class="item-info">
+                                        <div class="row">
+                                          <div class="col-12 col-md-8">
+                                            <h6 class="mt-0 mb-1">Estado: Documentación dentro</h6>
+                                            <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                          </div>
+                                          <div class="col-12 col-md-3 d-flex">
+                                            <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                            <div class="toast fade show ml-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                              <div class="toast-body text-center">
+                                                Facturas
+                                              </div>
+                                              <div class="dropdown-divider m-0"></div>
+                                              <div class="text-center">
+                                                <lord-icon
+                                                  src="assets/json/76-document-PNG-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#707070;,secondary:#707070;"
+                                                  style="width: 30px; height: 30px;">
+                                                </lord-icon>
+                                                PNG
+                                              </div>
+                                            </div> <!--end toast--> 
+                                          </div>
+                                        </div>
+                                        <div class="text-right text-muted font-size-10 mt-2">El 25/02/2021 a las 13:30</div>
+                                      </div>
+                                    </div>                                                               
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="dropdown-divider m-0"></div>
+                              <div class="row mt-4">
+                                <div class="col-12">
+                                  <h5 class="mb-4">Justificantes Estado: "Documentación dentro"</h5>
+                                  <div class="text-center mt-3 mb-3" data-toggle="modal" data-animation="bounce" data-target=".añadirJustificante">
+                                    <button class="btn btn-primary">Añadir justificante</button>
+                                  </div>
+                                  <div class="row mt-5">
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast-->
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                      <div class="toast fade show mb-2" style="flex-basis: 180px; max-width: 180px; margin: 0 auto;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                        <div class="d-flex flex-column">
+                                          <small class="pl-3 pt-2">25/05/2021</small>
+                                          <small class="pl-3">11 min ago</small>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="toast-header d-flex justify-content-end">
+                                          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"  data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarJust">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="toast-body text-center">
+                                          Escritura
+                                        </div>
+                                        <div class="row align-items-end documentosExpInt">
+                                          <div class="col-6">
+                                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarJust">
+                                              <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                                <lord-icon
+                                                  src="assets/json/35-edit-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000000;,secondary:#000000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="dropdown-divider m-0"></div>
+                                        <div class="text-center">
+                                          <lord-icon
+                                            src="assets/json/78-document-PDF-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#707070;,secondary:#707070;"
+                                            style="width: 30px; height: 30px;">
+                                          </lord-icon>
+                                          PDF
+                                        </div>
+                                      </div> <!--end toast--> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
+
+                        <div class="modal fade eliminarNotaEst" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar nota</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar el documento?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade editarNotaEst" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar nota</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <div class="form-group">
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba su nota aquí"></textarea>
+                              </div> 
+                                <div class="boton-etiqueta">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade editarEstado" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar estado</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-sm-12">
+                                      <input class="form-control" type="text" placeholder="Titulo o nombre del estado">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea20" rows="2" placeholder="Descripción"></textarea>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-sm-12">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Fecha límite (si la hubiera)" id="datepicker13">
+                                        <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                      </div><!-- input-group -->                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="custom-select">
+                                        <option>Antes de...</option>
+                                        <option>Pendiente documentación</option>
+                                        <option>Documentación dentro</option>
+                                        <option>Pendiente presentación</option>
+                                        <option>Presentada</option>
+                                        <option>Requerimiento</option>
+                                        <option>Resolución provisional</option>
+                                      </select>
+                                    </div>                                                  
+                                  </div>
+                                </form>
+                                <div class="boton-etiqueta">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade eliminarEstado" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar estado</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar el documento?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade eliminarJust" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar justificante</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar el documento?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade editarJust" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar justificante</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" placeholder="Nombre del documento">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="form-control">
+                                        <option>PDF</option>
+                                        <option>TXT</option>
+                                        <option>XLS</option>
+                                        <option>JPG</option>
+                                        <option>DOC</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="custom-file pl-2 pr-2">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile40">
+                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile40">Seleccionar archivo...</label>
+                                    </div>                                                  
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade cambiarEstadoPresen" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Cambiar estado</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea cambiar el estado del expediente de "Pendiente de presentación" a "Presentada"?</p>
+                                <p>Su rol <strong>SI</strong> permite el cambio de estado directo, por lo que no será necesaria la validación previa del supervisor del expediente</p>
+                                <p>No olvide adjuntar el justificante de presentación si corresponde en el estado a modificar.</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade cambiarEstadoReq" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Cambiar estado</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea cambiar el estado del expediente de "Pendiente de presentación" a "Requerimiento"?</p>
+                                <p>Su rol <strong>SI</strong> permite el cambio de estado directo, por lo que no será necesaria la validación previa del supervisor del expediente</p>
+                                <p>No olvide adjuntar el justificante de presentación si corresponde en el estado a modificar.</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade cambiarEstadoRes" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Cambiar estado</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea cambiar el estado del expediente de "Pendiente de presentación" a "Resolución provisional"?</p>
+                                <p>Su rol <strong>SI</strong> permite el cambio de estado directo, por lo que no será necesaria la validación previa del supervisor del expediente</p>
+                                <p>No olvide adjuntar el justificante de presentación si corresponde en el estado a modificar.</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade cambiarEstadoPenDoc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Cambiar estado</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea cambiar el estado del expediente de "Pendiente de presentación" a "Pendiente documentación"?</p>
+                                <p>Su rol <strong>SI</strong> permite el cambio de estado directo, por lo que no será necesaria la validación previa del supervisor del expediente</p>
+                                <p>No olvide adjuntar el justificante de presentación si corresponde en el estado a modificar.</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade cambiarEstadoDocDen" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Cambiar estado</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea cambiar el estado del expediente de "Pendiente de presentación" a "Documentación dentro"?</p>
+                                <p>Su rol <strong>SI</strong> permite el cambio de estado directo, por lo que no será necesaria la validación previa del supervisor del expediente</p>
+                                <p>No olvide adjuntar el justificante de presentación si corresponde en el estado a modificar.</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+                        
+                      </div>
+                      <div class="tab-pane p-3" id="infProcedimiento" role="tabpanel">
+                        <div class="row mt-4">
+                          <div class="col-12 col-md-6">
+                            <p><strong>Nombre:</strong></p>
+                            <p><strong>Descripción:</strong></p>
+                            <p><strong>Grupo:</strong></p>
+                            <p><strong>Límites expedientes:</strong></p>
+                            <p><strong>Plazo de presentación: Desde _______ Hasta ________</strong></p>
+                          </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mt-4">OPCIONES DE PRECIOS</h5>
+                        <div class="table-responsive">
+                          <table id="datatable-opcPrecios-buttons" class="table table-bordered" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Anticipo</th>
+                                <th>Inversión hasta</th>
+                                <th>Importe anticipo</th>
+                                <th>Porcentaje</th>
+                                <th>Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Si</td>
+                                <td>40.000</td>
+                                <td>300</td>
+                                <td>10%</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarPrecios">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".eliminarPrecios">
+                                    <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>No</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>15%</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarPrecios">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".eliminarPrecios">
+                                    <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="boton-etiqueta mb-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirPrecios">Añadir</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mt-4">ENLACES</h5>
+                        <div class="table-responsive">
+                          <table id="datatable-enlaces-buttons" class="table table-bordered" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Descripción</th>
+                                <th>Link</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Enlace aplicativo</td>
+                                <td>www.gobcan.es</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                          <h5 class="mt-4 mb-4">DOCUMENTOS PROCEDIMIENTOS</h5>
+                          <div class="row">
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header">
+                                      <small>¡</small>
+                                    </div>
+                                    <div class="toast-body text-center">
+                                      Facturas
+                                    </div>
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoAut">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/78-document-PDF-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
+                                      PDF
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header">
+                                      <small>¡</small>
+                                    </div>
+                                    <div class="toast-body text-center">
+                                      Facturas
+                                    </div>
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoAut">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/78-document-PDF-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
+                                      PDF
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header">
+                                      <small>¡</small>
+                                    </div>
+                                    <div class="toast-body text-center">
+                                      Facturas
+                                    </div>
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoAut">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/78-document-PDF-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
+                                      PDF
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                            <div class="col-12 col-md-4 col-lg-2">
+                              <div class="card">
+                                <div class="card-body p-0">    
+                                  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                    <div class="toast-header">
+                                      <small>¡</small>
+                                    </div>
+                                    <div class="toast-body text-center">
+                                      Facturas
+                                    </div>
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarArchivoAut">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <div class="text-center">
+                                      <lord-icon
+                                        src="assets/json/78-document-PDF-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#707070;,secondary:#707070;"
+                                        style="width: 30px; height: 30px;">
+                                      </lord-icon>
+                                      PDF
+                                    </div>
+                                  </div> <!--end toast-->                      
+                                </div><!--end card-body-->
+                              </div><!--end card-->
+                            </div><!--end col-->
+                          </div>
+
+                          <div class="boton-etiqueta">
+                            <button class="btn btn-sm btn-primary">Crédito presupuestario</button>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="card">
+                                <div class="card-body">
+                                  <h5 class="mb-4">Información</h5>
+                                  <div class="accordion" id="accordionExample">
+                                    <div class="card mb-0 pt-2 shadow-none">
+                                      <div class="card-header" id="headingTwo">
+                                        <h5 class="my-0">
+                                          <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            1: Objeto
+                                          </button>
+                                        </h5>
+                                      </div>
+                                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body font-size-13">
+                                          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, ipsa? Soluta quam nisi inventore commodi.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card mb-0 pt-2 shadow-none">
+                                      <div class="card-header" id="headingTwo">
+                                        <h5 class="my-0">
+                                          <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            2: Requisitos
+                                          </button>
+                                        </h5>
+                                      </div>
+                                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body font-size-13">
+                                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odit error laborum dolore iusto provident dolorum qui rerum, ratione quos cumque aliquam, culpa expedita consequuntur natus tempore commodi aliquid impedit.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card mb-0 pt-2 shadow-none">
+                                      <div class="card-header" id="headingThree">
+                                        <h5 class="my-0">
+                                          <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            3: Gastos subvencionales
+                                          </button>
+                                        </h5>
+                                      </div>
+                                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body font-size-13">
+                                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magni dicta hic totam distinctio accusamus quia doloribus libero placeat amet tempora itaque, excepturi odit rerum, a veritatis repellat facere ipsam, neque aperiam quae error dolorum? Voluptas illum voluptates sequi quasi officiis, doloremque dolore dicta neque error nisi quos sapiente minima!</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <div class="modal fade editarPrecios" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar precios</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" placeholder="Anticipo">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" placeholder="Inversión">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" placeholder="Importe anticipo">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" placeholder="Porcentaje">
+                          </div>                                                   
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade añadirPrecios" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir precios</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" placeholder="Anticipo">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" placeholder="Inversión">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" placeholder="Importe anticipo">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" placeholder="Porcentaje">
+                          </div>                                                   
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade eliminarPrecios" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar precios</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>¿Desea eliminar el documento?</p>
+                      <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                      <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
             </div>
 
             
@@ -5175,6 +7670,8 @@
     <!--Datepicker-->
     <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <!-- Datatable init js -->
     <script src="assets/js/pages/expedientes.init.js"></script>
     <script src="assets/js/app.js"></script>
@@ -5189,6 +7686,48 @@
       });
       $('.cargarDoc').on('click', function(){
         alert('Recuerde que las imágenes tienen que ser legibles, en caso de no serlo por favor repita la imagen')
+      });
+    </script>
+
+    <script>
+       $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        fade: true,
+        asNavFor: '.slider-nav'
+      });
+      $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: false,
+        focusOnSelect: true,
+        centerMode: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        $('.slider-for').slick('setPosition');
+        $('.slider-nav').slick('setPosition');
       });
     </script>
 
