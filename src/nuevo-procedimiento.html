@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/title-meta.html", {"title": "Procedimientos / Administrador"})
+
+    <!-- ION Slider -->
+    <link href="assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet" type="text/css" />
+    
+    @@include("partials/head-css.html")
+  </head>
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    }
+    .fecha-oculta {
+      display: none;
+    }
+  </style>
+
+  <body data-topbar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      @@include("partials/topbar.html") @@include("partials/sidebarAdm.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-tabs-custom" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#añadirProce" role="tab">Añadir procedimiento</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#infProce" role="tab">Información del procedimiento</a>
+                      </li>                                        
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#fasesProce" role="tab">Fases básicas del procedimiento</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#testRequi" role="tab">Test de requisitos y documentación</a>
+                      </li>
+                    </ul>
+  
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div class="tab-pane active p-3" id="añadirProce" role="tabpanel">
+                        <form class="mt-4">
+                          <div class="form-group row">
+                            <div class="col-12">
+                              <input class="form-control" type="text" placeholder="Nombre">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12">
+                              <textarea class="form-control" id="exampleFormControlTextarea20" rows="2" placeholder="Descripción"></textarea>
+                            </div> 
+                          </div>
+                          <p class="m-0"><strong>Grupo</strong></p>
+                          <select class="etiquetas-multiple" name="states[]" multiple="multiple">
+                            <option value="e1">#pymes2021</option>
+                            <option value="e2">#pymes2020</option>
+                            <option value="e3">#innobono</option>
+                          </select>
+                          <div class="form-group row mt-3">
+                            <div class="col-12">
+                              <input class="form-control" type="text" placeholder="Límite expedientes">
+                            </div>
+                          </div>
+                          <p class="m-0"><strong>Plazo de presentación</strong></p>
+                          <div class="form-group">
+                            <div>
+                              <div class="input-daterange input-group" id="date-range">
+                                <input type="text" class="form-control" name="start" placeholder="Desde" />
+                                <input type="text" class="form-control" name="end" placeholder="Hasta" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12">
+                              <input class="form-control" type="text" placeholder="Órgano administrativo">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12">
+                              <select class="form-control">
+                                <option>Departamento</option>
+                                <option>xxxxxxxx</option>
+                                <option>yyyyyyy</option>
+                                <option>zzzzzzz</option>
+                              </select>
+                            </div>
+                          </div>
+                        </form>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mt-4">OPCIONES DE PRECIOS</h5>
+                        <div class="table-responsive">
+                          <table id="datatable-opcPrecios-buttons" class="table table-bordered" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Anticipo</th>
+                                <th>Inversión hasta</th>
+                                <th>Importe anticipo</th>
+                                <th>Porcentaje</th>
+                                <th>Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Si</td>
+                                <td>40.000</td>
+                                <td>300</td>
+                                <td>10%</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarPreciosProc">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".eliminarPreciosProc">
+                                    <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>No</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>15%</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarPreciosProc">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".eliminarPreciosProc">
+                                    <a data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="boton-etiqueta mb-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirPreciosProc">Añadir</button>
+                        </div>
+
+                        <div class="checkbox my-2">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck24" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                            <label class="custom-control-label" for="customCheck24">Minimis</label>
+                          </div>
+                        </div>
+                        <div class="checkbox my-2">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck25" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                            <label class="custom-control-label" for="customCheck25">Proyecto</label>
+                          </div>
+                        </div>
+                        <div class="checkbox mt-2 mb-0">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck26" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                            <label class="custom-control-label" for="customCheck26">Con aceptación previa</label>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <div class="checkbox my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck27" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck27">Procedimiento oculto hasta fecha</label>
+                              </div>
+                            </div>
+                          </div> 
+                          <div class="col-lg-6">
+                            <div class="form-group fecha-oculta">
+                              <div>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" placeholder="Fecha" id="datepicker20">
+                                  <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                </div><!-- input-group -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="card-title mt-4">Etiquetas</h5>
+                        <select class="etiquetas-multiple2" name="states[]" multiple="multiple">
+                          <option value="e1">#pymes2021</option>
+                          <option value="e2">#pymes2020</option>
+                          <option value="e3">#innobono</option>
+                        </select>
+                        <div class="boton-etiqueta mb-4">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirEtiquetaProc">Añadir</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="card-title mt-4 mb-4">Habilitar a:</h5>
+                        <strong>Por código postal:</strong>
+                        <p class="mb-5">Desde - Hasta</p>
+                        <div class="text-center mb-4">
+                          <div class="p-3">
+                            <input type="text" id="range_04">
+                          </div>
+                        </div>
+                        <div class="text-center mb-4">
+                          <button class="btn btn-sm btn-primary">Habilitar a todos</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <p class="mt-4 mb-4"><strong>Por tipo de beneficiario:</strong></p>
+                        <div class="text-center mt-4 mb-5">
+                          <div class="form-check-inline my-1">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="customRadio27" name="customRadio" class="custom-control-input">
+                              <label class="custom-control-label" for="customRadio27">Autónomo</label>
+                            </div>
+                          </div>
+                          <div class="form-check-inline my-1">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="customRadio28" name="customRadio" class="custom-control-input">
+                              <label class="custom-control-label" for="customRadio28">Sociedad</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <p class="mt-4 mb-4"><strong>Por sectores:</strong></p>
+                        <div class="row">
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck20" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck20">Agrícola</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck21" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck21">Industrial</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck22" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck22">Sanitario</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck23" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck23">Turismo</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck24" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck24">Servicios</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck25" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck25">Automoción</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck26" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck26">Asesoría</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck27" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck27">Tecnología e I + D</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck28" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck28">Música, cultura y danza</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-3">
+                            <div class="form-check-inline my-2">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck29" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                <label class="custom-control-label" for="customCheck29">Sostenibilidad y ecológico</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="boton-etiqueta mt-4 mb-4">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirSectorProc">Añadir</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <p class="mt-4 mb-4"><strong>Por usuarios:</strong></p>
+                        <form class="buscador2">
+                          <div class="form-group mb-0">
+                            <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+                          </div>
+                        </form>
+                        <div class="row">
+                          <div class="col-12 col-sm-6">
+                            <div class="card card-borde2">
+                              <div class="card-body">
+                                <div class="usuarios">
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="checkbox" name="cap1"/>
+                                    <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="text-center mb-4">
+                              <button class="btn btn-sm btn-primary">Habilitar a todos</button>
+                            </div>
+                          </div>
+                          
+                          <div class="col-12 col-sm-6">
+                            <div class="card card-borde3">
+                              <div class="card-body">
+                                <p class="text-center"><strong>Añadidos</strong></p>
+                                <div class="usuarios">
+                                  <label class="checkeable">
+                                    <input type="radio" name="cap1"/>
+                                    <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="radio" name="cap1"/>
+                                    <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                  <label class="checkeable">
+                                    <input type="radio" name="cap1"/>
+                                    <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="boton-etiqueta mb-3">
+                              <button class="btn btn-sm btn-primary">Continuar</button>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="modal fade editarPreciosProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar precios</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" placeholder="Anticipo">                                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Inversión">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" placeholder="Importe anticipo">                                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Porcentaje">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+          
+                        <div class="modal fade añadirPreciosProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir precios</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" placeholder="Anticipo">                                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Inversión">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" placeholder="Importe anticipo">                                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Porcentaje">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+          
+                        <div class="modal fade eliminarPreciosProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar precios</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar el documento?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade añadirEtiquetaProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir etiqueta</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-sm-12">
+                                      <input class="form-control" type="text" id="etiqueta">                                                       
+                                    </div>                                                    
+                                  </div>
+                                </form>
+                                <div class="boton-etiqueta">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade añadirSectorProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir sector</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" placeholder="Sector a añadir">                                                       
+                                    </div>                                                 
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                      </div>
+                      <div class="tab-pane p-3" id="infProce" role="tabpanel">
+                        <h5 class="mt-4">ENLACES</h5>
+                        <div class="table-responsive mb-4">
+                          <table id="datatable-enlacesProc-buttons" class="table table-bordered" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Descripción</th>
+                                <th>Link</th>
+                                <th>Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Enlace aplicativo</td>
+                                <td>www.gobcan.es</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarEnlaces">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="boton-etiqueta mt-3 mb-4" data-toggle="modal" data-animation="bounce" data-target=".añadirEnlaces">
+                          <button class="btn btn-sm btn-primary">Añadir</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mt-4">Documentos procedimientos</h5>
+                        <div class="row">
+                          <div class="col-12 col-md-4 col-lg-2">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <p>¡</p>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Facturas
+                                  </div>
+                                  <div class="row align-items-end documentosExpInt">
+                                    <div class="col-6">
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                          </div><!--end col-->
+                          <div class="col-12 col-md-4 col-lg-2">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <p>¡</p>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Facturas
+                                  </div>
+                                  <div class="row align-items-end documentosExpInt">
+                                    <div class="col-6">
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast-->                       
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                          </div><!--end col-->
+                          <div class="col-12 col-md-4 col-lg-2">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <p>¡</p>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Facturas
+                                  </div>
+                                  <div class="row align-items-end documentosExpInt">
+                                    <div class="col-6">
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast-->                        
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                          </div><!--end col-->
+                        </div>
+                        <div class="boton-etiqueta mt-3 mb-4" data-toggle="modal" data-animation="bounce" data-target=".añadirDocProc">
+                          <button class="btn btn-sm btn-primary">Añadir</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mb-4 mt-4">Fechas Claves</h5>
+                        <div class="table-responsive">
+                          <table id="datatable-fechasClavesDocProc-buttons" class="table table-bordered" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Concepto</th>
+                                <th>Fecha límite</th>
+                                <th>Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>PYME</td>
+                                <td>22</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFechaClaveDocProc">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarFechaClaveDocProc">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PYME</td>
+                                <td>22</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFechaClaveDocProc">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarFechaClaveDocProc">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="boton-etiqueta mt-3 mb-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirFechaClaveDocProc">Añadir</button>
+                        </div>
+                        <div class="text-center mb-3 mt-3">
+                          <button class="btn btn-sm btn-primary">Crédito presupuestario</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mb-4 mt-4">Información</h5>
+                        <div class="accordion" id="accordionExample">
+                          <div class="card mb-0 pt-2 shadow-none">
+                            <div class="card-header" id="headingTwo">
+                              <h5 class="my-0">
+                                <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  1: Objeto
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                              <div class="card-body font-size-13">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, ipsa? Soluta quam nisi inventore commodi.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-0 pt-2 shadow-none">
+                            <div class="card-header" id="headingTwo">
+                              <h5 class="my-0">
+                                <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  2: Requisitos
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                              <div class="card-body font-size-13">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odit error laborum dolore iusto provident dolorum qui rerum, ratione quos cumque aliquam, culpa expedita consequuntur natus tempore commodi aliquid impedit.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-0 pt-2 shadow-none">
+                            <div class="card-header" id="headingThree">
+                              <h5 class="my-0">
+                                <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  3: Gastos subvencionales
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                              <div class="card-body font-size-13">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magni dicta hic totam distinctio accusamus quia doloribus libero placeat amet tempora itaque, excepturi odit rerum, a veritatis repellat facere ipsam, neque aperiam quae error dolorum? Voluptas illum voluptates sequi quasi officiis, doloremque dolore dicta neque error nisi quos sapiente minima!</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text-center mb-5 mt-4">
+                          <button class="btn btn-sm btn-primary">
+                            <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Añadir">
+                              <lord-icon
+                                src="assets/json/48-plus-to-square-rotation-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </div>
+                        <div class="boton-etiqueta mt-3 mb-3">
+                          <button class="btn btn-sm btn-primary">
+                            Continuar
+                            <a data-toggle="tab" href="#fasesProce" role="tab">
+                              <lord-icon
+                                src="assets/json/48-plus-to-square-rotation-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </div>
+
+                        <div class="modal fade eliminarFechaClaveDocProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar archivo</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar el documento?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade añadirFechaClaveDocProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar fecha</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker22">
+                                        <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                      </div><!-- input-group -->                                                       
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Concepto">                                                       
+                                    </div>                                                   
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+    
+                        <div class="modal fade editarFechaClaveDocProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar fecha</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker21">
+                                        <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                      </div><!-- input-group -->                                                       
+                                    </div>                                                  
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Concepto">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade añadirDocProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir archivo</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" id="nombreDocumento" placeholder="Nombre del documento">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="form-control">
+                                        <option>PDF</option>
+                                        <option>TXT</option>
+                                        <option>XLS</option>
+                                        <option>JPG</option>
+                                        <option>DOC</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="custom-file pl-2 pr-2">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile45">
+                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile45">Seleccionar archivo...</label>
+                                    </div>                                                  
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+                        
+                        <div class="modal fade editarDocProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar archivo</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" id="nombreDocumento" placeholder="Nombre del documento">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="form-control">
+                                        <option>PDF</option>
+                                        <option>TXT</option>
+                                        <option>XLS</option>
+                                        <option>JPG</option>
+                                        <option>DOC</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="custom-file pl-2 pr-2">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile46">
+                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile46">Seleccionar archivo...</label>
+                                    </div>                                                  
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade eliminarDocProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar archivo</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar el documento?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade añadirEnlaces" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir enlaces</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <textarea class="form-control" id="exampleFormControlTextarea22" rows="4" placeholder="Descripción"></textarea>
+                                    </div> 
+                                    <div class="col-12 mt-3">
+                                      <input class="form-control" type="text" placeholder="Link">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade editarEnlaces" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar enlaces</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <textarea class="form-control" id="exampleFormControlTextarea23" rows="4" placeholder="Descripción"></textarea>
+                                    </div> 
+                                    <div class="col-12 mt-3">
+                                      <input class="form-control" type="text" placeholder="Link">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                      </div>                                        
+                      <div class="tab-pane p-3" id="fasesProce" role="tabpanel">
+                        <p class="font-size-13 mb-0">
+                          Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                          art party before they sold out master cleanse gluten-free squid
+                          scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                          art party locavore wolf cliche high life echo park Austin. Cred
+                          vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                          farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
+                          mustache readymade thundercats keffiyeh craft beer marfa
+                          ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                          vegan.
+                        </p>
+                      </div>
+                      <div class="tab-pane p-3" id="testRequi" role="tabpanel">
+                        <p class="font-size-13 mb-0">
+                          Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                          art party before they sold out master cleanse gluten-free squid
+                          scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                          art party locavore wolf cliche high life echo park Austin. Cred
+                          vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                          farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
+                          mustache readymade thundercats keffiyeh craft beer marfa
+                          ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                          vegan.
+                        </p>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Ion Range Slider-->
+    <script src="assets/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/procedimientos.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('.etiquetas-multiple').select2({
+          language: {
+            noResults: function() {
+              return "No hay resultado";        
+            },
+            searching: function() {
+              return "Buscando..";
+            }
+          }
+        });
+        $('.etiquetas-multiple2').select2({
+          language: {
+            noResults: function() {
+              return "No hay resultado";        
+            },
+            searching: function() {
+              return "Buscando..";
+            }
+          }
+        });
+        $('.select2').css("width", "100%");
+      });
+
+      $('#customCheck27').on('change', function() {
+        if (this.checked) {
+          $('.fecha-oculta').css("display", "block");
+        } else {
+          $('.fecha-oculta').css("display", "none");
+        }
+      });
+    </script>
+  </body>
+</html>

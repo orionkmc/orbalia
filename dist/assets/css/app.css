@@ -3467,6 +3467,10 @@ input[switch="dark"]:checked + label {
   margin: 0 auto;
   margin-top: 1rem; }
 
+.buscador2 {
+  width: 30%;
+  margin: 1rem 0; }
+
 .dropdown-item:hover {
   color: #44a2d2; }
 
