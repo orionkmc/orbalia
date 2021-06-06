@@ -258,7 +258,6 @@ File: Main Css File
 .historicoDocGen:hover {
   color: #495057;
 }
-
 .timeline-horizontal {
   height: 250px;
   list-style: none;
@@ -387,6 +386,54 @@ File: Main Css File
 }
 .slider-nav .slide .toast-body {
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+#columns {
+  list-style-type: none;
+}
+.column {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+  cursor: move;
+}
+.column header {
+  height: 40px;
+  color: black;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+}
+.column.dragElem {
+  opacity: 0.4;
+}
+.column.over {
+  //border: 2px dashed #000;
+  border-top: 2px solid blue;
+}
+@media (max-width: 364.98px) {
+  .column header {
+    font-size: 9px;
+  }
+}
+.circle {
+  width: 30%;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

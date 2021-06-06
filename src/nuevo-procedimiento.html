@@ -915,7 +915,7 @@
                           </div>
                         </div>
                         <div class="text-center mb-5 mt-4">
-                          <button class="btn btn-sm btn-primary">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirInformacion">
                             <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Añadir">
                               <lord-icon
                                 src="assets/json/48-plus-to-square-rotation-outline.json"
@@ -941,6 +941,41 @@
                             </a>
                           </button>
                         </div>
+
+                        <div class="modal fade añadirInformacion" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir información</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-sm-12">
+                                      <input class="form-control" type="text" placeholder="Título">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Texto"></textarea>
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
                         <div class="modal fade eliminarFechaClaveDocProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-sm">
@@ -974,7 +1009,7 @@
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar fecha</h5>
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir fecha</h5>
                                 <lord-icon
                                   src="assets/json/38-error-cross-simple-outline.json"
                                   trigger="loop-on-hover"
@@ -1066,7 +1101,7 @@
                                 <form>
                                   <div class="form-group row">
                                     <div class="col-12">
-                                      <input class="form-control" type="text" id="nombreDocumento" placeholder="Nombre del documento">                                                       
+                                      <input class="form-control" type="text" placeholder="Nombre del documento">                                                       
                                     </div>                                                    
                                   </div>
                                   <div class="form-group row">
@@ -1244,30 +1279,1171 @@
 
                       </div>                                        
                       <div class="tab-pane p-3" id="fasesProce" role="tabpanel">
-                        <p class="font-size-13 mb-0">
-                          Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
-                          art party before they sold out master cleanse gluten-free squid
-                          scenester freegan cosby sweater. Fanny pack portland seitan DIY,
-                          art party locavore wolf cliche high life echo park Austin. Cred
-                          vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
-                          farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
-                          mustache readymade thundercats keffiyeh craft beer marfa
-                          ethical. Wolf salvia freegan, sartorial keffiyeh echo park
-                          vegan.
-                        </p>
+                        <div class="boton-etiqueta mt-4">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal">Cargar fases de otro procedimiento</button>
+                        </div>
+
+                        <div class="row mt-4">
+                          <div class="col-md-12">
+                            <h5 class="mt-4">Fases</h5>
+                            <div style="display:inline-block; width:100%; overflow-y:auto;">
+                              <ul class="timeline timeline-horizontal">
+                                <li class="timeline-item">
+                                  <div class="timeline-badge primary">
+                                    
+                                  </div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Pendiente documentación</h6>
+                                      <small>Finalizado 23/02/2021</small>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge success">
+                                    
+                                  </div>
+                                  <div class="timeline-panel" style="top: 80px; bottom: auto;">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Documentación dentro</h6>
+                                      <small>Finalizado 23/02/2021</small>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge warning">
+                                    
+                                  </div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Pendiente presentación</h6>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge danger">
+                                    
+                                  </div>
+                                  <div class="timeline-panel" style="top: 80px; bottom: auto;">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Presentada</h6>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge info">
+                                    
+                                  </div>
+                                  <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Requerimiento</h6>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="timeline-item">
+                                  <div class="timeline-badge success">
+                                    
+                                  </div>
+                                  <div class="timeline-panel" style="top: 80px; bottom: auto;">
+                                    <div class="timeline-heading">
+                                      <h6 class="timeline-title">Resolución provisional</h6>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                              <div class="text-right">
+                                <button class="btn btn-dropbox mb-3" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirEstado2">
+                                  <a data-toggle="tooltip" data-placement="top" title="Añadir">
+                                    <lord-icon
+                                      src="assets/json/48-plus-to-square-rotation-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#ffffff;,secondary:#ffffff;"
+                                      style="width:20px; height:20px;">
+                                    </lord-icon>
+                                  </a>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="modal fade añadirEstado2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir estado</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <form>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <input class="form-control" type="text" placeholder="Titulo o nombre del estado">                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group">
+                                      <textarea class="form-control" id="exampleFormControlTextarea21" rows="2" placeholder="Descripción"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-sm-12">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Fecha límite (si la hubiera)" id="datepicker18">
+                                          <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                        </div><!-- input-group -->                                                       
+                                      </div>                                                    
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-12">
+                                        <select class="custom-select">
+                                          <option>Antes de...</option>
+                                          <option>Pendiente documentación</option>
+                                          <option>Documentación dentro</option>
+                                          <option>Pendiente presentación</option>
+                                          <option>Presentada</option>
+                                          <option>Requerimiento</option>
+                                          <option>Resolución provisional</option>
+                                        </select>
+                                      </div>                                                  
+                                    </div>
+                                  </form>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Crear</button>
+                                  </div>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+                        </div>
+
+                        <div class="row mt-5">
+                          <div class="col-12">
+                            <ul id="columns" class="pl-0">
+                              <li class="column" draggable="true">
+                                <header>
+                                  <div class="row">
+                                    <div class="col-7">
+                                      1.- Pendiente documentación
+                                    </div>
+                                    <div class="col-5">
+                                      <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                      <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                          <lord-icon
+                                            src="assets/json/185-trash-bin-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </header>
+                              </li>
+                              <li class="column" draggable="true">
+                                <header>
+                                  <div class="row">
+                                    <div class="col-7">
+                                      2.- Documentación dentro
+                                    </div>
+                                    <div class="col-5">
+                                      <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                      <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                          <lord-icon
+                                            src="assets/json/185-trash-bin-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </header>
+                              </li>
+                              <li class="column" draggable="true">
+                                <header>
+                                  <div class="row">
+                                    <div class="col-7">
+                                      3.- Pendiente de presentación
+                                    </div>
+                                    <div class="col-5">
+                                      <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                      <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                          <lord-icon
+                                            src="assets/json/185-trash-bin-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </header>
+                              </li>
+                              <li class="column" draggable="true">
+                                <header>
+                                  <div class="row">
+                                    <div class="col-7">
+                                      4.- Presentada
+                                    </div>
+                                    <div class="col-5">
+                                      <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                      <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                          <lord-icon
+                                            src="assets/json/185-trash-bin-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </header>
+                              </li>
+                              <li class="column" draggable="true">
+                                <header>
+                                  <div class="row">
+                                    <div class="col-7">
+                                      5.- Requerimiento
+                                    </div>
+                                    <div class="col-5">
+                                      <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                      <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                          <lord-icon
+                                            src="assets/json/185-trash-bin-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </header>
+                              </li>
+                              <li class="column" draggable="true">
+                                <header>
+                                  <div class="row">
+                                    <div class="col-7">
+                                      6.- Resolución provisional
+                                    </div>
+                                    <div class="col-5">
+                                      <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                      <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".eliminarFaseProc">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                          <lord-icon
+                                            src="assets/json/185-trash-bin-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </header>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                          <button class="btn btn-dropbox mb-3" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirEstado2">
+                            <a data-toggle="tooltip" data-placement="top" title="Añadir">
+                              <lord-icon
+                                src="assets/json/48-plus-to-square-rotation-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </div>
+
+                        <div class="modal fade editarFaseProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar fase</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" placeholder="Tiulo">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade eliminarFaseProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar fase</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar la fase?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
                       </div>
                       <div class="tab-pane p-3" id="testRequi" role="tabpanel">
-                        <p class="font-size-13 mb-0">
-                          Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
-                          art party before they sold out master cleanse gluten-free squid
-                          scenester freegan cosby sweater. Fanny pack portland seitan DIY,
-                          art party locavore wolf cliche high life echo park Austin. Cred
-                          vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
-                          farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
-                          mustache readymade thundercats keffiyeh craft beer marfa
-                          ethical. Wolf salvia freegan, sartorial keffiyeh echo park
-                          vegan.
-                        </p>
+                        <h5 class="mt-4 mb-5">Documentación previa</h5>
+                        <div class="row">
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <p class="text-center mb-0 mt-2"><strong>420 3T2020</strong></p>
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedi">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="text-center">
+                                    <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Para ver si puede acceder a este trámite necesitamos que nos adjunte el modelo 420 del <strong>tercer</strong> trimestre de 2020
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+                                  <div class="text-center mb-2">
+                                    1 archivo
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <p class="text-center mb-0 mt-2"><strong>420 3T2020</strong></p>
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedi">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="text-center">
+                                    <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Para ver si puede acceder a este trámite necesitamos que nos adjunte el modelo 420 del <strong>cuarto</strong> trimestre de 2020
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+                                  <div class="text-center mb-2">
+                                    2 archivos
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <p class="text-center mb-0 mt-2"><strong>420 3T2020</strong></p>
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedi">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="text-center">
+                                    <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Para ver si puede acceder a este trámite necesitamos que nos adjunte el modelo 420 del <strong>tercer</strong> trimestre de 2020
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+                                  <div class="text-center mb-2">
+                                    Sin límite
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <p class="text-center mb-0 mt-2"><strong>420 3T2020</strong></p>
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <div>
+                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedi">
+                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                          <lord-icon
+                                            src="assets/json/35-edit-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="text-center">
+                                    <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Para ver si puede acceder a este trámite necesitamos que nos adjunte el modelo 420 del <strong>cuarto</strong> trimestre de 2020
+                                  </div>
+                                  <div class="dropdown-divider"></div>
+                                  <div class="text-center mb-2">
+                                    1 archivo
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                          </div><!--end col-->
+                        </div>
+                        <div class="text-center mt-4">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirDocPrevia">Añadir documentación previa</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mb-4 mt-4">Memoria</h5>
+                        <div class="accordion" id="accordionExample">
+                          <div class="card mb-0 pt-2 shadow-none">
+                            <div class="card-header" id="headingTwo">
+                              <h5 class="my-0">
+                                <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  Pregunta 1:
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px; float:right; background-color: #f1556c; margin-left: 2px; border-radius: 5px;">
+                                  </lord-icon>
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px; float:right; background-color: #44a2d2; margin-right: 2px; border-radius: 5px;">
+                                  </lord-icon>
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                              <div class="card-body font-size-13">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, ipsa? Soluta quam nisi inventore commodi.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-0 pt-2 shadow-none">
+                            <div class="card-header" id="headingTwo">
+                              <h5 class="my-0">
+                                <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Pregunta 2:
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px; float:right; background-color: #f1556c; margin-left: 2px; border-radius: 5px;">
+                                  </lord-icon>
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px; float:right; background-color: #44a2d2; margin-right: 2px; border-radius: 5px;">
+                                  </lord-icon>
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                              <div class="card-body font-size-13">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odit error laborum dolore iusto provident dolorum qui rerum, ratione quos cumque aliquam, culpa expedita consequuntur natus tempore commodi aliquid impedit.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-0 pt-2 shadow-none">
+                            <div class="card-header" id="headingThree">
+                              <h5 class="my-0">
+                                <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Pregunta 3
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px; float:right; background-color: #f1556c; margin-left: 2px; border-radius: 5px;">
+                                  </lord-icon>
+                                  <lord-icon
+                                    src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    style="width:20px; height:20px; float:right; background-color: #44a2d2; margin-right: 2px; border-radius: 5px;">
+                                  </lord-icon>
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                              <div class="card-body font-size-13">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magni dicta hic totam distinctio accusamus quia doloribus libero placeat amet tempora itaque, excepturi odit rerum, a veritatis repellat facere ipsam, neque aperiam quae error dolorum? Voluptas illum voluptates sequi quasi officiis, doloremque dolore dicta neque error nisi quos sapiente minima!</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text-center mb-5 mt-4">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirMemoria">
+                            <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Añadir">
+                              <lord-icon
+                                src="assets/json/48-plus-to-square-rotation-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mb-4 mt-4">DOCUMENTACIÓN</h5>
+                        <h6 class="mb-4 mt-4">Documentación genérica</h6>
+                        <div class="row mt-4">
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-end">
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    DNI
+                                  </div>
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                            <div class="text-center mt-4 mb-5">
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio35" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio35">Autónomo</label>
+                                </div>
+                              </div>
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio36" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio36">Sociedad</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-end">
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Escritura
+                                  </div>
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                            <div class="text-center mt-4 mb-5">
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio36" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio36">Autónomo</label>
+                                </div>
+                              </div>
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio37" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio37">Sociedad</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-end">
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Situación censal
+                                  </div>
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                            <div class="text-center mt-4 mb-5">
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio36" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio36">Autónomo</label>
+                                </div>
+                              </div>
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio37" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio37">Sociedad</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!--end col-->
+                        </div>
+                        <div class="text-center mb-4">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirDocGenProced">Añadir</button>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h6 class="mb-4 mt-4">Documentación específica</h6>
+                        <div class="row mt-4">
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-end">
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Escritura
+                                  </div>
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                            <div class="text-center mt-4 mb-5">
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio40" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio40">Autónomo</label>
+                                </div>
+                              </div>
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio41" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio41">Sociedad</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3">
+                            <div class="card">
+                              <div class="card-body p-0">    
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-end">
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Situación censal
+                                  </div>
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast-->                      
+                              </div><!--end card-body-->
+                            </div><!--end card-->
+                            <div class="text-center mt-4 mb-5">
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio38" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio38">Autónomo</label>
+                                </div>
+                              </div>
+                              <div class="form-check-inline my-1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio39" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio39">Sociedad</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!--end col-->
+                        </div>
+                        <div class="text-center mt-2">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirDocEspProced">Añadir</button>
+                        </div>
+
+                        <div class="text-center mt-4">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal">Crear procedimiento</button>
+                        </div>
+
+                        <div class="modal fade añadirDocGenProced" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir documentación genérica</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" placeholder="Nombre">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <p class="text-left mb-0"><strong>Identificador:</strong></p>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="form-control">
+                                        <option>PDF</option>
+                                        <option>Excel</option>
+                                        <option>JPG</option>
+                                        <option>PNG</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea35" rows="4" placeholder="Descripción"></textarea>
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade añadirDocEspProced" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir documentación específica</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" placeholder="Nombre">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <p class="text-left mb-0"><strong>Identificador:</strong></p>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="form-control">
+                                        <option>PDF</option>
+                                        <option>Excel</option>
+                                        <option>JPG</option>
+                                        <option>PNG</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea36" rows="4" placeholder="Descripción"></textarea>
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade añadirMemoria" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir memoria</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-sm-12">
+                                      <input class="form-control" type="text" placeholder="Título">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group">
+                                    <textarea class="form-control" rows="4" placeholder="Texto"></textarea>
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade añadirDocPrevia" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir documentación previa</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" placeholder="Título">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea30" rows="4" placeholder="Descripción"></textarea>
+                                  </div>
+                                  <p class="text-left"><strong>Limitar número de archivos a subir a:</strong></p>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="custom-file pl-2 pr-2">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile64">
+                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile64">Seleccionar archivo...</label>
+                                    </div>                                                  
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade editarDocProcedi" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar archivo</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input class="form-control" type="text" placeholder="Nombre del documento">                                                       
+                                    </div>                                                    
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <select class="form-control">
+                                        <option>PDF</option>
+                                        <option>TXT</option>
+                                        <option>XLS</option>
+                                        <option>JPG</option>
+                                        <option>DOC</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="custom-file pl-2 pr-2">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile54">
+                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile54">Seleccionar archivo...</label>
+                                    </div>                                                  
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade eliminarDocProcedi" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar archivo</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar el documento?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
                       </div>
                     </div>
   
@@ -1346,6 +2522,82 @@
           $('.fecha-oculta').css("display", "none");
         }
       });
+
+      var dragSrcEl = null;
+
+      function handleDragStart(e) {
+        // Target (this) element is the source node.
+        dragSrcEl = this;
+
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/html', this.outerHTML);
+
+        this.classList.add('dragElem');
+      }
+      function handleDragOver(e) {
+        if (e.preventDefault) {
+          e.preventDefault(); // Necessary. Allows us to drop.
+        }
+        this.classList.add('over');
+
+        e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+
+        return false;
+      }
+
+      function handleDragEnter(e) {
+        // this / e.target is the current hover target.
+      }
+
+      function handleDragLeave(e) {
+        this.classList.remove('over');  // this / e.target is previous target element.
+      }
+
+      function handleDrop(e) {
+        // this/e.target is current target element.
+
+        if (e.stopPropagation) {
+          e.stopPropagation(); // Stops some browsers from redirecting.
+        }
+
+        // Don't do anything if dropping the same column we're dragging.
+        if (dragSrcEl != this) {
+          // Set the source column's HTML to the HTML of the column we dropped on.
+          //alert(this.outerHTML);
+          //dragSrcEl.innerHTML = this.innerHTML;
+          //this.innerHTML = e.dataTransfer.getData('text/html');
+          this.parentNode.removeChild(dragSrcEl);
+          var dropHTML = e.dataTransfer.getData('text/html');
+          this.insertAdjacentHTML('beforebegin',dropHTML);
+          var dropElem = this.previousSibling;
+          addDnDHandlers(dropElem);
+          
+        }
+        this.classList.remove('over');
+        return false;
+      }
+
+      function handleDragEnd(e) {
+        // this/e.target is the source node.
+        this.classList.remove('over');
+
+        /*[].forEach.call(cols, function (col) {
+          col.classList.remove('over');
+        });*/
+      }
+
+      function addDnDHandlers(elem) {
+        elem.addEventListener('dragstart', handleDragStart, false);
+        elem.addEventListener('dragenter', handleDragEnter, false)
+        elem.addEventListener('dragover', handleDragOver, false);
+        elem.addEventListener('dragleave', handleDragLeave, false);
+        elem.addEventListener('drop', handleDrop, false);
+        elem.addEventListener('dragend', handleDragEnd, false);
+
+      }
+
+      var cols = document.querySelectorAll('#columns .column');
+      [].forEach.call(cols, addDnDHandlers);
     </script>
   </body>
 </html>
