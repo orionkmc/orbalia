@@ -58,16 +58,33 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-opcPrecios-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-opcPreciosEdit-buttons")
+    .DataTable(context9)
+    .buttons()
+    .container()
+    .appendTo("#datatable-opcPreciosEdit-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-enlacesProc-buttons")
     .DataTable(context9)
     .buttons()
     .container()
     .appendTo("#datatable-enlacesProc-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-enlacesProcEdit-buttons")
+    .DataTable(context9)
+    .buttons()
+    .container()
+    .appendTo("#datatable-enlacesProcEdit-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-fechasClavesDocProc-buttons")
     .DataTable(context9)
     .buttons()
     .container()
     .appendTo("#datatable-fechasClavesDocProc-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-fechasClavesDocProcEdit-buttons")
+    .DataTable(context9)
+    .buttons()
+    .container()
+    .appendTo(
+      "#datatable-fechasClavesDocProcEdit-buttons_wrapper .col-md-6:eq(0)"
+    );
   $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
     $($.fn.dataTable.tables(true))
       .DataTable()

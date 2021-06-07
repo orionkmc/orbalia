@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @@include("partials/title-meta.html", {"title": "Nuevo procedimiento / Administrador"})
+    @@include("partials/title-meta.html", {"title": "Editar procedimiento / Administrador"})
 
     <!-- ION Slider -->
     <link href="assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet" type="text/css" />
@@ -102,7 +102,7 @@
                         <div class="dropdown-divider"></div>
                         <h5 class="mt-4">OPCIONES DE PRECIOS</h5>
                         <div class="table-responsive">
-                          <table id="datatable-opcPrecios-buttons" class="table table-bordered" style="width:100%">
+                          <table id="datatable-opcPreciosEdit-buttons" class="table table-bordered" style="width:100%">
                             <thead>
                               <tr>
                                 <th>Anticipo</th>
@@ -609,7 +609,7 @@
                       <div class="tab-pane p-3" id="infProce" role="tabpanel">
                         <h5 class="mt-4">ENLACES</h5>
                         <div class="table-responsive mb-4">
-                          <table id="datatable-enlacesProc-buttons" class="table table-bordered" style="width:100%">
+                          <table id="datatable-enlacesProcEdit-buttons" class="table table-bordered" style="width:100%">
                             <thead>
                               <tr>
                                 <th>Descripción</th>
@@ -793,7 +793,7 @@
                         <div class="dropdown-divider"></div>
                         <h5 class="mb-4 mt-4">Fechas Claves</h5>
                         <div class="table-responsive">
-                          <table id="datatable-fechasClavesDocProc-buttons" class="table table-bordered" style="width:100%">
+                          <table id="datatable-fechasClavesDocProcEdit-buttons" class="table table-bordered" style="width:100%">
                             <thead>
                               <tr>
                                 <th>Concepto</th>
@@ -930,7 +930,7 @@
                         <div class="boton-etiqueta mt-3 mb-3">
                           <button class="btn btn-sm btn-primary">
                             Continuar
-                            <a>
+                            <a data-toggle="tab" href="#fasesProce" role="tab">
                               <lord-icon
                                 src="assets/json/48-plus-to-square-rotation-outline.json"
                                 trigger="loop-on-hover"
