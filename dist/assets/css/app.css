@@ -3669,3 +3669,57 @@ input[switch="dark"]:checked + label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+/**
+ * Drag and Drop Basic
+ **/
+[draggable="true"] {
+  /*
+   To prevent user selecting inside the drag source
+  */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
+
+#drag-drop-basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  #drag-drop-basic #source-container {
+    height: 300px;
+    border-left: 2px solid #f3f70a;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  #drag-drop-basic #target-container {
+    height: 300px;
+    border-left: 2px solid #44d24b;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  #drag-drop-basic #drag-source,
+  #drag-drop-basic #drag-source2,
+  #drag-drop-basic #drag-source3,
+  #drag-drop-basic #drag-source4,
+  #drag-drop-basic #drag-source5,
+  #drag-drop-basic #drag-source6,
+  #drag-drop-basic #drag-source7,
+  #drag-drop-basic #drag-source8,
+  #drag-drop-basic #drag-source9 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: steelblue;
+    background-size: cover;
+    margin: 1rem; }

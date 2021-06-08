@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap Css -->
+  <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+  <!-- Icons Css -->
+  <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- DataTables -->
+  <link
+  href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+  rel="stylesheet"
+  type="text/css"
+  />
+  <link
+  href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
+  rel="stylesheet"
+  type="text/css"
+  />
+
+  <!-- Responsive datatable examples -->
+  <link
+  href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+  rel="stylesheet"
+  type="text/css"
+  />
+
+  <!-- App Css-->
+  <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <title>Document</title>
+</head>
+<body>
+  <div id="drag-drop-basic">
+    <div id="source-container" data-role="drag-drop-container">
+        <div id="drag-source" draggable="true"></div>
+        <div id="drag-source2" draggable="true"></div>
+        <div id="drag-source3" draggable="true"></div>
+    </div>
+    <div id="target-container" data-role="drag-drop-container"></div>
+</div>
+<script>
+  /**
+  * Drag and Drop multiple elements in multiple sources 
+  **/
+
+  let sourceContainerId = ''
+  // Allow multiple draggable items
+  let dragSources = document.querySelectorAll('[draggable="true"]')
+  dragSources.forEach(dragSource => {
+    dragSource.addEventListener('dragstart', dragStart)
+  })
+
+  // Allow multiple dropped targets
+  let dropTargets = document.querySelectorAll('[data-role="drag-drop-container"]')
+  dropTargets.forEach(dropTarget => {
+    dropTarget.addEventListener('drop', dropped)
+    dropTarget.addEventListener('dragenter', cancelDefault)
+    dropTarget.addEventListener('dragover', cancelDefault)
+  })
+
+  function cancelDefault (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    return false
+  }
+
+  function dragStart (e) {
+    e.dataTransfer.setData('text/plain', e.target.id)
+    sourceContainerId = this.parentElement.id
+  }
+
+  function dropped (e) {
+    // execute function only when target container is different from source container
+    if (this.id !== sourceContainerId) {
+      console.log(this.id)
+      cancelDefault(e)
+      let id = e.dataTransfer.getData('text/plain')
+      e.target.appendChild(document.querySelector('#' + id))
+    }
+  }
+// End of Drag and Drop Basic
+</script>
+</body>
+</html>

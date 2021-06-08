@@ -438,3 +438,56 @@ File: Main Css File
   justify-content: center;
   align-items: center;
 }
+
+/**
+ * Drag and Drop Basic
+ **/
+
+ [draggable="true"] {
+  /*
+   To prevent user selecting inside the drag source
+  */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#drag-drop-basic{
+  display: flex;
+
+  #source-container{
+    height: 300px;
+    border-left: 2px solid #f3f70a;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #target-container{
+    height: 300px;
+    border-left: 2px solid #44d24b;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #drag-source, 
+  #drag-source2, 
+  #drag-source3, 
+  #drag-source4, 
+  #drag-source5, 
+  #drag-source6, 
+  #drag-source7, 
+  #drag-source8, 
+  #drag-source9{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: steelblue;
+    background-size: cover;
+    margin: 1rem;
+  }
+}
+
+// End of Drag and Drop Basic
