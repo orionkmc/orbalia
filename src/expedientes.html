@@ -23,21 +23,17 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12">
-                <div class="card" style="background-color: transparent; box-shadow: none;">
-                  <div class="card-body">
-                    <div class="text-left">
-                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirExpediente">
-                        Añadir expediente
-                        <lord-icon
-                          src="assets/json/48-plus-to-square-rotation-outline.json"
-                          trigger="loop-on-hover"
-                          target="a"
-                          colors="primary:#ffffff;,secondary:#ffffff;"
-                          style="width:20px; height:20px; margin-left: 5px;">
-                        </lord-icon>
-                      </button>
-                    </div>
-                  </div>
+                <div class="text-left mb-4">
+                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirExpediente">
+                    Añadir expediente
+                    <lord-icon
+                      src="assets/json/48-plus-to-square-rotation-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#000000;,secondary:#000000;"
+                      style="width:20px; height:20px; margin-left: 5px;">
+                    </lord-icon>
+                  </button>
                 </div>
               </div>
               <!-- end col -->
@@ -52,7 +48,7 @@
                         trigger="loop-on-hover"
                         target="a"
                         colors="primary:#808080;,secondary:#808080;"
-                        style="width:20px; height:20px"
+                        style="width:20px; height:20px; cursor: pointer;"
                         class="btn-close"
                         data-dismiss="modal"
                         aria-label="Close">
@@ -70,11 +66,11 @@
                         </div>
                         <div class="form-group row mt-3">
                           <div class="col-12">
-                            <select class="form-control">
-                              <option>Procedimientos</option>
-                              <option>XXXXXX</option>
-                              <option>YYYYYY</option>
-                              <option>ZZZZZZ</option>
+                            <p><strong>Procedimientos</strong></p>
+                            <select class="etiquetas-multiple" name="states[]" multiple="multiple">
+                              <option value="e1">#pymes2021</option>
+                              <option value="e2">#pymes2020</option>
+                              <option value="e3">#innobono</option>
                             </select>
                           </div>
                         </div>
@@ -98,7 +94,7 @@
                         trigger="loop-on-hover"
                         target="a"
                         colors="primary:#808080;,secondary:#808080;"
-                        style="width:20px; height:20px"
+                        style="width:20px; height:20px; cursor: pointer;"
                         class="btn-close"
                         data-dismiss="modal"
                         aria-label="Close">
@@ -128,6 +124,7 @@
                           <div class="form-group mb-0">
                             <div>
                               <div class="input-daterange input-group" id="date-range4">
+                                <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .45rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
                                 <input type="text" class="form-control" name="start" placeholder="Fecha inicial" />
                                 <input type="text" class="form-control" name="end" placeholder="Fecha final" />
                               </div>
@@ -150,8 +147,8 @@
                             <th>Fecha última nota</th>
                             <th>Importe inversión</th>
                             <th>Importe concedido</th>
-                            <th>Técnicos asignados</th>
-                            <th>Acciones</th>
+                            <th>Personal asignado</th>
+                            <th style="width: 100px;">Acciones</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -161,7 +158,7 @@
                             <td>2021/001/001</td>
                             <td>Montando Movidas SL</td>
                             <td>19/09/2021</td>
-                            <td>
+                            <td class="text-center">
                               <span class="badge badge-boxed  badge-warning">Pendiente presentación</span>
                             </td>
                             <td>PYMES2021</td>
@@ -190,7 +187,7 @@
                                     src="assets/json/69-eye-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -201,7 +198,7 @@
                                     src="assets/json/10-cloud-refresh-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -212,7 +209,7 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -225,7 +222,7 @@
                             <td>2021/002/001</td>
                             <td>Montando Movidas SL</td>
                             <td>19/09/2021</td>
-                            <td>
+                            <td class="text-center">
                               <span class="badge badge-boxed badge-danger">Eliminado</span>
                             </td>
                             <td>PYMES2021</td>
@@ -254,7 +251,7 @@
                                     src="assets/json/69-eye-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -265,7 +262,7 @@
                                     src="assets/json/10-cloud-refresh-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -276,7 +273,7 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -303,7 +300,7 @@
                       trigger="loop-on-hover"
                       target="a"
                       colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
+                      style="width:20px; height:20px; cursor: pointer;"
                       class="btn-close"
                       data-dismiss="modal"
                       aria-label="Close">
@@ -341,7 +338,7 @@
                       trigger="loop-on-hover"
                       target="a"
                       colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
+                      style="width:20px; height:20px; cursor: pointer;"
                       class="btn-close"
                       data-dismiss="modal"
                       aria-label="Close">
@@ -351,39 +348,39 @@
                     <p><strong>Seleccione un supervisor</strong></p>
                     <div class="usuarios">
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                       <label class="checkeable">
-                        <input type="radio" name="cap1"/>
+                        <input type="checkbox" name="cap1"/>
                         <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
                       </label>
                     </div>
@@ -484,7 +481,7 @@
                                     src="assets/json/48-plus-to-square-rotation-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -495,7 +492,7 @@
                                     src="assets/json/37-approve-checked-simple-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -506,7 +503,7 @@
                                     src="assets/json/38-error-cross-simple-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -529,7 +526,7 @@
                                     src="assets/json/48-plus-to-square-rotation-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -552,7 +549,7 @@
                                     src="assets/json/48-plus-to-square-rotation-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -609,6 +606,20 @@
     <script>
       $('#crearExpediente').on('click', function() {
         $('.añadirExpediente').modal('hide');
+      });
+
+      $(document).ready(function() {
+        $('.etiquetas-multiple').select2({
+          language: {
+            noResults: function() {
+              return "No hay resultado";        
+            },
+            searching: function() {
+              return "Buscando..";
+            }
+          }
+        });
+        $('.select2').css("width", "100%");
       });
     </script>
 

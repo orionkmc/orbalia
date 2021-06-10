@@ -27,8 +27,78 @@
           <div class="container-fluid">
 
             <div class="row">                                                
-              <div class="col-12">
-                <div class="card">                                       
+              <div class="col-12 col-sm-8">
+                <div class="card" style="height: 90%;">
+                  <div class="card-body">
+                    <h5 class="card-title">Mis trámites abiertos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-tramites-clie-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td>PYMES</td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1 ml-2" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver más">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              ORBALIA
+                            </td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1 ml-2" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver más">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>PYMES</td>
+                            <td class="centrar-boton">
+                              <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1 ml-2" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver más">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="card" style="height: 90%;">                                       
                   <div class="card-body"> 
                     <h5 class="card-title mb-3">Notificaciones</h5>
                     <div class="activity">
@@ -58,23 +128,11 @@
                           <p class="text-muted font-size-13">There are many variations of passages of Lorem Ipsum available.</p>
                         </div>
                       </div>
-                      <i class="mdi mdi-alert-outline text-danger"></i>    
-                      <div class="time-item">
-                        <div class="item-info">
-                          <div class="text-muted float-right font-size-10 mt-1 mr-2">
-                            <p class="mb-0">50 mins ago</p>
-                            <p class="mb-0">
-                              <a href="" data-toggle="modal" data-animation="bounce" data-target=".notificaciones">Leída</a>
-                            </p>
-                          </div>
-                          <h5 class="mt-0 mb-1">Task finished</h5>
-                          <p class="text-muted font-size-13">There are many variations of passages of Lorem Ipsum available.</p>
-                        </div>
-                      </div>
                     </div>
                   </div>                                        
                 </div>
-              </div>                                   
+              </div> 
+              <!-- end col -->                                  
             </div>
               
             <div class="modal fade notificaciones" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -103,65 +161,6 @@
                 </div><!-- /.modal-content -->
               </div><!-- /.modal-dialog -->
             </div><!-- /.modal -->
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Mis trámites abiertos</h5>
-                    <div class="table-responsive">
-                      <table id="datatable-tramites-clie-buttons" class="table table-bordered" style="width:100%">
-                        <thead>
-                          <tr>
-                            <th>Nombre</th>
-                            <th>Acciones</th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          <tr>
-                            <td>PYMES</td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1 ml-2" type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver más">
-                                  <lord-icon
-                                    src="assets/json/69-eye-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              ORBALIA
-                            </td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary btn-acciones-iconos mb-1 ml-2" type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver más">
-                                  <lord-icon
-                                    src="assets/json/69-eye-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end col -->
-            </div>
-            <!-- end row -->
 
             <div class="row">
               <div class="col-md-12">

@@ -9,13 +9,13 @@ File: Datatables Js File
 
 $(document).ready(function () {
   const context7 = {
-    paging: true,
-    info: true,
-    searching: true,
-    lengthChange: true,
+    paging: false,
+    info: false,
+    searching: false,
+    lengthChange: false,
     responsive: true,
     scrollX: false,
-    buttons: ["excel", "pdf", "colvis"],
+    buttons: false,
     language: {
       decimal: ",",
       thousands: ".",

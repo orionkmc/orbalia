@@ -3313,6 +3313,22 @@ input[switch="dark"]:checked + label {
           transform: rotate(180deg);
   color: #44a2d2; }
 
+body[data-topbar=dark] #page-topbar {
+  background-color: #212c52; }
+
+.mm-active .active {
+  color: #34bad1 !important; }
+
+#sidebar-menu ul li a:hover {
+  color: #34bad1; }
+
+.btn-outline-primary:hover {
+  color: #000 !important;
+  background-color: #d9dfe2 !important; }
+
+.badge {
+  font-size: .8125rem !important; }
+
 .card-borde {
   border-left: 2px solid #44a2d2;
   border-radius: 0 .25rem .25rem 0 !important; }
@@ -3322,7 +3338,7 @@ input[switch="dark"]:checked + label {
   border-radius: 0 .25rem .25rem 0 !important; }
 
 .card-borde3 {
-  border-left: 2px solid #f3f70a;
+  border-left: 2px solid #f7c00a;
   border-radius: 0 .25rem .25rem 0 !important; }
 
 .noti-icon .badge {
@@ -3390,6 +3406,13 @@ input[switch="dark"]:checked + label {
 .circulos-slider img {
   width: 100%;
   height: 100%; }
+
+.cambiar-foto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%); }
 
 .arch-notif {
   margin: 0 auto .75rem auto !important;

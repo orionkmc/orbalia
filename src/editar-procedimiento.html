@@ -125,7 +125,7 @@
                                         src="assets/json/35-edit-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -136,7 +136,7 @@
                                         src="assets/json/185-trash-bin-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -155,7 +155,7 @@
                                         src="assets/json/35-edit-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -166,7 +166,7 @@
                                         src="assets/json/185-trash-bin-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -350,84 +350,53 @@
 
                         <div class="dropdown-divider"></div>
                         <p class="mt-4 mb-4"><strong>Por usuarios:</strong></p>
-                        <form class="buscador2">
-                          <div class="form-group mb-0">
-                            <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
-                          </div>
-                        </form>
                         <div class="row">
-                          <div class="col-12 col-sm-6">
-                            <div class="card card-borde2">
-                              <div class="card-body">
-                                <div class="usuarios">
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="checkbox" name="cap1"/>
-                                    <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                </div>
+                          <div class="col-6">
+                            <form class="buscador2 w-100">
+                              <div class="form-group mb-0">
+                                <input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar..." aria-label="Search for..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
                               </div>
-                            </div>
-                            <div class="text-center mb-4">
+                            </form>
+                          </div>
+                          <div class="col-6 d-flex justify-content-center align-items-center">
+                            <h5>Añadidos</h5>
+                          </div>
+                        </div>
+
+                        <div id="drag-drop-basic">
+                          <div id="source-container" data-role="drag-drop-container">
+                            <div id="drag-source" draggable="true" style="background-image: url('assets/images/users/user-10.jpg');"></div>
+                            <div id="drag-source2" draggable="true" style="background-image: url('assets/images/users/user-1.jpg');"></div>
+                            <div id="drag-source3" draggable="true" style="background-image: url('assets/images/users/user-2.jpg');"></div>
+                            <div id="drag-source4" draggable="true" style="background-image: url('assets/images/users/user-3.jpg');"></div>
+                            <div id="drag-source5" draggable="true" style="background-image: url('assets/images/users/user-4.jpg');"></div>
+                            <div id="drag-source6" draggable="true" style="background-image: url('assets/images/users/user-5.jpg');"></div>
+                            <div id="drag-source7" draggable="true" style="background-image: url('assets/images/users/user-6.jpg');"></div>
+                            <div id="drag-source8" draggable="true" style="background-image: url('assets/images/users/user-7.jpg');"></div>
+                            <div id="drag-source9" draggable="true" style="background-image: url('assets/images/users/user-8.jpg');"></div>
+                          </div>
+                          <div id="target-container" data-role="drag-drop-container"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="text-center mt-5 mb-4">
                               <button class="btn btn-sm btn-primary">Habilitar a todos</button>
                             </div>
                           </div>
-                          
-                          <div class="col-12 col-sm-6">
-                            <div class="card card-borde3">
-                              <div class="card-body">
-                                <p class="text-center"><strong>Añadidos</strong></p>
-                                <div class="usuarios">
-                                  <label class="checkeable">
-                                    <input type="radio" name="cap1"/>
-                                    <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="radio" name="cap1"/>
-                                    <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                  <label class="checkeable">
-                                    <input type="radio" name="cap1"/>
-                                    <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="boton-etiqueta mb-3">
-                              <button class="btn btn-sm btn-primary">Continuar</button>
-                            </div>
-                          </div>
+                        </div>
+                        <div class="boton-etiqueta mt-3 mb-3">
+                          <button class="btn btn-sm btn-primary">
+                            Continuar
+                            <a>
+                              <lord-icon
+                                src="assets/json/48-plus-to-square-rotation-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#000000;,secondary:#000000;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
                         </div>
                         
                         <div class="modal fade editarPreciosProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -440,7 +409,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -483,7 +452,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -526,7 +495,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -554,7 +523,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -586,7 +555,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -628,7 +597,7 @@
                                         src="assets/json/35-edit-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -639,7 +608,7 @@
                                         src="assets/json/185-trash-bin-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -666,11 +635,9 @@
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
-                                  <div class="toast-body text-center">
+                                  <div class="toast-body d-flex justify-content-between">
                                     Facturas
-                                  </div>
-                                  <div class="row align-items-end documentosExpInt">
-                                    <div class="col-6">
+                                    <div class="documentosExpInt">
                                       <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
                                         <a data-toggle="tooltip" data-placement="top" title="Editar">
                                           <lord-icon
@@ -709,11 +676,9 @@
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
-                                  <div class="toast-body text-center">
+                                  <div class="toast-body d-flex justify-content-between">
                                     Facturas
-                                  </div>
-                                  <div class="row align-items-end documentosExpInt">
-                                    <div class="col-6">
+                                    <div class="documentosExpInt">
                                       <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
                                         <a data-toggle="tooltip" data-placement="top" title="Editar">
                                           <lord-icon
@@ -752,11 +717,9 @@
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
-                                  <div class="toast-body text-center">
+                                  <div class="toast-body d-flex justify-content-between">
                                     Facturas
-                                  </div>
-                                  <div class="row align-items-end documentosExpInt">
-                                    <div class="col-6">
+                                    <div class="documentosExpInt">
                                       <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
                                         <a data-toggle="tooltip" data-placement="top" title="Editar">
                                           <lord-icon
@@ -812,7 +775,7 @@
                                         src="assets/json/35-edit-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -823,7 +786,7 @@
                                         src="assets/json/185-trash-bin-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -840,7 +803,7 @@
                                         src="assets/json/35-edit-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -851,7 +814,7 @@
                                         src="assets/json/185-trash-bin-outline.json"
                                         trigger="loop-on-hover"
                                         target="a"
-                                        colors="primary:#ffffff;,secondary:#ffffff;"
+                                        colors="primary:#000000;,secondary:#000000;"
                                         style="width:20px; height:20px;">
                                       </lord-icon>
                                     </a>
@@ -921,7 +884,7 @@
                                 src="assets/json/48-plus-to-square-rotation-outline.json"
                                 trigger="loop-on-hover"
                                 target="a"
-                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                colors="primary:#000000;,secondary:#000000;"
                                 style="width:20px; height:20px;">
                               </lord-icon>
                             </a>
@@ -935,7 +898,7 @@
                                 src="assets/json/48-plus-to-square-rotation-outline.json"
                                 trigger="loop-on-hover"
                                 target="a"
-                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                colors="primary:#000000;,secondary:#000000;"
                                 style="width:20px; height:20px;">
                               </lord-icon>
                             </a>
@@ -952,7 +915,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -987,7 +950,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1015,7 +978,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1053,7 +1016,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1091,7 +1054,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1140,7 +1103,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1189,7 +1152,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1217,7 +1180,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1252,7 +1215,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1358,7 +1321,7 @@
                                       src="assets/json/48-plus-to-square-rotation-outline.json"
                                       trigger="loop-on-hover"
                                       target="a"
-                                      colors="primary:#ffffff;,secondary:#ffffff;"
+                                      colors="primary:#000000;,secondary:#000000;"
                                       style="width:20px; height:20px;">
                                     </lord-icon>
                                   </a>
@@ -1440,7 +1403,7 @@
                                             src="assets/json/35-edit-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1451,7 +1414,7 @@
                                             src="assets/json/185-trash-bin-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1473,7 +1436,7 @@
                                             src="assets/json/35-edit-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1484,7 +1447,7 @@
                                             src="assets/json/185-trash-bin-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1506,7 +1469,7 @@
                                             src="assets/json/35-edit-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1517,7 +1480,7 @@
                                             src="assets/json/185-trash-bin-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1539,7 +1502,7 @@
                                             src="assets/json/35-edit-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1550,7 +1513,7 @@
                                             src="assets/json/185-trash-bin-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1572,7 +1535,7 @@
                                             src="assets/json/35-edit-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1583,7 +1546,7 @@
                                             src="assets/json/185-trash-bin-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1605,7 +1568,7 @@
                                             src="assets/json/35-edit-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1616,7 +1579,7 @@
                                             src="assets/json/185-trash-bin-outline.json"
                                             trigger="loop-on-hover"
                                             target="a"
-                                            colors="primary:#ffffff;,secondary:#ffffff;"
+                                            colors="primary:#000000;,secondary:#000000;"
                                             style="width:20px; height:20px;">
                                           </lord-icon>
                                         </a>
@@ -1636,7 +1599,7 @@
                                 src="assets/json/48-plus-to-square-rotation-outline.json"
                                 trigger="loop-on-hover"
                                 target="a"
-                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                colors="primary:#000000;,secondary:#000000;"
                                 style="width:20px; height:20px;">
                               </lord-icon>
                             </a>
@@ -1653,7 +1616,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1685,7 +1648,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -1872,14 +1835,14 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px; float:right; background-color: #f1556c; margin-left: 2px; border-radius: 5px;">
                                   </lord-icon>
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px; float:right; background-color: #44a2d2; margin-right: 2px; border-radius: 5px;">
                                   </lord-icon>
                                 </button>
@@ -1900,14 +1863,14 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px; float:right; background-color: #f1556c; margin-left: 2px; border-radius: 5px;">
                                   </lord-icon>
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px; float:right; background-color: #44a2d2; margin-right: 2px; border-radius: 5px;">
                                   </lord-icon>
                                 </button>
@@ -1928,14 +1891,14 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px; float:right; background-color: #f1556c; margin-left: 2px; border-radius: 5px;">
                                   </lord-icon>
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px; float:right; background-color: #44a2d2; margin-right: 2px; border-radius: 5px;">
                                   </lord-icon>
                                 </button>
@@ -1955,7 +1918,7 @@
                                 src="assets/json/48-plus-to-square-rotation-outline.json"
                                 trigger="loop-on-hover"
                                 target="a"
-                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                colors="primary:#000000;,secondary:#000000;"
                                 style="width:20px; height:20px;">
                               </lord-icon>
                             </a>
@@ -2198,7 +2161,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -2244,7 +2207,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -2290,7 +2253,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -2325,7 +2288,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -2378,7 +2341,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -2427,7 +2390,7 @@
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#808080;,secondary:#808080;"
-                                  style="width:20px; height:20px"
+                                  style="width:20px; height:20px; cursor: pointer;"
                                   class="btn-close"
                                   data-dismiss="modal"
                                   aria-label="Close">
@@ -2598,6 +2561,48 @@
 
       var cols = document.querySelectorAll('#columns .column');
       [].forEach.call(cols, addDnDHandlers);
+
+              /**
+       * Drag and Drop multiple elements in multiple sources 
+      **/
+
+      let sourceContainerId = ''
+
+      // Allow multiple draggable items
+      let dragSources = document.querySelectorAll('[draggable="true"]')
+      dragSources.forEach(dragSource => {
+        dragSource.addEventListener('dragstart', dragStart)
+      })
+
+      // Allow multiple dropped targets
+      let dropTargets = document.querySelectorAll('[data-role="drag-drop-container"]')
+      dropTargets.forEach(dropTarget => {
+        dropTarget.addEventListener('drop', dropped)
+        dropTarget.addEventListener('dragenter', cancelDefault)
+        dropTarget.addEventListener('dragover', cancelDefault)
+      })
+
+      function cancelDefault (e) {
+        e.preventDefault()
+        e.stopPropagation()
+        return false
+      }
+
+      function dragStart (e) {
+        e.dataTransfer.setData('text/plain', e.target.id)
+        sourceContainerId = this.parentElement.id
+        console.log('sourceContainerId', sourceContainerId)
+      }
+
+      function dropped (e) {
+        // execute function only when target container is different from source container
+        if (this.id !== sourceContainerId) {
+          cancelDefault(e)
+          let id = e.dataTransfer.getData('text/plain')
+          e.target.appendChild(document.querySelector('#' + id))
+        }
+      }
+      // End of Drag and Drop Basic
     </script>
   </body>
 </html>

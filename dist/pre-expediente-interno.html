@@ -57,27 +57,6 @@
       <header id="page-topbar">
         <div class="navbar-header">
           <div class="d-flex">
-            <!-- LOGO -->
-            <div class="navbar-brand-box">
-              <a href="index.html" class="logo logo-dark">
-                <span class="logo-sm">
-                  <img src="assets/images/logo-sm.png" alt="" height="22" />
-                </span>
-                <span class="logo-lg">
-                  <img src="assets/images/logo-dark.png" alt="" height="17" />
-                </span>
-              </a>
-
-              <a href="index.html" class="logo logo-light">
-                <span class="logo-sm">
-                  <img src="assets/images/logo-sm.png" alt="" height="22" />
-                </span>
-                <span class="logo-lg">
-                  <img src="assets/images/logo-light.png" alt="" height="17" />
-                </span>
-              </a>
-            </div>
-
             <button
               type="button"
               class="btn btn-sm px-3 font-size-24 header-item waves-effect"
@@ -85,20 +64,19 @@
             >
               <i class="mdi mdi-menu"></i>
             </button>
-          </div>
 
-          <!-- Search input -->
-          <div class="search-wrap" id="search-wrap">
-            <div class="search-bar">
-              <input class="search-input form-control" placeholder="Search" />
-              <a
-                href="#"
-                class="close-search toggle-search"
-                data-target="#search-wrap"
-              >
-                <i class="mdi mdi-close-circle"></i>
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+              <a href="index.html" class="logo logo-light">
+                <span class="logo-sm">
+                  <img src="assets/images/logo-sm.png" alt="" height="22" />
+                </span>
+                <span class="logo-lg">
+                  <img src="assets/images/orbalia.png" alt="" height="27" />
+                </span>
               </a>
             </div>
+
           </div>
 
           <div class="d-flex">
@@ -173,6 +151,59 @@
                 </div>
               </div>
             </div>
+
+            <div class="dropdown d-inline-block">
+              <button
+                type="button"
+                class="btn header-item noti-icon waves-effect"
+                id="page-header-notifications-dropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="mdi mdi-message-processing-outline"></i>
+                <span class="badge badge-danger badge-pill">5</span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                aria-labelledby="page-header-notifications-dropdown"
+              >
+                <div class="p-3">
+                  <h6 class="m-0">Mensjaes (5)</h6>
+                </div>
+  
+                <div data-simplebar style="max-height: 230px">
+                  <a href="" class="text-reset notification-item">
+                    <div class="media">
+                      <div class="avatar-xs mr-3">
+                        <span
+                          class="avatar-title bg-primary rounded-circle font-size-16"
+                        >
+                          <i class="mdi mdi-cart-outline"></i>
+                        </span>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="mt-0 mb-1 font-size-15">Your order is placed</h6>
+                        <div class="text-muted">
+                          <p class="mb-1 font-size-12">
+                            Dummy text of the printing and typesetting industry.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="p-2 border-top">
+                  <a
+                    class="btn btn-sm btn-link font-size-14 btn-block text-center"
+                    href="javascript:void(0)"
+                  >
+                    <i class="mdi mdi-arrow-right-circle mr-1"></i> View all
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div class="dropdown d-inline-block">
               <button
                 type="button"
@@ -202,6 +233,12 @@
                 >
               </div>
             </div>
+
+            <div class="dropdown d-none d-lg-inline-block ml-1">
+              <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                  <i class="mdi mdi-fullscreen"></i>
+              </button>
+          </div>
           </div>
         </div>
       </header>
@@ -221,7 +258,7 @@
                     src="assets/json/467-dashboard-gauge-outline.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>Inicio</span>
@@ -233,7 +270,7 @@
                     src="assets/json/56-document-outline.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>Procedimientos</span>
@@ -245,7 +282,7 @@
                     src="assets/json/120-folder-open-morph-outline.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>Expedientes</span>
@@ -257,7 +294,7 @@
                     src="assets/json/268-avatar-man-outline.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>Usuarios</span>
@@ -269,7 +306,7 @@
                         src="assets/json/268-avatar-man-outline.json"
                         trigger="loop-on-hover"
                         target="a"
-                        colors="primary:#707070;,secondary:#707070;"
+                        colors="primary:#34bad1;,secondary:#34bad1;"
                         style="width:30px; height:30px;">
                       </lord-icon>
                       Usuarios
@@ -281,7 +318,7 @@
                         src="assets/json/274-male-and-two-female-outline.json"
                         trigger="loop-on-hover"
                         target="a"
-                        colors="primary:#707070;,secondary:#707070;"
+                        colors="primary:#34bad1;,secondary:#34bad1;"
                         style="width:30px; height:30px;">
                       </lord-icon>
                       Perfil Sociedad
@@ -293,7 +330,7 @@
                         src="assets/json/284-avatar-man-approved-outline.json"
                         trigger="loop-on-hover"
                         target="a"
-                        colors="primary:#707070;,secondary:#707070;"
+                        colors="primary:#34bad1;,secondary:#34bad1;"
                         style="width:30px; height:30px;">
                       </lord-icon>
                       Perfil Autónomo
@@ -307,7 +344,7 @@
                     src="assets/json/271-three-male-avatars-outline.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>Colaboradores</span>
@@ -319,7 +356,7 @@
                         src="assets/json/278-avatar-man-plus-outline.json"
                         trigger="loop-on-hover"
                         target="a"
-                        colors="primary:#707070;,secondary:#707070;"
+                        colors="primary:#34bad1;,secondary:#34bad1;"
                         style="width:30px; height:30px;">
                       </lord-icon>
                       Colaboradores
@@ -331,7 +368,7 @@
                         src="assets/json/274-male-and-two-female-outline.json"
                         trigger="loop-on-hover"
                         target="a"
-                        colors="primary:#707070;,secondary:#707070;"
+                        colors="primary:#34bad1;,secondary:#34bad1;"
                         style="width:30px; height:30px;">
                       </lord-icon>
                       Perfil Sociedad
@@ -345,7 +382,7 @@
                     src="assets/json/456-handshake-deal-outline.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>RRHH</span>
@@ -357,7 +394,7 @@
                     src="assets/json/161-growth-outline.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>Estadísticas</span>
@@ -369,7 +406,7 @@
                     src="assets/json/755-invoice-receipt-validating-ticket-outline-edited.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>Facturación</span>
@@ -381,7 +418,7 @@
                     src="assets/json/478-computer-display-outline.json"
                     trigger="loop-on-hover"
                     target="a"
-                    colors="primary:#707070;,secondary:#707070;"
+                    colors="primary:#34bad1;,secondary:#34bad1;"
                     style="width:30px; height:30px;">
                   </lord-icon>
                   <span>Administración web</span>
@@ -411,13 +448,13 @@
                       <div class="col-12 col-md-6">
                         <h5>
                           DATOS DE LA SOCIEDAD
-                          <button class="btn btn-sm btn-primary btn-acciones-iconos ml-2" type="button">
+                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos ml-2" type="button">
                             <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatosPreExpInter">
                               <lord-icon
                                 src="assets/json/35-edit-outline.json"
                                 trigger="loop-on-hover"
                                 target="a"
-                                colors="primary:#ffffff;,secondary:#ffffff;"
+                                colors="primary:#000000;,secondary:#000000;"
                                 style="width:20px; height:20px;">
                               </lord-icon>
                             </a>
@@ -485,7 +522,7 @@
                       trigger="loop-on-hover"
                       target="a"
                       colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
+                      style="width:20px; height:20px; cursor: pointer;"
                       class="btn-close"
                       data-dismiss="modal"
                       aria-label="Close">
@@ -563,7 +600,7 @@
                       trigger="loop-on-hover"
                       target="a"
                       colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
+                      style="width:20px; height:20px; cursor: pointer;"
                       class="btn-close"
                       data-dismiss="modal"
                       aria-label="Close">
@@ -616,7 +653,7 @@
                                     src="assets/json/35-edit-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -627,7 +664,7 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -649,7 +686,7 @@
                                     src="assets/json/35-edit-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -660,7 +697,7 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -684,7 +721,7 @@
                               trigger="loop-on-hover"
                               target="a"
                               colors="primary:#808080;,secondary:#808080;"
-                              style="width:20px; height:20px"
+                              style="width:20px; height:20px; cursor: pointer;"
                               class="btn-close"
                               data-dismiss="modal"
                               aria-label="Close">
@@ -744,7 +781,7 @@
                       trigger="loop-on-hover"
                       target="a"
                       colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
+                      style="width:20px; height:20px; cursor: pointer;"
                       class="btn-close"
                       data-dismiss="modal"
                       aria-label="Close">
@@ -825,7 +862,7 @@
                                     src="assets/json/35-edit-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -836,7 +873,7 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -858,7 +895,7 @@
                                     src="assets/json/35-edit-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -869,7 +906,7 @@
                                     src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
-                                    colors="primary:#ffffff;,secondary:#ffffff;"
+                                    colors="primary:#000000;,secondary:#000000;"
                                     style="width:20px; height:20px;">
                                   </lord-icon>
                                 </a>
@@ -892,7 +929,7 @@
                               trigger="loop-on-hover"
                               target="a"
                               colors="primary:#808080;,secondary:#808080;"
-                              style="width:20px; height:20px"
+                              style="width:20px; height:20px; cursor: pointer;"
                               class="btn-close"
                               data-dismiss="modal"
                               aria-label="Close">
@@ -948,7 +985,7 @@
                               trigger="loop-on-hover"
                               target="a"
                               colors="primary:#808080;,secondary:#808080;"
-                              style="width:20px; height:20px"
+                              style="width:20px; height:20px; cursor: pointer;"
                               class="btn-close"
                               data-dismiss="modal"
                               aria-label="Close">
@@ -1378,7 +1415,7 @@
                       trigger="loop-on-hover"
                       target="a"
                       colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
+                      style="width:20px; height:20px; cursor: pointer;"
                       class="btn-close"
                       data-dismiss="modal"
                       aria-label="Close">
@@ -1405,7 +1442,7 @@
                       trigger="loop-on-hover"
                       target="a"
                       colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px"
+                      style="width:20px; height:20px; cursor: pointer;"
                       class="btn-close"
                       data-dismiss="modal"
                       aria-label="Close">

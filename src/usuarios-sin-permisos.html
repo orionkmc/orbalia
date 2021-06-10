@@ -27,7 +27,20 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col-12 col-md-6">
-                        <h5>DATOS DEL USUARIO</h5>
+                        <h5>
+                          DATOS DEL USUARIO
+                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos ml-2" type="button">
+                            <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarDatos">
+                              <lord-icon
+                                src="assets/json/35-edit-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#000000;,secondary:#000000;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                        </h5>
                         <p>Usuario:</p>
                         <p>Nombre:</p>
                         <p>Apellidos:</p>
@@ -35,6 +48,63 @@
                         <p>Puesto:</p>
                         <p>Jornada:</p>
                         <p>Correo:</p>
+                      
+                        <div class="modal fade editarDatos" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-md">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Usuario</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px; cursor: pointer;"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" placeholder="Usuario">                                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Nombre">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" placeholder="Apellidos">                                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Teléfono">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" placeholder="Puesto">                                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <input class="form-control" type="text" placeholder="Jornada">
+                                    </div>                                                   
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="email" placeholder="Correo">                                                       
+                                    </div>                                                  
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
 
                       </div>
                       <div class="col-12 col-md-6">
@@ -60,7 +130,7 @@
                         trigger="loop-on-hover"
                         target="a"
                         colors="primary:#808080;,secondary:#808080;"
-                        style="width:20px; height:20px"
+                        style="width:20px; height:20px; cursor: pointer;"
                         class="btn-close"
                         data-dismiss="modal"
                         aria-label="Close">
@@ -128,7 +198,7 @@
                         trigger="loop-on-hover"
                         target="a"
                         colors="primary:#808080;,secondary:#808080;"
-                        style="width:20px; height:20px"
+                        style="width:20px; height:20px; cursor: pointer"
                         class="btn-close"
                         data-dismiss="modal"
                         aria-label="Close">
