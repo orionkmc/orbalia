@@ -123,6 +123,18 @@ body[data-topbar=dark] #page-topbar {
 .btn-modal {
   padding: 0.5rem 2rem;
 }
+.toast {
+  height: auto !important;
+  flex-basis: 180px !important;
+  max-width: 180px !important;
+  margin: 0 auto;
+}
+.toast-doc {
+  height: auto !important;
+  flex-basis: 230px !important;
+  max-width: 230px !important;
+  margin: 0 auto;
+}
 .ver-notif {
   border: none;
   margin-right: .2rem;

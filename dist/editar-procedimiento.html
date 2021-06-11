@@ -491,6 +491,7 @@
                           <div class="form-group">
                             <div>
                               <div class="input-daterange input-group" id="date-range">
+                                <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .45rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
                                 <input type="text" class="form-control" name="start" placeholder="Desde" />
                                 <input type="text" class="form-control" name="end" placeholder="Hasta" />
                               </div>
@@ -1039,128 +1040,92 @@
                         <div class="dropdown-divider"></div>
                         <h5 class="mt-4">Documentos procedimientos</h5>
                         <div class="row">
-                          <div class="col-12 col-md-4 col-lg-2">
-                            <div class="card">
-                              <div class="card-body p-0">    
-                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-between">
-                                    <p>¡</p>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="toast-body d-flex justify-content-between">
-                                    Facturas
-                                    <div class="documentosExpInt">
-                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
-                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
-                                          <lord-icon
-                                            src="assets/json/35-edit-outline.json"
-                                            trigger="loop-on-hover"
-                                            target="a"
-                                            colors="primary:#000000;,secondary:#000000;"
-                                            style="width:20px; height:20px;">
-                                          </lord-icon>
-                                        </a>
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center">
-                                    <lord-icon
-                                      src="assets/json/78-document-PDF-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#707070;,secondary:#707070;"
-                                      style="width: 30px; height: 30px;">
-                                    </lord-icon>
-                                    PDF
-                                  </div>
-                                </div> <!--end toast-->                      
-                              </div><!--end card-body-->
-                            </div><!--end card-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div class="d-flex justify-content-between">
+                                  Facturas
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
                           </div><!--end col-->
-                          <div class="col-12 col-md-4 col-lg-2">
-                            <div class="card">
-                              <div class="card-body p-0">    
-                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-between">
-                                    <p>¡</p>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="toast-body d-flex justify-content-between">
-                                    Facturas
-                                    <div class="documentosExpInt">
-                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
-                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
-                                          <lord-icon
-                                            src="assets/json/35-edit-outline.json"
-                                            trigger="loop-on-hover"
-                                            target="a"
-                                            colors="primary:#000000;,secondary:#000000;"
-                                            style="width:20px; height:20px;">
-                                          </lord-icon>
-                                        </a>
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center">
-                                    <lord-icon
-                                      src="assets/json/78-document-PDF-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#707070;,secondary:#707070;"
-                                      style="width: 30px; height: 30px;">
-                                    </lord-icon>
-                                    PDF
-                                  </div>
-                                </div> <!--end toast-->                       
-                              </div><!--end card-body-->
-                            </div><!--end card-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div class="d-flex justify-content-between">
+                                  Facturas
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
                           </div><!--end col-->
-                          <div class="col-12 col-md-4 col-lg-2">
-                            <div class="card">
-                              <div class="card-body p-0">    
-                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-between">
-                                    <p>¡</p>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="toast-body d-flex justify-content-between">
-                                    Facturas
-                                    <div class="documentosExpInt">
-                                      <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
-                                        <a data-toggle="tooltip" data-placement="top" title="Editar">
-                                          <lord-icon
-                                            src="assets/json/35-edit-outline.json"
-                                            trigger="loop-on-hover"
-                                            target="a"
-                                            colors="primary:#000000;,secondary:#000000;"
-                                            style="width:20px; height:20px;">
-                                          </lord-icon>
-                                        </a>
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center">
-                                    <lord-icon
-                                      src="assets/json/78-document-PDF-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#707070;,secondary:#707070;"
-                                      style="width: 30px; height: 30px;">
-                                    </lord-icon>
-                                    PDF
-                                  </div>
-                                </div> <!--end toast-->                        
-                              </div><!--end card-body-->
-                            </div><!--end card-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProc">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div class="d-flex justify-content-between">
+                                  Facturas
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
                           </div><!--end col-->
                         </div>
                         <div class="boton-etiqueta mt-3 mb-4" data-toggle="modal" data-animation="bounce" data-target=".añadirDocProc">
@@ -2343,221 +2308,198 @@
                         <h5 class="mb-4 mt-4">DOCUMENTACIÓN</h5>
                         <h6 class="mb-4 mt-4">Documentación genérica</h6>
                         <div class="row mt-4">
-                          <div class="col-12 col-md-3">
-                            <div class="card">
-                              <div class="card-body p-0">    
-                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-end">
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="toast-body text-center">
-                                    DNI
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center">
-                                    <lord-icon
-                                      src="assets/json/78-document-PDF-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#707070;,secondary:#707070;"
-                                      style="width: 30px; height: 30px;">
-                                    </lord-icon>
-                                    PDF
-                                  </div>
-                                </div> <!--end toast-->                      
-                              </div><!--end card-body-->
-                            </div><!--end card-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div>
+                                  Facturas
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio35" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio35">Autónomo</label>
+                                  <input type="radio" id="customRadio45" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio45">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio36" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio36">Sociedad</label>
+                                  <input type="radio" id="customRadio46" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio46">Sociedad</label>
                                 </div>
                               </div>
                             </div>
                           </div><!--end col-->
-                          <div class="col-12 col-md-3">
-                            <div class="card">
-                              <div class="card-body p-0">    
-                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-end">
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="toast-body text-center">
-                                    Escritura
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center">
-                                    <lord-icon
-                                      src="assets/json/78-document-PDF-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#707070;,secondary:#707070;"
-                                      style="width: 30px; height: 30px;">
-                                    </lord-icon>
-                                    PDF
-                                  </div>
-                                </div> <!--end toast-->                      
-                              </div><!--end card-body-->
-                            </div><!--end card-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div>
+                                  Facturas
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio36" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio36">Autónomo</label>
+                                  <input type="radio" id="customRadio47" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio47">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio37" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio37">Sociedad</label>
+                                  <input type="radio" id="customRadio48" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio48">Sociedad</label>
                                 </div>
                               </div>
                             </div>
                           </div><!--end col-->
-                          <div class="col-12 col-md-3">
-                            <div class="card">
-                              <div class="card-body p-0">    
-                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-end">
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="toast-body text-center">
-                                    Situación censal
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center">
-                                    <lord-icon
-                                      src="assets/json/78-document-PDF-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#707070;,secondary:#707070;"
-                                      style="width: 30px; height: 30px;">
-                                    </lord-icon>
-                                    PDF
-                                  </div>
-                                </div> <!--end toast-->                      
-                              </div><!--end card-body-->
-                            </div><!--end card-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div>
+                                  Facturas
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio36" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio36">Autónomo</label>
+                                  <input type="radio" id="customRadio49" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio49">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio37" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio37">Sociedad</label>
+                                  <input type="radio" id="customRadio50" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio50">Sociedad</label>
                                 </div>
                               </div>
                             </div>
                           </div><!--end col-->
                         </div>
-                        <div class="text-center mb-4">
+                        <div class="text-center mt-4 mb-4">
                           <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirDocGenProced">Añadir</button>
                         </div>
 
                         <div class="dropdown-divider"></div>
                         <h6 class="mb-4 mt-4">Documentación específica</h6>
                         <div class="row mt-4">
-                          <div class="col-12 col-md-3">
-                            <div class="card">
-                              <div class="card-body p-0">    
-                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-end">
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="toast-body text-center">
-                                    Escritura
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center">
-                                    <lord-icon
-                                      src="assets/json/78-document-PDF-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#707070;,secondary:#707070;"
-                                      style="width: 30px; height: 30px;">
-                                    </lord-icon>
-                                    PDF
-                                  </div>
-                                </div> <!--end toast-->                      
-                              </div><!--end card-body-->
-                            </div><!--end card-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div class="d-flex justify-content-between">
+                                  Facturas
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedi">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio40" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio40">Autónomo</label>
+                                  <input type="radio" id="customRadio51" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio51">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio41" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio41">Sociedad</label>
+                                  <input type="radio" id="customRadio52" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio52">Sociedad</label>
                                 </div>
                               </div>
                             </div>
                           </div><!--end col-->
-                          <div class="col-12 col-md-3">
-                            <div class="card">
-                              <div class="card-body p-0">    
-                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                                  <div class="toast-header d-flex justify-content-end">
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="toast-body text-center">
-                                    Situación censal
-                                  </div>
-                                  <div class="dropdown-divider m-0"></div>
-                                  <div class="text-center">
-                                    <lord-icon
-                                      src="assets/json/78-document-PDF-outline.json"
-                                      trigger="loop-on-hover"
-                                      target="a"
-                                      colors="primary:#707070;,secondary:#707070;"
-                                      style="width: 30px; height: 30px;">
-                                    </lord-icon>
-                                    PDF
-                                  </div>
-                                </div> <!--end toast-->                      
-                              </div><!--end card-body-->
-                            </div><!--end card-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProcedi">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div class="d-flex justify-content-between">
+                                  Facturas
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedi">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio38" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio38">Autónomo</label>
+                                  <input type="radio" id="customRadio53" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio53">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
                                 <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio39" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio39">Sociedad</label>
+                                  <input type="radio" id="customRadio54" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio54">Sociedad</label>
                                 </div>
                               </div>
                             </div>
                           </div><!--end col-->
                         </div>
-                        <div class="text-center mt-2">
+                        <div class="text-center mt-4">
                           <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirDocEspProced">Añadir</button>
                         </div>
 
