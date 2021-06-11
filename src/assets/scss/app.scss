@@ -86,7 +86,9 @@ body[data-topbar=dark] #page-topbar {
 #sidebar-menu ul li a:hover {
   color: #34bad1;
 }
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-danger:hover {
   color: #000 !important;
   background-color: #d9dfe2 !important;
 }
@@ -111,6 +113,24 @@ body[data-topbar=dark] #page-topbar {
 .custom-select {
   background-image: url("../images/flecha-select.png") !important;
   margin: 0 .3rem;
+}
+div.table-responsive>div.dataTables_wrapper>div.row>div[class^=col-]:first-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+element.style {
+  text-align: initial;
+}
+@media screen and (max-width: 767px) {
+  .dataTables_length {
+    text-align: initial !important;
+  }
+  .dataTables_filter {
+    text-align: end !important;
+  }
+  .dataTables_filter label {
+    margin-top: 0.5rem;
+  }
 }
 .table td, 
 .table th {
@@ -198,22 +218,6 @@ body[data-topbar=dark] #page-topbar {
   justify-content: center; 
   align-items: center;
 }
-@media (max-width: 767.98px) {
-  .contrato-vigente {
-    margin-top: 2rem;
-  }
-  .title-exp-int {
-    text-align: center;
-  }
-  .estado-exp {
-    margin: 0 auto;
-  }
-}
-@media (max-width: 552.98px) {
-  .renovacion {
-    margin-top: 1rem;
-  }
-}
 .ui-timepicker-container{ 
   z-index:1151 !important; 
 }
@@ -271,7 +275,7 @@ body[data-topbar=dark] #page-topbar {
 }
 .editarNotasExp {
   position: absolute;
-  right: 25px;
+  right: 30px;
 }
 .respuestasTest {
   display: flex;
@@ -496,6 +500,7 @@ body[data-topbar=dark] #page-topbar {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   #target-container{
@@ -504,6 +509,7 @@ body[data-topbar=dark] #page-topbar {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   #drag-source, 
@@ -520,8 +526,52 @@ body[data-topbar=dark] #page-topbar {
     border-radius: 50%;
     background-color: steelblue;
     background-size: cover;
-    margin: 1rem;
+    margin: 0.5rem;
   }
 }
 
 // End of Drag and Drop Basic
+@media (max-width: 767.98px) {
+  .contrato-vigente {
+    margin-top: 2rem;
+  }
+  .title-exp-int {
+    text-align: center;
+  }
+  .estado-exp {
+    margin: 0 auto;
+  }
+  #drag-drop-basic {
+    #drag-source, 
+    #drag-source2, 
+    #drag-source3, 
+    #drag-source4, 
+    #drag-source5, 
+    #drag-source6, 
+    #drag-source7, 
+    #drag-source8, 
+    #drag-source9{
+      width: 55px;
+      height: 55px;
+    }
+  }
+}
+@media (max-width: 551.98px) {
+  .renovacion {
+    margin-top: 1rem;
+  }
+  #drag-drop-basic {
+    #drag-source, 
+    #drag-source2, 
+    #drag-source3, 
+    #drag-source4, 
+    #drag-source5, 
+    #drag-source6, 
+    #drag-source7, 
+    #drag-source8, 
+    #drag-source9{
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

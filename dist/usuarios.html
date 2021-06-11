@@ -484,14 +484,33 @@
               </div>         
             </div>
 
-            <div class="row">
+            <div class="row text-center">
               <div class="col-12">
-                <div class="card" style="background-color: transparent; box-shadow: none;">
-                  <div class="card-body">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Añadir usuario<i class="mdi mdi-chevron-down ml-1"></i></button>
-                    <div class="dropdown-menu" style="height: 80px;">
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-animation="bounce" data-target=".usuarioExtSociedad">Usuario externo Sociedad</a>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-animation="bounce" data-target=".usuarioExtPersona">Usuario externo Persona física</a>
+                <div class="card card-borde">
+                  <div class="card-body text-muted">
+                    <div class="d-flex justify-content-center">
+                      <div style="margin-right: 3rem;">
+                        <lord-icon
+                          src="assets/json/274-male-and-two-female-outline.json"
+                          trigger="loop-on-hover"
+                          target="a"
+                          colors="primary:#44a2d2;,secondary:#44a2d2;"
+                          style="width:80px; height:80px; cursor: pointer;"
+                          data-toggle="modal" data-animation="bounce" data-target=".usuarioExtPersona">
+                        </lord-icon>
+                        <p>Persona Física</p>
+                      </div>
+                      <div style="margin-left: 3rem">
+                        <lord-icon
+                          src="assets/json/274-male-and-two-female-outline.json"
+                          trigger="loop-on-hover"
+                          target="a"
+                          colors="primary:#44d24b;,secondary:#44d24b;"
+                          style="width:80px; height:80px; cursor: pointer;"
+                          data-toggle="modal" data-animation="bounce" data-target=".usuarioExtSociedad">
+                        </lord-icon>
+                        <p>Persona Sociedad</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -908,7 +927,7 @@
                                         <td>Externo</td>
                                         <td>#pymes2021</td>
                                         <td class="centrar-boton">
-                                          <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
+                                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button">
                                             <a href="perfil-sociedad.html" data-toggle="tooltip" data-placement="top" title="Ver perfil">
                                               <lord-icon
                                                 src="assets/json/69-eye-outline.json"
@@ -934,7 +953,7 @@
                                         <td>Externo</td>
                                         <td>#pymes2021</td>
                                         <td class="centrar-boton">
-                                          <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button">
+                                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button">
                                             <a href="perfil-autonomo.html" data-toggle="tooltip" data-placement="top" title="Ver perfil">
                                               <lord-icon
                                                 src="assets/json/69-eye-outline.json"

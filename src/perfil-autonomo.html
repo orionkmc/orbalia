@@ -85,7 +85,7 @@
                               <p>Fecha de constitución:</p>
                               <button class="btn btn-sm btn-primary mt-2">Rol de usuario: Cliente</button>
                             </div>
-                            <div class="col-12 col-md-6 card-borde2">
+                            <div class="col-12 col-md-6 card-borde2 mt-5 mt-md-0">
                               <h5>
                                 COLABORADOR
                                 <button class="btn btn-sm btn-outline-primary btn-acciones-iconos ml-2" type="button">
@@ -438,14 +438,8 @@
                                     </div>
                                     <div class="form-group row">
                                       <div class="col-12">
-                                        <select class="form-control">
-                                          <option>PDF</option>
-                                          <option>TXT</option>
-                                          <option>XLS</option>
-                                          <option>JPG</option>
-                                          <option>DOC</option>
-                                        </select>
-                                      </div>
+                                        <input class="form-control" type="text" placeholder="Identificador">                                                       
+                                      </div>  
                                     </div>
                                     <div class="form-group row">
                                       <div class="custom-file pl-2 pr-2">
@@ -1023,8 +1017,8 @@
 
                           <h5 class="card-title mt-3">Historial de notas</h5>
                           <div class="activity mt-3">
-                            <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut2" type="button">
-                              <a href="#" data-toggle="tooltip" data-placement="top" title="Editar">
+                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut2" type="button">
+                              <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                 <lord-icon
                                   src="assets/json/35-edit-outline.json"
                                   trigger="loop-on-hover"
@@ -1034,19 +1028,10 @@
                                 </lord-icon>
                               </a>
                             </button>
-                            <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                           
-                            <div class="time-item2">
-                              <div class="item-info">
-                                <h5 class="mt-0 mb-1">Task Overdue</h5>
-                                <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
-                                <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
-                              </div>
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut2" type="button">
-                              <a href="#" data-toggle="tooltip" data-placement="top" title="Editar">
+                            <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaAut" type="button">
+                              <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
                                 <lord-icon
-                                  src="assets/json/35-edit-outline.json"
+                                  src="assets/json/185-trash-bin-outline.json"
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#000000;,secondary:#000000;"
@@ -1059,14 +1044,35 @@
                               <div class="item-info">
                                 <h5 class="mt-0 mb-1">Task Overdue</h5>
                                 <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                                <p class="font-size-13" style="color: #2d7bf4">
+                                  <lord-icon
+                                    src="assets/json/93-document-download-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                  Descargar archivo adjuntado
+                                </p>
                                 <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
                               </div>
                             </div>
                             <div class="dropdown-divider"></div>
-                            <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut2" type="button">
-                              <a href="#" data-toggle="tooltip" data-placement="top" title="Editar">
+                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaAut2" type="button">
+                              <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                 <lord-icon
                                   src="assets/json/35-edit-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#000000;,secondary:#000000;"
+                                  style="width:20px; height:20px;">
+                                </lord-icon>
+                              </a>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaAut" type="button">
+                              <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                <lord-icon
+                                  src="assets/json/185-trash-bin-outline.json"
                                   trigger="loop-on-hover"
                                   target="a"
                                   colors="primary:#000000;,secondary:#000000;"
@@ -1079,9 +1085,19 @@
                               <div class="item-info">
                                 <h5 class="mt-0 mb-1">Task Overdue</h5>
                                 <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                                <p class="font-size-13" style="color: #2d7bf4">
+                                  <lord-icon
+                                    src="assets/json/93-document-download-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                  Descargar archivo adjuntado
+                                </p>
                                 <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
                               </div>
-                            </div>                                                               
+                            </div>                                                           
                           </div>
 
                           <div class="modal fade añadirNotaPerfil2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -1104,38 +1120,10 @@
                                   <div class="form-group">
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba su nota aquí"></textarea>
                                   </div>
-                                  <div class="text-left">
-                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".añadirDocNota">Añadir doc</button>
-                                  </div>
-                                  <div class="boton-etiqueta">
-                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
-                                  </div>
-                                </div>
-                              </div><!-- /.modal-content -->
-                            </div><!-- /.modal-dialog -->
-                          </div><!-- /.modal -->
-
-                          <div class="modal fade añadirDocNota" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir doc a nota</h5>
-                                  <lord-icon
-                                    src="assets/json/38-error-cross-simple-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#808080;,secondary:#808080;"
-                                    style="width:20px; height:20px; cursor: pointer"
-                                    class="btn-close"
-                                    data-dismiss="modal"
-                                    aria-label="Close">
-                                  </lord-icon>
-                                </div>
-                                <div class="modal-body">
                                   <div class="form-group row">
                                     <div class="custom-file pl-2 pr-2">
-                                      <input type="file" class="custom-file-input">
-                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile05">Seleccionar archivo...</label>
+                                      <input type="file" class="custom-file-input" id="inputGroupFile78">
+                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile78">Seleccionar archivo...</label>
                                     </div>                                                  
                                   </div>
                                   <div class="boton-etiqueta">
@@ -1165,9 +1153,43 @@
                                 <div class="modal-body text-center">
                                   <div class="form-group">
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba su nota aquí"></textarea>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="custom-file pl-2 pr-2">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile80">
+                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile80">Seleccionar archivo...</label>
+                                    </div>                                                  
                                   </div> 
                                   <div class="boton-etiqueta">
                                     <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
+                                  </div>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                          </div><!-- /.modal -->
+
+                          <div class="modal fade eliminarNotaAut" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar nota</h5>
+                                  <lord-icon
+                                    src="assets/json/38-error-cross-simple-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#808080;,secondary:#808080;"
+                                    style="width:20px; height:20px; cursor: pointer;"
+                                    class="btn-close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                  </lord-icon>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <p>¿Desea eliminar el documento?</p>
+                                  <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                  <div class="d-flex justify-content-around">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
                                   </div>
                                 </div>
                               </div><!-- /.modal-content -->

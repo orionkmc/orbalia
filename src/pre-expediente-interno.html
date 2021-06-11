@@ -26,6 +26,86 @@
       <div class="main-content">
         <div class="page-content">
           <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <div class="row title-exp-int">
+                      <div class="col-12 col-md-6">
+                        <p><strong>Expediente interno<br>2021/001/001</strong></p>
+                        <h5 style="color:darkgoldenrod">Montando Movidas SL</h5>
+                        <small>PYMES2021</small>
+                      </div>
+                      <div class="col-12 col-md-3 offset-md-3 mt-5 mt-md-0">
+                        <div class="toast fade show estado-exp" style="width: 100%;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                          <div class="toast-header d-flex justify-content-between">
+                            <span>Estado</span>
+                            <button class="btn btn-sm btn-outline-primary btn-acciones-iconos ml-2" type="button">
+                              <a href="#" data-toggle="modal" data-animation="bounce" data-target=".editarEstadoExpInt">
+                                <lord-icon
+                                  src="assets/json/35-edit-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#000000;,secondary:#000000;"
+                                  style="width:20px; height:20px;">
+                                </lord-icon>
+                              </a>
+                            </button>
+                          </div>
+                          <div class="toast-body text-center">
+                            Pendiente de<br>presentación
+                          </div>
+                          <div class="dropdown-divider m-0"></div>
+                          <div class="text-center">
+                            5/9
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade editarEstadoExpInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar estado</h5>
+                    <lord-icon
+                      src="assets/json/38-error-cross-simple-outline.json"
+                      trigger="loop-on-hover"
+                      target="a"
+                      colors="primary:#808080;,secondary:#808080;"
+                      style="width:20px; height:20px; cursor: pointer;"
+                      class="btn-close"
+                      data-dismiss="modal"
+                      aria-label="Close">
+                    </lord-icon>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group row">
+                        <div class="col-12">
+                          <select class="form-control">
+                            <option>Estado del expediente</option>
+                            <option>Pendiente documentación</option>
+                            <option>Aceptado</option>
+                            <option>Validado</option>
+                            <option>Denegado</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="boton-etiqueta mt-3">
+                      <button class="btn btn-sm btn-primary" data-toggle="modal"data-dismiss="modal" aria-label="Close">Aceptar</button>
+                    </div>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
             <div class="row">
               <div class="col-12">
                 <div class="card card-borde">
@@ -59,7 +139,7 @@
                         <p>Fecha de registro:</p>
                         <p>Expediente de procedimiento:</p>
                       </div>
-                      <div class="col-12 col-md-6 card-borde2">
+                      <div class="col-12 col-md-6 card-borde2 mt-5 mt-md-0">
                         <h5 class="contrato-vigente">CONTRATO EXPEDIENTE</h5>
                         <div class="toast fade show toast-contrato" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
                           <div class="toast-header d-flex justify-content-between">
@@ -230,14 +310,8 @@
                       </div>
                       <div class="form-group row">
                         <div class="col-12">
-                          <select class="form-control">
-                            <option>PDF</option>
-                            <option>TXT</option>
-                            <option>XLS</option>
-                            <option>JPG</option>
-                            <option>DOC</option>
-                          </select>
-                        </div>
+                          <input class="form-control" type="text" placeholder="Identificador">                                                       
+                        </div> 
                       </div>
                       <div class="form-group row">
                         <div class="custom-file pl-2 pr-2">
@@ -283,7 +357,7 @@
                             <td>555-55-55</td>
                             <td>andnndj@gmail.com</td>
                             <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresPreExpInt">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresPreExpInt">
                                 <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
@@ -294,7 +368,7 @@
                                   </lord-icon>
                                 </a>
                               </button>
-                              <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                              <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
                                 <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                   <lord-icon
                                     src="assets/json/185-trash-bin-outline.json"
@@ -316,7 +390,7 @@
                             <td>555-55-55</td>
                             <td>andnndj@gmail.com</td>
                             <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresPreExpInt">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresPreExpInt">
                                 <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
@@ -327,7 +401,7 @@
                                   </lord-icon>
                                 </a>
                               </button>
-                              <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                              <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
                                 <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                   <lord-icon
                                     src="assets/json/185-trash-bin-outline.json"
@@ -492,7 +566,7 @@
                             <td>555-55-55</td>
                             <td>andnndj@gmail.com</td>
                             <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarContactoPreExpInt">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarContactoPreExpInt">
                                 <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
@@ -503,7 +577,7 @@
                                   </lord-icon>
                                 </a>
                               </button>
-                              <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                              <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
                                 <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                   <lord-icon
                                     src="assets/json/185-trash-bin-outline.json"
@@ -525,7 +599,7 @@
                             <td>555-55-55</td>
                             <td>andnndj@gmail.com</td>
                             <td class="centrar-boton">
-                              <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarContactoPreExpInt">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarContactoPreExpInt">
                                 <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
@@ -536,7 +610,7 @@
                                   </lord-icon>
                                 </a>
                               </button>
-                              <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                              <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
                                 <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                   <lord-icon
                                     src="assets/json/185-trash-bin-outline.json"

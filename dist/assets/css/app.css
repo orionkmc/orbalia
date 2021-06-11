@@ -3322,7 +3322,9 @@ body[data-topbar=dark] #page-topbar {
 #sidebar-menu ul li a:hover {
   color: #34bad1; }
 
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-danger:hover {
   color: #000 !important;
   background-color: #d9dfe2 !important; }
 
@@ -3347,6 +3349,21 @@ body[data-topbar=dark] #page-topbar {
 .custom-select {
   background-image: url("../images/flecha-select.png") !important;
   margin: 0 .3rem; }
+
+div.table-responsive > div.dataTables_wrapper > div.row > div[class^=col-]:first-child {
+  padding-left: 0;
+  padding-right: 0; }
+
+element.style {
+  text-align: initial; }
+
+@media screen and (max-width: 767px) {
+  .dataTables_length {
+    text-align: initial !important; }
+  .dataTables_filter {
+    text-align: end !important; }
+  .dataTables_filter label {
+    margin-top: 0.5rem; } }
 
 .table td,
 .table th {
@@ -3443,18 +3460,6 @@ body[data-topbar=dark] #page-topbar {
       -ms-flex-align: center;
           align-items: center; }
 
-@media (max-width: 767.98px) {
-  .contrato-vigente {
-    margin-top: 2rem; }
-  .title-exp-int {
-    text-align: center; }
-  .estado-exp {
-    margin: 0 auto; } }
-
-@media (max-width: 552.98px) {
-  .renovacion {
-    margin-top: 1rem; } }
-
 .ui-timepicker-container {
   z-index: 1151 !important; }
 
@@ -3517,7 +3522,7 @@ body[data-topbar=dark] #page-topbar {
 
 .editarNotasExp {
   position: absolute;
-  right: 25px; }
+  right: 30px; }
 
 .respuestasTest {
   display: -webkit-box;
@@ -3733,7 +3738,10 @@ body[data-topbar=dark] #page-topbar {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   #drag-drop-basic #target-container {
     height: 300px;
     border-left: 2px solid #44d24b;
@@ -3744,7 +3752,10 @@ body[data-topbar=dark] #page-topbar {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   #drag-drop-basic #drag-source,
   #drag-drop-basic #drag-source2,
   #drag-drop-basic #drag-source3,
@@ -3759,4 +3770,38 @@ body[data-topbar=dark] #page-topbar {
     border-radius: 50%;
     background-color: steelblue;
     background-size: cover;
-    margin: 1rem; }
+    margin: 0.5rem; }
+
+@media (max-width: 767.98px) {
+  .contrato-vigente {
+    margin-top: 2rem; }
+  .title-exp-int {
+    text-align: center; }
+  .estado-exp {
+    margin: 0 auto; }
+  #drag-drop-basic #drag-source,
+  #drag-drop-basic #drag-source2,
+  #drag-drop-basic #drag-source3,
+  #drag-drop-basic #drag-source4,
+  #drag-drop-basic #drag-source5,
+  #drag-drop-basic #drag-source6,
+  #drag-drop-basic #drag-source7,
+  #drag-drop-basic #drag-source8,
+  #drag-drop-basic #drag-source9 {
+    width: 55px;
+    height: 55px; } }
+
+@media (max-width: 551.98px) {
+  .renovacion {
+    margin-top: 1rem; }
+  #drag-drop-basic #drag-source,
+  #drag-drop-basic #drag-source2,
+  #drag-drop-basic #drag-source3,
+  #drag-drop-basic #drag-source4,
+  #drag-drop-basic #drag-source5,
+  #drag-drop-basic #drag-source6,
+  #drag-drop-basic #drag-source7,
+  #drag-drop-basic #drag-source8,
+  #drag-drop-basic #drag-source9 {
+    width: 35px;
+    height: 35px; } }
