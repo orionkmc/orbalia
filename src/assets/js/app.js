@@ -16,7 +16,8 @@ File: Main Js File
         //metis menu
         $("#side-menu").metisMenu();
     }
-
+    
+    var menuStatus = 'open';
     function initLeftMenuCollapse() {
         $('#vertical-menu-btn').on('click', function (event) {
             event.preventDefault();
@@ -25,6 +26,17 @@ File: Main Js File
                 $('body').toggleClass('vertical-collpsed');
             } else {
                 $('body').removeClass('vertical-collpsed');
+            }
+            if (menuStatus == 'open') {
+                $('.vertical-menu #sidebar-menu > ul > li > a span').fadeOut(0);
+                $('.vertical-menu #sidebar-menu > ul > li > a.has-arrow').removeClass('arrow');
+                menuStatus = 'close';
+            } else if (menuStatus == 'close') {
+                $('.vertical-menu #sidebar-menu > ul > li > a span').delay(500).fadeIn(300);
+                setTimeout(() => {
+                    $('.vertical-menu #sidebar-menu > ul > li > a.has-arrow').addClass('arrow');
+                }, 500);
+                menuStatus = 'open';
             }
         });
     }

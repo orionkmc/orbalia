@@ -298,52 +298,52 @@ body[data-topbar=dark] #page-topbar {
   padding: 20px 0px 20px 0px;
   position: relative;
   display: inline-block;
-	&:before {
+  &:before {
     height: 3px;
-		top: auto;
+    top: auto;
     position: absolute;
     bottom: 70px;
-		left: 56px;
-		right: 0;
-		width: 100%;
-		margin-bottom: 20px;
+    left: 56px;
+    right: 0;
+    width: 100%;
+    margin-bottom: 20px;
     content: " ";
     background-color: #eeeeee;
     margin-left: -1.5px;
   }
-	.timeline-item {
-		display: table-cell;
-		height: 150px;
-		width: 50%;
+  .timeline-item {
+    display: table-cell;
+    height: 150px;
+    width: 50%;
     min-width: 250px;
-		float: none !important;
-		padding-left: 0px;
-		padding-right: 20px;
-		margin: 0 auto;
-		vertical-align: bottom;
+    float: none !important;
+    padding-left: 0px;
+    padding-right: 20px;
+    margin: 0 auto;
+    vertical-align: bottom;
     margin-bottom: 20px;
     position: relative;
     &:before,
-		&:after {
+    &:after {
       content: "";
       display: table;
     }
-		&:after {
+    &:after {
       clear: both;
     }
-		.timeline-panel {
+    .timeline-panel {
       position: relative;
-			top: auto;
-			bottom: 25px;
-			display: inline-block;
-			float: none !important;
-			left: 0 !important;
-			right: 0 !important;
-			width: 100%;
+      top: auto;
+      bottom: 25px;
+      display: inline-block;
+      float: none !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100%;
       border-radius: 2px;
       padding: 20px;
       text-align: center;
-			&:before {
+      &:before {
         position: absolute;
         top: auto;
         bottom: -16px;
@@ -355,12 +355,12 @@ body[data-topbar=dark] #page-topbar {
         margin-top: 0;
         color: #495057;
       }
-		}
-		&:before,
-		&:after {
+    }
+    &:before,
+    &:after {
       display: none;
     }
-		.timeline-badge {
+    .timeline-badge {
       top: auto;
       bottom: 0px;
       left: 130px;
@@ -373,13 +373,13 @@ body[data-topbar=dark] #page-topbar {
       position: absolute;
       margin-left: -25px;
       background-color: #333;
-			border: 3px solid #ffffff;
+      border: 3px solid #ffffff;
       z-index: 100;
       -webkit-transform: rotate(45deg);
-     -moz-transform: rotate(45deg);
-     -ms-transform: rotate(45deg);
-     -o-transform: rotate(45deg);
-     transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
       &.primary {
         background-color: #1f9eba;
       }
@@ -396,24 +396,24 @@ body[data-topbar=dark] #page-topbar {
         background-color: #ba1f1f;
       }
     }
-	}
+  }
   .timeline-item:last-child {
-		&:nth-child(even) {
-			float: right;
-		}
-	}
-	.timeline-item:nth-child(even) {
-		.timeline-panel {
-			float: right;
-			left: 16px;
-			&:before {
-				border-left-width: 0;
-				border-right-width: 14px;
-				left: -14px;
-				right: auto;
-			}
-		}
-	}
+    &:nth-child(even) {
+      float: right;
+    }
+  }
+  .timeline-item:nth-child(even) {
+    .timeline-panel {
+      float: right;
+      left: 16px;
+      &:before {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+      }
+    }
+  }
 }
 .slider-nav .slide {
   padding: 20px;
@@ -474,12 +474,12 @@ body[data-topbar=dark] #page-topbar {
 }
 
 /**
- * Drag and Drop Basic
- **/
+* Drag and Drop Basic
+**/
 
- [draggable="true"] {
+[draggable="true"] {
   /*
-   To prevent user selecting inside the drag source
+  To prevent user selecting inside the drag source
   */
   user-select: none;
   -moz-user-select: none;
@@ -489,7 +489,7 @@ body[data-topbar=dark] #page-topbar {
 
 #drag-drop-basic{
   display: flex;
-
+  
   #source-container{
     height: 300px;
     border-left: 2px solid #f3f70a;
@@ -497,7 +497,7 @@ body[data-topbar=dark] #page-topbar {
     display: flex;
     flex-wrap: wrap;
   }
-
+  
   #target-container{
     height: 300px;
     border-left: 2px solid #44d24b;
@@ -505,7 +505,7 @@ body[data-topbar=dark] #page-topbar {
     display: flex;
     flex-wrap: wrap;
   }
-
+  
   #drag-source, 
   #drag-source2, 
   #drag-source3, 
@@ -525,3 +525,32 @@ body[data-topbar=dark] #page-topbar {
 }
 
 // End of Drag and Drop Basic
+
+.main-content {
+  transition: margin-left 0.5s;
+}
+.vertical-menu {
+  transition: all 0.5s;
+}
+.vertical-collpsed {
+  .vertical-menu {
+    width: 70px!important;
+    #sidebar-menu {
+      .menu-title {
+      display: block!important;
+      visibility: hidden;
+      }
+      ul > li > a {
+        padding: .75rem 20px;
+        min-height: auto;
+        transition: all 0.5s;
+        span {
+          display: block;
+        }
+      }
+      ul > li:hover > a {
+        width: auto;
+      }
+    }
+  }
+}

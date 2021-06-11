@@ -59,14 +59,14 @@
     padding: 20px 0 30px 0;
 
     .mm-active {
-        >.has-arrow {
+        >.has-arrow.arrow {
             &:after {
                 content: "\F140";
             }
         }
     }
 
-    .has-arrow {
+    .has-arrow.arrow {
         &:after {
             content: "\F142";   
             font-family: 'Material Design Icons';
@@ -240,7 +240,7 @@
                 height: inherit !important;
             }
 
-            .has-arrow {
+            .has-arrow.arrow {
                 &:after {
                     display: none;
                 }
@@ -495,7 +495,7 @@ body[data-sidebar-size="small"] {
         width: $sidebar-width-sm;
         text-align: center;
 
-        .has-arrow:after,
+        .has-arrow.arrow:after,
         .badge {
             display: none !important;
         }
