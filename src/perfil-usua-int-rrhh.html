@@ -37,11 +37,11 @@
         <div class="page-content">
           <div class="container-fluid">
             <div class="row datos-sociedad mt-5">
-              <div class="col-12">
-                <div class="card card-borde">
+              <div class="col-12 col-sm-5">
+                <div class="card card-borde" style="height: 94%;">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-12 col-md-7 text-right d-flex flex-column justify-content-center">
+                      <div class="col-7 d-flex flex-column justify-content-center">
                         <h5>
                           DATOS DEL USUARIO
                           <button class="btn btn-sm btn-outline-primary btn-acciones-iconos ml-2" type="button">
@@ -64,8 +64,8 @@
                         <p>Jornada:</p>
                         <p>Correo:</p>
                       </div>
-                      <div class="col-12 col-md-5">
-                        <div class="circulos-slider img-box" style="position: relative;">
+                      <div class="col-5">
+                        <div class="circulos-slider img-box" style="position: relative; width: 100%;">
                           <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
                           <div class="cambiar-foto">
                             <button class="btn btn-sm btn-acciones-iconos" type="button">
@@ -89,6 +89,122 @@
                   </div>
                 </div>
               </div>
+
+              <div class="col-12 col-sm-7">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <h5 class="mb-4">Departamentos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-depUsuaIntRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Departamento</th>
+                            <th>Asignado por</th>
+                            <th>Fecha</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>23444</td>
+                            <td>22</td>
+                            <td>Sociedad</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                            <td>22</td>
+                            <td>Autónomo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="boton-etiqueta">
+                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirDeptUsuaInt">Asignar</button>
+                      </div>
+
+                      <div class="modal fade añadirDeptUsuaInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Asignar departamento</h5>
+                              <lord-icon
+                                src="assets/json/38-error-cross-simple-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#808080;,secondary:#808080;"
+                                style="width:20px; height:20px; cursor: pointer;"
+                                class="btn-close"
+                                data-dismiss="modal"
+                                aria-label="Close">
+                              </lord-icon>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group row">
+                                  <div class="col-lg-6 mo-b-15">
+                                    <input class="form-control" type="text" placeholder="Departamento">                                                       
+                                  </div>
+                                  <div class="col-lg-6 mo-b-15">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Fecha de concesión" id="datepicker4">
+                                      <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                    </div><!-- input-group -->                                                       
+                                  </div>                                              
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-12">
+                                    <p><strong>Asignado por:</strong></p>
+                                    <div class="usuarios">
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                      <label class="checkeable">
+                                        <input type="radio" name="cap1"/>
+                                        <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                                      </label>
+                                    </div>                                                      
+                                  </div>                                                  
+                                </div>
+                                <div class="boton-etiqueta">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                      </div><!-- /.modal -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
 
               <div class="modal fade cambiarFoto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-md">
@@ -212,125 +328,6 @@
               <div class="col-md-12">
                 <div class="card card-borde">
                   <div class="card-body">
-                    <h5 class="mb-4">Departamentos</h5>
-                    <div class="table-responsive">
-                      <table id="datatable-depUsuaIntRR-buttons" class="table table-bordered" style="width:100%">
-                        <thead>
-                          <tr>
-                            <th>Departamento</th>
-                            <th>Asignado por</th>
-                            <th>Fecha</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>23444</td>
-                            <td>22</td>
-                            <td>Sociedad</td>
-                          </tr>
-                          <tr>
-                            <td>23444</td>
-                            <td>22</td>
-                            <td>Autónomo</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <div class="boton-etiqueta">
-                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirDeptUsuaInt">Asignar</button>
-                      </div>
-
-                      <div class="modal fade añadirDeptUsuaInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Asignar departamento</h5>
-                              <lord-icon
-                                src="assets/json/38-error-cross-simple-outline.json"
-                                trigger="loop-on-hover"
-                                target="a"
-                                colors="primary:#808080;,secondary:#808080;"
-                                style="width:20px; height:20px; cursor: pointer;"
-                                class="btn-close"
-                                data-dismiss="modal"
-                                aria-label="Close">
-                              </lord-icon>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="form-group row">
-                                  <div class="col-lg-6 mo-b-15">
-                                    <input class="form-control" type="text" placeholder="Departamento">                                                       
-                                  </div>
-                                  <div class="col-lg-6 mo-b-15">
-                                    <div class="input-group">
-                                      <input type="text" class="form-control" placeholder="Fecha de concesión" id="datepicker4">
-                                      <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
-                                    </div><!-- input-group -->                                                       
-                                  </div>                                              
-                                </div>
-                                <div class="form-group row">
-                                  <div class="col-12">
-                                    <p><strong>Asignado por:</strong></p>
-                                    <div class="usuarios">
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-4.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-5.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-8.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-1.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-6.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                      <label class="checkeable">
-                                        <input type="radio" name="cap1"/>
-                                        <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
-                                      </label>
-                                    </div>                                                      
-                                  </div>                                                  
-                                </div>
-                                <div class="boton-etiqueta">
-                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
-                                </div>
-                              </form>
-                            </div>
-                          </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                      </div><!-- /.modal -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end col -->
-            </div>
-            <!-- end row -->
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card card-borde">
-                  <div class="card-body">
                     <h5 class="mb-4">Accesos especiales</h5>
                     <div class="table-responsive">
                       <table id="datatable-AccEspUsuaIntRR-buttons" class="table table-bordered" style="width:100%">
@@ -382,86 +379,91 @@
                 <div class="card card-borde">
                   <div class="card-body">
                     <h4 class="mb-4">Documentos laborales</h4>
-                    <h5 class="mb-4">Contrato</h5>
-                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                      <div class="toast-header d-flex justify-content-between">
-                        <small>25/05/2021 <br>11 mins ago</small>
-                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocLab">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="toast-body text-center">
-                        <div class="d-flex justify-content-between">
-                          Facturas
-                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocLab">
-                            <a data-toggle="tooltip" data-placement="top" title="Editar">
-                              <lord-icon
-                                src="assets/json/35-edit-outline.json"
-                                trigger="loop-on-hover"
-                                target="a"
-                                colors="primary:#000000;,secondary:#000000;"
-                                style="width:20px; height:20px;">
-                              </lord-icon>
-                            </a>
-                          </button>
+                    <div class="row">
+                      <div class="col-12 col-sm-6">
+                        <div class="card card-borde2">
+                          <div class="card-body">
+                            <h5 class="mb-4">Contrato</h5>
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocLab">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div class="d-flex justify-content-between">
+                                  Facturas
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocLab">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                                <div class="dropdown-divider m-0"></div>
+                                <div class="text-center">
+                                  <small>Vencimiento <br>XX/XX/XXXX</small>
+                                </div>
+                              </div>
+                            </div> <!--end toast-->
+                            <div class="boton-etiqueta mb-4">
+                              <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContrato">Añadir</button>
+                            </div>
+                          </div>
                         </div>
-                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
-                        <div class="dropdown-divider mb-0"></div>
-                        <p class="text-center mb-0 mt-1">PDF</p>
-                        <div class="dropdown-divider m-0"></div>
-                        <div class="text-center">
-                          <small>Vencimiento <br>XX/XX/XXXX</small>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="card card-borde3">
+                          <div class="card-body">
+                            <h5 class="mt-4 mb-4">Nómina</h5>
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocLab">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                <div class="d-flex justify-content-between">
+                                  Facturas
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocLab">
+                                    <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                                <div class="dropdown-divider m-0"></div>
+                                <div class="text-center">
+                                  <small>Mes<br>Marzo 2021</small>
+                                </div>
+                              </div>
+                            </div> <!--end toast-->
+                            <div class="boton-etiqueta mb-4">
+                              <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNomina">Añadir</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div> <!--end toast-->
-                    <div class="boton-etiqueta mb-4">
-                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContrato">Añadir</button>
                     </div>
 
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card card-borde">
-                  <div class="card-body">
-                    <h5 class="mt-4 mb-4">Nómina</h5>
-                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
-                      <div class="toast-header d-flex justify-content-between">
-                        <small>25/05/2021 <br>11 mins ago</small>
-                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocLab">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="toast-body text-center">
-                        <div class="d-flex justify-content-between">
-                          Facturas
-                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocLab">
-                            <a data-toggle="tooltip" data-placement="top" title="Editar">
-                              <lord-icon
-                                src="assets/json/35-edit-outline.json"
-                                trigger="loop-on-hover"
-                                target="a"
-                                colors="primary:#000000;,secondary:#000000;"
-                                style="width:20px; height:20px;">
-                              </lord-icon>
-                            </a>
-                          </button>
-                        </div>
-                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
-                        <div class="dropdown-divider mb-0"></div>
-                        <p class="text-center mb-0 mt-1">PDF</p>
-                        <div class="dropdown-divider m-0"></div>
-                        <div class="text-center">
-                          <small>Mes<br>Marzo 2021</small>
-                        </div>
-                      </div>
-                    </div> <!--end toast-->
-                    <div class="boton-etiqueta mb-4">
-                      <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirNomina">Añadir</button>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -511,6 +513,7 @@
                           <div class="form-group mb-0">
                             <div>
                               <div class="input-daterange input-group" id="date-range3">
+                                <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .45rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
                                 <input type="text" class="form-control" name="start" placeholder="Fecha inicial" />
                                 <input type="text" class="form-control" name="end" placeholder="Fecha final" />
                               </div>

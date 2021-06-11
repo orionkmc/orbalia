@@ -48,6 +48,47 @@ $(document).ready(function () {
     },
   };
 
+  const context10 = {
+    paging: false,
+    info: false,
+    searching: false,
+    lengthChange: false,
+    responsive: true,
+    scrollX: false,
+    buttons: false,
+    language: {
+      decimal: ",",
+      thousands: ".",
+      info: "Página _START_ de _END_ de _TOTAL_ entradas",
+      infoEmpty: "",
+      infoPostFix: "",
+      infoFiltered: "",
+      loadingRecords: "Cargando...",
+      lengthMenu: "Mostrar _MENU_ Resultados",
+      paginate: {
+        first: "Primero",
+        last: "Último",
+        next: "Siguiente",
+        previous: "Anterior",
+      },
+      processing: "Procesando...",
+      search: "Buscar: ",
+      searchPlaceholder: "",
+      zeroRecords: "No se encontraron resultados",
+      emptyTable: "Ningún dato disponible en esta tabla",
+      aria: {
+        sortAscending: ": Activar para ordenar la columna de manera ascendente",
+        sortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
+      buttons: {
+        excel: "Excel",
+        pdf: "PDF",
+        colvis: "Columnas Visibles",
+      },
+    },
+  };
+
   $("#datatable-usuarios-rrhh-buttons")
     .DataTable(context4)
     .buttons()
@@ -59,17 +100,17 @@ $(document).ready(function () {
     .container()
     .appendTo("#datatable-historialUsua-rrhh-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-depCrearRol-buttons")
-    .DataTable(context4)
+    .DataTable(context10)
     .buttons()
     .container()
     .appendTo("#datatable-depCrearRol-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-PerIniCrearRol-buttons")
-    .DataTable(context4)
+    .DataTable(context10)
     .buttons()
     .container()
     .appendTo("#datatable-PerIniCrearRol-buttons_wrapper .col-md-6:eq(0)");
   $("#datatable-PerExpCrearRol-buttons")
-    .DataTable(context4)
+    .DataTable(context10)
     .buttons()
     .container()
     .appendTo("#datatable-PerExpCrearRol-buttons_wrapper .col-md-6:eq(0)");

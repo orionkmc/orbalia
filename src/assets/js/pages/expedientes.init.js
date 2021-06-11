@@ -174,6 +174,9 @@ $("#datepicker17").datepicker();
 $("#datepicker18").datepicker();
 $("#datepicker19").datepicker();
 $("#datepicker20").datepicker();
+$("#datepicker21").datepicker();
+$("#datepicker22").datepicker();
+$("#datepicker23").datepicker();
 
 $(function () {
   "use strict";

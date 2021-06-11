@@ -450,7 +450,7 @@
                         <h5 style="color:darkgoldenrod">Montando Movidas SL</h5>
                         <small>PYMES2021</small>
                       </div>
-                      <div class="col-12 col-md-3 offset-md-3 mt-sm-3 mt-md-0">
+                      <div class="col-12 col-md-3 offset-md-3 mt-5 mt-md-0">
                         <div class="toast fade show estado-exp" style="width: 100%;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
                           <div class="toast-header d-flex justify-content-between">
                             <span>Estado</span>
@@ -538,7 +538,7 @@
                                 <p>Fecha de registro:</p>
                                 <p>Expediente de procedimiento:</p>
                               </div>
-                              <div class="col-12 col-md-6 card-borde2">
+                              <div class="col-12 col-md-6 card-borde2 mt-5 mt-md-0">
                                 <h5 class="contrato-vigente">CONTRATO EXPEDIENTE</h5>
                                 <div class="toast fade show toast-contrato" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
                                   <div class="toast-header d-flex justify-content-between">
@@ -735,7 +735,7 @@
                                 <td>555-55-55</td>
                                 <td>andnndj@gmail.com</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresExpInt">
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresExpInt">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                       <lord-icon
                                         src="assets/json/35-edit-outline.json"
@@ -746,7 +746,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                       <lord-icon
                                         src="assets/json/185-trash-bin-outline.json"
@@ -768,7 +768,7 @@
                                 <td>555-55-55</td>
                                 <td>andnndj@gmail.com</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresExpInt">
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarRepresExpInt">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                       <lord-icon
                                         src="assets/json/35-edit-outline.json"
@@ -779,7 +779,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                       <lord-icon
                                         src="assets/json/185-trash-bin-outline.json"
@@ -948,6 +948,7 @@
                         <div class="boton-etiqueta mt-3 mb-3">
                           <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirContactoPreExpInt">Añadir</button>
                         </div>
+
                         <div class="modal fade añadirContactoPreExpInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
@@ -1058,10 +1059,21 @@
                         <div class="dropdown-divider"></div>
                         <h5 class="mb-4 mt-4">DESCRIPCIÓN / NOTAS</h5>
                         <div class="activity mt-3">
-                          <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaExpInt" type="button">
+                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaExpInt" type="button">
                             <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                               <lord-icon
                                 src="assets/json/35-edit-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#000000;,secondary:#000000;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                          <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" type="button">
+                            <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                              <lord-icon
+                                src="assets/json/185-trash-bin-outline.json"
                                 trigger="loop-on-hover"
                                 target="a"
                                 colors="primary:#000000;,secondary:#000000;"
@@ -1074,14 +1086,35 @@
                             <div class="item-info">
                               <h5 class="mt-0 mb-1">Task Overdue</h5>
                               <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
+                              <p class="font-size-13" style="color: #2d7bf4">
+                                <lord-icon
+                                  src="assets/json/93-document-download-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#000000;,secondary:#000000;"
+                                  style="width:20px; height:20px;">
+                                </lord-icon>
+                                Descargar archivo adjuntado
+                              </p>
                               <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
                             </div>
                           </div>
                           <div class="dropdown-divider"></div>
-                          <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".editarNotaExpInt" type="button">
+                          <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaExpInt" type="button">
                             <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                               <lord-icon
                                 src="assets/json/35-edit-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#000000;,secondary:#000000;"
+                                style="width:20px; height:20px;">
+                              </lord-icon>
+                            </a>
+                          </button>
+                          <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" type="button">
+                            <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                              <lord-icon
+                                src="assets/json/185-trash-bin-outline.json"
                                 trigger="loop-on-hover"
                                 target="a"
                                 colors="primary:#000000;,secondary:#000000;"
@@ -1093,7 +1126,17 @@
                           <div class="time-item2">
                             <div class="item-info">
                               <h5 class="mt-0 mb-1">Task Overdue</h5>
-                              <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                              <p class="text-muted font-size-13 mb-1">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                              <p class="font-size-13" style="color: #2d7bf4">
+                                <lord-icon
+                                  src="assets/json/93-document-download-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#000000;,secondary:#000000;"
+                                  style="width:20px; height:20px;">
+                                </lord-icon>
+                                Descargar archivo adjuntado
+                              </p>
                               <div class="text-right text-muted font-size-10">El 25/02/2021 a las 13:30</div>
                             </div>
                           </div>                                                               
@@ -1121,7 +1164,13 @@
                               <div class="modal-body text-center">
                                 <div class="form-group">
                                   <textarea class="form-control" id="exampleFormControlTextarea2" rows="4" placeholder="Escriba su nota aquí"></textarea>
-                              </div> 
+                                </div>
+                                <div class="form-group row">
+                                  <div class="custom-file pl-2 pr-2">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile76">
+                                    <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile76">Seleccionar archivo...</label>
+                                  </div>                                                  
+                                </div> 
                                 <div class="boton-etiqueta">
                                   <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
                                 </div>
@@ -1149,7 +1198,13 @@
                               <div class="modal-body text-center">
                                 <div class="form-group">
                                   <textarea class="form-control" id="exampleFormControlTextarea3" rows="4" placeholder="Escriba su nota aquí"></textarea>
-                              </div> 
+                                </div>
+                                <div class="form-group row">
+                                  <div class="custom-file pl-2 pr-2">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile75">
+                                    <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile75">Seleccionar archivo...</label>
+                                  </div>                                                  
+                                </div>
                                 <div class="boton-etiqueta">
                                   <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
                                 </div>
@@ -1178,7 +1233,7 @@
                                 <td>Sociedad</td>
                                 <td>1</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFechaClaveExpInt">
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFechaClaveExpInt">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                       <lord-icon
                                         src="assets/json/35-edit-outline.json"
@@ -1189,7 +1244,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Cumplido">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -1200,7 +1255,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                       <lord-icon
                                         src="assets/json/185-trash-bin-outline.json"
@@ -1211,7 +1266,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-warning btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-warning btn-acciones-iconos" type="button">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Descargar">
                                       <lord-icon
                                         src="assets/json/93-document-download-outline.json"
@@ -1230,7 +1285,7 @@
                                 <td>Sociedad</td>
                                 <td>1</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFechaClaveExpInt">
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarFechaClaveExpInt">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                       <lord-icon
                                         src="assets/json/35-edit-outline.json"
@@ -1241,7 +1296,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Cumplido">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -1252,7 +1307,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
                                       <lord-icon
                                         src="assets/json/185-trash-bin-outline.json"
@@ -1263,7 +1318,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-warning btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-warning btn-acciones-iconos" type="button">
                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Descargar">
                                       <lord-icon
                                         src="assets/json/93-document-download-outline.json"
@@ -1282,6 +1337,7 @@
                         <div class="boton-etiqueta mt-3 mb-3">
                           <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirFechaClaveExpInt">Añadir</button>
                         </div>
+
                         <div class="modal fade añadirFechaClaveExpInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
@@ -1558,6 +1614,7 @@
                                 <th>Caducidad de acceso</th>
                                 <th>Último acceso al expediente</th>
                                 <th>Departamento</th>
+                                <th>Acciones</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -1569,6 +1626,30 @@
                                 <td>Ilimitado</td>
                                 <td>23/04/2020 11:25</td>
                                 <td>Subvenciones</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarUsuario">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
                               </tr>
                               <tr>
                                 <td class="centrar-boton">
@@ -1578,6 +1659,30 @@
                                 <td>Ilimitado</td>
                                 <td>23/04/2020 11:25</td>
                                 <td>Subvenciones</td>
+                                <td class="centrar-boton">
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarUsuario">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <lord-icon
+                                        src="assets/json/35-edit-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                      <lord-icon
+                                        src="assets/json/185-trash-bin-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000000;,secondary:#000000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </td>
                               </tr>
                             </tbody>
                           </table>
@@ -1585,6 +1690,63 @@
                         <div class="boton-etiqueta mt-3 mb-3">
                           <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirUsuaAccesoExpInt">Nuevo acceso</button>
                         </div>
+
+                        <div class="modal fade editarUsuario" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Editar usuario</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px; cursor: pointer;"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" value="Usuario">                                                       
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Inicio de acceso" id="datepicker21">
+                                        <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                      </div><!-- input-group --> 
+                                    </div>                                                   
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Caducidad de acceso" id="datepicker22">
+                                        <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                      </div><!-- input-group -->                                                    
+                                    </div> 
+                                    <div class="col-lg-6">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Último acceso al expediente" id="datepicker23">
+                                        <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                      </div><!-- input-group --> 
+                                    </div>                                                   
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="col-lg-6  mo-b-15">
+                                      <input class="form-control" type="text" value="Departamento">
+                                    </div>                                                
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
                         <div class="modal fade añadirUsuaAccesoExpInt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
@@ -1610,18 +1772,10 @@
                                     </div> 
                                     <div class="col-lg-6">
                                       <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Fecha de inicio de acceso" id="datepicker4">
-                                        <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
-                                      </div><!-- input-group -->                                                       
-                                    </div>     
-                                  </div>
-                                  <div class="form-group row">
-                                    <div class="col-lg-6  mo-b-15">
-                                      <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Caducidad de acceso" id="datepicker5">
                                         <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
-                                      </div><!-- input-group -->
-                                    </div>    
+                                      </div><!-- input-group -->                                                      
+                                    </div>     
                                   </div>
                                                                                  
                                   <div class="d-flex justify-content-center">
@@ -1635,11 +1789,11 @@
                         </div><!-- /.modal -->
 
                         <div class="dropdown-divider"></div>
-                        <div class="title-ventas d-flex justify-content-between mt-4">
-                          <div>
+                        <div class="title-ventas row">
+                          <div class="col-12 col-sm-6">
                             <h5 class="mb-4">Historial de cambios</h5>
                           </div>
-                          <form>
+                          <form class="col-12 col-sm-6">
                             <div class="form-group mb-4">
                               <div>
                                 <div class="input-daterange input-group" id="date-range6">
@@ -1741,7 +1895,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -1808,7 +1962,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -1875,7 +2029,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2032,13 +2186,7 @@
                                         </div>
                                         <div class="form-group row">
                                           <div class="col-12">
-                                            <select class="form-control">
-                                              <option>PDF</option>
-                                              <option>TXT</option>
-                                              <option>XLS</option>
-                                              <option>JPG</option>
-                                              <option>DOC</option>
-                                            </select>
+                                            <input class="form-control" type="text" placeholder="Identificador">                                                       
                                           </div>
                                         </div>
                                         <div class="form-group row">
@@ -2131,7 +2279,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2195,7 +2343,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2259,7 +2407,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2323,7 +2471,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2387,7 +2535,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2473,13 +2621,7 @@
                                         </div>
                                         <div class="form-group row">
                                           <div class="col-12">
-                                            <select class="form-control">
-                                              <option>PDF</option>
-                                              <option>TXT</option>
-                                              <option>XLS</option>
-                                              <option>JPG</option>
-                                              <option>DOC</option>
-                                            </select>
+                                            <input class="form-control" type="text" placeholder="Identificador">                                                       
                                           </div>
                                         </div>
                                         <div class="form-group row">
@@ -2589,7 +2731,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2656,7 +2798,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2723,7 +2865,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2790,7 +2932,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -2947,13 +3089,7 @@
                                         </div>
                                         <div class="form-group row">
                                           <div class="col-12">
-                                            <select class="form-control">
-                                              <option>PDF</option>
-                                              <option>TXT</option>
-                                              <option>XLS</option>
-                                              <option>JPG</option>
-                                              <option>DOC</option>
-                                            </select>
+                                            <input class="form-control" type="text" placeholder="Identificador">                                                       
                                           </div>
                                         </div>
                                         <div class="form-group row">
@@ -3046,7 +3182,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3110,7 +3246,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3174,7 +3310,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3238,7 +3374,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3302,7 +3438,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3388,13 +3524,7 @@
                                         </div>
                                         <div class="form-group row">
                                           <div class="col-12">
-                                            <select class="form-control">
-                                              <option>PDF</option>
-                                              <option>TXT</option>
-                                              <option>XLS</option>
-                                              <option>JPG</option>
-                                              <option>DOC</option>
-                                            </select>
+                                            <input class="form-control" type="text" placeholder="Identificador">                                                       
                                           </div>
                                         </div>
                                         <div class="form-group row">
@@ -3504,7 +3634,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3571,7 +3701,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3728,13 +3858,7 @@
                                         </div>
                                         <div class="form-group row">
                                           <div class="col-12">
-                                            <select class="form-control">
-                                              <option>PDF</option>
-                                              <option>TXT</option>
-                                              <option>XLS</option>
-                                              <option>JPG</option>
-                                              <option>DOC</option>
-                                            </select>
+                                            <input class="form-control" type="text" placeholder="Identificador">                                                       
                                           </div>
                                         </div>
                                         <div class="form-group row">
@@ -3827,7 +3951,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3891,7 +4015,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -3957,7 +4081,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -4044,13 +4168,7 @@
                                       </div>
                                       <div class="form-group row">
                                         <div class="col-12">
-                                          <select class="form-control">
-                                            <option>PDF</option>
-                                            <option>TXT</option>
-                                            <option>XLS</option>
-                                            <option>JPG</option>
-                                            <option>DOC</option>
-                                          </select>
+                                          <input class="form-control" type="text" placeholder="Identificador">                                                       
                                         </div>
                                       </div>
                                       <div class="form-group row">
@@ -4136,7 +4254,7 @@
                                     <td>22</td>
                                     <td>Sociedad</td>
                                     <td class="centrar-boton">
-                                      <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                      <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Aceptar">
                                           <lord-icon
                                             src="assets/json/37-approve-checked-simple-outline.json"
@@ -4171,7 +4289,7 @@
                                       </button>
                                     </td>
                                     <td class="centrar-boton">
-                                      <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                      <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Aceptar">
                                           <lord-icon
                                             src="assets/json/37-approve-checked-simple-outline.json"
@@ -4206,7 +4324,7 @@
                                       </button>
                                     </td>
                                     <td class="centrar-boton">
-                                      <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                      <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Aceptar">
                                           <lord-icon
                                             src="assets/json/37-approve-checked-simple-outline.json"
@@ -4246,7 +4364,7 @@
                                     <td>22</td>
                                     <td>Sociedad</td>
                                     <td class="centrar-boton">
-                                      <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                      <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Aceptar">
                                           <lord-icon
                                             src="assets/json/37-approve-checked-simple-outline.json"
@@ -4281,7 +4399,7 @@
                                       </button>
                                     </td>
                                     <td class="centrar-boton">
-                                      <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                      <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Aceptar">
                                           <lord-icon
                                             src="assets/json/37-approve-checked-simple-outline.json"
@@ -4316,7 +4434,7 @@
                                       </button>
                                     </td>
                                     <td class="centrar-boton">
-                                      <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                      <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Aceptar">
                                           <lord-icon
                                             src="assets/json/37-approve-checked-simple-outline.json"
@@ -4438,7 +4556,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -4502,7 +4620,7 @@
                                   </div>
                                 </div> <!--end toast-->
                                 <div class="text-center">
-                                  <button class="btn btn-sm btn-success btn-acciones-iconos" type="button">
+                                  <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
                                     <a data-toggle="tooltip" data-placement="top" title="Validar">
                                       <lord-icon
                                         src="assets/json/37-approve-checked-simple-outline.json"
@@ -4588,13 +4706,7 @@
                                         </div>
                                         <div class="form-group row">
                                           <div class="col-12">
-                                            <select class="form-control">
-                                              <option>PDF</option>
-                                              <option>TXT</option>
-                                              <option>XLS</option>
-                                              <option>JPG</option>
-                                              <option>DOC</option>
-                                            </select>
+                                            <input class="form-control" type="text" placeholder="Identificador">                                                       
                                           </div>
                                         </div>
                                         <div class="form-group row">
@@ -4804,8 +4916,8 @@
                               </div-col-12>
                             </div>
                             <div class="activity mt-3">
-                              <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaExp" type="button">
-                                <a data-toggle="tooltip" data-placement="top" title="Editar">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaExpInt2" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
                                     trigger="loop-on-hover"
@@ -4815,22 +4927,51 @@
                                   </lord-icon>
                                 </a>
                               </button>
-                              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaExp">
-                                <span aria-hidden="true">&times;</span>
+                              <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaExpInt2" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
                               </button>
                               <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
                               <div class="time-item2">
                                 <div class="item-info">
-                                  <h6 class="mt-0 mb-1">Estado: Pendiente de presentación</h6>
-                                  <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
-                                  <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                  <h5 class="mt-0 mb-1">Task Overdue</h5>
+                                  <p class="text-muted font-size-13 mb-1">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                  <p class="font-size-13" style="color: #2d7bf4">
+                                    <lord-icon
+                                      src="assets/json/93-document-download-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#000000;,secondary:#000000;"
+                                      style="width:20px; height:20px;">
+                                    </lord-icon>
+                                    Descargar archivo adjuntado
+                                  </p>
+                                  <div class="text-right text-muted font-size-10">El 25/02/2021 a las 13:30</div>
                                 </div>
-                              </div>
+                              </div> 
                               <div class="dropdown-divider"></div>
-                              <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaExp" type="button">
-                                <a data-toggle="tooltip" data-placement="top" title="Editar">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaExpInt2" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                   <lord-icon
                                     src="assets/json/35-edit-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaExpInt2" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                  <lord-icon
+                                    src="assets/json/185-trash-bin-outline.json"
                                     trigger="loop-on-hover"
                                     target="a"
                                     colors="primary:#000000;,secondary:#000000;"
@@ -4843,8 +4984,18 @@
                                 <div class="item-info">
                                   <div class="row">
                                     <div class="col-12 col-md-8">
-                                      <h6 class="mt-0 mb-1">Estado: Documentación dentro</h6>
+                                      <h6 class="mt-0 mb-1">Ana Rojas</h6>
                                       <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                      <p class="font-size-13" style="color: #2d7bf4">
+                                        <lord-icon
+                                          src="assets/json/93-document-download-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                        Descargar archivo adjuntado
+                                      </p>
                                     </div>
                                     <div class="col-12 col-md-3 d-flex">
                                       <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
@@ -4886,7 +5037,7 @@
                               </div>                                                               
                             </div>
 
-                            <div class="modal fade eliminarNotaExp" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal fade eliminarNotaExpInt2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-sm">
                                 <div class="modal-content">
                                   <div class="modal-header">
@@ -4914,7 +5065,7 @@
                               </div><!-- /.modal-dialog -->
                             </div><!-- /.modal -->
 
-                            <div class="modal fade editarNotaExp" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal fade editarNotaExpInt2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                               <div class="modal-dialog">
                                 <div class="modal-content">
                                   <div class="modal-header">
@@ -4932,8 +5083,14 @@
                                   </div>
                                   <div class="modal-body text-center">
                                     <div class="form-group">
-                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba su nota aquí"></textarea>
-                                  </div> 
+                                      <textarea class="form-control" id="exampleFormControlTextarea3" rows="4" placeholder="Escriba su nota aquí"></textarea>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="custom-file pl-2 pr-2">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile75">
+                                        <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile75">Seleccionar archivo...</label>
+                                      </div>                                                  
+                                    </div>
                                     <div class="boton-etiqueta">
                                       <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
                                     </div>
@@ -4976,7 +5133,7 @@
                                     </td>
                                     <td>
                                       Pendiente
-                                      <button class="btn btn-sm btn-success btn-acciones-iconos mb-1 ml-2" type="button">
+                                      <button class="btn btn-sm btn-outline-success btn-acciones-iconos mb-1 ml-2" type="button">
                                         <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Validar">
                                           <lord-icon
                                             src="assets/json/37-approve-checked-simple-outline.json"
@@ -4987,7 +5144,7 @@
                                           </lord-icon>
                                         </a>
                                       </button>
-                                      <button class="btn btn-sm btn-danger btn-acciones-iconos mb-1" type="button">
+                                      <button class="btn btn-sm btn-outline-danger btn-acciones-iconos mb-1" type="button">
                                         <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Cancelar">
                                           <lord-icon
                                             src="assets/json/185-trash-bin-outline.json"
@@ -5250,7 +5407,7 @@
                                 </li>
                               </ul>
                               <div class="text-right">
-                                <button class="btn btn-dropbox btn-rounded mb-3" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirEstado">
+                                <button class="btn btn-primary btn-rounded mb-3" type="button" data-toggle="modal" data-animation="bounce" data-target=".añadirEstado">
                                   <a data-toggle="tooltip" data-placement="top" title="Añadir">
                                     <lord-icon
                                       src="assets/json/48-plus-to-square-rotation-outline.json"
@@ -5536,8 +5693,8 @@
                                     </div-col-12>
                                   </div>
                                   <div class="activity mt-3">
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -5547,22 +5704,51 @@
                                         </lord-icon>
                                       </a>
                                     </button>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
-                                      <span aria-hidden="true">&times;</span>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
                                     </button>
-                                    <img src="assets/images/users/user-9.jpg" alt="" class="img-activity">                                                                                                            
+                                    <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
                                     <div class="time-item2">
                                       <div class="item-info">
-                                        <h6 class="mt-0 mb-1">Estado: Pendiente presentación</h6>
-                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
-                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                        <h5 class="mt-0 mb-1">Task Overdue</h5>
+                                        <p class="text-muted font-size-13 mb-1">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                        <p class="font-size-13" style="color: #2d7bf4">
+                                          <lord-icon
+                                            src="assets/json/93-document-download-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                          Descargar archivo adjuntado
+                                        </p>
+                                        <div class="text-right text-muted font-size-10">El 25/02/2021 a las 13:30</div>
                                       </div>
                                     </div>
                                     <div class="dropdown-divider"></div>
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
                                           target="a"
                                           colors="primary:#000000;,secondary:#000000;"
@@ -5577,6 +5763,16 @@
                                           <div class="col-12 col-md-8">
                                             <h6 class="mt-0 mb-1">Estado: Pendiente presentación</h6>
                                             <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                            <p class="font-size-13" style="color: #2d7bf4">
+                                              <lord-icon
+                                                src="assets/json/93-document-download-outline.json"
+                                                trigger="loop-on-hover"
+                                                target="a"
+                                                colors="primary:#000000;,secondary:#000000;"
+                                                style="width:20px; height:20px;">
+                                              </lord-icon>
+                                              Descargar archivo adjuntado
+                                            </p>
                                           </div>
                                           <div class="col-12 col-md-3 d-flex">
                                             <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
@@ -5735,8 +5931,8 @@
                                     </div-col-12>
                                   </div>
                                   <div class="activity mt-3">
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -5746,22 +5942,51 @@
                                         </lord-icon>
                                       </a>
                                     </button>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
-                                      <span aria-hidden="true">&times;</span>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
                                     </button>
-                                    <img src="assets/images/users/user-7.jpg" alt="" class="img-activity">                                                                                                            
+                                    <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
                                     <div class="time-item2">
                                       <div class="item-info">
-                                        <h6 class="mt-0 mb-1">Estado: Presentada</h6>
-                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
-                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                        <h5 class="mt-0 mb-1">Task Overdue</h5>
+                                        <p class="text-muted font-size-13 mb-1">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                        <p class="font-size-13" style="color: #2d7bf4">
+                                          <lord-icon
+                                            src="assets/json/93-document-download-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                          Descargar archivo adjuntado
+                                        </p>
+                                        <div class="text-right text-muted font-size-10">El 25/02/2021 a las 13:30</div>
                                       </div>
                                     </div>
                                     <div class="dropdown-divider"></div>
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
                                           target="a"
                                           colors="primary:#000000;,secondary:#000000;"
@@ -5776,6 +6001,16 @@
                                           <div class="col-12 col-md-8">
                                             <h6 class="mt-0 mb-1">Estado: Presentada</h6>
                                             <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                            <p class="font-size-13" style="color: #2d7bf4">
+                                              <lord-icon
+                                                src="assets/json/93-document-download-outline.json"
+                                                trigger="loop-on-hover"
+                                                target="a"
+                                                colors="primary:#000000;,secondary:#000000;"
+                                                style="width:20px; height:20px;">
+                                              </lord-icon>
+                                              Descargar archivo adjuntado
+                                            </p>
                                           </div>
                                           <div class="col-12 col-md-3 d-flex">
                                             <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
@@ -5934,8 +6169,8 @@
                                     </div-col-12>
                                   </div>
                                   <div class="activity mt-3">
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -5945,22 +6180,51 @@
                                         </lord-icon>
                                       </a>
                                     </button>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
-                                      <span aria-hidden="true">&times;</span>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
                                     </button>
-                                    <img src="assets/images/users/user-6.jpg" alt="" class="img-activity">                                                                                                            
+                                    <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
                                     <div class="time-item2">
                                       <div class="item-info">
-                                        <h6 class="mt-0 mb-1">Estado: Requerimiento</h6>
-                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
-                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                        <h5 class="mt-0 mb-1">Task Overdue</h5>
+                                        <p class="text-muted font-size-13 mb-1">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                        <p class="font-size-13" style="color: #2d7bf4">
+                                          <lord-icon
+                                            src="assets/json/93-document-download-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                          Descargar archivo adjuntado
+                                        </p>
+                                        <div class="text-right text-muted font-size-10">El 25/02/2021 a las 13:30</div>
                                       </div>
                                     </div>
                                     <div class="dropdown-divider"></div>
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
                                           target="a"
                                           colors="primary:#000000;,secondary:#000000;"
@@ -5975,6 +6239,16 @@
                                           <div class="col-12 col-md-8">
                                             <h6 class="mt-0 mb-1">Estado: Requerimiento</h6>
                                             <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                            <p class="font-size-13" style="color: #2d7bf4">
+                                              <lord-icon
+                                                src="assets/json/93-document-download-outline.json"
+                                                trigger="loop-on-hover"
+                                                target="a"
+                                                colors="primary:#000000;,secondary:#000000;"
+                                                style="width:20px; height:20px;">
+                                              </lord-icon>
+                                              Descargar archivo adjuntado
+                                            </p>
                                           </div>
                                           <div class="col-12 col-md-3 d-flex">
                                             <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
@@ -6133,8 +6407,8 @@
                                     </div-col-12>
                                   </div>
                                   <div class="activity mt-3">
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -6144,22 +6418,51 @@
                                         </lord-icon>
                                       </a>
                                     </button>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
-                                      <span aria-hidden="true">&times;</span>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
                                     </button>
                                     <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
                                     <div class="time-item2">
                                       <div class="item-info">
-                                        <h6 class="mt-0 mb-1">Estado: Resolución provisional</h6>
-                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
-                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                        <h5 class="mt-0 mb-1">Task Overdue</h5>
+                                        <p class="text-muted font-size-13 mb-1">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                        <p class="font-size-13" style="color: #2d7bf4">
+                                          <lord-icon
+                                            src="assets/json/93-document-download-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                          Descargar archivo adjuntado
+                                        </p>
+                                        <div class="text-right text-muted font-size-10">El 25/02/2021 a las 13:30</div>
                                       </div>
                                     </div>
                                     <div class="dropdown-divider"></div>
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
                                           target="a"
                                           colors="primary:#000000;,secondary:#000000;"
@@ -6174,6 +6477,16 @@
                                           <div class="col-12 col-md-8">
                                             <h6 class="mt-0 mb-1">Estado: Resolución provisional</h6>
                                             <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                            <p class="font-size-13" style="color: #2d7bf4">
+                                              <lord-icon
+                                                src="assets/json/93-document-download-outline.json"
+                                                trigger="loop-on-hover"
+                                                target="a"
+                                                colors="primary:#000000;,secondary:#000000;"
+                                                style="width:20px; height:20px;">
+                                              </lord-icon>
+                                              Descargar archivo adjuntado
+                                            </p>
                                           </div>
                                           <div class="col-12 col-md-3 d-flex">
                                             <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
@@ -6332,8 +6645,8 @@
                                     </div-col-12>
                                   </div>
                                   <div class="activity mt-3">
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -6343,22 +6656,51 @@
                                         </lord-icon>
                                       </a>
                                     </button>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
-                                      <span aria-hidden="true">&times;</span>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
                                     </button>
-                                    <img src="assets/images/users/user-4.jpg" alt="" class="img-activity">                                                                                                            
+                                    <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
                                     <div class="time-item2">
                                       <div class="item-info">
-                                        <h6 class="mt-0 mb-1">Estado: Pendiente documentación</h6>
-                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
-                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                        <h5 class="mt-0 mb-1">Task Overdue</h5>
+                                        <p class="text-muted font-size-13 mb-1">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                        <p class="font-size-13" style="color: #2d7bf4">
+                                          <lord-icon
+                                            src="assets/json/93-document-download-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                          Descargar archivo adjuntado
+                                        </p>
+                                        <div class="text-right text-muted font-size-10">El 25/02/2021 a las 13:30</div>
                                       </div>
                                     </div>
                                     <div class="dropdown-divider"></div>
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
                                           target="a"
                                           colors="primary:#000000;,secondary:#000000;"
@@ -6373,6 +6715,16 @@
                                           <div class="col-12 col-md-8">
                                             <h6 class="mt-0 mb-1">Estado: Pendiente documentación</h6>
                                             <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                            <p class="font-size-13" style="color: #2d7bf4">
+                                              <lord-icon
+                                                src="assets/json/93-document-download-outline.json"
+                                                trigger="loop-on-hover"
+                                                target="a"
+                                                colors="primary:#000000;,secondary:#000000;"
+                                                style="width:20px; height:20px;">
+                                              </lord-icon>
+                                              Descargar archivo adjuntado
+                                            </p>
                                           </div>
                                           <div class="col-12 col-md-3 d-flex">
                                             <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
@@ -6531,8 +6883,8 @@
                                     </div-col-12>
                                   </div>
                                   <div class="activity mt-3">
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
                                           trigger="loop-on-hover"
@@ -6542,22 +6894,51 @@
                                         </lord-icon>
                                       </a>
                                     </button>
-                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst">
-                                      <span aria-hidden="true">&times;</span>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
                                     </button>
-                                    <img src="assets/images/users/user-1.jpg" alt="" class="img-activity">                                                                                                            
+                                    <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
                                     <div class="time-item2">
                                       <div class="item-info">
-                                        <h6 class="mt-0 mb-1">Estado: Documentación dentro</h6>
-                                        <p class="text-muted font-size-13">@kmarrero este cliente quiere invertir en mejorar su local y adquirir nuevos equipos. Inversión 100k </p>
-                                        <div class="text-right text-muted font-size-10">El 27/02/2021 a las 13:30</div>
+                                        <h5 class="mt-0 mb-1">Task Overdue</h5>
+                                        <p class="text-muted font-size-13 mb-1">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                        <p class="font-size-13" style="color: #2d7bf4">
+                                          <lord-icon
+                                            src="assets/json/93-document-download-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                          Descargar archivo adjuntado
+                                        </p>
+                                        <div class="text-right text-muted font-size-10">El 25/02/2021 a las 13:30</div>
                                       </div>
                                     </div>
                                     <div class="dropdown-divider"></div>
-                                    <button class="btn btn-sm btn-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
-                                      <a data-toggle="tooltip" data-placement="top" title="Editar">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos editarNotasExp" data-toggle="modal" data-animation="bounce" data-target=".editarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
+                                          trigger="loop-on-hover"
+                                          target="a"
+                                          colors="primary:#000000;,secondary:#000000;"
+                                          style="width:20px; height:20px;">
+                                        </lord-icon>
+                                      </a>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger btn-acciones-iconos editarNotas" data-toggle="modal" data-animation="bounce" data-target=".eliminarNotaEst" type="button">
+                                      <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <lord-icon
+                                          src="assets/json/185-trash-bin-outline.json"
                                           trigger="loop-on-hover"
                                           target="a"
                                           colors="primary:#000000;,secondary:#000000;"
@@ -6572,6 +6953,16 @@
                                           <div class="col-12 col-md-8">
                                             <h6 class="mt-0 mb-1">Estado: Documentación dentro</h6>
                                             <p class="text-muted font-size-13">@dramirez llamé al cliente para rellenar la ficha y no me lo cogió</p>
+                                            <p class="font-size-13" style="color: #2d7bf4">
+                                              <lord-icon
+                                                src="assets/json/93-document-download-outline.json"
+                                                trigger="loop-on-hover"
+                                                target="a"
+                                                colors="primary:#000000;,secondary:#000000;"
+                                                style="width:20px; height:20px;">
+                                              </lord-icon>
+                                              Descargar archivo adjuntado
+                                            </p>
                                           </div>
                                           <div class="col-12 col-md-3 d-flex">
                                             <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
@@ -6735,7 +7126,13 @@
                               <div class="modal-body text-center">
                                 <div class="form-group">
                                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escriba su nota aquí"></textarea>
-                              </div> 
+                                </div>
+                                <div class="form-group row">
+                                  <div class="custom-file pl-2 pr-2">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile76">
+                                    <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile76">Seleccionar archivo...</label>
+                                  </div>                                                  
+                                </div> 
                                 <div class="boton-etiqueta">
                                   <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Editar</button>
                                 </div>
@@ -7082,7 +7479,7 @@
                                 <td>300</td>
                                 <td>10%</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarPrecios">
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarPrecios">
                                     <a data-toggle="tooltip" data-placement="top" title="Editar">
                                       <lord-icon
                                         src="assets/json/35-edit-outline.json"
@@ -7093,7 +7490,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".eliminarPrecios">
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".eliminarPrecios">
                                     <a data-toggle="tooltip" data-placement="top" title="Eliminar">
                                       <lord-icon
                                         src="assets/json/185-trash-bin-outline.json"
@@ -7112,7 +7509,7 @@
                                 <td>-</td>
                                 <td>15%</td>
                                 <td class="centrar-boton">
-                                  <button class="btn btn-sm btn-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarPrecios">
+                                  <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".editarPrecios">
                                     <a data-toggle="tooltip" data-placement="top" title="Editar">
                                       <lord-icon
                                         src="assets/json/35-edit-outline.json"
@@ -7123,7 +7520,7 @@
                                       </lord-icon>
                                     </a>
                                   </button>
-                                  <button class="btn btn-sm btn-danger btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".eliminarPrecios">
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button"  data-toggle="modal" data-animation="bounce" data-target=".eliminarPrecios">
                                     <a data-toggle="tooltip" data-placement="top" title="Eliminar">
                                       <lord-icon
                                         src="assets/json/185-trash-bin-outline.json"
@@ -7173,7 +7570,7 @@
                                 <div class="toast-body text-center">
                                   <div class="d-flex justify-content-between">
                                     Facturas
-                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedimiento">
                                       <a data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
@@ -7199,7 +7596,7 @@
                                 <div class="toast-body text-center">
                                   <div class="d-flex justify-content-between">
                                     Facturas
-                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedimiento">
                                       <a data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
@@ -7225,7 +7622,7 @@
                                 <div class="toast-body text-center">
                                   <div class="d-flex justify-content-between">
                                     Facturas
-                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedimiento">
                                       <a data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
@@ -7251,7 +7648,7 @@
                                 <div class="toast-body text-center">
                                   <div class="d-flex justify-content-between">
                                     Facturas
-                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProc">
+                                    <button class="btn btn-sm btn-outline-primary btn-acciones-iconos" type="button" data-toggle="modal" data-animation="bounce" data-target=".editarDocProcedimiento">
                                       <a data-toggle="tooltip" data-placement="top" title="Editar">
                                         <lord-icon
                                           src="assets/json/35-edit-outline.json"
@@ -7356,14 +7753,8 @@
                         </div>
                         <div class="form-group row">
                           <div class="col-12">
-                            <select class="form-control">
-                              <option>PDF</option>
-                              <option>TXT</option>
-                              <option>XLS</option>
-                              <option>JPG</option>
-                              <option>DOC</option>
-                            </select>
-                          </div>
+                            <input class="form-control" type="text" placeholder="Identificador">                                                       
+                          </div>  
                         </div>
                         <div class="form-group row">
                           <div class="custom-file pl-2 pr-2">
