@@ -3815,6 +3815,7 @@ element.style {
   transition: all 0.5s; }
 
 .vertical-collpsed .vertical-menu {
+  position: fixed;
   width: 70px !important; }
   .vertical-collpsed .vertical-menu #sidebar-menu .menu-title {
     display: block !important;
