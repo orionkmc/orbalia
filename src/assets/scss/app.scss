@@ -531,34 +531,7 @@ element.style {
 }
 
 // End of Drag and Drop Basic
-<<<<<<< HEAD
 
-.main-content {
-  transition: margin-left 0.5s;
-}
-.vertical-menu {
-  transition: all 0.5s;
-}
-.vertical-collpsed {
-  .vertical-menu {
-    width: 70px!important;
-    #sidebar-menu {
-      .menu-title {
-      display: block!important;
-      visibility: hidden;
-      }
-      ul > li > a {
-        padding: .75rem 20px;
-        min-height: auto;
-        transition: all 0.5s;
-        span {
-          display: block;
-        }
-      }
-      ul > li:hover > a {
-        width: auto;
-      }
-=======
 @media (max-width: 767.98px) {
   .contrato-vigente {
     margin-top: 2rem;
@@ -600,7 +573,35 @@ element.style {
     #drag-source9{
       width: 35px;
       height: 35px;
->>>>>>> 910ec0a0d690afa0e9228854aa44a45cec2c3185
+    }
+  }
+}
+
+.main-content {
+  transition: margin-left 0.5s;
+}
+.vertical-menu {
+  transition: all 0.5s;
+}
+.vertical-collpsed {
+  .vertical-menu {
+    width: 70px!important;
+    #sidebar-menu {
+      .menu-title {
+      display: block!important;
+      visibility: hidden;
+      }
+      ul > li > a {
+        padding: .75rem 20px;
+        min-height: auto;
+        transition: all 0.5s;
+        span {
+          display: block;
+        }
+      }
+      ul > li:hover > a {
+        width: auto;
+      }
     }
   }
 }
