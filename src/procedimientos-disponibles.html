@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+      
+    @@include("partials/title-meta.html", {"title": "Procedimientos disponibles / Cliente"})
+
+    @@include("partials/head-css.html")
+
+  </head>
+  <style>
+    #accordionExample2 .card-header h5 button::before {
+      top: 9px;
+    }
+    .preg3 {
+      display: block;
+    }
+    .botones-direccion {
+      display: flex;
+      justify-content: space-around;
+    }
+    .toast-body {
+      font-size: .7rem;
+    }
+    .preg3-1,
+    .btn-salir {
+      display: none;
+    }
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+    /* Make circles that indicate the steps of the form: */
+    /* .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #44a2d2;
+      border: none;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    } */
+
+    /* Mark the active step: */
+    /* .step.active {
+      opacity: 1;
+    } */
+
+    /* Mark the steps that are finished and valid: */
+    /* .step.finish {
+      background-color: #44a2d2;
+    } */
+  </style>
+
+  <body data-topbar="dark">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+      @@include("partials/topbar-cliente.html")
+
+      @@include("partials/sidebarCliente.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+
+        <div class="page-content">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <h5 class="mb-4 mt-4">Procedimientos disponibles</h5>
+                    <div class="accordion" id="accordionExample2">
+                      <div class="card card-borde mb-2 shadow-none">
+                        <div class="card-header" id="headingOne2">
+                        <h5 class="my-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="false" aria-controls="collapseTwo2">
+                          Subvenciones pymes
+                          </button>
+                        </h5>
+                        </div>
+                        <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample2">
+                          <div class="card-body font-size-13">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#infBasica" role="tab">Información básica</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#documentacionCli" role="tab">Documentación</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#importe" role="tab">Importe mínimo proyecto <br>XX€</a>
+                              </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                              <div class="tab-pane active p-3" id="infBasica" role="tabpanel">
+                                <h5 class="mb-4 mt-4">Descripción</h5>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="dropdown-divider"></div>
+                                <h5 class="mb-4 mt-4">Plazo</h5>
+                                <h5 class="mb-4 mt-4">Crédito presupuestario</h5>
+                                <h6 class="mb-4 mt-4">Información 1</h6>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="dropdown-divider"></div>
+                                <h6 class="mb-4 mt-4">Información 2</h6>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="boton-accordion mt-4 mb-4">
+                                  <button class="btn-primary">Descargar en PDF</button>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="boton-accordion mt-5">
+                                  <button class="btn-success" data-toggle="modal" data-target="#empezarProc">Empezar</button>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="empezarProc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog factura">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Empezar procedimiento</h5>
+                                          <lord-icon
+                                            src="assets/json/38-error-cross-simple-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            data-toggle="modal" 
+                                            href="#avisoCerrar"
+                                            colors="primary:#808080;,secondary:#808080;"
+                                            style="width:30px; height:30px; cursor: pointer"
+                                            class="btn-close"
+                                            aria-label="Close">
+                                          </lord-icon>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form id="regForm">
+                                          <!-- One "tab" for each step in the form: -->
+                                          <div class="tab">
+                                            <p>Va a comenzar el proceso para tramitar la subvención de <strong>NOMBRE.</strong></p>
+                                            <p>Recuerde que esta subvención es <strong>con aceptación previa,</strong> por lo que un técnico verificará su documentación y le llegará un aviso al correo cuando el expediente esté correctamente validado.</p>
+                                            <p>No olvide que, en caso de dejar el proceso a medias, podrá retomarlo más tarde por dónde lo dejó.</p>
+                                          </div>
+                                          
+                                          <div class="tab">
+                                            <h6>Paso 1. Requisitos para acceder a la subvención</h6>
+                                            <div class="cuadros-preg mt-4">
+                                              <div class="cuadros-item active">1</div>
+                                              <div class="cuadros-item">2</div>
+                                              <div class="cuadros-item">3</div>
+                                              <div class="cuadros-item">4</div>
+                                              <div class="cuadros-item">5</div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                              <div class="preg3">
+                                                <p><strong>1. ¿Tienes empleados?</strong></p>
+                                                <div class="d-flex justify-content-around">
+                                                  <div class="form-check-inline my-1">
+                                                    <div class="custom-control custom-radio">
+                                                      <input type="radio" id="customRadio47" name="customRadio" class="custom-control-input">
+                                                      <label class="custom-control-label" for="customRadio47">Sí</label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-check-inline my-1">
+                                                      <div class="custom-control custom-radio">
+                                                        <input type="radio" id="customRadio48" name="customRadio" class="custom-control-input invalido">
+                                                        <label class="custom-control-label" for="customRadio48">No</label>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="preg3-1">
+                                                <p>¡Vaya!</p>
+                                                <p>Parece que <strong>no cumple</strong> con alguno de los requisitos necesarios para poder solicitar esta subvención.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="tab">
+                                            <h6>Paso 1. Requisitos para acceder a la subvención</h6>
+                                            <div class="cuadros-preg mt-4">
+                                              <div class="cuadros-item">1</div>
+                                              <div class="cuadros-item active">2</div>
+                                              <div class="cuadros-item">3</div>
+                                              <div class="cuadros-item">4</div>
+                                              <div class="cuadros-item">5</div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                              <div class="preg3">
+                                                <p><strong>2. ¿XXXXXXX?</strong></p>
+                                                <div class="d-flex justify-content-around">
+                                                  <div class="form-check-inline my-1">
+                                                    <div class="custom-control custom-radio">
+                                                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                      <label class="custom-control-label" for="customRadio1">Sí</label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-check-inline my-1">
+                                                    <div class="custom-control custom-radio">
+                                                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input invalido">
+                                                      <label class="custom-control-label" for="customRadio2">No</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="preg3-1">
+                                                <p>¡Vaya!</p>
+                                                <p>Parece que <strong>no cumple</strong> con alguno de los requisitos necesarios para poder solicitar esta subvención.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="tab">
+                                            <h6>Paso 1. Requisitos para acceder a la subvención</h6>
+                                            <div class="cuadros-preg mt-4">
+                                              <div class="cuadros-item">1</div>
+                                              <div class="cuadros-item">2</div>
+                                              <div class="cuadros-item active">3</div>
+                                              <div class="cuadros-item">4</div>
+                                              <div class="cuadros-item">5</div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                              <div class="preg3">
+                                                <p><strong>3. ¿XXXXXXX?</strong></p>
+                                                <div class="d-flex justify-content-around validar">
+                                                  <div class="form-check-inline my-1">
+                                                    <div class="custom-control custom-radio">
+                                                      <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                                      <label class="custom-control-label" for="customRadio3">Sí</label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-check-inline my-1">
+                                                    <div class="custom-control custom-radio">
+                                                      <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input invalido">
+                                                      <label class="custom-control-label" for="customRadio4">No</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="preg3-1">
+                                                <p>¡Vaya!</p>
+                                                <p>Parece que <strong>no cumple</strong> con alguno de los requisitos necesarios para poder solicitar esta subvención.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="tab">
+                                            <h6>Paso 1. Requisitos para acceder a la subvención</h6>
+                                            <div class="cuadros-preg mt-4">
+                                              <div class="cuadros-item">1</div>
+                                              <div class="cuadros-item">2</div>
+                                              <div class="cuadros-item">3</div>
+                                              <div class="cuadros-item active">4</div>
+                                              <div class="cuadros-item">5</div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                              <div class="preg3">
+                                                <p><strong>4. ¿XXXXXXX?</strong></p>
+                                                <div class="d-flex justify-content-around validar">
+                                                  <div class="form-check-inline my-1">
+                                                    <div class="custom-control custom-radio">
+                                                      <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+                                                      <label class="custom-control-label" for="customRadio5">Sí</label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-check-inline my-1">
+                                                    <div class="custom-control custom-radio">
+                                                      <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input invalido">
+                                                      <label class="custom-control-label" for="customRadio6">No</label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="preg3-1">
+                                                <p>¡Vaya!</p>
+                                                <p>Parece que <strong>no cumple</strong> con alguno de los requisitos necesarios para poder solicitar esta subvención.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="tab">
+                                            <h6>Paso 1. Requisitos para acceder a la subvención</h6>
+                                            <div class="cuadros-preg mt-4">
+                                              <div class="cuadros-item">1</div>
+                                              <div class="cuadros-item">2</div>
+                                              <div class="cuadros-item">3</div>
+                                              <div class="cuadros-item">4</div>
+                                              <div class="cuadros-item active">5</div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                              <div class="preg3">
+                                                <p>Parece que cumples con todos los requisitos para solicitar esta subvención. Puedes avanzar al paso 2.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="tab">
+                                            <h6>Paso 2. Documentos previos necesarios para evaluar la solicitud</h6>
+                                            <div class="cuadros-preg mt-4">
+                                              <div class="cuadros-item active">1</div>
+                                              <div class="cuadros-item">2</div>
+                                              <div class="cuadros-item">3</div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                              <div class="text-center">   
+                                                <div class="toast fade show" style="width: 100%;" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                                  <p class="text-center mb-0 mt-2"><strong>420 3T2020</strong></p>
+                                                  <div class="text-center">
+                                                    <img src="assets/images/users/user-10.jpg" alt="" class="avatar-xs rounded-circle">
+                                                  </div>
+                                                  <div class="toast-body text-center">
+                                                    Para ver si puede acceder a este trámite necesitamos que nos adjunte el modelo 420 del <strong>tercer</strong> trimestre de 2020
+                                                  </div>
+                                                </div> <!--end toast-->
+                                                <form class="mt-3">
+                                                  <div class="form-group row">
+                                                    <div class="custom-file pl-2 pr-2">
+                                                      <input type="file" class="custom-file-input" id="inputGroupFile1">
+                                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile1">Subir archivo...</label>
+                                                    </div>                                                  
+                                                  </div>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="tab">
+                                            <h6>Paso 2. Documentos previos necesarios para evaluar la solicitud</h6>
+                                            <div class="cuadros-preg mt-4">
+                                              <div class="cuadros-item">1</div>
+                                              <div class="cuadros-item active">2</div>
+                                              <div class="cuadros-item">3</div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                              <div class="text-center">  
+                                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                                  <div class="toast-header d-flex justify-content-start">
+                                                    <small>25/05/2021 <br>11 mins ago</small>
+                                                  </div>
+                                                  <div class="toast-body text-center">
+                                                    Facturas <br>
+                                                    <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                                    <div class="dropdown-divider mb-0"></div>
+                                                    <p class="text-center mb-0 mt-1">PDF</p>
+                                                  </div>
+                                                </div> <!--end toast-->
+                                                <div>
+                                                  <lord-icon
+                                                    src="assets/json/70-attachment-outline.json"
+                                                    trigger="loop-on-hover"
+                                                    target="a"
+                                                    colors="primary:#000000;,secondary:#000000;"
+                                                    style="width:30px; height:30px;">
+                                                  </lord-icon>
+                                                  Archivo subido
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="tab">
+                                            <h6>Paso 2. Documentos previos necesarios para evaluar la solicitud</h6>
+                                            <div class="cuadros-preg mt-4">
+                                              <div class="cuadros-item">1</div>
+                                              <div class="cuadros-item">2</div>
+                                              <div class="cuadros-item active">3</div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                              <div class="text-center">  
+                                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                                  <div class="toast-header d-flex justify-content-start">
+                                                    <small>25/05/2021 <br>11 mins ago</small>
+                                                  </div>
+                                                  <div class="toast-body text-center">
+                                                    Facturas <br>
+                                                    <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                                    <div class="dropdown-divider mb-0"></div>
+                                                    <p class="text-center mb-0 mt-1">PDF</p>
+                                                  </div>
+                                                </div> <!--end toast-->
+                                                <div>
+                                                  <lord-icon
+                                                    src="assets/json/70-attachment-outline.json"
+                                                    trigger="loop-on-hover"
+                                                    target="a"
+                                                    colors="primary:#000000;,secondary:#000000;"
+                                                    style="width:30px; height:30px;">
+                                                  </lord-icon>
+                                                  Archivo subido
+                                                </div>
+                                                <form class="mt-3">
+                                                  <div class="form-group row">
+                                                    <div class="custom-file pl-2 pr-2">
+                                                      <input type="file" class="custom-file-input" id="inputGroupFile2">
+                                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile2">Añadir otro archivo...</label>
+                                                    </div>                                                  
+                                                  </div>
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="tab">
+                                            <div class="cuadros-preg mt-4 text-center">
+                                              <p>¡Enhorabuena! <br>Tu solicitud de creación de expediente ha sido finalizada con éxito. Un técnico de nuestro equipo lo revisará y te llegará un correo con la confirmación para que puedas acceder desde la sección "Mis procedimientos".</p>
+                                            </div>
+                                          </div>
+
+                                          <div class="mt-5 botones-direccion">
+                                            <button class="boton-empezar btn-primary" style="padding: .4rem 1.6rem;" type="button" id="prevBtn" onclick="nextPrev(-1)">Atras</button>
+                                            <button class="boton-empezar btn-primary" type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+                                          </div>
+                                          
+                                          <div class="text-center mt-3 btn-salir">
+                                            <button class="boton-empezar btn-primary salir-empezar" data-dismiss="modal" aria-label="Close">Salir</button>
+                                          </div>
+                                          <!-- <div style="text-align:center;margin-top:40px;">
+                                            <span class="step"></span>
+                                            <span class="step"></span>
+                                            <span class="step"></span>
+                                            <span class="step"></span>
+                                          </div> -->
+                                        
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane p-3" id="documentacionCli" role="tabpanel">
+                                <div class="row mt-4">
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                </div>
+                              </div>
+                              <div class="tab-pane p-3" id="importe" role="tabpanel">
+                                <p class="font-size-13 mb-0">
+                                  Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                                  art party before they sold out master cleanse gluten-free squid
+                                  scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                                  art party locavore wolf cliche high life echo park Austin. Cred
+                                  vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                                  farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
+                                  mustache readymade thundercats keffiyeh craft beer marfa
+                                  ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                  vegan
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-borde2 mb-2 shadow-none">
+                        <div class="card-header" id="headingTwo2">
+                        <h5 class="my-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                          Subvenciones BONOS
+                          </button>
+                        </h5>
+                        </div>
+                        <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
+                          <div class="card-body font-size-13">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#infBasica2" role="tab">Información básica</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#documentacionCli2" role="tab">Documentación</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#importe2" role="tab">Importe mínimo proyecto <br>XX€</a>
+                              </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                              <div class="tab-pane active p-3" id="infBasica2" role="tabpanel">
+                                <h5 class="mb-4 mt-4">Descripción</h5>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="dropdown-divider"></div>
+                                <h5 class="mb-4 mt-4">Plazo</h5>
+                                <h5 class="mb-4 mt-4">Crédito presupuestario</h5>
+                                <h6 class="mb-4 mt-4">Información 1</h6>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="dropdown-divider"></div>
+                                <h6 class="mb-4 mt-4">Información 2</h6>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="boton-accordion mt-4 mb-4">
+                                  <button class="btn-primary">Descargar en PDF</button>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="boton-accordion mt-5">
+                                  <button class="btn-success">Empezar</button>
+                                </div>
+                              </div>
+                              <div class="tab-pane p-3" id="documentacionCli2" role="tabpanel">
+                                <div class="row mt-4">
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                </div>
+                              </div>
+                              <div class="tab-pane p-3" id="importe2" role="tabpanel">
+                                <p class="font-size-13 mb-0">
+                                  Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                                  art party before they sold out master cleanse gluten-free squid
+                                  scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                                  art party locavore wolf cliche high life echo park Austin. Cred
+                                  vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                                  farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
+                                  mustache readymade thundercats keffiyeh craft beer marfa
+                                  ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                  vegan
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-borde3 mb-2 shadow-none">
+                        <div class="card-header" id="headingThree2">
+                          <h5 class="my-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                            Subvenciones XXXX
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordionExample2">
+                          <div class="card-body font-size-13">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#infBasica3" role="tab">Información básica</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#documentacionCli3" role="tab">Documentación</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#importe3" role="tab">Importe mínimo proyecto <br>XX€</a>
+                              </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                              <div class="tab-pane active p-3" id="infBasica3" role="tabpanel">
+                                <h5 class="mb-4 mt-4">Descripción</h5>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="dropdown-divider"></div>
+                                <h5 class="mb-4 mt-4">Plazo</h5>
+                                <h5 class="mb-4 mt-4">Crédito presupuestario</h5>
+                                <h6 class="mb-4 mt-4">Información 1</h6>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="dropdown-divider"></div>
+                                <h6 class="mb-4 mt-4">Información 2</h6>
+                                <p class="font-size-13 mb-0 mb-3">
+                                  Raw denim you probably haven't heard of them jean shorts Austin.
+                                  Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                  cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                  butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                  qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                  iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                  voluptate nisi qui.Vegan fanny pack
+                                  odio cillum wes anderson 8-bit.
+                                </p>
+                                <div class="boton-accordion mt-4 mb-4">
+                                  <button class="btn-primary">Descargar en PDF</button>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="boton-accordion mt-5">
+                                  <button class="btn-success">Empezar</button>
+                                </div>
+                              </div>
+                              <div class="tab-pane p-3" id="documentacionCli3" role="tabpanel">
+                                <div class="row mt-4">
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                  <div class="col-12 col-md-3 text-center mb-3">   
+                                    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                      <div class="toast-header d-flex justify-content-between">
+                                        <small>25/05/2021 <br>11 mins ago</small>
+                                      </div>
+                                      <div class="toast-body text-center">
+                                        Facturas <br>
+                                        <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                        <div class="dropdown-divider mb-0"></div>
+                                        <p class="text-center mb-0 mt-1">PDF</p>
+                                      </div>
+                                    </div> <!--end toast-->
+                                  </div><!--end col-->
+                                </div>
+                              </div>
+                              <div class="tab-pane p-3" id="importe3" role="tabpanel">
+                                <p class="font-size-13 mb-0">
+                                  Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
+                                  art party before they sold out master cleanse gluten-free squid
+                                  scenester freegan cosby sweater. Fanny pack portland seitan DIY,
+                                  art party locavore wolf cliche high life echo park Austin. Cred
+                                  vinyl keffiyeh DIY salvia PBR, banh mi before they sold out
+                                  farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral,
+                                  mustache readymade thundercats keffiyeh craft beer marfa
+                                  ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                  vegan
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal fade" id="avisoCerrar" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Salir</h5>
+                              <lord-icon
+                                src="assets/json/38-error-cross-simple-outline.json"
+                                trigger="loop-on-hover"
+                                target="a"
+                                colors="primary:#808080;,secondary:#808080;"
+                                style="width:20px; height:20px; cursor: pointer;"
+                                class="btn-close"
+                                data-dismiss="modal"
+                                aria-label="Close">
+                              </lord-icon>
+                            </div>
+                            <div class="modal-body text-center">
+                              <p>Vas a abandonar el proceso pero no te preocupes, podrás retomarlo más tarde desde la sección de Inicio o desde Trámites disponibles en el botón <strong>"Continuar".</strong></p>
+                              <div class="text-center mt-3">
+                                <button class="boton-empezar btn-primary salir-empezar" data-dismiss="modal" aria-label="Close">Salir</button>
+                              </div>
+                            </div>
+                          </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                      </div><!-- /.modal -->
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+          
+          @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/js/pages/procedimientos-disponibles.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      var currentTab = 0; // Current tab is set to be the first tab (0)
+      showTab(currentTab); // Display the current tab
+
+      function showTab(n) {
+        // This function will display the specified tab of the form ...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        // ... and fix the Previous/Next buttons:
+        if (n == 0) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 1)) {
+          document.getElementById("nextBtn").innerHTML = "Enviar";
+        } else {
+          document.getElementById("nextBtn").innerHTML = "Siguiente";
+        }
+        // ... and run a function that displays the correct step indicator:
+        // fixStepIndicator(n)
+      }
+
+      function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1);
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form... :
+        if (currentTab >= x.length) {
+          //...the form gets submitted:
+          document.getElementById("regForm").submit();
+          return false;
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+      }
+      // function fixStepIndicator(n) {
+      //   // This function removes the "active" class of all steps...
+      //   var i, x = document.getElementsByClassName("step");
+      //   for (i = 0; i < x.length; i++) {
+      //     x[i].className = x[i].className.replace(" active", "");
+      //   }
+      //   //... and adds the "active" class to the current step:
+      //   x[n].className += " active";
+      // }
+      $('.salir-empezar').on('click', function(){
+        $('#empezarProc').modal('toggle');
+      });
+      $('.invalido').on('change', function(){
+        if (this.checked) {
+          $('.preg3').css("display", "none");
+          $('.botones-direccion').css("display", "none");
+          $('.preg3-1').css("display", "block");
+          $('.btn-salir').css("display", "block");
+        } else {
+          $('.preg3').css("display", "block");
+          $('.botones-direccion').css("display", "flex");
+          $('.btn-salir').css("display", "none");
+          $('.preg3-1').css("display", "none");
+        }
+      });
+     </script>
+  </body>
+</html>

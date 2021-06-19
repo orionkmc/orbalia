@@ -177,6 +177,20 @@ element.style {
 .boton-etiqueta button {
   padding: .5rem 2rem;
 }
+.boton-accordion {
+  text-align: center;
+}
+.boton-empezar {
+  border-radius: 5px;
+  border-width: 0px;
+  padding: .4rem 1rem;
+}
+.boton-accordion button {
+  padding: .5rem 2rem !important;
+  border-radius: 5px;
+  border-width: 0px;
+  color: #fff !important;
+}
 .custom-file-input:lang(en)~.custom-file-label::after {
   content: "Elegir";
 }
@@ -614,14 +628,6 @@ element.style {
   padding: .5rem !important;
   text-align: center;
 }
-@media (max-width: 425.98px) {
-  .content-slider {
-    margin: 0 .4rem !important;
-  }
-  .radio-preg1 label {
-    font-size: 10px;
-  }
-}
 .preguntas {
   height: 50px;
   border: 1px solid lightgray;
@@ -638,4 +644,32 @@ element.style {
   justify-content: center;
   align-items: center;
   margin-top: .5rem;
+}
+.btn-primary.focus, .btn-primary:focus,
+.btn-success.focus, .btn-success:focus,
+.btn-danger.focus, .btn-danger:focus,
+.btn-warning.focus, .btn-warning:focus    {
+  box-shadow: none !important;
+}
+@media (max-width: 425.98px) {
+  .content-slider {
+    margin: 0 .4rem !important;
+  }
+  .radio-preg1 label {
+    font-size: 10px;
+  }
+}
+.cuadros-preg {
+  display: flex;
+  justify-content: space-around;
+}
+.cuadros-item {
+  padding: .5rem 0.8rem;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.cuadros-preg .active {
+  background-color: #44a2d2;
+  color: #fff;
+  border: 1px solid #44a2d2;
 }
