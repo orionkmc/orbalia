@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/title-meta.html", {"title": "Expediente Interno / Administrador"})
+    
+    @@include("partials/head-css.html")
+  </head>
+
+  <style>
+    .datepicker {
+      z-index: 1060!important;
+    }
+    .presupuesto {
+      display: none;
+    }
+  </style>
+  <body data-topbar="dark">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      @@include("partials/topbar-cliente.html")
+      @@include("partials/sidebarCliente.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#documentacion" role="tab">Documentación</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#miproyecto" role="tab">Mi proyecto</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#misubvencion" role="tab">Mi subvención</a>
+                      </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content mt-4">
+                      <div class="tab-pane active p-3" id="documentacion" role="tabpanel">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="row title-exp-int">
+                              <div class="col-12 col-md-6">
+                                <p><strong>Expediente interno<br>2021/001/001</strong></p>
+                                <h5 style="color:darkgoldenrod">Montando Movidas SL</h5>
+                                <small>PYMES2021</small>
+                              </div>
+                              <div class="col-12 col-md-6 text-center">
+                                <h5 class="contrato-vigente">CONTRATO EXPEDIENTE</h5>
+                                <div class="toast fade show toast-contrato" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <small>25/05/2021 <br>11 mins ago</small>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocCon">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    <div>
+                                      Facturas
+                                    </div>
+                                    <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                    <div class="dropdown-divider mb-0"></div>
+                                    <p class="text-center mb-0 mt-1">PDF</p>
+                                  </div>
+                                </div> <!--end toast-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-5">
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Documentación</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="30" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44a2d2"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Información</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="80" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44d24b"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Mi proyecto</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="30" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#f7c00a"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="row mt-5">
+                          <div class="col-12 col-md-4 offset-md-4">
+                            <div class="card card-borde2">
+                              <div class="card-body text-center">
+                                <h6>Estado</h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-12 col-md-4 offset-md-4">
+                            <div class="card card-borde3">
+                              <div class="card-body text-center">
+                                <h6>Importe concedido</h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <div class="row d-flex align-items-center mt-4">
+                          <div class="col-12 col-md-6">
+                            <h5>DOCUMENTACIÓN GENÉRICA</h5>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="text-right knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="50" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44a2d2"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-4">
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocCon">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                Facturas <br>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
+                            <form>
+                              <div class="form-group row">
+                                <div class="custom-file pl-2 pr-2">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile1">
+                                  <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile1">Subir archivo...</label>
+                                </div>                                                  
+                              </div>
+                            </form>
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocCon">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                Facturas <br>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
+                            <form>
+                              <div class="form-group row">
+                                <div class="custom-file pl-2 pr-2">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile2">
+                                  <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile2">Subir archivo...</label>
+                                </div>                                                  
+                              </div>
+                            </form>
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocCon">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                Facturas <br>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
+                          </div><!--end col-->
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <div class="row d-flex align-items-center mt-4">
+                          <div class="col-12 col-md-6">
+                            <h5>DOCUMENTACIÓN ESPECÍFICA</h5>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="text-right knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="50" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44a2d2"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-4">
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocCon">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                Facturas <br>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
+                            <form>
+                              <div class="form-group row">
+                                <div class="custom-file pl-2 pr-2">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile1">
+                                  <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile1">Subir archivo...</label>
+                                </div>                                                  
+                              </div>
+                            </form>
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocCon">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                Facturas <br>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
+                            <form>
+                              <div class="form-group row">
+                                <div class="custom-file pl-2 pr-2">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile2">
+                                  <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile2">Subir archivo...</label>
+                                </div>                                                  
+                              </div>
+                            </form>
+                          </div><!--end col-->
+                          <div class="col-12 col-md-3 text-center mb-3">   
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                              <div class="toast-header d-flex justify-content-between">
+                                <small>25/05/2021 <br>11 mins ago</small>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocCon">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="toast-body text-center">
+                                Facturas <br>
+                                <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                <div class="dropdown-divider mb-0"></div>
+                                <p class="text-center mb-0 mt-1">PDF</p>
+                              </div>
+                            </div> <!--end toast-->
+                          </div><!--end col-->
+                        </div>
+
+                        <div class="text-center mb-4">
+                          <button class="btn btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirDoc">Añadir otro documento</button>
+                        </div>
+
+                        <div class="modal fade añadirDoc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir otra documentación</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px; cursor: pointer;"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <form>
+                                  <div class="form-group row">
+                                    <div class="custom-file pl-2 pr-2">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile8">
+                                      <label class="custom-file-label text-left" style="margin-left: 12px; margin-right: 12px;" for="inputGroupFile8">Seleccionar archivo...</label>
+                                    </div>                                                  
+                                  </div>
+                                  <div class="boton-etiqueta">
+                                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade eliminarDocCon" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar archivo</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px; cursor: pointer;"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body text-center">
+                                <p>¿Desea eliminar el documento?</p>
+                                <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                <div class="d-flex justify-content-around">
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                  <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                      </div>
+                      <div class="tab-pane p-3" id="miproyecto" role="tabpanel">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="row title-exp-int">
+                              <div class="col-12">
+                                <p><strong>Expediente interno<br>2021/001/001</strong></p>
+                                <h5 style="color:darkgoldenrod">Montando Movidas SL</h5>
+                                <small>PYMES2021</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-5">
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Documentación</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="30" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44a2d2"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Información</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="80" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44d24b"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Mi proyecto</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="30" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#f7c00a"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-5">
+                          <div class="col-12 col-md-4 offset-md-4">
+                            <div class="card card-borde2">
+                              <div class="card-body text-center">
+                                <h6>Estado</h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-12 col-md-4 offset-md-4">
+                            <div class="card card-borde3">
+                              <div class="card-body text-center">
+                                <h6>Importe concedido</h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <div class="row d-flex align-items-center mt-4">
+                          <div class="col-12 col-md-6">
+                            <h5>INFORMACIÓN SOBRE EL PROYECTO</h5>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="text-right knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="100" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44a2d2"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion mb-4" id="accordionExample">
+                          <div class="card mb-0 pt-2 shadow-none">
+                            <div class="card-header" id="headingTwo">
+                              <h5 class="my-0">
+                                <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  Pregunta 1: ¿Tienes empleados?
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                              <div class="card-body font-size-13">
+                                Escriba aquí su respuesta
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-0 pt-2 shadow-none">
+                            <div class="card-header" id="headingTwo">
+                              <h5 class="my-0">
+                                <button class="btn btn-link collapsed ml-3" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Pregunta 2: ¿En qué consiste el proyecto?
+                                </button>
+                              </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                              <div class="card-body font-size-13">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officia quis error porro voluptatibus. Quisquam accusantium ducimus, id consectetur ratione suscipit optio explicabo cupiditate quod magni rerum eaque nesciunt quasi.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <div class="row d-flex align-items-center mt-4">
+                          <div class="col-12 col-md-6">
+                            <h5>DOCUMENTOS PROYECTO</h5>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="text-right knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="20" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44d24b"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-4">
+                          <div class="col-12">
+                            <div class="table-responsive">
+                              <table id="datatable-docProyeCliente-buttons" class="table table-bordered" style="width:100%">
+                                <thead>
+                                  <tr>
+                                    <th>Concepto</th>
+                                    <th>Última fecha</th>
+                                    <th>Código</th>
+                                    <th>Importe</th>
+                                    <th style="width: 200px;">Presupuesto</th>
+                                    <th style="width: 200px;">Factura</th>
+                                    <th style="width: 200px;">Comprobante</th>
+                                    <th>Notas</th>
+                                    <th>Acciones</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Bicicleta</td>
+                                    <td>03/02/2021</td>
+                                    <td>001002556</td>
+                                    <td>1000€</td>
+                                    <td>
+                                      <div class="d-flex">
+                                        <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                          <div class="toast-header d-flex justify-content-between">
+                                            <small>C</small>
+                                            <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoSoc">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="dropdown-divider m-0"></div>
+                                          <div class="text-center">
+                                            <lord-icon
+                                              src="assets/json/78-document-PDF-outline.json"
+                                              trigger="loop-on-hover"
+                                              target="a"
+                                              colors="primary:#707070;,secondary:#707070;"
+                                              style="width: 30px; height: 30px;">
+                                            </lord-icon>
+                                            PDF
+                                          </div>
+                                          <div class="text-center">
+                                            <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
+                                              <a data-toggle="tooltip" data-placement="top" title="Validar">
+                                                <lord-icon
+                                                  src="assets/json/37-approve-checked-simple-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000;,secondary:#000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div> <!--end toast--> 
+                                        <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                          <div class="toast-header d-flex justify-content-between">
+                                            <small>C</small>
+                                            <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoSoc">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="dropdown-divider m-0"></div>
+                                          <div class="text-center">
+                                            <lord-icon
+                                              src="assets/json/78-document-PDF-outline.json"
+                                              trigger="loop-on-hover"
+                                              target="a"
+                                              colors="primary:#707070;,secondary:#707070;"
+                                              style="width: 30px; height: 30px;">
+                                            </lord-icon>
+                                            PDF
+                                          </div>
+                                          <div class="text-center">
+                                            <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
+                                              <a data-toggle="tooltip" data-placement="top" title="La factura está a nombre distinto del beneficiario">
+                                                <lord-icon
+                                                  src="assets/json/425-exclamation-mark-bubble-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000;,secondary:#000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div> <!--end toast-->
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="d-flex">
+                                        <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                          <div class="toast-header d-flex justify-content-between">
+                                            <small>C</small>
+                                            <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoSoc">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="dropdown-divider m-0"></div>
+                                          <div class="text-center">
+                                            <lord-icon
+                                              src="assets/json/78-document-PDF-outline.json"
+                                              trigger="loop-on-hover"
+                                              target="a"
+                                              colors="primary:#707070;,secondary:#707070;"
+                                              style="width: 30px; height: 30px;">
+                                            </lord-icon>
+                                            PDF
+                                          </div>
+                                          <div class="text-center">
+                                            <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
+                                              <a data-toggle="tooltip" data-placement="top" title="Validar">
+                                                <lord-icon
+                                                  src="assets/json/37-approve-checked-simple-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000;,secondary:#000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div> <!--end toast--> 
+                                        <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                          <div class="toast-header d-flex justify-content-between">
+                                            <small>C</small>
+                                            <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoSoc">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="dropdown-divider m-0"></div>
+                                          <div class="text-center">
+                                            <lord-icon
+                                              src="assets/json/78-document-PDF-outline.json"
+                                              trigger="loop-on-hover"
+                                              target="a"
+                                              colors="primary:#707070;,secondary:#707070;"
+                                              style="width: 30px; height: 30px;">
+                                            </lord-icon>
+                                            PDF
+                                          </div>
+                                          <div class="text-center">
+                                            <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
+                                              <a data-toggle="tooltip" data-placement="top" title="La factura está a nombre distinto del beneficiario">
+                                                <lord-icon
+                                                  src="assets/json/425-exclamation-mark-bubble-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000;,secondary:#000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div> <!--end toast-->
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="d-flex">
+                                        <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                          <div class="toast-header d-flex justify-content-between">
+                                            <small>C</small>
+                                            <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoSoc">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="dropdown-divider m-0"></div>
+                                          <div class="text-center">
+                                            <lord-icon
+                                              src="assets/json/78-document-PDF-outline.json"
+                                              trigger="loop-on-hover"
+                                              target="a"
+                                              colors="primary:#707070;,secondary:#707070;"
+                                              style="width: 30px; height: 30px;">
+                                            </lord-icon>
+                                            PDF
+                                          </div>
+                                          <div class="text-center">
+                                            <button class="btn btn-sm btn-outline-success btn-acciones-iconos" type="button">
+                                              <a data-toggle="tooltip" data-placement="top" title="Validar">
+                                                <lord-icon
+                                                  src="assets/json/37-approve-checked-simple-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000;,secondary:#000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div> <!--end toast--> 
+                                        <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                          <div class="toast-header d-flex justify-content-between">
+                                            <small>C</small>
+                                            <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarArchivoSoc">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="dropdown-divider m-0"></div>
+                                          <div class="text-center">
+                                            <lord-icon
+                                              src="assets/json/78-document-PDF-outline.json"
+                                              trigger="loop-on-hover"
+                                              target="a"
+                                              colors="primary:#707070;,secondary:#707070;"
+                                              style="width: 30px; height: 30px;">
+                                            </lord-icon>
+                                            PDF
+                                          </div>
+                                          <div class="text-center">
+                                            <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
+                                              <a data-toggle="tooltip" data-placement="top" title="La factura está a nombre distinto del beneficiario">
+                                                <lord-icon
+                                                  src="assets/json/425-exclamation-mark-bubble-outline.json"
+                                                  trigger="loop-on-hover"
+                                                  target="a"
+                                                  colors="primary:#000;,secondary:#000;"
+                                                  style="width:20px; height:20px;">
+                                                </lord-icon>
+                                              </a>
+                                            </button>
+                                          </div>
+                                        </div> <!--end toast-->
+                                      </div>
+                                    </td>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                    <td class="centrar-boton">
+                                      <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button" data-dismiss="toast" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".eliminarDocProy">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                          <lord-icon
+                                            src="assets/json/185-trash-bin-outline.json"
+                                            trigger="loop-on-hover"
+                                            target="a"
+                                            colors="primary:#000000;,secondary:#000000;"
+                                            style="width:20px; height:20px;">
+                                          </lord-icon>
+                                        </a>
+                                      </button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="boton-etiqueta mt-3 mb-3" data-toggle="modal" data-animation="bounce" data-target=".añadirConcepto">
+                              <button class="btn btn-sm btn-primary">Añadir concepto</button>
+                            </div>
+
+                            <div class="modal fade eliminarDocProy" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Eliminar archivo</h5>
+                                    <lord-icon
+                                      src="assets/json/38-error-cross-simple-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#808080;,secondary:#808080;"
+                                      style="width:20px; height:20px; cursor: pointer;"
+                                      class="btn-close"
+                                      data-dismiss="modal"
+                                      aria-label="Close">
+                                    </lord-icon>
+                                  </div>
+                                  <div class="modal-body text-center">
+                                    <p>¿Desea eliminar el documento?</p>
+                                    <p>Su rol <strong>SI</strong> permite la eliminación directa</p>
+                                    <div class="d-flex justify-content-around">
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Aceptar</button>
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                    </div>
+                                  </div>
+                                </div><!-- /.modal-content -->
+                              </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
+
+                            <div class="modal fade añadirConcepto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Añadir concepto</h5>
+                                    <lord-icon
+                                      src="assets/json/38-error-cross-simple-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#808080;,secondary:#808080;"
+                                      style="width:20px; height:20px; cursor: pointer;"
+                                      class="btn-close"
+                                      data-dismiss="modal"
+                                      aria-label="Close">
+                                    </lord-icon>
+                                  </div>
+                                  <div class="modal-body text-center">
+                                    <form>
+                                      <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile7">
+                                        <label class="custom-file-label text-left" for="inputGroupFile7">Subir archivo...</label>
+                                      </div>   
+                                      <div class="form-group mt-2">
+                                        <input class="form-control" type="text" placeholder="Tipo de documento">                                                       
+                                      </div>
+                                      <div class="form-group">
+                                        <div>
+                                          <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Fecha de factura o presupuesto" id="datepicker1">
+                                            <div class="input-group-append bg-custom b-0"><span class="input-group-text"><i class="mdi mdi-calendar"></i></span></div>
+                                          </div><!-- input-group -->
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Número de factura o presupuesto">                                                       
+                                      </div>
+                                      <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Total de factura">                                                       
+                                      </div>
+                                      <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Proveedor">                                                       
+                                      </div>
+                                      <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Concepto">                                                       
+                                      </div>
+                                      <div class="custom-control custom-checkbox my-3 text-left">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Este presupuesto es comparativo</label>
+                                      </div>
+                                      <div class="form-group">
+                                        <textarea class="form-control" id="exampleFormControlTextarea8" rows="4" placeholder="Notas adicionales"></textarea>
+                                      </div>
+                                    </form>
+                                    <div class="text-center">
+                                      <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                                    </div>
+                                  </div>
+                                </div><!-- /.modal-content -->
+                              </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
+                          </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <h5 class="mt-4 mb-4">RESUMEN DE MI PROYECTO</h5>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="table-responsive">
+                              <table id="datatable-ResProyeCliente-buttons" class="table table-bordered" style="width:100%">
+                                <thead>
+                                  <tr>
+                                    <th>Concepto</th>
+                                    <th>Proyecto</th>
+                                    <th>Total facturado</th>
+                                    <th>Pendiente a facturar</th>
+                                    <th>Importes pagados</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Bicicleta</td>
+                                    <td>03/02/2021</td>
+                                    <td>001002556</td>
+                                    <td>1000€</td>
+                                    <td>1000€</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Bicicleta</td>
+                                    <td>03/02/2021</td>
+                                    <td>828471999</td>
+                                    <td>1200€</td>
+                                    <td>1300€</td>
+                                  </tr>
+                                  <tr>
+                                    <td><strong>Totales</strong></td>
+                                    <td><strong>03/02/2021</strong></td>
+                                    <td><strong>828471999</strong></td>
+                                    <td><strong>1200€</strong></td>
+                                    <td><strong>1300€</strong></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane p-3" id="misubvencion" role="tabpanel">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="row title-exp-int">
+                              <div class="col-12">
+                                <p><strong>Expediente interno<br>2021/001/001</strong></p>
+                                <h5 style="color:darkgoldenrod">Montando Movidas SL</h5>
+                                <small>PYMES2021</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-5">
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Documentación</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="30" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44a2d2"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Información</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="80" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#44d24b"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-4 mt-4">
+                            <h4 class="text-center">Mi proyecto</h4>
+                            <div class="text-center knob-Prosess mt-4 mt-sm-0" dir="ltr">
+                              <input class="knob animated" value="0" rel="30" data-width="120" data-height="120" data-linecap=round
+                              data-fgColor="#f7c00a"  data-skin="tron" data-angleOffset="180"
+                              data-readOnly=true data-thickness=".1"/>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-5">
+                          <div class="col-12 col-md-4 offset-md-4">
+                            <div class="card card-borde2">
+                              <div class="card-body text-center">
+                                <h6>Estado</h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-12 col-md-4 offset-md-4">
+                            <div class="card card-borde3">
+                              <div class="card-body text-center">
+                                <h6>Importe concedido</h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#infBasica" role="tab">Información básica</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#docum" role="tab">Documentación</a>
+                          </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane active p-3" id="infBasica" role="tabpanel">
+                            <h5 class="mb-4 mt-4">Descripción</h5>
+                            <p class="font-size-13 mb-0 mb-3">
+                              Raw denim you probably haven't heard of them jean shorts Austin.
+                              Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                              cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                              butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                              qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                              iphone. Seitan aliquip quis cardigan american apparel, butcher
+                              voluptate nisi qui.Vegan fanny pack
+                              odio cillum wes anderson 8-bit.
+                            </p>
+                            <div class="dropdown-divider"></div>
+                            <h5 class="mb-4 mt-4">Plazo</h5>
+                            <h5 class="mb-4 mt-4">Crédito presupuestario</h5>
+                            <h6 class="mb-4 mt-4">Información 1</h6>
+                            <p class="font-size-13 mb-0 mb-3">
+                              Raw denim you probably haven't heard of them jean shorts Austin.
+                              Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                              cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                              butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                              qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                              iphone. Seitan aliquip quis cardigan american apparel, butcher
+                              voluptate nisi qui.Vegan fanny pack
+                              odio cillum wes anderson 8-bit.
+                            </p>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="mb-4 mt-4">Información 2</h6>
+                            <p class="font-size-13 mb-0 mb-3">
+                              Raw denim you probably haven't heard of them jean shorts Austin.
+                              Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                              cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                              butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                              qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                              iphone. Seitan aliquip quis cardigan american apparel, butcher
+                              voluptate nisi qui.Vegan fanny pack
+                              odio cillum wes anderson 8-bit.
+                            </p>
+                          </div>
+                          <div class="tab-pane p-3" id="docum" role="tabpanel">
+                            <div class="row mt-4">
+                              <div class="col-12 col-md-3 text-center mb-3">   
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <small>25/05/2021 <br>11 mins ago</small>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Facturas <br>
+                                    <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                    <div class="dropdown-divider mb-0"></div>
+                                    <p class="text-center mb-0 mt-1">PDF</p>
+                                  </div>
+                                </div> <!--end toast-->
+                              </div><!--end col-->
+                              <div class="col-12 col-md-3 text-center mb-3">   
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <small>25/05/2021 <br>11 mins ago</small>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Facturas <br>
+                                    <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                    <div class="dropdown-divider mb-0"></div>
+                                    <p class="text-center mb-0 mt-1">PDF</p>
+                                  </div>
+                                </div> <!--end toast-->
+                              </div><!--end col-->
+                              <div class="col-12 col-md-3 text-center mb-3">   
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="toast-header d-flex justify-content-between">
+                                    <small>25/05/2021 <br>11 mins ago</small>
+                                  </div>
+                                  <div class="toast-body text-center">
+                                    Facturas <br>
+                                    <img src="assets/images/pdf.png" alt="doc" style="width: 50%; margin: 0.3rem 0;">
+                                    <div class="dropdown-divider mb-0"></div>
+                                    <p class="text-center mb-0 mt-1">PDF</p>
+                                  </div>
+                                </div> <!--end toast-->
+                                <div class="text-center">
+                                  <button class="btn btn-sm btn-outline-danger btn-acciones-iconos" type="button">
+                                    <a data-toggle="tooltip" data-placement="top" title="Un documento nuevo ha sido subido al procedimiento">
+                                      <lord-icon
+                                        src="assets/json/425-exclamation-mark-bubble-outline.json"
+                                        trigger="loop-on-hover"
+                                        target="a"
+                                        colors="primary:#000;,secondary:#000;"
+                                        style="width:20px; height:20px;">
+                                      </lord-icon>
+                                    </a>
+                                  </button>
+                                </div>
+                              </div><!--end col-->
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/jquery-knob/jquery.knob.min.js"></script>
+
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!--Datepicker-->
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/expedientes-cliente.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+  </body>
+</html>

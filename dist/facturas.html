@@ -397,195 +397,86 @@
         <div class="page-content">
           <div class="container-fluid">
 
-            <div class="row">                                                
-              <div class="col-12 col-sm-8">
-                <div class="card" style="height: 90%;">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-borde">
                   <div class="card-body">
-                    <h5 class="card-title">Mis trámites abiertos</h5>
+                    <h5 class="card-title mb-5">Mis facturas</h5>
+                    <h5 class="card-title">Pendientes</h5>
                     <div class="table-responsive">
-                      <table id="datatable-tramites-clie-buttons" class="table table-bordered" style="width:100%">
+                      <table id="datatable-facturasPend-clie-buttons" class="table table-bordered" style="width:100%">
                         <thead>
                           <tr>
-                            <th>Nombre</th>
+                            <th>Factura</th>
+                            <th>Fecha factura</th>
+                            <th>Estado</th>
+                            <th>Procedimiento</th>
+                            <th>Expediente</th>
+                            <th>Total factura</th>
+                            <th>Método de pago</th>
+                            <th>Factura</th>
+                            <th>Otros</th>
+                            <th>Justificantes</th>
                             <th>Acciones</th>
                           </tr>
                         </thead>
-
                         <tbody>
                           <tr>
-                            <td>PYMES</td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver más">
-                                  <lord-icon
-                                    src="assets/json/69-eye-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#000000;,secondary:#000000;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
+                            <td>Factura 21/2021</td>
+                            <td>22/05/2021</td>
+                            <td><span class="badge badge-boxed badge-warning">Pendiente</span></td>
+                            <td>PYMES2021</td>
+                            <td>EXP001/2021</td>
+                            <td>1.687,14€</td>
+                            <td><span class="badge badge-boxed badge-warning">Pendiente</span></td>
                             <td>
-                              ORBALIA
-                            </td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver más">
-                                  <lord-icon
-                                    src="assets/json/69-eye-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#000000;,secondary:#000000;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>PYMES</td>
-                            <td class="centrar-boton">
-                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button">
-                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Ver más">
-                                  <lord-icon
-                                    src="assets/json/69-eye-outline.json"
-                                    trigger="loop-on-hover"
-                                    target="a"
-                                    colors="primary:#000000;,secondary:#000000;"
-                                    style="width:20px; height:20px;">
-                                  </lord-icon>
-                                </a>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-4">
-                <div class="card" style="height: 90%;">                                       
-                  <div class="card-body"> 
-                    <h5 class="card-title mb-3">Notificaciones</h5>
-                    <div class="activity">
-                      <i class="mdi mdi-check text-primary"></i>
-                      <div class="time-item">
-                        <div class="item-info">
-                          <div class="text-muted float-right font-size-10 mt-1 mr-2">
-                            <p class="mb-0">15 mins ago</p>
-                            <p class="mb-0">
-                              <a href="perfil-cliente.html">Continuar</a>
-                            </p>
-                          </div>
-                          <h5 class="mt-0 mb-1">Completa tu perfil</h5>
-                          <p class="text-muted font-size-13 mb-0">Termina de completar tu perfil.</p>
-                          <p class="text-muted font-size-13 mb-0">30/100%</p>
-                        </div>
-                      </div>
-                      <img src="assets/images/users/user-8.jpg" alt="" class="img-activity">                                                                                                            
-                      <div class="time-item">
-                        <div class="item-info">
-                          <div class="text-muted float-right font-size-10 mt-1 mr-2">
-                            <p class="mb-0">25 mins ago</p>
-                            <p class="mb-0">
-                              <a href="" data-toggle="modal" data-animation="bounce" data-target=".notificaciones">Leída</a>
-                            </p>
-                          </div>
-                          <h5 class="mt-0 mb-1">Task finished</h5>
-                          <p class="text-muted font-size-13">There are many variations of passages of Lorem Ipsum available.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>                                        
-                </div>
-              </div> 
-              <!-- end col -->                                  
-            </div>
-              
-            <div class="modal fade notificaciones" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Notificaciones</h5>
-                    <lord-icon
-                      src="assets/json/38-error-cross-simple-outline.json"
-                      trigger="loop-on-hover"
-                      target="a"
-                      colors="primary:#808080;,secondary:#808080;"
-                      style="width:20px; height:20px; cursor: pointer;"
-                      class="btn-close"
-                      data-dismiss="modal"
-                      aria-label="Close">
-                    </lord-icon>
-                  </div>
-                  <div class="modal-body text-center">
-                    <p>
-                      ¿Deseas marcar como leída la notificación?
-                    </p>
-                    <button type="button" class="btn btn-sm btn-primary btn-modal confirmar" data-dismiss="modal" aria-label="Close">Sí</button>
-                    <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">No</button>
-                  </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Trámites disponibles</h5>
-                    <div class="table-responsive">
-                      <table id="datatable-tramitesDisp-clie-buttons" class="table table-bordered" style="width:100%">
-                        <thead>
-                          <tr>
-                            <th>Project Name</th>
-                            <th>Client Name</th>
-                            <th>Start Date</th>
-                            <th>Deadline</th>
-                            <th>Status</th>
-                            <th>Progress</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Product Devlopment</td>
-                            <td>
-                              <img src="assets/images/users/user-2.jpg" alt="" class="avatar-xs rounded-circle mr-2">
-                                  Kevin J. Heal
-                            </td>
-                            <td>20/3/2018</td>
-                            <td>5/5/2018</td>
-                            <td><span class="badge badge-boxed  badge-primary">Active</span></td>
-                            <td>
-                              <small class="float-right ml-2 pt-1 font-size-12">92%</small>
-                              <div class="progress mt-2" style="height:5px;">
-                              <div class="progress-bar bg-primary" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                              <div class="d-flex">
+                                <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast--> 
                               </div>
                             </td>
-                          </tr>
-                          <tr>
-                            <td>New Office Building</td>
-                            <td>
-                              <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle mr-2">
-                                Frank M. Lyons
+                            <td></td>
+                            <td class="text-center">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button" data-toggle="modal" data-animation="bounce" data-target=".subirJustificante">
+                                <a data-toggle="tooltip" data-placement="top" title="Subir justificante">
+                                  <lord-icon
+                                    src="assets/json/92-document-upload-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
                             </td>
-                            <td>11/6/2018</td>
-                            <td>15/7/2018</td>
                             <td>
-                              <span class="badge badge-boxed  badge-warning">
-                                <a ></a>Panding
-                              </span>
-                            </td>
-                            <td>
-                              <small class="float-right ml-2 pt-1 font-size-12">0%</small>
-                              <div class="progress mt-2" style="height:5px;">
-                              <div class="progress-bar  bg-warning" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button" data-toggle="modal" data-animation="bounce" data-target=".pagarOnline">
+                                <a data-toggle="tooltip" data-placement="top" title="Pagar online">
+                                  <lord-icon
+                                    src="assets/json/298-coins-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-acciones-iconos mb-1" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Elige el método de pago">
+                                  <i class="icon_help far fa-question-circle" style="font-size: 15px;"></i>
+                                </a>
+                              </button>
                             </td>
                           </tr>
                         </tbody>
@@ -595,6 +486,278 @@
                 </div>
               </div>
               <!-- end col -->
+
+              <div class="modal fade subirJustificante" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Subir justificante</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <form>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile8">
+                          <label class="custom-file-label text-left" for="inputGroupFile8">Subir archivo...</label>
+                        </div>   
+                      </form>
+                      <div class="text-center mt-4">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade pagarOnline" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Pagar online</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>Elija el método de pago</p> 
+                      <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".tranfBancaria">Transferencia bancaria</button>
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close">Tarjeta</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade tranfBancaria" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Pagar online</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>Para completar el pago de su factura, siga estos pasos:</p>
+                      <p>1.- Realizar la transferencia</p>
+                      <p>Importe: XXX€</p>
+                      <p>IBAN: ES22 2222 2222 2222 2222</p>
+                      <p>Nombre beneficiario: Orbalia Consulting SL</p>
+                      <p>COncepto: Pago factura 21/2021</p>
+                      <p>2.- Subir el justificante de pago en la sección de Facturas de su perfil o enviarlo por correo electrónico a subvenciones@orbalia.es</p>
+                      <div class="text-center">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".tranfBancaria">Transferencia bancaria</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <h5 class="card-title mb-5">Mis facturas</h5>
+                    <h5 class="card-title">Pendientes</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-facturasPag-clie-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Factura</th>
+                            <th>Fecha factura</th>
+                            <th>Estado</th>
+                            <th>Procedimiento</th>
+                            <th>Expediente</th>
+                            <th>Total factura</th>
+                            <th>Método de pago</th>
+                            <th>Factura</th>
+                            <th>Otros</th>
+                            <th>Justificantes</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Factura 21/2021</td>
+                            <td>22/05/2021</td>
+                            <td><span class="badge badge-boxed badge-warning">Pendiente</span></td>
+                            <td>PYMES2021</td>
+                            <td>EXP001/2021</td>
+                            <td>1.687,14€</td>
+                            <td><span class="badge badge-boxed badge-warning">Pendiente</span></td>
+                            <td>
+                              <div class="d-flex">
+                                <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast--> 
+                              </div>
+                            </td>
+                            <td></td>
+                            <td class="text-center">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button" data-toggle="modal" data-animation="bounce" data-target=".subirJustificante">
+                                <a data-toggle="tooltip" data-placement="top" title="Subir justificante">
+                                  <lord-icon
+                                    src="assets/json/92-document-upload-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button" data-toggle="modal" data-animation="bounce" data-target=".pagarOnline">
+                                <a data-toggle="tooltip" data-placement="top" title="Pagar online">
+                                  <lord-icon
+                                    src="assets/json/298-coins-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-acciones-iconos mb-1" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Elige el método de pago">
+                                  <i class="icon_help far fa-question-circle" style="font-size: 15px;"></i>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+
+              <div class="modal fade subirJustificante" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Subir justificante</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <form>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile8">
+                          <label class="custom-file-label text-left" for="inputGroupFile8">Subir archivo...</label>
+                        </div>   
+                      </form>
+                      <div class="text-center mt-4">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade pagarOnline" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Pagar online</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>Elija el método de pago</p> 
+                      <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".tranfBancaria">Transferencia bancaria</button>
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close">Tarjeta</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade tranfBancaria" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Pagar online</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>Para completar el pago de su factura, siga estos pasos:</p>
+                      <p>1.- Realizar la transferencia</p>
+                      <p>Importe: XXX€</p>
+                      <p>IBAN: ES22 2222 2222 2222 2222</p>
+                      <p>Nombre beneficiario: Orbalia Consulting SL</p>
+                      <p>COncepto: Pago factura 21/2021</p>
+                      <p>2.- Subir el justificante de pago en la sección de Facturas de su perfil o enviarlo por correo electrónico a subvenciones@orbalia.es</p>
+                      <div class="text-center">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".tranfBancaria">Transferencia bancaria</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
             </div>
             <!-- end row -->
 
@@ -647,13 +810,8 @@
     <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
-    <script src="assets/js/pages/index-cliente.init.js"></script>
+    <script src="assets/js/pages/facturas.init.js"></script>
     <script src="assets/js/app.js"></script>
-    <script>
-      $('.confirmar').click(function() {
-          $('.time-item').css("background-color", "#fff");
-        });
-    </script>
 
   </body>
 </html>

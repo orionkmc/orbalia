@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+      
+    @@include("partials/title-meta.html", {"title": "Inicio / Cliente"})
+
+    @@include("partials/head-css.html")
+
+  </head>
+
+  <body data-topbar="dark">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+      @@include("partials/topbar-cliente.html")
+
+      @@include("partials/sidebarCliente.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+
+        <div class="page-content">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <h5 class="card-title mb-5">Mis facturas</h5>
+                    <h5 class="card-title">Pendientes</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-facturasPend-clie-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Factura</th>
+                            <th>Fecha factura</th>
+                            <th>Estado</th>
+                            <th>Procedimiento</th>
+                            <th>Expediente</th>
+                            <th>Total factura</th>
+                            <th>Método de pago</th>
+                            <th>Factura</th>
+                            <th>Otros</th>
+                            <th>Justificantes</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Factura 21/2021</td>
+                            <td>22/05/2021</td>
+                            <td><span class="badge badge-boxed badge-warning">Pendiente</span></td>
+                            <td>PYMES2021</td>
+                            <td>EXP001/2021</td>
+                            <td>1.687,14€</td>
+                            <td><span class="badge badge-boxed badge-warning">Pendiente</span></td>
+                            <td>
+                              <div class="d-flex">
+                                <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast--> 
+                              </div>
+                            </td>
+                            <td></td>
+                            <td class="text-center">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button" data-toggle="modal" data-animation="bounce" data-target=".subirJustificante">
+                                <a data-toggle="tooltip" data-placement="top" title="Subir justificante">
+                                  <lord-icon
+                                    src="assets/json/92-document-upload-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button" data-toggle="modal" data-animation="bounce" data-target=".pagarOnline">
+                                <a data-toggle="tooltip" data-placement="top" title="Pagar online">
+                                  <lord-icon
+                                    src="assets/json/298-coins-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-acciones-iconos mb-1" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Elige el método de pago">
+                                  <i class="icon_help far fa-question-circle" style="font-size: 15px;"></i>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+
+              <div class="modal fade subirJustificante" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Subir justificante</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <form>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile8">
+                          <label class="custom-file-label text-left" for="inputGroupFile8">Subir archivo...</label>
+                        </div>   
+                      </form>
+                      <div class="text-center mt-4">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade pagarOnline" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Pagar online</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>Elija el método de pago</p> 
+                      <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".tranfBancaria">Transferencia bancaria</button>
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close">Tarjeta</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade tranfBancaria" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Pagar online</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>Para completar el pago de su factura, siga estos pasos:</p>
+                      <p>1.- Realizar la transferencia</p>
+                      <p>Importe: XXX€</p>
+                      <p>IBAN: ES22 2222 2222 2222 2222</p>
+                      <p>Nombre beneficiario: Orbalia Consulting SL</p>
+                      <p>COncepto: Pago factura 21/2021</p>
+                      <p>2.- Subir el justificante de pago en la sección de Facturas de su perfil o enviarlo por correo electrónico a subvenciones@orbalia.es</p>
+                      <div class="text-center">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".tranfBancaria">Transferencia bancaria</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <h5 class="card-title mb-5">Mis facturas</h5>
+                    <h5 class="card-title">Pendientes</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-facturasPag-clie-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Factura</th>
+                            <th>Fecha factura</th>
+                            <th>Estado</th>
+                            <th>Procedimiento</th>
+                            <th>Expediente</th>
+                            <th>Total factura</th>
+                            <th>Método de pago</th>
+                            <th>Factura</th>
+                            <th>Otros</th>
+                            <th>Justificantes</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Factura 21/2021</td>
+                            <td>22/05/2021</td>
+                            <td><span class="badge badge-boxed badge-warning">Pendiente</span></td>
+                            <td>PYMES2021</td>
+                            <td>EXP001/2021</td>
+                            <td>1.687,14€</td>
+                            <td><span class="badge badge-boxed badge-warning">Pendiente</span></td>
+                            <td>
+                              <div class="d-flex">
+                                <div class="toast fade show mr-1 mb-0" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast">
+                                  <div class="dropdown-divider m-0"></div>
+                                  <div class="text-center">
+                                    <lord-icon
+                                      src="assets/json/78-document-PDF-outline.json"
+                                      trigger="loop-on-hover"
+                                      target="a"
+                                      colors="primary:#707070;,secondary:#707070;"
+                                      style="width: 30px; height: 30px;">
+                                    </lord-icon>
+                                    PDF
+                                  </div>
+                                </div> <!--end toast--> 
+                              </div>
+                            </td>
+                            <td></td>
+                            <td class="text-center">
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button" data-toggle="modal" data-animation="bounce" data-target=".subirJustificante">
+                                <a data-toggle="tooltip" data-placement="top" title="Subir justificante">
+                                  <lord-icon
+                                    src="assets/json/92-document-upload-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                            </td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button" data-toggle="modal" data-animation="bounce" data-target=".pagarOnline">
+                                <a data-toggle="tooltip" data-placement="top" title="Pagar online">
+                                  <lord-icon
+                                    src="assets/json/298-coins-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-acciones-iconos mb-1" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Elige el método de pago">
+                                  <i class="icon_help far fa-question-circle" style="font-size: 15px;"></i>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+
+              <div class="modal fade subirJustificante" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Subir justificante</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <form>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile8">
+                          <label class="custom-file-label text-left" for="inputGroupFile8">Subir archivo...</label>
+                        </div>   
+                      </form>
+                      <div class="text-center mt-4">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Subir</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade pagarOnline" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Pagar online</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>Elija el método de pago</p> 
+                      <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-animation="bounce" data-target=".tranfBancaria">Transferencia bancaria</button>
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close">Tarjeta</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade tranfBancaria" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Pagar online</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body text-center">
+                      <p>Para completar el pago de su factura, siga estos pasos:</p>
+                      <p>1.- Realizar la transferencia</p>
+                      <p>Importe: XXX€</p>
+                      <p>IBAN: ES22 2222 2222 2222 2222</p>
+                      <p>Nombre beneficiario: Orbalia Consulting SL</p>
+                      <p>COncepto: Pago factura 21/2021</p>
+                      <p>2.- Subir el justificante de pago en la sección de Facturas de su perfil o enviarlo por correo electrónico a subvenciones@orbalia.es</p>
+                      <div class="text-center">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".tranfBancaria">Transferencia bancaria</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div>
+            <!-- end row -->
+
+          </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+          
+          @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/js/pages/facturas.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+      
+    @@include("partials/title-meta.html", {"title": "Inicio / Cliente"})
+
+    @@include("partials/head-css.html")
+
+  </head>
+
+  <body data-topbar="dark">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+      @@include("partials/topbar-cliente.html")
+
+      @@include("partials/sidebarCliente.html")
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+
+        <div class="page-content">
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <h5 class="card-title mb-5">Mis procedimientos</h5>
+                    <h5 class="card-title">Abiertos</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-misProc-clie-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Project Name</th>
+                            <th>Status</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Product Devlopment</td>
+                            <td><span class="badge badge-boxed badge-primary">Solicitada</span></td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button">
+                                <a href="expedientes-cliente.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-acciones-iconos mb-1" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Tienes avisos pendientes">
+                                  <i class="icon_help far fa-question-circle" style="font-size: 15px;"></i>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>New Office Building</td>
+                            <td><span class="badge badge-boxed  badge-success">Concedida</span></td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button">
+                                <a href="expedientes-cliente.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-acciones-iconos mb-1" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Tienes avisos pendientes">
+                                  <i class="icon_help far fa-question-circle" style="font-size: 15px;"></i>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-borde2">
+                  <div class="card-body">
+                    <h5 class="card-title">Finalizados</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-final-clie-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Project Name</th>
+                            <th>Status</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Product Devlopment</td>
+                            <td><span class="badge badge-boxed badge-success">Concedida</span></td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button">
+                                <a href="expedientes-cliente.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-acciones-iconos mb-1" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Tienes avisos pendientes">
+                                  <i class="icon_help far fa-question-circle" style="font-size: 15px;"></i>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>New Office Building</td>
+                            <td><span class="badge badge-boxed  badge-warning">Desestimada</span></td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-primary btn-acciones-iconos mb-1 ml-2" type="button">
+                                <a href="expedientes-cliente.html" data-toggle="tooltip" data-placement="top" title="Ver">
+                                  <lord-icon
+                                    src="assets/json/69-eye-outline.json"
+                                    trigger="loop-on-hover"
+                                    target="a"
+                                    colors="primary:#000000;,secondary:#000000;"
+                                    style="width:20px; height:20px;">
+                                  </lord-icon>
+                                </a>
+                              </button>
+                              <button class="btn btn-sm btn-acciones-iconos mb-1" type="button">
+                                <a href="javascript: void(0);" data-toggle="tooltip" data-placement="top" title="Tienes avisos pendientes">
+                                  <i class="icon_help far fa-question-circle" style="font-size: 15px;"></i>
+                                </a>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+          </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+          
+          @@include("partials/footer.html")
+      </div>
+      <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/js/pages/mis-procedimientos.init.js"></script>
+    <script src="assets/js/app.js"></script>
+
+  </body>
+</html>
