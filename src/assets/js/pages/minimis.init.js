@@ -58,6 +58,11 @@ $(document).ready(function () {
     .buttons()
     .container()
     .appendTo("#datatable-minimisTabla-clie-buttons_wrapper .col-md-6:eq(0)");
+  $("#datatable-marcoTabla-clie-buttons")
+    .DataTable(context1)
+    .buttons()
+    .container()
+    .appendTo("#datatable-marcoTabla-clie-buttons_wrapper .col-md-6:eq(0)");
   $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
     $($.fn.dataTable.tables(true))
       .DataTable()
@@ -65,3 +70,6 @@ $(document).ready(function () {
       .responsive.recalc();
   });
 });
+
+$("#datepicker1").datepicker();
+$("#datepicker2").datepicker();

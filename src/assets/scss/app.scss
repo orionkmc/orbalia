@@ -265,11 +265,23 @@ element.style {
   border: 5px solid transparent;
   height: 100%;
 }
+.boton-externo {
+  margin-top: .7rem;
+  padding: 0.3rem;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: .7rem;
+}
 .checkeable input {
   display: none;
 }
-.checkeable input:checked  + img {
+.checkeable input:checked  + img,
+.checkeable input:checked  + .boton-externo {
   border-color:#44a2d2;
+}
+.checkeable input:checked  + .boton-externo {
+  background-color:#0acf97;
+  color: white;
 }
 .buscador {
   width: 50%;
@@ -672,4 +684,9 @@ element.style {
   background-color: #44a2d2;
   color: #fff;
   border: 1px solid #44a2d2;
+}
+.navbar-brand-box {
+  padding: 0 1.5rem;
+  text-align: left !important;
+  width: 240px;
 }

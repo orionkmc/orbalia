@@ -46,6 +46,21 @@
     .datepicker {
       z-index: 1060!important;
     }
+    .cambiar-foto {
+      display: none;
+      transition: all 0.5s;
+    }
+    .img-box img {
+      cursor: pointer;
+      opacity: 1;
+      transition: all 0.5s;
+    }
+    .img-box:hover .cambiar-foto {
+      display: block;
+    }
+    .img-box:hover img {
+      opacity: 0.5;
+    }
   </style>
   <body data-topbar="dark">
     <!-- Begin page -->
@@ -284,7 +299,7 @@
           </a>
         </li>
         <li>
-          <a href="javascript: void(0);" class="has-arrow arrow waves-effect">
+          <a href="usuarios.html" class="waves-effect">
             <lord-icon
               src="assets/json/268-avatar-man-outline.json"
               trigger="loop-on-hover"
@@ -294,44 +309,6 @@
             </lord-icon>
             <span>Usuarios</span>
           </a>
-          <ul class="sub-menu" aria-expanded="false">
-            <li>
-              <a href="usuarios.html">
-                <lord-icon
-                  src="assets/json/268-avatar-man-outline.json"
-                  trigger="loop-on-hover"
-                  target="a"
-                  colors="primary:#34bad1;,secondary:#34bad1;"
-                  style="width:30px; height:30px;">
-                </lord-icon>
-                Usuarios
-              </a>
-            </li>
-            <li>
-              <a href="perfil-sociedad.html">
-                <lord-icon
-                  src="assets/json/274-male-and-two-female-outline.json"
-                  trigger="loop-on-hover"
-                  target="a"
-                  colors="primary:#34bad1;,secondary:#34bad1;"
-                  style="width:30px; height:30px;">
-                </lord-icon>
-                Perfil Sociedad
-              </a>
-            </li>
-            <li>
-              <a href="perfil-autonomo.html">
-                <lord-icon
-                  src="assets/json/284-avatar-man-approved-outline.json"
-                  trigger="loop-on-hover"
-                  target="a"
-                  colors="primary:#34bad1;,secondary:#34bad1;"
-                  style="width:30px; height:30px;">
-                </lord-icon>
-                Perfil Autónomo
-              </a>
-            </li>
-          </ul>
         </li>
         <li>
           <a href="javascript: void(0);" class="has-arrow arrow waves-effect">
@@ -435,12 +412,13 @@
       <div class="main-content">
         <div class="page-content">
           <div class="container-fluid">
-            <div class="row datos-sociedad mt-5">
-              <div class="col-12">
-                <div class="card card-borde">
+
+            <div class="row datos-sociedad">
+              <div class="col-12 col-sm-5">
+                <div class="card card-borde" style="height: 94%;">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-12 col-md-6">
+                      <div class="col-7 d-flex flex-column justify-content-center">
                         <h5>
                           DATOS DEL USUARIO
                           <button class="btn btn-sm btn-outline-primary btn-acciones-iconos ml-2" type="button">
@@ -531,11 +509,26 @@
                             </div><!-- /.modal-content -->
                           </div><!-- /.modal-dialog -->
                         </div><!-- /.modal -->
-
                       </div>
-                      <div class="col-12 col-md-6">
-                        <div class="circulos-slider">
-                          <img src="assets/images/users/user-9.jpg" alt="" class="avatar-xs rounded-circle">
+                      <div class="col-5">
+                        <div class="circulos-slider img-box" style="position: relative; width: 100%;">
+                          <img src="assets/images/users/user-3.jpg" alt="" class="avatar-xs rounded-circle">
+                          <div class="cambiar-foto">
+                            <button class="btn btn-sm btn-acciones-iconos" type="button">
+                              <a href="#" data-toggle="modal" data-animation="bounce" data-target=".cambiarFoto">
+                                <lord-icon
+                                  src="assets/json/54-photo-picturellandscape-gallery-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#000000;,secondary:#000000;"
+                                  style="width:15vw; height:15vh;">
+                                </lord-icon>
+                              </a>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="text-center mt-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".asignarRol">Rol: Administrador</button>
                         </div>
                         <div class="text-center mt-3">
                           <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".enviarMensajeUsuaInt">Mensaje</button>
@@ -545,6 +538,188 @@
                   </div>
                 </div>
               </div>
+
+              <div class="col-12 col-sm-7">
+                <div class="card card-borde">
+                  <div class="card-body">
+                    <h4 class="mb-4">Gestionar permisos de usuario</h4>
+                    <h5 class="mb-4">Inicio</h5>
+                    <div class="table-responsive">
+                      <table id="datatable-gesPerUsuaRR-buttons" class="table table-bordered" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Inicio</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>22345</td>
+                          </tr>
+                          <tr>
+                            <td>23444</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+
+              <div class="modal fade cambiarFoto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Cambiar foto de perfil</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile64">
+                          <label class="custom-file-label" for="inputGroupFile64">Cambiar foto</label>
+                        </div>
+                      </form>
+                      <div class="boton-etiqueta">
+                        <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Cambiar</button>
+                      </div>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade editarDatosUsuaRRHH" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Usuario interno RRHH</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="usuarRR" placeholder="Usuario">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="nombreRRhh" placeholder="Nombre">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="apellidoRRHH" placeholder="Apellido">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="telfRRHH" placeholder="Teléfono">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="text" id="puestoRRHH" placeholder="Puesto">                                                       
+                          </div> 
+                          <div class="col-lg-6">
+                            <input class="form-control" type="text" id="jornadaRRHH" placeholder="Jornada">
+                          </div>                                                   
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6  mo-b-15">
+                            <input class="form-control" type="email" id="emailRRHH" placeholder="E-mail">                                                       
+                          </div>                                                   
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade enviarMensaje" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Mensaje a usuario</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <textarea class="form-control" rows="4" placeholder="Escriba su mensaje aquí..."></textarea>
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade asignarRol" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Asignar rol</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Seleccionar rol...</option>
+                              <option>.....</option>
+                              <option>-----</option>
+                              <option>++++++</option>
+                              <option>******</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
 
               <div class="modal fade editarDatosUsuaIntRRHH" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-md">
@@ -632,36 +807,6 @@
                 </div><!-- /.modal-dialog -->
               </div><!-- /.modal -->
             </div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card card-borde">
-                  <div class="card-body">
-                    <h4 class="mb-4">Gestionar permisos de usuario</h4>
-                    <h5 class="mb-4">Inicio</h5>
-                    <div class="table-responsive">
-                      <table id="datatable-gesPerUsuaRR-buttons" class="table table-bordered" style="width:100%">
-                        <thead>
-                          <tr>
-                            <th>Inicio</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>22345</td>
-                          </tr>
-                          <tr>
-                            <td>23444</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end col -->
-            </div>
-            <!-- end row -->
 
             <div class="row">
               <div class="col-md-12">

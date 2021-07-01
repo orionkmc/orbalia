@@ -36,7 +36,7 @@
       <div class="main-content">
         <div class="page-content">
           <div class="container-fluid">
-            <div class="row datos-sociedad mt-5">
+            <div class="row datos-sociedad">
               <div class="col-12 col-sm-5">
                 <div class="card card-borde" style="height: 94%;">
                   <div class="card-body">
@@ -80,6 +80,9 @@
                               </a>
                             </button>
                           </div>
+                        </div>
+                        <div class="text-center mt-3">
+                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".asignarRol">Rol: Administrador</button>
                         </div>
                         <div class="text-center mt-3">
                           <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".enviarMensaje">Mensaje</button>
@@ -313,6 +316,44 @@
                       <form>
                         <div class="form-group">
                           <textarea class="form-control" rows="4" placeholder="Escriba su mensaje aquí..."></textarea>
+                        </div>
+                        <div class="boton-etiqueta">
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="modal fade asignarRol" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Asignar rol</h5>
+                      <lord-icon
+                        src="assets/json/38-error-cross-simple-outline.json"
+                        trigger="loop-on-hover"
+                        target="a"
+                        colors="primary:#808080;,secondary:#808080;"
+                        style="width:20px; height:20px; cursor: pointer;"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                      </lord-icon>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row">
+                          <div class="col-12">
+                            <select class="form-control">
+                              <option>Seleccionar rol...</option>
+                              <option>.....</option>
+                              <option>-----</option>
+                              <option>++++++</option>
+                              <option>******</option>
+                            </select>
+                          </div>
                         </div>
                         <div class="boton-etiqueta">
                           <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Guardar</button>

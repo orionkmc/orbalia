@@ -49,7 +49,8 @@
     .datepicker {
       z-index: 1060!important;
     }
-    .fecha-oculta {
+    .fecha-oculta,
+    .fechaLimite {
       display: none;
     }
   </style>
@@ -291,7 +292,7 @@
           </a>
         </li>
         <li>
-          <a href="javascript: void(0);" class="has-arrow arrow waves-effect">
+          <a href="usuarios.html" class="waves-effect">
             <lord-icon
               src="assets/json/268-avatar-man-outline.json"
               trigger="loop-on-hover"
@@ -301,44 +302,6 @@
             </lord-icon>
             <span>Usuarios</span>
           </a>
-          <ul class="sub-menu" aria-expanded="false">
-            <li>
-              <a href="usuarios.html">
-                <lord-icon
-                  src="assets/json/268-avatar-man-outline.json"
-                  trigger="loop-on-hover"
-                  target="a"
-                  colors="primary:#34bad1;,secondary:#34bad1;"
-                  style="width:30px; height:30px;">
-                </lord-icon>
-                Usuarios
-              </a>
-            </li>
-            <li>
-              <a href="perfil-sociedad.html">
-                <lord-icon
-                  src="assets/json/274-male-and-two-female-outline.json"
-                  trigger="loop-on-hover"
-                  target="a"
-                  colors="primary:#34bad1;,secondary:#34bad1;"
-                  style="width:30px; height:30px;">
-                </lord-icon>
-                Perfil Sociedad
-              </a>
-            </li>
-            <li>
-              <a href="perfil-autonomo.html">
-                <lord-icon
-                  src="assets/json/284-avatar-man-approved-outline.json"
-                  trigger="loop-on-hover"
-                  target="a"
-                  colors="primary:#34bad1;,secondary:#34bad1;"
-                  style="width:30px; height:30px;">
-                </lord-icon>
-                Perfil Autónomo
-              </a>
-            </li>
-          </ul>
         </li>
         <li>
           <a href="javascript: void(0);" class="has-arrow arrow waves-effect">
@@ -465,55 +428,78 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                       <div class="tab-pane active p-3" id="añadirProce" role="tabpanel">
-                        <form class="mt-4">
-                          <div class="form-group row">
-                            <div class="col-12">
-                              <input class="form-control" type="text" placeholder="Nombre">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <div class="col-12">
-                              <textarea class="form-control" id="exampleFormControlTextarea20" rows="2" placeholder="Descripción"></textarea>
-                            </div> 
-                          </div>
-                          <p class="m-0"><strong>Grupo</strong></p>
-                          <select class="etiquetas-multiple" name="states[]" multiple="multiple">
-                            <option value="e1">#pymes2021</option>
-                            <option value="e2">#pymes2020</option>
-                            <option value="e3">#innobono</option>
-                          </select>
-                          <div class="form-group row mt-3">
-                            <div class="col-12">
-                              <input class="form-control" type="text" placeholder="Límite expedientes">
-                            </div>
-                          </div>
-                          <p class="m-0"><strong>Plazo de presentación</strong></p>
-                          <div class="form-group">
-                            <div>
-                              <div class="input-daterange input-group" id="date-range">
-                                <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .45rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
-                                <input type="text" class="form-control" name="start" placeholder="Desde" />
-                                <input type="text" class="form-control" name="end" placeholder="Hasta" />
+                        <div class="row">
+                          <div class="col-12 col-md-6">
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <input class="form-control" type="text" placeholder="Nombre">
                               </div>
                             </div>
                           </div>
-                          <div class="form-group row">
-                            <div class="col-12">
-                              <input class="form-control" type="text" placeholder="Órgano administrativo">
+                          <div class="col-12 col-md-6">
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <textarea class="form-control" id="exampleFormControlTextarea20" rows="1" placeholder="Descripción"></textarea>
+                              </div> 
                             </div>
                           </div>
-                          <div class="form-group row">
-                            <div class="col-12">
-                              <select class="form-control">
-                                <option>Departamento</option>
-                                <option>xxxxxxxx</option>
-                                <option>yyyyyyy</option>
-                                <option>zzzzzzz</option>
-                              </select>
-                            </div>
-                          </div>
-                        </form>
+                        </div>
 
+                        <div class="row">
+                          <div class="col-12 col-md-6">
+                            <p class="m-0"><strong>Grupo</strong></p>
+                            <select class="etiquetas-multiple" name="states[]" multiple="multiple">
+                              <option value="e1">#pymes2021</option>
+                              <option value="e2">#pymes2020</option>
+                              <option value="e3">#innobono</option>
+                            </select>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group row mt-3">
+                              <div class="col-12">
+                                <input class="form-control" type="text" placeholder="Límite expedientes">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-12 col-md-6">
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <select class="form-control">
+                                  <option>Departamento</option>
+                                  <option>xxxxxxxx</option>
+                                  <option>yyyyyyy</option>
+                                  <option>zzzzzzz</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <input class="form-control" type="text" placeholder="Órgano administrativo">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-12 col-md-6">
+                            <p class="m-0"><strong>Plazo de presentación</strong></p>
+                            <div class="form-group">
+                              <div>
+                                <div class="input-daterange input-group" id="date-range">
+                                  <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .45rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
+                                  <input type="text" class="form-control" name="start" placeholder="Desde" />
+                                  <input type="text" class="form-control" name="end" placeholder="Hasta" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
                         <div class="dropdown-divider"></div>
                         <h5 class="mt-4">OPCIONES DE PRECIOS</h5>
                         <div class="table-responsive">
@@ -603,6 +589,12 @@
                         </div>
                         <div class="checkbox my-2">
                           <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                            <label class="custom-control-label" for="customCheck1">Marco temporal</label>
+                          </div>
+                        </div>
+                        <div class="checkbox my-2">
+                          <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="customCheck25" data-parsley-multiple="groups" data-parsley-mincheck="2">
                             <label class="custom-control-label" for="customCheck25">Proyecto</label>
                           </div>
@@ -635,28 +627,50 @@
                         </div>
 
                         <div class="dropdown-divider"></div>
-                        <h5 class="card-title mt-4">Etiquetas</h5>
-                        <select class="etiquetas-multiple2" name="states[]" multiple="multiple">
-                          <option value="e1">#pymes2021</option>
-                          <option value="e2">#pymes2020</option>
-                          <option value="e3">#innobono</option>
-                        </select>
-                        <div class="boton-etiqueta mb-4">
-                          <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirEtiquetaProc">Añadir</button>
-                        </div>
+                        <div class="row">
+                          <div class="col-12 col-md-6">
+                            <h5 class="card-title mt-4">Etiquetas</h5>
+                            <select class="etiquetas-multiple2" name="states[]" multiple="multiple">
+                              <option value="e1">#pymes2021</option>
+                              <option value="e2">#pymes2020</option>
+                              <option value="e3">#innobono</option>
+                            </select>
+                            <div class="boton-etiqueta mb-4">
+                              <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirEtiquetaProc">Añadir</button>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="card-borde2 pl-3">
+                              <h5 class="card-title mt-4 mb-4">Habilitar a:</h5>
+                              <strong>Por código postal:</strong>
+                              <div class="text-center mt-4 mb-4">
+                                <div class="row">
+                                  <div class="col-lg-6">
+                                    <div class="form-group row">
+                                      <label for="example-text-input" class="col-sm-4 col-form-label">Desde:</label>
+                                      <div class="col-sm-8">
+                                          <input class="form-control" type="text">
+                                      </div>
+                                    </div>
+                                  </div>
 
-                        <div class="dropdown-divider"></div>
-                        <h5 class="card-title mt-4 mb-4">Habilitar a:</h5>
-                        <strong>Por código postal:</strong>
-                        <p class="mb-5">Desde - Hasta</p>
-                        <div class="text-center mb-4">
-                          <div class="p-3">
-                            <input type="text" id="range_04">
+                                  <div class="col-lg-6">
+                                    <div class="form-group row">
+                                      <label for="example-text-input" class="col-sm-4 col-form-label">Hasta:</label>
+                                      <div class="col-sm-8">
+                                          <input class="form-control" type="text">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="boton-etiqueta mb-4">
+                                <button class="btn btn-sm btn-primary">Aplicar</button>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="text-center mb-4">
-                          <button class="btn btn-sm btn-primary">Habilitar a todos</button>
-                        </div>
+
 
                         <div class="dropdown-divider"></div>
                         <p class="mt-4 mb-4"><strong>Por tipo de beneficiario:</strong></p>
@@ -800,17 +814,11 @@
                           </div>
                         </div>
                         <div class="boton-etiqueta mt-3 mb-3">
+                          <button class="btn btn-sm btn-primary mr-2">
+                            Guardar borrador
+                          </button>
                           <button class="btn btn-sm btn-primary">
                             Continuar
-                            <a>
-                              <lord-icon
-                                src="assets/json/48-plus-to-square-rotation-outline.json"
-                                trigger="loop-on-hover"
-                                target="a"
-                                colors="primary:#000000;,secondary:#000000;"
-                                style="width:20px; height:20px;">
-                              </lord-icon>
-                            </a>
                           </button>
                         </div>
                         
@@ -1206,8 +1214,10 @@
                         <div class="boton-etiqueta mt-3 mb-3">
                           <button class="btn btn-sm btn-primary" data-toggle="modal" data-animation="bounce" data-target=".añadirFechaClaveDocProc">Añadir</button>
                         </div>
-                        <div class="text-center mb-3 mt-3">
-                          <button class="btn btn-sm btn-primary">Crédito presupuestario</button>
+                        <div class="form-group row">
+                          <div class="col-12 col-md-6">
+                            <input class="form-control" type="text" placeholder="Crédito presupuestario">                                                       
+                          </div>                                                    
                         </div>
 
                         <div class="dropdown-divider"></div>
@@ -1272,15 +1282,6 @@
                         <div class="boton-etiqueta mt-3 mb-3">
                           <button class="btn btn-sm btn-primary">
                             Continuar
-                            <a>
-                              <lord-icon
-                                src="assets/json/48-plus-to-square-rotation-outline.json"
-                                trigger="loop-on-hover"
-                                target="a"
-                                colors="primary:#000000;,secondary:#000000;"
-                                style="width:20px; height:20px;">
-                              </lord-icon>
-                            </a>
                           </button>
                         </div>
 
@@ -1448,7 +1449,7 @@
                                   </div>
                                   <div class="form-group row">
                                     <div class="col-12">
-                                      <input class="form-control" type="text" placeholder="Identificador">                                                       
+                                      <input class="form-control" type="text" placeholder="Aclaración del cliente">                                                       
                                     </div> 
                                   </div>
                                   <div class="form-group row">
@@ -1610,7 +1611,7 @@
                       </div>                                        
                       <div class="tab-pane p-3" id="fasesProce" role="tabpanel">
                         <div class="boton-etiqueta mt-4">
-                          <button type="button" class="btn btn-sm btn-primary btn-modal">Cargar fases de otro procedimiento</button>
+                          <button type="button" class="btn btn-sm btn-primary btn-modal" data-toggle="modal" data-animation="bounce" data-target=".cargarFases">Cargar las fases de otro procedimiento para este</button>
                         </div>
 
                         <div class="row mt-4">
@@ -1713,27 +1714,33 @@
                                     aria-label="Close">
                                   </lord-icon>
                                 </div>
-                                <div class="modal-body text-center">
+                                <div class="modal-body">
                                   <form>
                                     <div class="form-group row">
                                       <div class="col-sm-12">
                                         <input class="form-control" type="text" placeholder="Titulo o nombre del estado">                                                       
                                       </div>                                                    
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group mb-1">
                                       <textarea class="form-control" id="exampleFormControlTextarea21" rows="2" placeholder="Descripción"></textarea>
                                     </div>
-                                    <div class="form-group row">
+                                    <div class="form-check-inline my-3 ml-1">
+                                      <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="fecha-limite" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                        <label class="custom-control-label" for="fecha-limite">¿Posee fecha límite?</label>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row fechaLimite">
                                       <div class="col-sm-12">
                                         <div class="input-group">
-                                          <input type="text" class="form-control" placeholder="Fecha límite (si la hubiera)" id="datepicker18">
+                                          <input type="text" class="form-control" placeholder="Fecha límite" id="datepicker18">
                                           <div class="input-group-append bg-custom b-0"><span class="input-group-text" style="padding: .2rem .75rem;"><i class="mdi mdi-calendar"></i></span></div>
                                         </div><!-- input-group -->                                                       
                                       </div>                                                    
                                     </div>
                                     <div class="form-group row">
                                       <div class="col-12">
-                                        <select class="custom-select">
+                                        <select class="custom-select ml-0">
                                           <option>Antes de...</option>
                                           <option>Pendiente documentación</option>
                                           <option>Documentación dentro</option>
@@ -1976,17 +1983,41 @@
                         <div class="boton-etiqueta mt-3 mb-3">
                           <button class="btn btn-sm btn-primary">
                             Continuar
-                            <a>
-                              <lord-icon
-                                src="assets/json/48-plus-to-square-rotation-outline.json"
-                                trigger="loop-on-hover"
-                                target="a"
-                                colors="primary:#000000;,secondary:#000000;"
-                                style="width:20px; height:20px;">
-                              </lord-icon>
-                            </a>
                           </button>
                         </div>
+
+                        <div class="modal fade cargarFases" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Cargar fase</h5>
+                                <lord-icon
+                                  src="assets/json/38-error-cross-simple-outline.json"
+                                  trigger="loop-on-hover"
+                                  target="a"
+                                  colors="primary:#808080;,secondary:#808080;"
+                                  style="width:20px; height:20px; cursor: pointer;"
+                                  class="btn-close"
+                                  data-dismiss="modal"
+                                  aria-label="Close">
+                                </lord-icon>
+                              </div>
+                              <div class="modal-body">
+                                <p class="m-0"><strong>Fase</strong></p>
+                                <select class="cargar-fase" name="states[]" multiple="multiple">
+                                  <option value="e1">------------</option>
+                                  <option value="e2">............</option>
+                                  <option value="e3">++++++++++++</option>
+                                </select>
+                                <div class="boton-etiqueta mt-3 mb-3">
+                                  <button class="btn btn-sm btn-primary" data-dismiss="modal" aria-label="Close">
+                                    Cargar
+                                  </button>
+                                </div>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
                         <div class="modal fade editarFaseProc" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-sm">
@@ -2330,15 +2361,15 @@
                             </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio37" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio37">Autónomo</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut1" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut1">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio38" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio38">Sociedad</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut2" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut2">Sociedad</label>
                                 </div>
                               </div>
                             </div>
@@ -2362,15 +2393,15 @@
                             </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio39" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio39">Autónomo</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut3" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut3">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio40" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio40">Sociedad</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut4" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut4">Sociedad</label>
                                 </div>
                               </div>
                             </div>
@@ -2394,15 +2425,15 @@
                             </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio41" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio41">Autónomo</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut5" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut5">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio42" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio42">Sociedad</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut6" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut6">Sociedad</label>
                                 </div>
                               </div>
                             </div>
@@ -2445,15 +2476,15 @@
                             </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio42" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio42">Autónomo</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut7" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut7">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio43" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio43">Sociedad</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut8" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut8">Sociedad</label>
                                 </div>
                               </div>
                             </div>
@@ -2488,15 +2519,15 @@
                             </div> <!--end toast-->
                             <div class="text-center mt-4 mb-5">
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio44" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio44">Autónomo</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut9" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut9">Autónomo</label>
                                 </div>
                               </div>
                               <div class="form-check-inline my-1">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio45" name="customRadio" class="custom-control-input">
-                                  <label class="custom-control-label" for="customRadio45">Sociedad</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" id="aut10" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="aut10">Sociedad</label>
                                 </div>
                               </div>
                             </div>
@@ -2533,10 +2564,13 @@
                                       <input class="form-control" type="text" placeholder="Nombre">                                                       
                                     </div>                                                    
                                   </div>
-                                  <div class="form-group row">
-                                    <div class="col-12">
-                                      <input class="form-control" type="text" placeholder="Identificador">                                                       
-                                    </div> 
+                                  <div class="form-group row ml-0">
+                                    <p class="m-0"><strong>Identificador</strong></p>
+                                    <select class="ident-doc-gen" name="states[]" multiple="multiple">
+                                      <option value="e1">------------</option>
+                                      <option value="e2">............</option>
+                                      <option value="e3">++++++++++++</option>
+                                    </select>
                                   </div>
                                   <div class="form-group">
                                     <textarea class="form-control" id="exampleFormControlTextarea35" rows="4" placeholder="Descripción"></textarea>
@@ -2573,13 +2607,13 @@
                                       <input class="form-control" type="text" placeholder="Nombre">                                                       
                                     </div>                                                    
                                   </div>
+                                  <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea36" rows="4" placeholder="Descripción"></textarea>
+                                  </div>
                                   <div class="form-group row">
                                     <div class="col-12">
                                       <input class="form-control" type="text" placeholder="Identificador">                                                       
                                     </div> 
-                                  </div>
-                                  <div class="form-group">
-                                    <textarea class="form-control" id="exampleFormControlTextarea36" rows="4" placeholder="Descripción"></textarea>
                                   </div>
                                   <div class="boton-etiqueta">
                                     <button type="button" class="btn btn-sm btn-primary btn-modal" data-dismiss="modal" aria-label="Close">Añadir</button>
@@ -2809,6 +2843,8 @@
 
     <script>
       $(document).ready(function() {
+        $('.cargar-fase').select2();
+        $('.ident-doc-gen').select2();
         $('.etiquetas-multiple').select2({
           language: {
             noResults: function() {
@@ -2837,6 +2873,14 @@
           $('.fecha-oculta').css("display", "block");
         } else {
           $('.fecha-oculta').css("display", "none");
+        }
+      });
+
+      $('#fecha-limite').on('change', function() {
+        if (this.checked) {
+          $('.fechaLimite').css("display", "block");
+        } else {
+          $('.fechaLimite').css("display", "none");
         }
       });
 
