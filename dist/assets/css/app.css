@@ -3799,7 +3799,8 @@ element.style {
     border-radius: 50%;
     background-color: steelblue;
     background-size: cover;
-    margin: 0.5rem; }
+    margin: 0.5rem;
+    cursor: move; }
 
 @media (max-width: 767.98px) {
   .contrato-vigente {

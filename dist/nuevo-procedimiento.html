@@ -8,9 +8,6 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-    <!-- ION Slider -->
-    <link href="assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet" type="text/css" />
     
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -794,15 +791,15 @@
 
                         <div id="drag-drop-basic">
                           <div id="source-container" data-role="drag-drop-container">
-                            <div id="drag-source" draggable="true" style="background-image: url('assets/images/users/user-10.jpg');"></div>
-                            <div id="drag-source2" draggable="true" style="background-image: url('assets/images/users/user-1.jpg');"></div>
-                            <div id="drag-source3" draggable="true" style="background-image: url('assets/images/users/user-2.jpg');"></div>
-                            <div id="drag-source4" draggable="true" style="background-image: url('assets/images/users/user-3.jpg');"></div>
-                            <div id="drag-source5" draggable="true" style="background-image: url('assets/images/users/user-4.jpg');"></div>
-                            <div id="drag-source6" draggable="true" style="background-image: url('assets/images/users/user-5.jpg');"></div>
-                            <div id="drag-source7" draggable="true" style="background-image: url('assets/images/users/user-6.jpg');"></div>
-                            <div id="drag-source8" draggable="true" style="background-image: url('assets/images/users/user-7.jpg');"></div>
-                            <div id="drag-source9" draggable="true" style="background-image: url('assets/images/users/user-8.jpg');"></div>
+                            <div id="drag-source" draggable="true" style="background-image: url('assets/images/users/user-10.jpg');" class="drag"></div>
+                            <div id="drag-source2" draggable="true" style="background-image: url('assets/images/users/user-1.jpg');" class="drag"></div>
+                            <div id="drag-source3" draggable="true" style="background-image: url('assets/images/users/user-2.jpg');" class="drag"></div>
+                            <div id="drag-source4" draggable="true" style="background-image: url('assets/images/users/user-3.jpg');" class="drag"></div>
+                            <div id="drag-source5" draggable="true" style="background-image: url('assets/images/users/user-4.jpg');" class="drag"></div>
+                            <div id="drag-source6" draggable="true" style="background-image: url('assets/images/users/user-5.jpg');" class="drag"></div>
+                            <div id="drag-source7" draggable="true" style="background-image: url('assets/images/users/user-6.jpg');" class="drag"></div>
+                            <div id="drag-source8" draggable="true" style="background-image: url('assets/images/users/user-7.jpg');" class="drag"></div>
+                            <div id="drag-source9" draggable="true" style="background-image: url('assets/images/users/user-8.jpg');" class="drag"></div>
                           </div>
                           <div id="target-container" data-role="drag-drop-container"></div>
                         </div>
@@ -2834,9 +2831,6 @@
     <!--Datepicker-->
     <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
-    <!-- Ion Range Slider-->
-    <script src="assets/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
-
     <!-- Datatable init js -->
     <script src="assets/js/pages/procedimientos.init.js"></script>
     <script src="assets/js/app.js"></script>
@@ -2889,7 +2883,7 @@
       function handleDragStart(e) {
         // Target (this) element is the source node.
         dragSrcEl = this;
-
+        
         e.dataTransfer.effectAllowed = 'move';
         e.dataTransfer.setData('text/html', this.outerHTML);
 
@@ -3002,7 +2996,15 @@
       }
       // End of Drag and Drop Basic
 
-
+      $(document).ready(function() {
+        $('.drag').dblclick(function() {
+          if ($(this).parent().attr('id') == 'source-container') {
+            $(this).appendTo('#target-container');
+          } else if ($(this).parent().attr('id') == 'target-container') {
+            $(this).appendTo('#source-container');
+          }
+        })
+      });
     </script>
   </body>
 </html>

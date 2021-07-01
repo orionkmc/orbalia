@@ -166,15 +166,3 @@ $(document).ready(function () {
 $("#datepicker20").datepicker();
 $("#datepicker21").datepicker();
 $("#datepicker22").datepicker();
-
-$(document).ready(function () {
-  $("#range_04").ionRangeSlider({
-    skin: "flat",
-    type: "double",
-    grid: true,
-    min: 0,
-    max: 40000,
-    from: 700,
-    to: 10000,
-  });
-});
